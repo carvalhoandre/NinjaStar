@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Musica de fundo2.wav-40baf52e966dfdf6f5455a655caf013c.sample"
+
+[deps]
+
+source_file="res://sons/Musica de fundo2.wav"
+dest_files=[ "res://.import/Musica de fundo2.wav-40baf52e966dfdf6f5455a655caf013c.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

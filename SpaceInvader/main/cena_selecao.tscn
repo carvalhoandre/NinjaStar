@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://imagens/telaInc.jpg" type="Texture" id=3]
+
+[node name="Node2D" type="Node2D"]
+scale = Vector2( 1.40609, 1.4658 )
+
+[node name="telaInc" type="Sprite" parent="."]
+position = Vector2( 366.275, 204.092 )
+texture = ExtResource( 3 )
