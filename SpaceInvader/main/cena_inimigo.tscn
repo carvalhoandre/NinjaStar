@@ -40,7 +40,7 @@ extents = Vector2( 178.955, 239.161 )
 
 [node name="Node2D" type="Node2D"]
 position = Vector2( 541.609, 77.558 )
-scale = Vector2( 0.258757, 0.258757 )
+scale = Vector2( 0.567965, 0.623349 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -55,6 +55,7 @@ anims/explodindo = SubResource( 1 )
 anims/voando = SubResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="Area2D"]
+scale = Vector2( 0.666292, 0.654691 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 168.93, 64.6806, 493.89, 526.336 )

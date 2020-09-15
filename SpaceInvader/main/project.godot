@@ -16,12 +16,24 @@ _global_script_class_icons={
 [application]
 
 config/name="Aula 2020 - 08 - 24 - Jogo De Nave"
-run/main_scene="res://cena_fase1.tscn"
+run/main_scene="res://cena_inicio.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+ScriptGlobal="*res://script_global.gd"
 
 [display]
 
 window/stretch/mode="2d"
+
+[input]
+
+enter={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777221,"unicode":0,"echo":false,"script":null)
+ ]
+}
 
 [rendering]
 

@@ -1,5 +1,18 @@
 extends KinematicBody2D
 
+
+func _ready():
+	$Nave1.visible = false
+	$Nave2.visible = false
+	$Nave3.visible = false
+	
+	if(ScriptGlobal.cod_nave==1):
+		$Nave1.visible = true
+	elif(ScriptGlobal.cod_nave==2):
+		$Nave2.visible = true
+	elif(ScriptGlobal.cod_nave==3):
+		$Nave3.visible = true
+
 var mov = Vector2(0,0)
 var velocidade = 400
 func _process(delta):
@@ -21,6 +34,7 @@ func _process(delta):
 		
 	mov.x = 0
 	mov.y = 0	
+	
 	if (Input.is_action_pressed("ui_up")and global_position.y>=95):
 		mov.y = -velocidade 
 	if (Input.is_action_pressed("ui_down")and global_position.y<=492):
