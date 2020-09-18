@@ -11,9 +11,6 @@ extents = Vector2( 71.2848, 79.5304 )
 [node name="Node2D" type="Node2D"]
 position = Vector2( 523.909, 500.853 )
 scale = Vector2( -2.03605, 2.28755 )
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="KinematicBody2D" type="KinematicBody2D" parent="."]
 position = Vector2( -0.9758, -0.674683 )
@@ -37,8 +34,8 @@ position = Vector2( -1.00003, 0.909332 )
 shape = SubResource( 1 )
 
 [node name="Position2D" type="Position2D" parent="KinematicBody2D"]
-position = Vector2( 51.3454, 18.3158 )
+position = Vector2( 47.194, 31.1741 )
 
 [node name="Position2D2" type="Position2D" parent="KinematicBody2D"]
-position = Vector2( -51.8275, 13.1219 )
+position = Vector2( -47.6761, 23.8372 )
 scale = Vector2( -1.18543, 3.29534 )

@@ -1,6 +1,6 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=15 format=2]
 
-[ext_resource path="res://imagens/Céu nuvens.jpg" type="Texture" id=1]
+[ext_resource path="res://imagens/fundo3.jpg" type="Texture" id=1]
 [ext_resource path="res://cena_nave.tscn" type="PackedScene" id=2]
 [ext_resource path="res://sons/Musica de fundo.wav" type="AudioStream" id=3]
 [ext_resource path="res://script_fase.gd" type="Script" id=4]
@@ -8,17 +8,33 @@
 [ext_resource path="res://imagens/Piloto.png" type="Texture" id=6]
 [ext_resource path="res://imagens/Vida.png" type="Texture" id=7]
 [ext_resource path="res://imagens/Missel.png" type="Texture" id=8]
+[ext_resource path="res://imagens/muralha.webp" type="Texture" id=9]
 
 [sub_resource type="DynamicFont" id=1]
 size = 30
 font_data = ExtResource( 5 )
 
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 21
+font_data = ExtResource( 5 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 531.732, 89.8759 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.0980392, 1, 0, 1 )
+border_color = Color( 1, 1, 1, 1 )
+shadow_color = Color( 1, 1, 1, 0.6 )
+
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 4 )
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 514.156, 302.163 )
-scale = Vector2( 1.12003, 0.972614 )
+position = Vector2( 513.526, 299.643 )
+scale = Vector2( 1.65357, 1.46298 )
 texture = ExtResource( 1 )
 
 [node name="Aviao" parent="." instance=ExtResource( 2 )]
@@ -38,33 +54,95 @@ scale = Vector2( 0.302828, 0.284644 )
 texture = ExtResource( 6 )
 
 [node name="Vida1" type="Sprite" parent="."]
-position = Vector2( 168.829, 46.617 )
+position = Vector2( 93.6499, 50.3968 )
 scale = Vector2( 0.225205, 0.188516 )
 texture = ExtResource( 7 )
 
 [node name="Vida2" type="Sprite" parent="."]
-position = Vector2( 100.794, 46.6171 )
+position = Vector2( 129.772, 51.0178 )
 scale = Vector2( 0.225205, 0.188516 )
 texture = ExtResource( 7 )
 
 [node name="Vida3" type="Sprite" parent="."]
-position = Vector2( 136.071, 47.877 )
+position = Vector2( 167.153, 50.3969 )
 scale = Vector2( 0.225205, 0.188516 )
 texture = ExtResource( 7 )
 
-[node name="Label" type="Label" parent="."]
-margin_left = 197.808
+[node name="QtdMissil" type="Label" parent="."]
+margin_left = 243.216
 margin_top = 34.0179
-margin_right = 252.808
+margin_right = 298.216
 margin_bottom = 57.0179
 custom_fonts/font = SubResource( 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 text = "0x"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Missil" type="Sprite" parent="."]
-position = Vector2( 250.724, 46.6171 )
+position = Vector2( 217.088, 51.0178 )
 scale = Vector2( 0.127177, 0.127177 )
 texture = ExtResource( 8 )
+
+[node name="QtdTempo" type="Label" parent="."]
+margin_left = 499.492
+margin_top = 28.9781
+margin_right = 539.492
+margin_bottom = 42.9781
+rect_scale = Vector2( 1.88056, 1.95649 )
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "00"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="QtdPonto" type="Label" parent="."]
+margin_left = 865.565
+margin_top = 37.2562
+margin_right = 975.565
+margin_bottom = 54.2562
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Pontos: 0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 499.492, 590.309 )
+shape = SubResource( 4 )
+
+[node name="Sprite" type="Sprite" parent="Area2D"]
+position = Vector2( 554.992, 565.082 )
+scale = Vector2( 1.15025, 0.367582 )
+texture = ExtResource( 9 )
+
+[node name="VidaBarreira" type="ProgressBar" parent="."]
+margin_left = 172.601
+margin_top = 504.079
+margin_right = 176.601
+margin_bottom = 518.079
+rect_scale = Vector2( -43.7882, 1.72309 )
+custom_styles/fg = SubResource( 5 )
+max_value = 5.0
+step = 1.0
+value = 3.0
+percent_visible = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TempoInimigo" type="Timer" parent="."]
+
+[node name="TempoJogo" type="Timer" parent="."]
+wait_time = 59.0
+autostart = true
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

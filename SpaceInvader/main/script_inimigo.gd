@@ -1,5 +1,7 @@
 extends Area2D
 
+var tipo_premio = "ponto"
+
 func _ready():
 	pass # Replace with function body.
 
@@ -17,4 +19,12 @@ func _on_Area2D_area_entered(area):
 
 func _on_AnimationPlayer_animation_finished(anim_name):
 	if(anim_name=="explodindo"):
+		
+		var cena_premio = preload("res://cena_premio.tscn")
+		var objeto_premio = cena_premio.instance()
+		
+		objeto_premio.get_node("Premio").tipo_premio = tipo_premio
+		
+		objeto_premio.global_position = global_position
+		get_tree().root.add_child(objeto_premio)
 		queue_free()

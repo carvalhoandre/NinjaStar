@@ -17,6 +17,16 @@ var mov = Vector2(0,0)
 var velocidade = 400
 func _process(delta):
 	
+	var posx = global_position.x
+	var posy = global_position.y
+	
+	var limitex = get_viewport_rect().size.x
+	var limitey = get_viewport_rect().size.y
+	
+	global_position.x = clamp(posx,0,limitex)	
+	global_position.y = clamp(posy,0,limitey)
+	
+	
 	#print("Posicao y nave = " + str(global_position.y))
 	#print("Tamanho da tela = " + str(get_viewport().size.x))
 	
@@ -31,17 +41,17 @@ func _process(delta):
 		objeto_disparo2.global_position = $Position2D2.global_position
 		objeto_disparo2.z_index = 0
 		get_tree().root.add_child(objeto_disparo2)
+
 		
 	mov.x = 0
 	mov.y = 0	
-	
-	if (Input.is_action_pressed("ui_up")and global_position.y>=95):
+	if (Input.is_action_pressed("ui_up")):
 		mov.y = -velocidade 
-	if (Input.is_action_pressed("ui_down")and global_position.y<=492):
+	if (Input.is_action_pressed("ui_down")):
 		mov.y = velocidade
-	if (Input.is_action_pressed("ui_left") and global_position.x>=142):
+	if (Input.is_action_pressed("ui_left")):
 		mov.x = -velocidade
-	if (Input.is_action_pressed("ui_right") and global_position.x<=886):
+	if (Input.is_action_pressed("ui_right")):
 		mov.x = velocidade	
 		
 	move_and_slide(mov)

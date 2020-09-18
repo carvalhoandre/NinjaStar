@@ -1,6 +1,6 @@
 extends Area2D
 
-var mov = Vector2(0,-3)
+var mov = Vector2(0,-20)
 
 func _ready():
 	get_parent().get_node("AudioStreamPlayer2D").play()
