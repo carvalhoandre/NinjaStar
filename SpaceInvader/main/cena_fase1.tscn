@@ -1,70 +1,147 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=16 format=2]
 
-[ext_resource path="res://imagens/Céu nuvens.jpg" type="Texture" id=1]
+[ext_resource path="res://imagens/Céu escuro.jpg" type="Texture" id=1]
 [ext_resource path="res://cena_nave.tscn" type="PackedScene" id=2]
 [ext_resource path="res://sons/Musica de fundo.wav" type="AudioStream" id=3]
 [ext_resource path="res://script_fase.gd" type="Script" id=4]
-[ext_resource path="res://recursos/Ch Games Black.otf" type="DynamicFontData" id=5]
-[ext_resource path="res://imagens/Piloto.png" type="Texture" id=6]
-[ext_resource path="res://imagens/Vida.png" type="Texture" id=7]
-[ext_resource path="res://imagens/Missel.png" type="Texture" id=8]
+[ext_resource path="res://recursos/imagens/Piloto.png" type="Texture" id=5]
+[ext_resource path="res://recursos/imagens/Vida.png" type="Texture" id=6]
+[ext_resource path="res://recursos/fonts/Kufam-VariableFont_wght.ttf" type="DynamicFontData" id=7]
+[ext_resource path="res://recursos/imagens/Missel.png" type="Texture" id=8]
+[ext_resource path="res://recursos/imagens/Barricada.png" type="Texture" id=9]
+[ext_resource path="res://recursos/fonts/Ch Games Black.otf" type="DynamicFontData" id=10]
 
 [sub_resource type="DynamicFont" id=1]
 size = 30
-font_data = ExtResource( 5 )
+font_data = ExtResource( 10 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 42
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 25
+font_data = ExtResource( 7 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 611.217, 103.196 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.0313726, 1, 0.0235294, 1 )
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 4 )
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 514.156, 302.163 )
-scale = Vector2( 1.12003, 0.972614 )
+position = Vector2( 511.538, 300.203 )
+scale = Vector2( 1.15012, 0.983536 )
 texture = ExtResource( 1 )
 
 [node name="Aviao" parent="." instance=ExtResource( 2 )]
-position = Vector2( 557.379, 542.617 )
+position = Vector2( 449.026, 472.061 )
 scale = Vector2( 0.92, 0.906953 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
+volume_db = -80.0
 autoplay = true
 
-[node name="Timer" type="Timer" parent="."]
-autostart = true
-
 [node name="Piloto" type="Sprite" parent="."]
-position = Vector2( 46.6171, 46.6171 )
-scale = Vector2( 0.302828, 0.284644 )
-texture = ExtResource( 6 )
+position = Vector2( 58.3316, 50.0191 )
+scale = Vector2( 0.223375, 0.223375 )
+texture = ExtResource( 5 )
 
 [node name="Vida1" type="Sprite" parent="."]
-position = Vector2( 168.829, 46.617 )
-scale = Vector2( 0.225205, 0.188516 )
-texture = ExtResource( 7 )
+position = Vector2( 110.986, 52.74 )
+scale = Vector2( 0.369618, 0.369618 )
+texture = ExtResource( 6 )
 
 [node name="Vida2" type="Sprite" parent="."]
-position = Vector2( 100.794, 46.6171 )
-scale = Vector2( 0.225205, 0.188516 )
-texture = ExtResource( 7 )
+position = Vector2( 154.986, 52.74 )
+scale = Vector2( 0.369618, 0.369618 )
+texture = ExtResource( 6 )
 
 [node name="Vida3" type="Sprite" parent="."]
-position = Vector2( 136.071, 47.877 )
-scale = Vector2( 0.225205, 0.188516 )
-texture = ExtResource( 7 )
+position = Vector2( 200.121, 52.74 )
+scale = Vector2( 0.369618, 0.369618 )
+texture = ExtResource( 6 )
 
-[node name="Label" type="Label" parent="."]
-margin_left = 197.808
-margin_top = 34.0179
-margin_right = 252.808
-margin_bottom = 57.0179
+[node name="Missel" type="Sprite" parent="."]
+position = Vector2( 345.669, 58.6045 )
+scale = Vector2( 0.276145, 0.14334 )
+texture = ExtResource( 8 )
+
+[node name="QtdMissel" type="Label" parent="."]
+margin_left = 264.284
+margin_top = 36.9845
+margin_right = 329.284
+margin_bottom = 91.9845
 custom_fonts/font = SubResource( 1 )
-text = "0x"
+text = "0 X"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Missil" type="Sprite" parent="."]
-position = Vector2( 250.724, 46.6171 )
-scale = Vector2( 0.127177, 0.127177 )
-texture = ExtResource( 8 )
-[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[node name="QtdTempo" type="Label" parent="."]
+margin_left = 555.89
+margin_top = 30.5867
+margin_right = 607.89
+margin_bottom = 85.5867
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "00"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="QtdPonto" type="Label" parent="."]
+margin_left = 877.26
+margin_top = 26.2905
+margin_right = 1067.26
+margin_bottom = 81.2905
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Pontos: 0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Barreira" type="Area2D" parent="."]
+
+[node name="Sprite" type="Sprite" parent="Barreira"]
+position = Vector2( 342.699, 604.762 )
+texture = ExtResource( 9 )
+
+[node name="Sprite2" type="Sprite" parent="Barreira"]
+position = Vector2( 798.79, 602.242 )
+texture = ExtResource( 9 )
+
+[node name="Sprite3" type="Sprite" parent="Barreira"]
+position = Vector2( 1252.36, 602.242 )
+texture = ExtResource( 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barreira"]
+position = Vector2( 545.953, 658.532 )
+shape = SubResource( 4 )
+
+[node name="TempoInimigo" type="Timer" parent="."]
+autostart = true
+
+[node name="TempoJogo" type="Timer" parent="."]
+wait_time = 59.0
+autostart = true
+
+[node name="VidaBarreira" type="ProgressBar" parent="."]
+margin_left = 33.9028
+margin_top = 459.807
+margin_right = 37.9028
+margin_bottom = 473.807
+rect_scale = Vector2( 60.4386, 1.78948 )
+custom_styles/bg = SubResource( 5 )
+max_value = 5.0
+step = 1.0
+value = 3.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="timeout" from="TempoInimigo" to="." method="_on_Timer_timeout"]
