@@ -45,16 +45,12 @@ scale = Vector2( -0.200001, -0.18333 )
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2( -14.1581, 0 )
 script = ExtResource( 2 )
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="Sprite" type="Sprite" parent="Area2D"]
-position = Vector2( -14.0095, -3.48413 )
-scale = Vector2( 1.08038, 1.08038 )
+position = Vector2( 4.71924, 15.4456 )
 texture = ExtResource( 1 )
 region_enabled = true
-region_rect = Rect2( 1206, 86, 466, 471 )
+region_rect = Rect2( 165, 66, 491, 495 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2( 0, 9.15527e-05 )

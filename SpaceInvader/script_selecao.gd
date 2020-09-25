@@ -27,7 +27,9 @@ func _process(delta):
 		$AnimPersonagem.play("nave3")
 
 	if (Input.is_action_just_pressed("enter")):
+		ScriptGlobal.resetar_dados()
 		get_tree().change_scene("res://cena_fase1.tscn")
+		
 		
 		
 		

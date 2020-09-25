@@ -1,9 +1,16 @@
 extends Area2D
 
+
+# Declare member variables here. Examples:
+# var a = 2
+# var b = "text"
+
 var tipo_premio = "ponto"
 
+# Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
+
 
 var mov = Vector2(0,-10)
 func _process(delta):
@@ -17,6 +24,8 @@ func _on_Area2D_area_entered(area):
 		soltar_premio()
 	elif (area.name=="Barreira"):
 		ScriptGlobal.qtd_vidas_barreira -= 1
+		if (ScriptGlobal.qtd_vidas_barreira==0):
+			get_tree().change_scene("res://cena_fim_de_jogo.tscn")
 		mov.y = 0
 		$AnimationPlayer.play("explodindo")
 
@@ -34,5 +43,10 @@ func soltar_premio():
 func _on_Area2D_body_entered(body):
 	if (body.name=="Nave" and $AnimationPlayer.current_animation=="voando"):
 		ScriptGlobal.qtd_vidas_nave -= 1
+		if (ScriptGlobal.qtd_vidas_nave==0):
+			get_tree().change_scene("res://cena_fim_de_jogo.tscn")
 		mov.y = 0
 		$AnimationPlayer.play("explodindo")
+	
+
+

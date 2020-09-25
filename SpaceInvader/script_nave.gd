@@ -15,7 +15,6 @@ func _ready():
 		$Nave3.visible = true
 
 var mov = Vector2(0,0)
-var tipo_disparo = "simples"
 var velocidade = 400
 func _process(delta):
 	
@@ -31,25 +30,28 @@ func _process(delta):
 	
 	#print("Posicao y nave = " + str(global_position.y))
 	#print("Tamanho da tela = " + str(get_viewport().size.x))
+	z_index = 1
 	
 	if (Input.is_action_just_pressed("disparo_simples")):		
-		var cena_disparo = preload("res://cena_disparo.tscn")		
-		z_index = 1		
+		var cena_disparo = preload("res://cena_disparo.tscn")				
 		var objeto_disparo1 = cena_disparo.instance()
 		objeto_disparo1.global_position = $Position2D.global_position		
 		objeto_disparo1.z_index = 0
 		get_tree().root.add_child(objeto_disparo1)
+	
 	elif (Input.is_action_just_pressed("disparo_especial") and ScriptGlobal.qtd_missel>0):
-		var cena_disparo = preload("res://cena_disparo.tscn")		
+		var cena_disparo = preload("res://cena_disparo.tscn")	
 		
 		var largura_tela = get_viewport_rect().size.x
 		var altura_tela = get_viewport_rect().size.y
-		var espaco_entre_missil = 30
+		var espaco_entre_missil = 60
 		var qtd_missil = round(largura_tela / espaco_entre_missil) + 1
 		var posicaoX = 0
 		while(qtd_missil>0):	
 			var objeto_disparo1 = cena_disparo.instance()
+			
 			objeto_disparo1.get_node("Disparo").tipo_disparo = "especial"
+			
 			objeto_disparo1.global_position.y = altura_tela
 			objeto_disparo1.global_position.x = posicaoX
 			objeto_disparo1.z_index = 0
@@ -57,6 +59,7 @@ func _process(delta):
 			posicaoX += espaco_entre_missil
 			qtd_missil-=1
 		ScriptGlobal.qtd_missel -= 1
+		
 		
 	mov.x = 0
 	mov.y = 0	

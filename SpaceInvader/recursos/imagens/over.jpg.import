@@ -2,16 +2,11 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Céu escuro.jpg-a0a2b35552b56aaa8c56048bebb87306.stex"
-metadata={
-"vram_texture": false
-}
+valid=false
 
 [deps]
 
-source_file="res://imagens/Céu escuro.jpg"
-dest_files=[ "res://.import/Céu escuro.jpg-a0a2b35552b56aaa8c56048bebb87306.stex" ]
-
+source_file="res://recursos/imagens/over.jpg"
 [params]
 
 compress/mode=0

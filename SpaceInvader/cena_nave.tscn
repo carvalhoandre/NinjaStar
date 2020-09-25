@@ -11,29 +11,29 @@ extents = Vector2( 30.2571, 55.3799 )
 [node name="Node2D" type="Node2D"]
 position = Vector2( 527.381, 493.797 )
 
-[node name="KinematicBody2D" type="KinematicBody2D" parent="."]
+[node name="Nave" type="KinematicBody2D" parent="."]
 position = Vector2( -0.9758, -0.674683 )
 scale = Vector2( 1.32, 1.13793 )
 script = ExtResource( 2 )
 
-[node name="Nave1" type="Sprite" parent="KinematicBody2D"]
+[node name="Nave1" type="Sprite" parent="Nave"]
 position = Vector2( 0.266479, -8.44217 )
 scale = Vector2( 0.226998, 0.320842 )
 texture = ExtResource( 1 )
 
-[node name="Nave2" type="Sprite" parent="KinematicBody2D"]
+[node name="Nave2" type="Sprite" parent="Nave"]
 position = Vector2( -1.00136e-05, -1.2429 )
 scale = Vector2( 0.276578, 0.247359 )
 texture = ExtResource( 3 )
 
-[node name="Nave3" type="Sprite" parent="KinematicBody2D"]
+[node name="Nave3" type="Sprite" parent="Nave"]
 position = Vector2( 0.221924, -3.67529 )
 scale = Vector2( 0.173905, 0.137798 )
 texture = ExtResource( 4 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Nave"]
 position = Vector2( -1.00003, -5.92606 )
 shape = SubResource( 1 )
 
-[node name="Position2D" type="Position2D" parent="KinematicBody2D"]
+[node name="Position2D" type="Position2D" parent="Nave"]
 position = Vector2( -1.15742, -86.4718 )
