@@ -1,13 +1,14 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://recursos/fonts/Grandstander-Italic-VariableFont_wght.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://script_pausa.gd" type="Script" id=2]
+[ext_resource path="res://recursos/fonts/game_over.ttf" type="DynamicFontData" id=3]
 
 [sub_resource type="DynamicFont" id=1]
-size = 30
+size = 100
 use_mipmaps = true
 use_filter = true
-font_data = ExtResource( 1 )
+font_data = ExtResource( 3 )
 
 [sub_resource type="DynamicFont" id=2]
 size = 20
@@ -29,23 +30,23 @@ __meta__ = {
 }
 
 [node name="Configuracoes" type="Label" parent="."]
-margin_left = 398.135
-margin_top = 80.6349
-margin_right = 611.135
-margin_bottom = 110.635
+margin_left = 391.835
+margin_top = 99.5337
+margin_right = 682.835
+margin_bottom = 156.534
 custom_fonts/font = SubResource( 1 )
-text = "CONFIGURAÇÕES"
+text = "SETTING"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="PressioneEnter" type="Label" parent="."]
 margin_left = 389.316
-margin_top = 448.532
-margin_right = 602.316
-margin_bottom = 478.532
+margin_top = 444.752
+margin_right = 703.316
+margin_bottom = 501.752
 custom_fonts/font = SubResource( 1 )
-text = "<< Pressione 'P'>>"
+text = " Press 'P'"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -56,7 +57,7 @@ margin_top = 209.147
 margin_right = 578.135
 margin_bottom = 238.147
 custom_fonts/font = SubResource( 2 )
-text = "Efeitos sonoros"
+text = "SOUND EFFECTS"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -67,7 +68,7 @@ margin_top = 269.623
 margin_right = 578.135
 margin_bottom = 298.623
 custom_fonts/font = SubResource( 2 )
-text = "Música"
+text = "MUSIC"
 __meta__ = {
 "_edit_use_anchors_": false
 }

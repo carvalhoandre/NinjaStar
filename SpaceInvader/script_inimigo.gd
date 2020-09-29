@@ -12,7 +12,7 @@ func _ready():
 	pass # Replace with function body.
 
 
-var mov = Vector2(0,-10)
+var mov = Vector2(0,-20)
 func _process(delta):
 	translate(mov)
 
@@ -42,6 +42,7 @@ func soltar_premio():
 
 func _on_Area2D_body_entered(body):
 	if (body.name=="Nave" and $AnimationPlayer.current_animation=="voando"):
+		body.get_node("AnimationPlayer").play("dano")
 		ScriptGlobal.qtd_vidas_nave -= 1
 		if (ScriptGlobal.qtd_vidas_nave==0):
 			get_tree().change_scene("res://cena_fim_de_jogo.tscn")

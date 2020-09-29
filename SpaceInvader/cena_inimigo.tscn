@@ -40,7 +40,10 @@ tracks/0/keys = {
 
 [node name="Node2D" type="Node2D"]
 position = Vector2( 269.638, 112.127 )
-scale = Vector2( -0.200001, -0.18333 )
+scale = Vector2( -0.144016, -0.132011 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2( -14.1581, 0 )

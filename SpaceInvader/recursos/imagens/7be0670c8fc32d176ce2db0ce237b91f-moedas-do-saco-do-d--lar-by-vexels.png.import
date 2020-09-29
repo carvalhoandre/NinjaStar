@@ -1,0 +1,34 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/7be0670c8fc32d176ce2db0ce237b91f-moedas-do-saco-do-d--lar-by-vexels.png-607a25f82059e6a74a62b74a2f1b70b6.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://recursos/imagens/7be0670c8fc32d176ce2db0ce237b91f-moedas-do-saco-do-d--lar-by-vexels.png"
+dest_files=[ "res://.import/7be0670c8fc32d176ce2db0ce237b91f-moedas-do-saco-do-d--lar-by-vexels.png-607a25f82059e6a74a62b74a2f1b70b6.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

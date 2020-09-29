@@ -1,6 +1,6 @@
 extends Area2D
 
-var mov = Vector2(0,-3)
+var mov = Vector2(0,-19)
 
 var tipo_disparo = "simples"
 
@@ -13,7 +13,8 @@ func _ready():
 	elif (tipo_disparo == "especial"):
 		$Especial.visible = true
 	
-	get_parent().get_node("AudioStreamPlayer2D").play()
+	if(ScriptGlobal.status_efeitos_sonoros):
+		get_parent().get_node("AudioStreamPlayer2D").play()
 	
 func _process(delta):	
 	translate(mov)
