@@ -1,6 +1,5 @@
 extends KinematicBody2D
 
-
 func _ready():
 	
 	$Nave1.visible = false
@@ -27,7 +26,6 @@ func _process(delta):
 	global_position.x = clamp(posx,0,limitex)	
 	global_position.y = clamp(posy,0,limitey)
 	
-	
 	#print("Posicao y nave = " + str(global_position.y))
 	#print("Tamanho da tela = " + str(get_viewport().size.x))
 	z_index = 1
@@ -37,7 +35,8 @@ func _process(delta):
 		var objeto_disparo1 = cena_disparo.instance()
 		objeto_disparo1.global_position = $Position2D.global_position		
 		objeto_disparo1.z_index = 0
-		get_tree().root.add_child(objeto_disparo1)
+#		get_tree().root.add_child(objeto_disparo1)
+		get_parent().get_parent().add_child(objeto_disparo1)
 	
 	elif (Input.is_action_just_pressed("disparo_especial") and ScriptGlobal.qtd_missel>0):
 		var cena_disparo = preload("res://cena_disparo.tscn")	
@@ -55,7 +54,8 @@ func _process(delta):
 			objeto_disparo1.global_position.y = altura_tela
 			objeto_disparo1.global_position.x = posicaoX
 			objeto_disparo1.z_index = 0
-			get_tree().root.add_child(objeto_disparo1)
+#			get_tree().root.add_child(objeto_disparo1)
+			get_parent().get_parent().add_child(objeto_disparo1)
 			posicaoX += espaco_entre_missil
 			qtd_missil-=1
 		ScriptGlobal.qtd_missel -= 1

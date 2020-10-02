@@ -1,10 +1,5 @@
 extends Area2D
 
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
 var tipo_premio = "ponto"
 
 # Called when the node enters the scene tree for the first time.
@@ -27,6 +22,3 @@ func _on_Premio_body_entered(body):
 		ScriptGlobal.qtd_missel += 1
 		
 	queue_free()
-		
-		
-		

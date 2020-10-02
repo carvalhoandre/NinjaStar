@@ -1,0 +1,276 @@
+[gd_scene load_steps=62 format=2]
+
+[ext_resource path="res://recursos/imagens/cenário/Tile/1.png" type="Texture" id=1]
+[ext_resource path="res://recursos/imagens/cenário/BG.png" type="Texture" id=2]
+[ext_resource path="res://recursos/imagens/cenário/Tile/2.png" type="Texture" id=3]
+[ext_resource path="res://recursos/imagens/cenário/Tile/3.png" type="Texture" id=4]
+[ext_resource path="res://recursos/imagens/personagens/Idle__006.png" type="Texture" id=5]
+[ext_resource path="res://recursos/imagens/personagens/Run__007.png" type="Texture" id=6]
+[ext_resource path="res://recursos/imagens/personagens/Run__009.png" type="Texture" id=7]
+[ext_resource path="res://recursos/imagens/personagens/Jump_Attack__000.png" type="Texture" id=8]
+[ext_resource path="res://recursos/imagens/personagens/Jump__000.png" type="Texture" id=9]
+[ext_resource path="res://recursos/imagens/personagens/Jump__002.png" type="Texture" id=10]
+[ext_resource path="res://recursos/imagens/personagens/Run__000.png" type="Texture" id=11]
+[ext_resource path="res://recursos/imagens/personagens/Jump__003.png" type="Texture" id=12]
+[ext_resource path="res://recursos/imagens/personagens/Idle__003.png" type="Texture" id=13]
+[ext_resource path="res://recursos/imagens/personagens/Jump__004.png" type="Texture" id=14]
+[ext_resource path="res://recursos/imagens/personagens/Idle__000.png" type="Texture" id=15]
+[ext_resource path="res://recursos/imagens/personagens/Idle__002.png" type="Texture" id=16]
+[ext_resource path="res://recursos/imagens/personagens/Jump__001.png" type="Texture" id=17]
+[ext_resource path="res://recursos/imagens/personagens/Jump__005.png" type="Texture" id=18]
+[ext_resource path="res://recursos/imagens/personagens/Idle__005.png" type="Texture" id=19]
+[ext_resource path="res://recursos/imagens/personagens/Run__004.png" type="Texture" id=20]
+[ext_resource path="res://recursos/imagens/personagens/Run__005.png" type="Texture" id=21]
+[ext_resource path="res://recursos/imagens/personagens/Run__006.png" type="Texture" id=22]
+[ext_resource path="res://recursos/imagens/personagens/Idle__004.png" type="Texture" id=23]
+[ext_resource path="res://recursos/imagens/personagens/Run__001.png" type="Texture" id=24]
+[ext_resource path="res://recursos/imagens/personagens/Run__003.png" type="Texture" id=25]
+[ext_resource path="res://recursos/imagens/personagens/Idle__008.png" type="Texture" id=26]
+[ext_resource path="res://recursos/imagens/personagens/Idle__007.png" type="Texture" id=27]
+[ext_resource path="res://recursos/imagens/personagens/Idle__009.png" type="Texture" id=28]
+[ext_resource path="res://recursos/imagens/personagens/Run__002.png" type="Texture" id=29]
+[ext_resource path="res://recursos/imagens/personagens/Run__008.png" type="Texture" id=30]
+[ext_resource path="res://recursos/imagens/personagens/Idle__001.png" type="Texture" id=31]
+[ext_resource path="res://recursos/imagens/personagens/Jump__007.png" type="Texture" id=32]
+[ext_resource path="res://recursos/imagens/personagens/Jump__006.png" type="Texture" id=33]
+[ext_resource path="res://recursos/imagens/personagens/Jump__009.png" type="Texture" id=34]
+[ext_resource path="res://recursos/imagens/personagens/Jump__008.png" type="Texture" id=35]
+[ext_resource path="res://script_personagem.gd" type="Script" id=36]
+[ext_resource path="res://recursos/imagens/personagens/Slide__002.png" type="Texture" id=37]
+[ext_resource path="res://recursos/imagens/personagens/Slide__008.png" type="Texture" id=38]
+[ext_resource path="res://recursos/imagens/personagens/Slide__000.png" type="Texture" id=39]
+[ext_resource path="res://recursos/imagens/personagens/Slide__003.png" type="Texture" id=40]
+[ext_resource path="res://recursos/imagens/personagens/Slide__009.png" type="Texture" id=41]
+[ext_resource path="res://recursos/imagens/personagens/Slide__006.png" type="Texture" id=42]
+[ext_resource path="res://recursos/imagens/personagens/Slide__004.png" type="Texture" id=43]
+[ext_resource path="res://recursos/imagens/personagens/Slide__007.png" type="Texture" id=44]
+[ext_resource path="res://recursos/imagens/personagens/Slide__005.png" type="Texture" id=45]
+[ext_resource path="res://recursos/imagens/personagens/Slide__001.png" type="Texture" id=46]
+[ext_resource path="res://recursos/imagens/cenário/Objects/Tree.png" type="Texture" id=47]
+[ext_resource path="res://recursos/imagens/cenário/Objects/Grass (1).png" type="Texture" id=48]
+[ext_resource path="res://recursos/imagens/cenário/Objects/Bush (2).png" type="Texture" id=49]
+[ext_resource path="res://recursos/imagens/cenário/Objects/Bush (1).png" type="Texture" id=50]
+[ext_resource path="res://recursos/imagens/cenário/Objects/Cactus (1).png" type="Texture" id=51]
+[ext_resource path="res://recursos/imagens/cenário/Objects/Cactus (3).png" type="Texture" id=52]
+[ext_resource path="res://recursos/imagens/cenário/Objects/Skeleton.png" type="Texture" id=53]
+
+[sub_resource type="ConvexPolygonShape2D" id=1]
+points = PoolVector2Array( 0, 0, 128, 0, 128, 128, 0, 128 )
+
+[sub_resource type="ConvexPolygonShape2D" id=2]
+points = PoolVector2Array( 0, 0, 128, 0, 128, 128, 0, 128 )
+
+[sub_resource type="ConvexPolygonShape2D" id=3]
+points = PoolVector2Array( 0, 0, 128, 0, 128, 128, 0, 128 )
+
+[sub_resource type="ConvexPolygonShape2D" id=4]
+points = PoolVector2Array( 0, 0, 128, 0, 128, 128, 0, 128 )
+
+[sub_resource type="ConvexPolygonShape2D" id=5]
+points = PoolVector2Array( 0, 0, 128, 0, 128, 128, 0, 128 )
+
+[sub_resource type="TileSet" id=6]
+0/name = "3.png 0"
+0/texture = ExtResource( 4 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 128, 128 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape = SubResource( 1 )
+0/shape_one_way = false
+0/shape_one_way_margin = 1.0
+0/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 1 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+0/z_index = 0
+1/name = "2.png 1"
+1/texture = ExtResource( 3 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 0, 0, 128, 128 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape = SubResource( 2 )
+1/shape_one_way = false
+1/shape_one_way_margin = 1.0
+1/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 2 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+1/z_index = 0
+2/name = "1.png 2"
+2/texture = ExtResource( 1 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 0, 0, 128, 128 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape = SubResource( 3 )
+2/shape_one_way = false
+2/shape_one_way_margin = 1.0
+2/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 3 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+2/z_index = 0
+3/name = "2.png 3"
+3/texture = ExtResource( 3 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 0, 0, 128, 128 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape = SubResource( 4 )
+3/shape_one_way = false
+3/shape_one_way_margin = 1.0
+3/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 4 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+3/z_index = 0
+4/name = "3.png 4"
+4/texture = ExtResource( 4 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 0, 0, 128, 128 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape = SubResource( 5 )
+4/shape_one_way = false
+4/shape_one_way_margin = 1.0
+4/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+4/z_index = 0
+
+[sub_resource type="SpriteFrames" id=7]
+animations = [ {
+"frames": [ ExtResource( 39 ), ExtResource( 46 ), ExtResource( 37 ), ExtResource( 40 ), ExtResource( 43 ), ExtResource( 45 ), ExtResource( 42 ), ExtResource( 44 ), ExtResource( 38 ), ExtResource( 41 ) ],
+"loop": false,
+"name": "abaixado",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 15 ), ExtResource( 31 ), ExtResource( 16 ), ExtResource( 13 ), ExtResource( 23 ), ExtResource( 19 ), ExtResource( 5 ), ExtResource( 27 ), ExtResource( 26 ), ExtResource( 28 ) ],
+"loop": true,
+"name": "parado",
+"speed": 15.0
+}, {
+"frames": [ ExtResource( 8 ), ExtResource( 9 ), ExtResource( 17 ), ExtResource( 10 ), ExtResource( 12 ), ExtResource( 14 ), ExtResource( 18 ), ExtResource( 33 ), ExtResource( 32 ), ExtResource( 35 ), ExtResource( 34 ) ],
+"loop": false,
+"name": "pulando",
+"speed": 15.0
+}, {
+"frames": [ ExtResource( 11 ), ExtResource( 24 ), ExtResource( 29 ), ExtResource( 25 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 6 ), ExtResource( 30 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "andando",
+"speed": 15.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 91.3049, 180.512 )
+
+[node name="Node2D" type="Node2D"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground"]
+position = Vector2( 509.83, 317.096 )
+scale = Vector2( 0.801169, 0.658771 )
+texture = ExtResource( 2 )
+
+[node name="TileMap" type="TileMap" parent="."]
+scale = Vector2( 0.5, 0.5 )
+tile_set = SubResource( 6 )
+cell_size = Vector2( 128, 128 )
+format = 1
+tile_data = PoolIntArray( 131107, 2, 0, 131108, 1, 0, 131109, 1, 0, 131110, 0, 0, 196621, 2, 0, 196622, 0, 0, 196633, 2, 0, 196634, 1, 0, 196635, 0, 0, 196687, 2, 0, 196688, 0, 0, 262175, 2, 0, 262176, 1, 0, 262177, 0, 0, 262222, 2, 0, 262223, 1, 0, 262224, 1, 0, 262225, 0, 0, 327698, 2, 0, 327699, 1, 0, 327700, 1, 0, 327701, 1, 0, 327702, 0, 0, 327719, 2, 0, 327720, 3, 0, 327721, 3, 0, 327722, 3, 0, 327723, 0, 0, 327757, 2, 0, 327758, 1, 0, 327759, 1, 0, 327760, 1, 0, 327761, 3, 0, 327762, 0, 0, 393226, 2, 0, 393227, 1, 0, 393228, 1, 0, 393229, 1, 0, 393230, 1, 0, 393231, 0, 0, 393293, 2, 0, 393294, 1, 0, 393295, 1, 0, 393296, 1, 0, 393297, 3, 0, 393298, 3, 0, 393299, 0, 0, 458785, 2, 0, 458786, 1, 0, 458787, 1, 0, 458788, 1, 0, 458789, 0, 0, 458817, 1, 0, 458818, 1, 0, 458828, 2, 0, 458829, 1, 0, 458830, 1, 0, 458831, 1, 0, 458832, 1, 0, 458833, 3, 0, 458834, 3, 0, 458835, 3, 0, 458836, 0, 0, 524334, 2, 0, 524335, 1, 0, 524336, 1, 0, 524337, 1, 0, 524338, 1, 0, 524339, 1, 0, 524340, 1, 0, 524341, 1, 0, 524342, 1, 0, 524343, 1, 0, 524344, 1, 0, 524345, 0, 0, 524349, 2, 0, 524350, 1, 0, 524351, 1, 0, 524352, 1, 0, 524353, 1, 0, 524354, 1, 0, 524355, 1, 0, 524356, 1, 0, 524357, 1, 0, 524358, 1, 0, 524359, 1, 0, 524360, 1, 0, 524361, 1, 0, 524362, 1, 0, 524363, 1, 0, 524364, 1, 0, 524365, 1, 0, 524366, 1, 0, 524367, 1, 0, 524368, 1, 0, 524369, 3, 0, 524370, 3, 0, 524371, 3, 0, 524372, 3, 0, 524373, 0, 0, 589824, 2, 0, 589825, 1, 0, 589826, 1, 0, 589827, 1, 0, 589828, 1, 0, 589829, 1, 0, 589830, 1, 0, 589831, 1, 0, 589832, 1, 0, 589833, 1, 0, 589834, 1, 0, 589835, 1, 0, 589836, 1, 0, 589837, 1, 0, 589838, 1, 0, 589839, 4, 0, 589842, 2, 0, 589843, 3, 0, 589844, 3, 0, 589845, 3, 0, 589846, 3, 0, 589847, 3, 0, 589848, 3, 0, 589849, 3, 0, 589850, 3, 0, 589851, 3, 0, 589852, 3, 0, 589853, 3, 0, 589854, 0, 0 )
+
+[node name="Bush (1)" type="Sprite" parent="TileMap"]
+position = Vector2( 9298.66, 983.128 )
+texture = ExtResource( 50 )
+
+[node name="Grass (1)" type="Sprite" parent="TileMap"]
+position = Vector2( 7885.33, 1000.08 )
+texture = ExtResource( 48 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="."]
+position = Vector2( 46.3268, 495.34 )
+scale = Vector2( 0.314588, 0.314588 )
+script = ExtResource( 36 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="KinematicBody2D"]
+position = Vector2( 62.3029, 62.303 )
+scale = Vector2( 0.897174, 0.897174 )
+frames = SubResource( 7 )
+animation = "abaixado"
+frame = 9
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
+position = Vector2( 69.1575, 65.296 )
+scale = Vector2( 1.07008, 1.07008 )
+shape = SubResource( 8 )
+
+[node name="Camera2D" type="Camera2D" parent="KinematicBody2D"]
+position = Vector2( 3.17876, 0 )
+current = true
+
+[node name="Bush (1)" type="Sprite" parent="."]
+position = Vector2( 313.358, 535.002 )
+texture = ExtResource( 50 )
+
+[node name="Bush (2)" type="Sprite" parent="."]
+position = Vector2( 690.136, 346.418 )
+texture = ExtResource( 49 )
+
+[node name="Cactus (1)" type="Sprite" parent="."]
+position = Vector2( 1446.59, 261.661 )
+texture = ExtResource( 51 )
+
+[node name="Cactus (3)" type="Sprite" parent="."]
+position = Vector2( 1692.39, 528.645 )
+texture = ExtResource( 52 )
+
+[node name="Skeleton" type="Sprite" parent="."]
+position = Vector2( 2336.82, 425.877 )
+texture = ExtResource( 53 )
+
+[node name="Tree" type="Sprite" parent="."]
+position = Vector2( 3284.53, 383.499 )
+texture = ExtResource( 47 )

@@ -1,16 +1,9 @@
 extends Area2D
 
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
 var tipo_premio = "ponto"
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
-
 
 var mov = Vector2(0,-20)
 func _process(delta):
@@ -38,7 +31,8 @@ func soltar_premio():
 	var objeto_premio = cena_premio.instance()
 	objeto_premio.get_node("Premio").tipo_premio = tipo_premio		
 	objeto_premio.global_position = global_position
-	get_tree().root.add_child(objeto_premio)	
+#	get_tree().root.add_child(objeto_premio)
+	get_parent().get_parent().add_child(objeto_premio)
 
 func _on_Area2D_body_entered(body):
 	if (body.name=="Nave" and $AnimationPlayer.current_animation=="voando"):
@@ -48,6 +42,3 @@ func _on_Area2D_body_entered(body):
 			get_tree().change_scene("res://cena_fim_de_jogo.tscn")
 		mov.y = 0
 		$AnimationPlayer.play("explodindo")
-	
-
-

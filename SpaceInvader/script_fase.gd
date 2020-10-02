@@ -1,5 +1,4 @@
 extends Node2D
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$TempoJogo.wait_time = ScriptGlobal.qtd_tempo
@@ -21,7 +20,6 @@ func atualizarHUD():
 		$AudioStreamPlayer.play()
 	elif($AudioStreamPlayer.playing and ScriptGlobal.status_musica==false):
 		$AudioStreamPlayer.stop()
-	
 
 func _process(delta):
 	atualizarHUD()
@@ -40,12 +38,12 @@ func _on_Timer_timeout():
 		objeto_inimigo.get_node("Area2D").tipo_premio = "ponto"
 		qtd_inimigo += 1
 	
-	
 	objeto_inimigo.global_position.y = 0
 	var largura = get_viewport_rect().size.x
 	objeto_inimigo.global_position.x = rand_range(0,largura)
 	
-	get_tree().root.add_child(objeto_inimigo)
-	
+#	get_tree().root.add_child(objeto_inimigo)
+	add_child(objeto_inimigo)
+
 func _on_TempoJogo_timeout():
 	get_tree().change_scene("res://cena_fim_de_jogo.tscn")

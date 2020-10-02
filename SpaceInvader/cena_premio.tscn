@@ -9,6 +9,7 @@ extents = Vector2( 6.18951, 16.3894 )
 
 [node name="Node2D" type="Node2D"]
 position = Vector2( 155.042, 83.1973 )
+scale = Vector2( 1.70744, 1.70744 )
 
 [node name="Premio" type="Area2D" parent="."]
 position = Vector2( -0.336365, 0.37458 )

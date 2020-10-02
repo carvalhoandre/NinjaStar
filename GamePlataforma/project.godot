@@ -16,6 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="JogoPlataforma"
+run/main_scene="res://cena_fase.tscn"
 config/icon="res://icon.png"
 
 [rendering]

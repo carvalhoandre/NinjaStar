@@ -65,27 +65,27 @@ autoplay = true
 
 [node name="Piloto" type="Sprite" parent="."]
 position = Vector2( 46.9923, 47.4993 )
-scale = Vector2( 0.191877, 0.207626 )
+scale = Vector2( 0.141804, 0.153443 )
 texture = ExtResource( 7 )
 
 [node name="Vida1" type="Sprite" parent="."]
-position = Vector2( 110.986, 52.74 )
-scale = Vector2( 0.369618, 0.369618 )
+position = Vector2( 88.3964, 48.9602 )
+scale = Vector2( 0.243834, 0.243834 )
 texture = ExtResource( 6 )
 
 [node name="Vida2" type="Sprite" parent="."]
-position = Vector2( 154.986, 52.74 )
-scale = Vector2( 0.369618, 0.369618 )
+position = Vector2( 121.102, 48.9602 )
+scale = Vector2( 0.239378, 0.239378 )
 texture = ExtResource( 6 )
 
 [node name="Vida3" type="Sprite" parent="."]
-position = Vector2( 200.121, 52.74 )
-scale = Vector2( 0.369618, 0.369618 )
+position = Vector2( 151.177, 47.7003 )
+scale = Vector2( 0.233698, 0.233698 )
 texture = ExtResource( 6 )
 
 [node name="Missel" type="Sprite" parent="."]
-position = Vector2( 345.669, 58.6045 )
-scale = Vector2( 0.276145, 0.14334 )
+position = Vector2( 348.179, 53.5648 )
+scale = Vector2( 0.199397, 0.103502 )
 texture = ExtResource( 8 )
 
 [node name="QtdMissel" type="Label" parent="."]
@@ -93,6 +93,7 @@ margin_left = 279.689
 margin_top = 38.5882
 margin_right = 344.689
 margin_bottom = 93.5882
+rect_scale = Vector2( 0.784598, 0.784598 )
 custom_fonts/font = SubResource( 1 )
 text = "0 X"
 __meta__ = {
@@ -100,10 +101,10 @@ __meta__ = {
 }
 
 [node name="QtdTempo" type="Label" parent="."]
-margin_left = 512.08
-margin_top = 15.8686
-margin_right = 560.08
-margin_bottom = 72.8686
+margin_left = 509.57
+margin_top = 27.2079
+margin_right = 557.57
+margin_bottom = 84.2079
 custom_fonts/font = SubResource( 2 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 text = "00"
@@ -112,10 +113,11 @@ __meta__ = {
 }
 
 [node name="QtdPonto" type="Label" parent="."]
-margin_left = 953.401
-margin_top = 32.6786
-margin_right = 979.401
-margin_bottom = 75.6786
+margin_left = 917.007
+margin_top = 33.9385
+margin_right = 943.007
+margin_bottom = 76.9385
+rect_scale = Vector2( 0.655524, 0.655524 )
 custom_fonts/font = SubResource( 3 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 text = "0"
@@ -164,7 +166,7 @@ z_index = 1
 
 [node name="Sprite2" type="Sprite" parent="."]
 position = Vector2( 905.968, 53.0024 )
-scale = Vector2( 0.139061, 0.139061 )
+scale = Vector2( 0.0896224, 0.0896224 )
 texture = ExtResource( 9 )
 [connection signal="timeout" from="TempoInimigo" to="." method="_on_Timer_timeout"]
 [connection signal="timeout" from="TempoJogo" to="." method="_on_TempoJogo_timeout"]
