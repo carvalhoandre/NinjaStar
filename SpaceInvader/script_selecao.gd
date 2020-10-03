@@ -9,6 +9,7 @@ func _ready():
 func _process(delta):
 	
 	if (Input.is_action_just_pressed("ui_left")):
+		Script
 		if (ScriptGlobal.cod_nave==1):
 			ScriptGlobal.cod_nave = 3
 		else:
