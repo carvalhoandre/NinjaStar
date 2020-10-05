@@ -6,4 +6,4 @@ func _ready():
 
 
 func _on_Button_pressed():
-	pass # Replace with function body.
+	get_tree().change_scene("res://cena_selecao.tscn")

@@ -322,6 +322,7 @@ scale = Vector2( 0.250528, 0.18105 )
 texture = ExtResource( 3 )
 
 [node name="Pressione" type="Label" parent="."]
+modulate = Color( 1, 1, 1, 0 )
 margin_left = 410.52
 margin_top = 523.765
 margin_right = 740.52
