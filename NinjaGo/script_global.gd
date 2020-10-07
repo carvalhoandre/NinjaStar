@@ -1,10 +1,10 @@
 extends Node
 
-var velocidade = 300
+var velocidade = 400
 var forca_pulo = -690
 var mov = Vector2(0,0)
 
-var cod_personagem = 1
+var cod_personagem = 2
 var valor_ponto = 10
 var status_musica = true
 var status_efeitos_sonoros = true

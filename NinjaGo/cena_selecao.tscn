@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://script_selecao.gd" type="Script" id=1]
 [ext_resource path="res://recursos/imagens/Outos/cena_selecao.png" type="Texture" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://recursos/fontes/game_over.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://recursos/imagens/personagens/Cop/Idle (1).png" type="Texture" id=5]
 [ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Idle__000.png" type="Texture" id=6]
+[ext_resource path="res://recursos/fontes/NinjaStrike.otf" type="DynamicFontData" id=7]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.447059, 0.184314, 0.45098, 1 )
@@ -21,7 +22,7 @@ use_mipmaps = true
 use_filter = true
 font_data = ExtResource( 4 )
 
-[sub_resource type="Animation" id=8]
+[sub_resource type="Animation" id=4]
 resource_name = "personagem1"
 length = 0.5
 loop = true
@@ -98,7 +99,7 @@ tracks/5/keys = {
 "values": [ Vector2( 672.355, 395.107 ) ]
 }
 
-[sub_resource type="Animation" id=9]
+[sub_resource type="Animation" id=5]
 resource_name = "personagem2"
 length = 0.5
 loop = true
@@ -175,7 +176,7 @@ tracks/5/keys = {
 "values": [ Vector2( 672.355, 395.107 ) ]
 }
 
-[sub_resource type="Animation" id=10]
+[sub_resource type="Animation" id=6]
 resource_name = "personagem3"
 length = 0.5
 loop = true
@@ -268,6 +269,12 @@ tracks/0/keys = {
 "values": [ true, false ]
 }
 
+[sub_resource type="DynamicFont" id=8]
+size = 80
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 7 )
+
 [node name="Node2D" type="Node2D"]
 position = Vector2( 1.12244, 0 )
 script = ExtResource( 1 )
@@ -334,10 +341,21 @@ texture = ExtResource( 5 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "personagem1"
-anims/personagem1 = SubResource( 8 )
-anims/personagem2 = SubResource( 9 )
-anims/personagem3 = SubResource( 10 )
+anims/personagem1 = SubResource( 4 )
+anims/personagem2 = SubResource( 5 )
+anims/personagem3 = SubResource( 6 )
 
 [node name="AnimationPressione" type="AnimationPlayer" parent="."]
 autoplay = "Piscar"
 anims/Piscar = SubResource( 7 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 704.011
+margin_top = 14.2705
+margin_right = 1013.01
+margin_bottom = 77.2705
+custom_fonts/font = SubResource( 8 )
+text = "NINJA GO"
+__meta__ = {
+"_edit_use_anchors_": false
+}

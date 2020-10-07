@@ -1,51 +1,12 @@
-[gd_scene load_steps=62 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://recursos/imagens/cenário/Tile/1.png" type="Texture" id=1]
 [ext_resource path="res://recursos/imagens/cenário/BG.png" type="Texture" id=2]
 [ext_resource path="res://recursos/imagens/cenário/Tile/2.png" type="Texture" id=3]
 [ext_resource path="res://recursos/imagens/cenário/Tile/3.png" type="Texture" id=4]
-[ext_resource path="res://recursos/imagens/personagens/Idle__006.png" type="Texture" id=5]
-[ext_resource path="res://recursos/imagens/personagens/Run__007.png" type="Texture" id=6]
-[ext_resource path="res://recursos/imagens/personagens/Run__009.png" type="Texture" id=7]
-[ext_resource path="res://recursos/imagens/personagens/Jump_Attack__000.png" type="Texture" id=8]
-[ext_resource path="res://recursos/imagens/personagens/Jump__000.png" type="Texture" id=9]
-[ext_resource path="res://recursos/imagens/personagens/Jump__002.png" type="Texture" id=10]
-[ext_resource path="res://recursos/imagens/personagens/Run__000.png" type="Texture" id=11]
-[ext_resource path="res://recursos/imagens/personagens/Jump__003.png" type="Texture" id=12]
-[ext_resource path="res://recursos/imagens/personagens/Idle__003.png" type="Texture" id=13]
-[ext_resource path="res://recursos/imagens/personagens/Jump__004.png" type="Texture" id=14]
-[ext_resource path="res://recursos/imagens/personagens/Idle__000.png" type="Texture" id=15]
-[ext_resource path="res://recursos/imagens/personagens/Idle__002.png" type="Texture" id=16]
-[ext_resource path="res://recursos/imagens/personagens/Jump__001.png" type="Texture" id=17]
-[ext_resource path="res://recursos/imagens/personagens/Jump__005.png" type="Texture" id=18]
-[ext_resource path="res://recursos/imagens/personagens/Idle__005.png" type="Texture" id=19]
-[ext_resource path="res://recursos/imagens/personagens/Run__004.png" type="Texture" id=20]
-[ext_resource path="res://recursos/imagens/personagens/Run__005.png" type="Texture" id=21]
-[ext_resource path="res://recursos/imagens/personagens/Run__006.png" type="Texture" id=22]
-[ext_resource path="res://recursos/imagens/personagens/Idle__004.png" type="Texture" id=23]
-[ext_resource path="res://recursos/imagens/personagens/Run__001.png" type="Texture" id=24]
-[ext_resource path="res://recursos/imagens/personagens/Run__003.png" type="Texture" id=25]
-[ext_resource path="res://recursos/imagens/personagens/Idle__008.png" type="Texture" id=26]
-[ext_resource path="res://recursos/imagens/personagens/Idle__007.png" type="Texture" id=27]
-[ext_resource path="res://recursos/imagens/personagens/Idle__009.png" type="Texture" id=28]
-[ext_resource path="res://recursos/imagens/personagens/Run__002.png" type="Texture" id=29]
-[ext_resource path="res://recursos/imagens/personagens/Run__008.png" type="Texture" id=30]
-[ext_resource path="res://recursos/imagens/personagens/Idle__001.png" type="Texture" id=31]
-[ext_resource path="res://recursos/imagens/personagens/Jump__007.png" type="Texture" id=32]
-[ext_resource path="res://recursos/imagens/personagens/Jump__006.png" type="Texture" id=33]
-[ext_resource path="res://recursos/imagens/personagens/Jump__009.png" type="Texture" id=34]
-[ext_resource path="res://recursos/imagens/personagens/Jump__008.png" type="Texture" id=35]
-[ext_resource path="res://script_personagem.gd" type="Script" id=36]
-[ext_resource path="res://recursos/imagens/personagens/Slide__002.png" type="Texture" id=37]
-[ext_resource path="res://recursos/imagens/personagens/Slide__008.png" type="Texture" id=38]
-[ext_resource path="res://recursos/imagens/personagens/Slide__000.png" type="Texture" id=39]
-[ext_resource path="res://recursos/imagens/personagens/Slide__003.png" type="Texture" id=40]
-[ext_resource path="res://recursos/imagens/personagens/Slide__009.png" type="Texture" id=41]
-[ext_resource path="res://recursos/imagens/personagens/Slide__006.png" type="Texture" id=42]
-[ext_resource path="res://recursos/imagens/personagens/Slide__004.png" type="Texture" id=43]
-[ext_resource path="res://recursos/imagens/personagens/Slide__007.png" type="Texture" id=44]
-[ext_resource path="res://recursos/imagens/personagens/Slide__005.png" type="Texture" id=45]
-[ext_resource path="res://recursos/imagens/personagens/Slide__001.png" type="Texture" id=46]
+[ext_resource path="res://cena_personagem.tscn" type="PackedScene" id=5]
+[ext_resource path="res://script_fase.gd" type="Script" id=6]
+[ext_resource path="res://cena_pausa.tscn" type="PackedScene" id=7]
 [ext_resource path="res://recursos/imagens/cenário/Objects/Tree.png" type="Texture" id=47]
 [ext_resource path="res://recursos/imagens/cenário/Objects/Grass (1).png" type="Texture" id=48]
 [ext_resource path="res://recursos/imagens/cenário/Objects/Bush (2).png" type="Texture" id=49]
@@ -176,33 +137,11 @@ points = PoolVector2Array( 0, 0, 128, 0, 128, 128, 0, 128 )
 } ]
 4/z_index = 0
 
-[sub_resource type="SpriteFrames" id=7]
-animations = [ {
-"frames": [ ExtResource( 15 ), ExtResource( 31 ), ExtResource( 16 ), ExtResource( 13 ), ExtResource( 23 ), ExtResource( 19 ), ExtResource( 5 ), ExtResource( 27 ), ExtResource( 26 ), ExtResource( 28 ) ],
-"loop": true,
-"name": "parado",
-"speed": 15.0
-}, {
-"frames": [ ExtResource( 39 ), ExtResource( 46 ), ExtResource( 37 ), ExtResource( 40 ), ExtResource( 43 ), ExtResource( 45 ), ExtResource( 42 ), ExtResource( 44 ), ExtResource( 38 ), ExtResource( 41 ) ],
-"loop": false,
-"name": "abaixado",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 8 ), ExtResource( 9 ), ExtResource( 17 ), ExtResource( 10 ), ExtResource( 12 ), ExtResource( 14 ), ExtResource( 18 ), ExtResource( 33 ), ExtResource( 32 ), ExtResource( 35 ), ExtResource( 34 ) ],
-"loop": false,
-"name": "pulando",
-"speed": 15.0
-}, {
-"frames": [ ExtResource( 11 ), ExtResource( 24 ), ExtResource( 29 ), ExtResource( 25 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 6 ), ExtResource( 30 ), ExtResource( 7 ) ],
-"loop": true,
-"name": "andando",
-"speed": 15.0
-} ]
-
-[sub_resource type="RectangleShape2D" id=8]
-extents = Vector2( 91.3049, 180.512 )
-
 [node name="Node2D" type="Node2D"]
+pause_mode = 1
+script = ExtResource( 6 )
+
+[node name="Personagem" parent="." instance=ExtResource( 5 )]
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
@@ -225,31 +164,6 @@ texture = ExtResource( 50 )
 [node name="Grass (1)" type="Sprite" parent="TileMap"]
 position = Vector2( 7885.33, 1000.08 )
 texture = ExtResource( 48 )
-
-[node name="KinematicBody2D" type="KinematicBody2D" parent="."]
-position = Vector2( 46.3268, 495.34 )
-scale = Vector2( 0.314588, 0.314588 )
-script = ExtResource( 36 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="AnimatedSprite" type="AnimatedSprite" parent="KinematicBody2D"]
-position = Vector2( 62.3029, 62.303 )
-scale = Vector2( 0.897174, 0.897174 )
-frames = SubResource( 7 )
-animation = "abaixado"
-frame = 9
-playing = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
-position = Vector2( 69.1575, 65.296 )
-scale = Vector2( 1.07008, 1.07008 )
-shape = SubResource( 8 )
-
-[node name="Camera2D" type="Camera2D" parent="KinematicBody2D"]
-position = Vector2( 3.17876, 0 )
-current = true
 
 [node name="Bush (1)" type="Sprite" parent="."]
 position = Vector2( 313.358, 535.002 )
@@ -274,3 +188,6 @@ texture = ExtResource( 53 )
 [node name="Tree" type="Sprite" parent="."]
 position = Vector2( 3284.53, 383.499 )
 texture = ExtResource( 47 )
+
+[node name="Pausa" parent="." instance=ExtResource( 7 )]
+visible = false

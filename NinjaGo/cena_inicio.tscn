@@ -12,6 +12,8 @@ use_mipmaps = true
 font_data = ExtResource( 1 )
 
 [node name="Node2D" type="Node2D"]
+position = Vector2( 5.6568, 0 )
+scale = Vector2( 0.983627, 0.980426 )
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
