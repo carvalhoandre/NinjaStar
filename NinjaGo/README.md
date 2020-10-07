@@ -1,2 +1,2 @@
-# Games
-Aplicações desenvolvidas via _*Godot*_ 
+# NinjaGO
+Jogo 2D de plataforma, temática ninja, desenvolvido via _*Godot*_ 
