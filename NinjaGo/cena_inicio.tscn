@@ -1,15 +1,61 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://recursos/fontes/NinjaLine.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://script_inicio.gd" type="Script" id=2]
 [ext_resource path="res://recursos/imagens/Outos/Sem Título-1.png" type="Texture" id=3]
+[ext_resource path="res://recursos/imagens/personagens/Zumbi/female/Idle (9).png" type="Texture" id=4]
+[ext_resource path="res://recursos/imagens/personagens/Zumbi/female/Idle (3).png" type="Texture" id=5]
+[ext_resource path="res://recursos/imagens/personagens/Zumbi/female/Idle (14).png" type="Texture" id=6]
+[ext_resource path="res://recursos/imagens/personagens/Zumbi/female/Idle (6).png" type="Texture" id=7]
+[ext_resource path="res://recursos/imagens/personagens/Zumbi/female/Idle (4).png" type="Texture" id=8]
+[ext_resource path="res://recursos/imagens/personagens/Zumbi/female/Idle (7).png" type="Texture" id=9]
+[ext_resource path="res://recursos/imagens/personagens/Zumbi/female/Idle (12).png" type="Texture" id=10]
+[ext_resource path="res://recursos/imagens/personagens/Zumbi/female/Attack (1).png" type="Texture" id=11]
+[ext_resource path="res://recursos/imagens/personagens/Zumbi/female/Idle (1).png" type="Texture" id=12]
+[ext_resource path="res://recursos/imagens/personagens/Zumbi/female/Idle (2).png" type="Texture" id=13]
+[ext_resource path="res://recursos/imagens/personagens/Zumbi/female/Idle (5).png" type="Texture" id=14]
+[ext_resource path="res://recursos/imagens/personagens/Zumbi/female/Idle (10).png" type="Texture" id=15]
+[ext_resource path="res://recursos/imagens/personagens/Zumbi/female/Idle (11).png" type="Texture" id=16]
+[ext_resource path="res://recursos/imagens/personagens/Zumbi/female/Idle (13).png" type="Texture" id=17]
+[ext_resource path="res://recursos/imagens/personagens/Zumbi/female/Idle (8).png" type="Texture" id=18]
+[ext_resource path="res://recursos/imagens/personagens/Zumbi/female/Idle (15).png" type="Texture" id=19]
+[ext_resource path="res://recursos/sons/inicio.wav" type="AudioStream" id=20]
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 1, 0.0509804, 0.0509804, 1 )
 
 [sub_resource type="DynamicFont" id=1]
 resource_local_to_scene = true
 size = 30
-outline_color = Color( 0.666667, 0.0156863, 0.0156863, 1 )
+outline_color = Color( 0, 0, 0, 1 )
 use_mipmaps = true
+use_filter = true
 font_data = ExtResource( 1 )
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 5 ), ExtResource( 8 ), ExtResource( 14 ), ExtResource( 7 ), ExtResource( 9 ), ExtResource( 18 ), ExtResource( 4 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 10 ), ExtResource( 17 ), ExtResource( 6 ), ExtResource( 19 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="Animation" id=3]
+resource_name = "iniciar"
+length = 0.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Button:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
 
 [node name="Node2D" type="Node2D"]
 position = Vector2( 5.6568, 0 )
@@ -27,10 +73,27 @@ margin_top = 483.204
 margin_right = 558.738
 margin_bottom = 534.204
 rect_scale = Vector2( 1.57113, 1.53118 )
+custom_styles/hover = SubResource( 4 )
 custom_fonts/font = SubResource( 1 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 text = "Iniciar"
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 520.467, 452.929 )
+scale = Vector2( 0.195019, 0.195019 )
+frames = SubResource( 2 )
+frame = 10
+playing = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "iniciar"
+anims/iniciar = SubResource( 3 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 20 )
+autoplay = true
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

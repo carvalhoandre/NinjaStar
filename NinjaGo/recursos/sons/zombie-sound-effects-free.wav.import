@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/zombie-sound-effects-free.wav-6d2ad8505b4f48a62158a8b546168305.sample"
+
+[deps]
+
+source_file="res://recursos/sons/zombie-sound-effects-free.wav"
+dest_files=[ "res://.import/zombie-sound-effects-free.wav-6d2ad8505b4f48a62158a8b546168305.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,111 @@
+[gd_scene load_steps=21 format=2]
+
+[ext_resource path="res://recursos/imagens/Outos/final.png" type="Texture" id=1]
+[ext_resource path="res://script_win.gd" type="Script" id=2]
+[ext_resource path="res://recursos/imagens/personagens/Dead__001.png" type="Texture" id=3]
+[ext_resource path="res://recursos/fontes/game_over.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Jump_Throw__001.png" type="Texture" id=5]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Jump_Attack__000.png" type="Texture" id=6]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Slide__000.png" type="Texture" id=7]
+[ext_resource path="res://recursos/imagens/personagens/Climb_009.png" type="Texture" id=8]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Jump_Throw__002.png" type="Texture" id=9]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Jump_Attack__001.png" type="Texture" id=10]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Idle__006.png" type="Texture" id=11]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Jump__007.png" type="Texture" id=12]
+[ext_resource path="res://recursos/imagens/personagens/Idle__003.png" type="Texture" id=13]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Idle__001.png" type="Texture" id=14]
+[ext_resource path="res://recursos/sons/win.wav" type="AudioStream" id=15]
+
+[sub_resource type="DynamicFont" id=1]
+size = 150
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 80
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 4 )
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ ExtResource( 11 ), ExtResource( 14 ), ExtResource( 6 ), ExtResource( 10 ), ExtResource( 5 ), ExtResource( 12 ), ExtResource( 7 ), ExtResource( 9 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=4]
+animations = [ {
+"frames": [ ExtResource( 3 ), ExtResource( 8 ), ExtResource( 13 ) ],
+"loop": true,
+"name": "default",
+"speed": 4.0
+} ]
+
+[sub_resource type="Animation" id=5]
+resource_name = "default"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Label2:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.9 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 515.42, 299.142 )
+scale = Vector2( 0.414412, 0.335375 )
+texture = ExtResource( 1 )
+
+[node name="Game Over" type="Label" parent="."]
+margin_left = 596.018
+margin_top = 164.792
+margin_right = 996.018
+margin_bottom = 250.792
+custom_fonts/font = SubResource( 1 )
+text = "VOCE VENCEU"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 292.0
+margin_top = 512.0
+margin_right = 756.0
+margin_bottom = 558.0
+custom_fonts/font = SubResource( 2 )
+text = "Pressione \"Enter\" para reiniciar"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimatedSprite2" type="AnimatedSprite" parent="."]
+position = Vector2( 395.502, 390.796 )
+scale = Vector2( 0.508154, 0.517529 )
+frames = SubResource( 3 )
+playing = true
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 622.035, 396.447 )
+scale = Vector2( 0.522318, 0.522318 )
+frames = SubResource( 4 )
+frame = 1
+playing = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "default"
+anims/default = SubResource( 5 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 15 )
+volume_db = 20.0
+autoplay = true

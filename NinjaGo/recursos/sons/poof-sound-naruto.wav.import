@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/poof-sound-naruto.wav-4b24da75793d84ecb65abacce4674074.sample"
+
+[deps]
+
+source_file="res://recursos/sons/poof-sound-naruto.wav"
+dest_files=[ "res://.import/poof-sound-naruto.wav-4b24da75793d84ecb65abacce4674074.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

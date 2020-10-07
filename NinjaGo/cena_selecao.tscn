@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://script_selecao.gd" type="Script" id=1]
 [ext_resource path="res://recursos/imagens/Outos/cena_selecao.png" type="Texture" id=2]
@@ -7,6 +7,8 @@
 [ext_resource path="res://recursos/imagens/personagens/Cop/Idle (1).png" type="Texture" id=5]
 [ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Idle__000.png" type="Texture" id=6]
 [ext_resource path="res://recursos/fontes/NinjaStrike.otf" type="DynamicFontData" id=7]
+[ext_resource path="res://recursos/sons/ninja-sound-effect.wav" type="AudioStream" id=8]
+[ext_resource path="res://recursos/sons/poof-sound-naruto.wav" type="AudioStream" id=9]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.447059, 0.184314, 0.45098, 1 )
@@ -359,3 +361,11 @@ text = "NINJA GO"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
+autoplay = true
+
+[node name="Efeito" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 9 )
+volume_db = 5.0

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/naruto-musica-de-batalha.wav-225930efe7b2ad6fbedb664e9ef15ce1.sample"
+
+[deps]
+
+source_file="res://recursos/sons/naruto-musica-de-batalha.wav"
+dest_files=[ "res://.import/naruto-musica-de-batalha.wav-225930efe7b2ad6fbedb664e9ef15ce1.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

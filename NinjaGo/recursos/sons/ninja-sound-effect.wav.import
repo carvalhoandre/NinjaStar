@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/ninja-sound-effect.wav-aeb38d31d36c8a348de33dccba37f782.sample"
+
+[deps]
+
+source_file="res://recursos/sons/ninja-sound-effect.wav"
+dest_files=[ "res://.import/ninja-sound-effect.wav-aeb38d31d36c8a348de33dccba37f782.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

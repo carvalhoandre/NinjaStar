@@ -6,13 +6,15 @@ func _ready():
 func _process(delta):
 	
 	if (Input.is_action_just_pressed("ui_left")):
+		$Efeito.play()
 		Script
 		if (ScriptGlobal.cod_personagem==1):
 			ScriptGlobal.cod_personagem = 3
+			
 		else:
 			ScriptGlobal.cod_personagem -= 1
-
 	elif (Input.is_action_just_pressed("ui_right")):
+		$Efeito.play()
 		if (ScriptGlobal.cod_personagem==3):
 			ScriptGlobal.cod_personagem = 1
 		else:
