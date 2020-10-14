@@ -16,9 +16,11 @@ func _ready():
 		var personagem = $Personagem3
 
 func _process(delta):
-	ScriptGlobal.mov.y += 20
-	#mov.y += 20
 	
+	if (global_position.y > $Camera2D.limit_bottom):
+		global_position = get_parent().get_node("CheckPoint").global_position
+		
+	ScriptGlobal.mov.y += 20
 	if(Input.is_action_pressed("ui_left")):
 		ScriptGlobal.mov.x = -ScriptGlobal.velocidade
 		#mov.x = -velocidade
@@ -30,7 +32,7 @@ func _process(delta):
 			$Personagem3.flip_h = true
 		#$AnimatedSprite.flip_h = true
 		if(is_on_floor()):
-			andado()
+			andando()
 	elif(Input.is_action_pressed("ui_right")):
 		ScriptGlobal.mov.x = ScriptGlobal.velocidade
 		#mov.x = velocidade
@@ -42,7 +44,7 @@ func _process(delta):
 			$Personagem3.flip_h = false
 		#$AnimatedSprite.flip_h = false
 		if(is_on_floor()):
-			andado()
+			andando()
 	else:
 		ScriptGlobal.mov.x = 0
 		#mov.x = 0
@@ -61,7 +63,14 @@ func _process(delta):
 	ScriptGlobal.mov = move_and_slide(ScriptGlobal.mov, Vector2(0,-1))
 	#mov = move_and_slide(mov, Vector2(0,-1))
 
-func andado():
+func _on_pisadinha_body_entered(body):
+	if (body.name=="Inimigo"):
+		body.get_node("AnimatedSprite").play("morrendo")
+		body.velocidade = 0
+		body.get_node("CollisionShape2D").queue_free()
+		ScriptGlobal.mov.y = ScriptGlobal.forca_pulo / 2
+		
+func andando():
 	if(ScriptGlobal.cod_personagem==1):
 		return $Personagem1.play("andando")
 	elif(ScriptGlobal.cod_personagem==2):
@@ -92,3 +101,4 @@ func abaixando():
 		return $Personagem2.play("abaixado")
 	elif(ScriptGlobal.cod_personagem==3):
 		return $Personagem3.play("abaixado")
+		

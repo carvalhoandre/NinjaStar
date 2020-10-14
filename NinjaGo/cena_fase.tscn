@@ -1,20 +1,160 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=168 format=2]
 
-[ext_resource path="res://recursos/imagens/cenário/Tile/1.png" type="Texture" id=1]
-[ext_resource path="res://recursos/imagens/cenário/BG.png" type="Texture" id=2]
-[ext_resource path="res://recursos/imagens/cenário/Tile/2.png" type="Texture" id=3]
-[ext_resource path="res://recursos/imagens/cenário/Tile/3.png" type="Texture" id=4]
-[ext_resource path="res://cena_personagem.tscn" type="PackedScene" id=5]
-[ext_resource path="res://script_fase.gd" type="Script" id=6]
-[ext_resource path="res://cena_pausa.tscn" type="PackedScene" id=7]
-[ext_resource path="res://recursos/sons/ninja-star-inn.wav" type="AudioStream" id=8]
-[ext_resource path="res://recursos/imagens/cenário/Objects/Tree.png" type="Texture" id=47]
-[ext_resource path="res://recursos/imagens/cenário/Objects/Grass (1).png" type="Texture" id=48]
-[ext_resource path="res://recursos/imagens/cenário/Objects/Bush (2).png" type="Texture" id=49]
-[ext_resource path="res://recursos/imagens/cenário/Objects/Bush (1).png" type="Texture" id=50]
-[ext_resource path="res://recursos/imagens/cenário/Objects/Cactus (1).png" type="Texture" id=51]
-[ext_resource path="res://recursos/imagens/cenário/Objects/Cactus (3).png" type="Texture" id=52]
-[ext_resource path="res://recursos/imagens/cenário/Objects/Skeleton.png" type="Texture" id=53]
+[ext_resource path="res://imagens/cenário/Tile/3.png" type="Texture" id=1]
+[ext_resource path="res://imagens/cenário/Tile/2.png" type="Texture" id=2]
+[ext_resource path="res://imagens/cenário/Tile/1.png" type="Texture" id=3]
+[ext_resource path="res://imagens/cenário/BG.png" type="Texture" id=4]
+[ext_resource path="res://script_personagem.gd" type="Script" id=35]
+[ext_resource path="res://imagens/cenário/Objects/Bush (1).png" type="Texture" id=36]
+[ext_resource path="res://imagens/cenário/Objects/Cactus (1).png" type="Texture" id=37]
+[ext_resource path="res://imagens/cenário/Objects/Skeleton.png" type="Texture" id=38]
+[ext_resource path="res://imagens/cenário/Objects/Bush (2).png" type="Texture" id=39]
+[ext_resource path="res://imagens/cenário/Objects/SignArrow.png" type="Texture" id=40]
+[ext_resource path="res://imagens/cenário/Objects/Tree.png" type="Texture" id=41]
+[ext_resource path="res://imagens/cenário/Objects/Stone.png" type="Texture" id=42]
+[ext_resource path="res://imagens/inimigo/Walk (1).png" type="Texture" id=43]
+[ext_resource path="res://imagens/inimigo/Walk (3).png" type="Texture" id=44]
+[ext_resource path="res://imagens/inimigo/Walk (5).png" type="Texture" id=45]
+[ext_resource path="res://imagens/inimigo/Walk (7).png" type="Texture" id=46]
+[ext_resource path="res://imagens/inimigo/Walk (9).png" type="Texture" id=47]
+[ext_resource path="res://imagens/inimigo/Walk (8).png" type="Texture" id=48]
+[ext_resource path="res://imagens/inimigo/Walk (10).png" type="Texture" id=49]
+[ext_resource path="res://imagens/inimigo/Walk (2).png" type="Texture" id=50]
+[ext_resource path="res://imagens/inimigo/Walk (4).png" type="Texture" id=51]
+[ext_resource path="res://imagens/inimigo/Walk (6).png" type="Texture" id=52]
+[ext_resource path="res://script_inimigo.gd" type="Script" id=53]
+[ext_resource path="res://imagens/inimigo/Dead (7).png" type="Texture" id=54]
+[ext_resource path="res://imagens/inimigo/Dead (3).png" type="Texture" id=55]
+[ext_resource path="res://imagens/inimigo/Dead (10).png" type="Texture" id=56]
+[ext_resource path="res://imagens/inimigo/Dead (9).png" type="Texture" id=57]
+[ext_resource path="res://imagens/inimigo/Dead (12).png" type="Texture" id=58]
+[ext_resource path="res://imagens/inimigo/Dead (8).png" type="Texture" id=59]
+[ext_resource path="res://imagens/inimigo/Dead (6).png" type="Texture" id=60]
+[ext_resource path="res://imagens/inimigo/Dead (5).png" type="Texture" id=61]
+[ext_resource path="res://imagens/inimigo/Dead (11).png" type="Texture" id=62]
+[ext_resource path="res://imagens/inimigo/Dead (1).png" type="Texture" id=63]
+[ext_resource path="res://imagens/inimigo/Dead (4).png" type="Texture" id=64]
+[ext_resource path="res://imagens/inimigo/Dead (2).png" type="Texture" id=65]
+[ext_resource path="res://recursos/imagens/personagens/Idle__002.png" type="Texture" id=66]
+[ext_resource path="res://recursos/imagens/personagens/Idle__000.png" type="Texture" id=67]
+[ext_resource path="res://recursos/imagens/personagens/Idle__001.png" type="Texture" id=68]
+[ext_resource path="res://recursos/imagens/personagens/Slide__006.png" type="Texture" id=69]
+[ext_resource path="res://recursos/imagens/personagens/Slide__004.png" type="Texture" id=70]
+[ext_resource path="res://recursos/imagens/personagens/Slide__009.png" type="Texture" id=71]
+[ext_resource path="res://recursos/imagens/personagens/Run__007.png" type="Texture" id=72]
+[ext_resource path="res://recursos/imagens/personagens/Slide__001.png" type="Texture" id=73]
+[ext_resource path="res://recursos/imagens/personagens/Run__009.png" type="Texture" id=74]
+[ext_resource path="res://recursos/imagens/personagens/Jump__006.png" type="Texture" id=75]
+[ext_resource path="res://recursos/imagens/personagens/Idle__005.png" type="Texture" id=76]
+[ext_resource path="res://recursos/imagens/personagens/Idle__008.png" type="Texture" id=77]
+[ext_resource path="res://recursos/imagens/personagens/Jump__005.png" type="Texture" id=78]
+[ext_resource path="res://recursos/imagens/personagens/Cop/Slide (8).png" type="Texture" id=79]
+[ext_resource path="res://recursos/imagens/personagens/Run__001.png" type="Texture" id=80]
+[ext_resource path="res://recursos/imagens/personagens/Idle__004.png" type="Texture" id=81]
+[ext_resource path="res://recursos/imagens/personagens/Slide__007.png" type="Texture" id=82]
+[ext_resource path="res://recursos/imagens/personagens/Run__002.png" type="Texture" id=83]
+[ext_resource path="res://recursos/imagens/personagens/Cop/Slide (9).png" type="Texture" id=84]
+[ext_resource path="res://recursos/imagens/personagens/Slide__003.png" type="Texture" id=85]
+[ext_resource path="res://recursos/imagens/personagens/Idle__009.png" type="Texture" id=86]
+[ext_resource path="res://recursos/imagens/personagens/Jump__007.png" type="Texture" id=87]
+[ext_resource path="res://recursos/imagens/personagens/Run__006.png" type="Texture" id=88]
+[ext_resource path="res://recursos/imagens/personagens/Slide__002.png" type="Texture" id=89]
+[ext_resource path="res://recursos/imagens/personagens/Slide__005.png" type="Texture" id=90]
+[ext_resource path="res://recursos/imagens/personagens/Run__000.png" type="Texture" id=91]
+[ext_resource path="res://recursos/imagens/personagens/Idle__003.png" type="Texture" id=92]
+[ext_resource path="res://recursos/imagens/personagens/Idle__006.png" type="Texture" id=93]
+[ext_resource path="res://recursos/imagens/personagens/Run__004.png" type="Texture" id=94]
+[ext_resource path="res://recursos/imagens/personagens/Idle__007.png" type="Texture" id=95]
+[ext_resource path="res://recursos/imagens/personagens/Jump__004.png" type="Texture" id=96]
+[ext_resource path="res://recursos/imagens/personagens/Jump__009.png" type="Texture" id=97]
+[ext_resource path="res://recursos/imagens/personagens/Run__003.png" type="Texture" id=98]
+[ext_resource path="res://recursos/imagens/personagens/Slide__000.png" type="Texture" id=99]
+[ext_resource path="res://recursos/imagens/personagens/Jump__003.png" type="Texture" id=100]
+[ext_resource path="res://recursos/imagens/personagens/Slide__008.png" type="Texture" id=101]
+[ext_resource path="res://recursos/imagens/personagens/Jump__000.png" type="Texture" id=102]
+[ext_resource path="res://recursos/imagens/personagens/Jump__008.png" type="Texture" id=103]
+[ext_resource path="res://recursos/imagens/personagens/Run__005.png" type="Texture" id=104]
+[ext_resource path="res://recursos/imagens/personagens/Cop/Slide (10).png" type="Texture" id=105]
+[ext_resource path="res://recursos/imagens/personagens/Jump__001.png" type="Texture" id=106]
+[ext_resource path="res://recursos/imagens/personagens/Jump__002.png" type="Texture" id=107]
+[ext_resource path="res://recursos/imagens/personagens/Run__008.png" type="Texture" id=108]
+[ext_resource path="res://recursos/imagens/personagens/Cop/Slide (7).png" type="Texture" id=109]
+[ext_resource path="res://recursos/imagens/personagens/Cop/Slide (3).png" type="Texture" id=110]
+[ext_resource path="res://recursos/imagens/personagens/Cop/Slide (4).png" type="Texture" id=111]
+[ext_resource path="res://recursos/imagens/personagens/Cop/Slide (2).png" type="Texture" id=112]
+[ext_resource path="res://recursos/imagens/personagens/Cop/Slide (5).png" type="Texture" id=113]
+[ext_resource path="res://recursos/imagens/personagens/Cop/Slide (6).png" type="Texture" id=114]
+[ext_resource path="res://recursos/imagens/personagens/Cop/Jump (6).png" type="Texture" id=115]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Idle__000.png" type="Texture" id=116]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Slide__006.png" type="Texture" id=117]
+[ext_resource path="res://recursos/imagens/personagens/Cop/Jump (8).png" type="Texture" id=118]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Slide__002.png" type="Texture" id=119]
+[ext_resource path="res://recursos/imagens/personagens/Cop/Jump (9).png" type="Texture" id=120]
+[ext_resource path="res://recursos/imagens/personagens/Cop/Jump (5).png" type="Texture" id=121]
+[ext_resource path="res://recursos/imagens/personagens/Cop/Idle (3).png" type="Texture" id=122]
+[ext_resource path="res://recursos/imagens/personagens/Cop/Run (1).png" type="Texture" id=123]
+[ext_resource path="res://recursos/imagens/personagens/Cop/Run (2).png" type="Texture" id=124]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Slide__009.png" type="Texture" id=125]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Slide__001.png" type="Texture" id=126]
+[ext_resource path="res://recursos/imagens/personagens/Cop/Run (3).png" type="Texture" id=127]
+[ext_resource path="res://recursos/imagens/personagens/Cop/Run (4).png" type="Texture" id=128]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Idle__003.png" type="Texture" id=129]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Run__002.png" type="Texture" id=130]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Slide__003.png" type="Texture" id=131]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Slide__008.png" type="Texture" id=132]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Slide__007.png" type="Texture" id=133]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Slide__005.png" type="Texture" id=134]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Jump__000.png" type="Texture" id=135]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Jump__001.png" type="Texture" id=136]
+[ext_resource path="res://recursos/imagens/personagens/Cop/Idle (8).png" type="Texture" id=137]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Run__001.png" type="Texture" id=138]
+[ext_resource path="res://recursos/imagens/personagens/Cop/Jump (1).png" type="Texture" id=139]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Jump__009.png" type="Texture" id=140]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Jump__005.png" type="Texture" id=141]
+[ext_resource path="res://recursos/imagens/personagens/Cop/Idle (6).png" type="Texture" id=142]
+[ext_resource path="res://recursos/imagens/personagens/Cop/Jump (3).png" type="Texture" id=143]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Run__003.png" type="Texture" id=144]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Run__007.png" type="Texture" id=145]
+[ext_resource path="res://recursos/imagens/personagens/Cop/Jump (7).png" type="Texture" id=146]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Run__004.png" type="Texture" id=147]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Slide__000.png" type="Texture" id=148]
+[ext_resource path="res://recursos/imagens/personagens/Cop/Idle (5).png" type="Texture" id=149]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Idle__006.png" type="Texture" id=150]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Run__009.png" type="Texture" id=151]
+[ext_resource path="res://recursos/imagens/personagens/Cop/Idle (10).png" type="Texture" id=152]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Jump__006.png" type="Texture" id=153]
+[ext_resource path="res://recursos/imagens/personagens/Cop/Jump (4).png" type="Texture" id=154]
+[ext_resource path="res://recursos/imagens/personagens/Cop/Jump (10).png" type="Texture" id=155]
+[ext_resource path="res://recursos/imagens/personagens/Cop/Idle (4).png" type="Texture" id=156]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Run__006.png" type="Texture" id=157]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Run__008.png" type="Texture" id=158]
+[ext_resource path="res://recursos/imagens/personagens/Cop/Idle (1).png" type="Texture" id=159]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Idle__008.png" type="Texture" id=160]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Idle__007.png" type="Texture" id=161]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Idle__002.png" type="Texture" id=162]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Run__005.png" type="Texture" id=163]
+[ext_resource path="res://recursos/imagens/personagens/Cop/Idle (7).png" type="Texture" id=164]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Idle__001.png" type="Texture" id=165]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Idle__004.png" type="Texture" id=166]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Idle__005.png" type="Texture" id=167]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Idle__009.png" type="Texture" id=168]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Jump__007.png" type="Texture" id=169]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Jump__003.png" type="Texture" id=170]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Jump__002.png" type="Texture" id=171]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Jump__004.png" type="Texture" id=172]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Jump__008.png" type="Texture" id=173]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Run__000.png" type="Texture" id=174]
+[ext_resource path="res://recursos/imagens/personagens/Cop/Idle (9).png" type="Texture" id=175]
+[ext_resource path="res://recursos/imagens/personagens/Cop/Idle (2).png" type="Texture" id=176]
+[ext_resource path="res://recursos/imagens/personagens/Cop/Jump (2).png" type="Texture" id=177]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Slide__004.png" type="Texture" id=178]
+[ext_resource path="res://recursos/imagens/personagens/Cop/Run (8).png" type="Texture" id=179]
+[ext_resource path="res://recursos/imagens/personagens/Cop/Run (5).png" type="Texture" id=180]
+[ext_resource path="res://recursos/imagens/personagens/Cop/Slide (1).png" type="Texture" id=181]
+[ext_resource path="res://recursos/imagens/personagens/Cop/Run (6).png" type="Texture" id=182]
+[ext_resource path="res://recursos/imagens/personagens/Cop/Run (7).png" type="Texture" id=183]
+[ext_resource path="res://cena_pausa.tscn" type="PackedScene" id=184]
+[ext_resource path="res://recursos/sons/ninja-star-inn.wav" type="AudioStream" id=185]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 128, 0, 128, 128, 0, 128 )
@@ -25,15 +165,9 @@ points = PoolVector2Array( 0, 0, 128, 0, 128, 128, 0, 128 )
 [sub_resource type="ConvexPolygonShape2D" id=3]
 points = PoolVector2Array( 0, 0, 128, 0, 128, 128, 0, 128 )
 
-[sub_resource type="ConvexPolygonShape2D" id=4]
-points = PoolVector2Array( 0, 0, 128, 0, 128, 128, 0, 128 )
-
-[sub_resource type="ConvexPolygonShape2D" id=5]
-points = PoolVector2Array( 0, 0, 128, 0, 128, 128, 0, 128 )
-
-[sub_resource type="TileSet" id=6]
-0/name = "3.png 0"
-0/texture = ExtResource( 4 )
+[sub_resource type="TileSet" id=4]
+0/name = "1.png 0"
+0/texture = ExtResource( 3 )
 0/tex_offset = Vector2( 0, 0 )
 0/modulate = Color( 1, 1, 1, 1 )
 0/region = Rect2( 0, 0, 128, 128 )
@@ -54,7 +188,7 @@ points = PoolVector2Array( 0, 0, 128, 0, 128, 128, 0, 128 )
 } ]
 0/z_index = 0
 1/name = "2.png 1"
-1/texture = ExtResource( 3 )
+1/texture = ExtResource( 2 )
 1/tex_offset = Vector2( 0, 0 )
 1/modulate = Color( 1, 1, 1, 1 )
 1/region = Rect2( 0, 0, 128, 128 )
@@ -74,7 +208,7 @@ points = PoolVector2Array( 0, 0, 128, 0, 128, 128, 0, 128 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 1/z_index = 0
-2/name = "1.png 2"
+2/name = "3.png 2"
 2/texture = ExtResource( 1 )
 2/tex_offset = Vector2( 0, 0 )
 2/modulate = Color( 1, 1, 1, 1 )
@@ -95,106 +229,240 @@ points = PoolVector2Array( 0, 0, 128, 0, 128, 128, 0, 128 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 2/z_index = 0
-3/name = "2.png 3"
-3/texture = ExtResource( 3 )
-3/tex_offset = Vector2( 0, 0 )
-3/modulate = Color( 1, 1, 1, 1 )
-3/region = Rect2( 0, 0, 128, 128 )
-3/tile_mode = 0
-3/occluder_offset = Vector2( 0, 0 )
-3/navigation_offset = Vector2( 0, 0 )
-3/shape_offset = Vector2( 0, 0 )
-3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-3/shape = SubResource( 4 )
-3/shape_one_way = false
-3/shape_one_way_margin = 1.0
-3/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 4 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+
+[sub_resource type="SpriteFrames" id=5]
+animations = [ {
+"frames": [ ExtResource( 67 ), ExtResource( 68 ), ExtResource( 66 ), ExtResource( 92 ), ExtResource( 81 ), ExtResource( 76 ), ExtResource( 93 ), ExtResource( 95 ), ExtResource( 77 ), ExtResource( 86 ) ],
+"loop": true,
+"name": "parado",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 99 ), ExtResource( 73 ), ExtResource( 89 ), ExtResource( 85 ), ExtResource( 70 ), ExtResource( 90 ), ExtResource( 69 ), ExtResource( 82 ), ExtResource( 101 ), ExtResource( 71 ) ],
+"loop": false,
+"name": "abaixando",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 102 ), ExtResource( 106 ), ExtResource( 107 ), ExtResource( 100 ), ExtResource( 96 ), ExtResource( 78 ), ExtResource( 75 ), ExtResource( 87 ), ExtResource( 103 ), ExtResource( 97 ) ],
+"loop": false,
+"name": "pulando",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 91 ), ExtResource( 80 ), ExtResource( 83 ), ExtResource( 98 ), ExtResource( 94 ), ExtResource( 104 ), ExtResource( 88 ), ExtResource( 72 ), ExtResource( 108 ), ExtResource( 74 ) ],
+"loop": true,
+"name": "andando",
+"speed": 5.0
 } ]
-3/z_index = 0
-4/name = "3.png 4"
-4/texture = ExtResource( 4 )
-4/tex_offset = Vector2( 0, 0 )
-4/modulate = Color( 1, 1, 1, 1 )
-4/region = Rect2( 0, 0, 128, 128 )
-4/tile_mode = 0
-4/occluder_offset = Vector2( 0, 0 )
-4/navigation_offset = Vector2( 0, 0 )
-4/shape_offset = Vector2( 0, 0 )
-4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-4/shape = SubResource( 5 )
-4/shape_one_way = false
-4/shape_one_way_margin = 1.0
-4/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 5 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+
+[sub_resource type="SpriteFrames" id=6]
+animations = [ {
+"frames": [ ExtResource( 116 ), ExtResource( 165 ), ExtResource( 162 ), ExtResource( 129 ), ExtResource( 166 ), ExtResource( 167 ), ExtResource( 150 ), ExtResource( 161 ), ExtResource( 160 ), ExtResource( 168 ), ExtResource( 174 ), ExtResource( 138 ), ExtResource( 130 ), ExtResource( 144 ), ExtResource( 147 ), ExtResource( 163 ), ExtResource( 157 ), ExtResource( 145 ), ExtResource( 158 ), ExtResource( 151 ) ],
+"loop": true,
+"name": "parado",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 148 ), ExtResource( 126 ), ExtResource( 119 ), ExtResource( 131 ), ExtResource( 178 ), ExtResource( 134 ), ExtResource( 117 ), ExtResource( 133 ), ExtResource( 132 ), ExtResource( 125 ) ],
+"loop": false,
+"name": "abaixando",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 135 ), ExtResource( 136 ), ExtResource( 171 ), ExtResource( 170 ), ExtResource( 172 ), ExtResource( 141 ), ExtResource( 153 ), ExtResource( 169 ), ExtResource( 173 ), ExtResource( 140 ) ],
+"loop": false,
+"name": "pulando",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 174 ), ExtResource( 138 ), ExtResource( 130 ), ExtResource( 144 ), ExtResource( 147 ), ExtResource( 163 ), ExtResource( 157 ), ExtResource( 145 ), ExtResource( 158 ), ExtResource( 151 ) ],
+"loop": true,
+"name": "andando",
+"speed": 5.0
 } ]
-4/z_index = 0
+
+[sub_resource type="SpriteFrames" id=7]
+animations = [ {
+"frames": [ ExtResource( 159 ), ExtResource( 176 ), ExtResource( 122 ), ExtResource( 156 ), ExtResource( 149 ), ExtResource( 142 ), ExtResource( 164 ), ExtResource( 137 ), ExtResource( 175 ), ExtResource( 152 ) ],
+"loop": true,
+"name": "parado",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 181 ), ExtResource( 112 ), ExtResource( 110 ), ExtResource( 111 ), ExtResource( 113 ), ExtResource( 114 ), ExtResource( 109 ), ExtResource( 79 ), ExtResource( 84 ), ExtResource( 105 ) ],
+"loop": false,
+"name": "abaixando",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 139 ), ExtResource( 177 ), ExtResource( 143 ), ExtResource( 154 ), ExtResource( 121 ), ExtResource( 115 ), ExtResource( 146 ), ExtResource( 118 ), ExtResource( 120 ), ExtResource( 155 ) ],
+"loop": false,
+"name": "pulando",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 123 ), ExtResource( 124 ), ExtResource( 127 ), ExtResource( 128 ), ExtResource( 180 ), ExtResource( 182 ), ExtResource( 183 ), ExtResource( 179 ) ],
+"loop": true,
+"name": "andando",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 42.3835, 81.9597 )
+
+[sub_resource type="RectangleShape2D" id=9]
+extents = Vector2( 45.4711, 5.31564 )
+
+[sub_resource type="SpriteFrames" id=10]
+animations = [ {
+"frames": [ ExtResource( 43 ), ExtResource( 50 ), ExtResource( 44 ), ExtResource( 51 ), ExtResource( 45 ), ExtResource( 52 ), ExtResource( 46 ), ExtResource( 48 ), ExtResource( 47 ), ExtResource( 49 ) ],
+"loop": true,
+"name": "andando",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 63 ), ExtResource( 65 ), ExtResource( 55 ), ExtResource( 64 ), ExtResource( 61 ), ExtResource( 60 ), ExtResource( 54 ), ExtResource( 59 ), ExtResource( 57 ), ExtResource( 56 ), ExtResource( 62 ), ExtResource( 58 ) ],
+"loop": false,
+"name": "morrendo",
+"speed": 10.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=11]
+extents = Vector2( 38.0141, 80.6583 )
+
+[sub_resource type="RectangleShape2D" id=12]
 
 [node name="Node2D" type="Node2D"]
 pause_mode = 1
-script = ExtResource( 6 )
-
-[node name="Personagem" parent="." instance=ExtResource( 5 )]
-position = Vector2( -707.235, 21.8629 )
+position = Vector2( 8, 0 )
+scale = Vector2( 0.8, 0.8 )
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground"]
-position = Vector2( 509.83, 317.096 )
-scale = Vector2( 0.801169, 0.658771 )
-texture = ExtResource( 2 )
+position = Vector2( 512.533, 301.497 )
+scale = Vector2( 0.801351, 0.629188 )
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="TileMap" type="TileMap" parent="."]
+position = Vector2( -6.47656, 26.6468 )
 scale = Vector2( 0.5, 0.5 )
-tile_set = SubResource( 6 )
+tile_set = SubResource( 4 )
 cell_size = Vector2( 128, 128 )
 format = 1
-tile_data = PoolIntArray( 131107, 2, 0, 131108, 1, 0, 131109, 1, 0, 131110, 0, 0, 196621, 2, 0, 196622, 0, 0, 196633, 2, 0, 196634, 1, 0, 196635, 0, 0, 196687, 2, 0, 196688, 0, 0, 262175, 2, 0, 262176, 1, 0, 262177, 0, 0, 262222, 2, 0, 262223, 1, 0, 262224, 1, 0, 262225, 0, 0, 327698, 2, 0, 327699, 1, 0, 327700, 1, 0, 327701, 1, 0, 327702, 0, 0, 327719, 2, 0, 327720, 3, 0, 327721, 3, 0, 327722, 3, 0, 327723, 0, 0, 327757, 2, 0, 327758, 1, 0, 327759, 1, 0, 327760, 1, 0, 327761, 3, 0, 327762, 0, 0, 393226, 2, 0, 393227, 1, 0, 393228, 1, 0, 393229, 1, 0, 393230, 1, 0, 393231, 0, 0, 393293, 2, 0, 393294, 1, 0, 393295, 1, 0, 393296, 1, 0, 393297, 3, 0, 393298, 3, 0, 393299, 0, 0, 458785, 2, 0, 458786, 1, 0, 458787, 1, 0, 458788, 1, 0, 458789, 0, 0, 458817, 1, 0, 458818, 1, 0, 458828, 2, 0, 458829, 1, 0, 458830, 1, 0, 458831, 1, 0, 458832, 1, 0, 458833, 3, 0, 458834, 3, 0, 458835, 3, 0, 458836, 0, 0, 524334, 2, 0, 524335, 1, 0, 524336, 1, 0, 524337, 1, 0, 524338, 1, 0, 524339, 1, 0, 524340, 1, 0, 524341, 1, 0, 524342, 1, 0, 524343, 1, 0, 524344, 1, 0, 524345, 0, 0, 524349, 2, 0, 524350, 1, 0, 524351, 1, 0, 524352, 1, 0, 524353, 1, 0, 524354, 1, 0, 524355, 1, 0, 524356, 1, 0, 524357, 1, 0, 524358, 1, 0, 524359, 1, 0, 524360, 1, 0, 524361, 1, 0, 524362, 1, 0, 524363, 1, 0, 524364, 1, 0, 524365, 1, 0, 524366, 1, 0, 524367, 1, 0, 524368, 1, 0, 524369, 3, 0, 524370, 3, 0, 524371, 3, 0, 524372, 3, 0, 524373, 0, 0, 589824, 2, 0, 589825, 1, 0, 589826, 1, 0, 589827, 1, 0, 589828, 1, 0, 589829, 1, 0, 589830, 1, 0, 589831, 1, 0, 589832, 1, 0, 589833, 1, 0, 589834, 1, 0, 589835, 1, 0, 589836, 1, 0, 589837, 1, 0, 589838, 1, 0, 589839, 4, 0, 589842, 2, 0, 589843, 3, 0, 589844, 3, 0, 589845, 3, 0, 589846, 3, 0, 589847, 3, 0, 589848, 3, 0, 589849, 3, 0, 589850, 3, 0, 589851, 3, 0, 589852, 3, 0, 589853, 3, 0, 589854, 0, 0 )
-
-[node name="Bush (1)" type="Sprite" parent="TileMap"]
-position = Vector2( 9298.66, 983.128 )
-texture = ExtResource( 50 )
-
-[node name="Grass (1)" type="Sprite" parent="TileMap"]
-position = Vector2( 7885.33, 1000.08 )
-texture = ExtResource( 48 )
+tile_data = PoolIntArray( -327587, 0, 0, -327586, 1, 0, -327585, 1, 0, -327584, 1, 0, -327583, 2, 0, -262099, 0, 0, -262098, 1, 0, -262097, 2, 0, -262093, 0, 0, -262092, 1, 0, -262091, 2, 0, -262087, 0, 0, -262086, 1, 0, -262085, 2, 0, -262080, 0, 0, -262079, 1, 0, -262078, 2, 0, -262071, 0, 0, -262070, 1, 0, -262069, 1, 0, -262068, 1, 0, -262067, 1, 0, -262066, 1, 0, -262065, 1, 0, -262064, 1, 0, -262063, 1, 0, -262062, 1, 0, -262061, 1, 0, -262060, 1, 0, -262059, 2, 0, -262052, 0, 0, -262051, 1, 0, -262050, 1, 0, -262049, 1, 0, -262048, 1, 0, -262047, 1, 0, -262046, 1, 0, -262045, 1, 0, -262044, 2, 0, -196525, 0, 0, -196524, 1, 0, -196523, 1, 0, -196522, 1, 0, -196521, 1, 0, -196520, 1, 0, -196519, 1, 0, -196518, 1, 0, -196517, 1, 0, -196516, 2, 0, -196515, 0, 0, -196514, 1, 0, -196513, 1, 0, -196512, 1, 0, -196511, 1, 0, -196510, 1, 0, -196509, 2, 0, -131034, 0, 0, -131033, 1, 0, -131032, 1, 0, -131031, 2, 0, -130968, 0, 0, -130967, 1, 0, -130966, 2, 0, 65566, 0, 0, 65567, 1, 0, 65568, 1, 0, 65569, 1, 0, 65570, 1, 0, 65571, 2, 0, 131121, 0, 0, 131122, 1, 0, 131123, 1, 0, 131124, 1, 0, 131125, 2, 0, 131191, 1, 0, 327702, 0, 0, 327703, 1, 0, 327704, 1, 0, 327705, 1, 0, 327706, 1, 0, 327707, 1, 0, 327708, 2, 0, 393272, 0, 0, 393273, 1, 0, 393274, 2, 0, 524304, 0, 0, 524305, 1, 0, 524306, 1, 0, 524307, 1, 0, 524308, 2, 0, 524336, 0, 0, 524337, 1, 0, 524338, 1, 0, 524339, 2, 0, 524342, 0, 0, 524343, 1, 0, 524344, 2, 0, 524390, 0, 0, 524391, 1, 0, 524392, 1, 0, 524393, 1, 0, 524394, 1, 0, 524395, 1, 0, 524396, 1, 0, 524397, 1, 0, 524398, 1, 0, 524399, 1, 0, 524400, 1, 0, 524401, 1, 0, 524402, 1, 0, 524403, 2, 0, 655361, 0, 0, 655362, 1, 0, 655363, 1, 0, 655364, 1, 0, 655365, 1, 0, 655366, 1, 0, 655367, 1, 0, 655368, 1, 0, 655369, 1, 0, 655370, 1, 0, 655371, 1, 0, 655372, 1, 0, 655373, 1, 0, 655374, 2, 0, 655382, 0, 0, 655383, 1, 0, 655384, 1, 0, 655385, 1, 0, 655386, 1, 0, 655387, 1, 0, 655388, 1, 0, 655389, 2, 0, 655393, 0, 0, 655394, 1, 0, 655395, 1, 0, 655396, 1, 0, 655397, 1, 0, 655398, 1, 0, 655399, 1, 0, 655400, 1, 0, 655401, 1, 0, 655402, 1, 0, 655403, 1, 0, 655404, 1, 0, 655405, 1, 0, 655406, 2, 0, 655419, 0, 0, 655420, 1, 0, 655421, 2, 0, 655428, 0, 0, 655429, 1, 0, 655430, 2, 0, 655436, 0, 0, 655437, 1, 0, 655438, 1, 0, 655439, 1, 0, 655440, 1, 0, 655441, 2, 0, 655445, 0, 0, 655446, 1, 0, 655447, 1, 0, 655448, 1, 0, 655449, 1, 0, 655455, 0, 0, 655456, 1, 0, 655457, 1, 0, 655458, 1, 0, 655459, 2, 0, 720985, 1, 0, 720986, 1, 0, 720987, 1, 0, 720988, 1, 0, 720989, 1, 0, 720990, 1, 0, 720991, 1, 0, 720992, 2, 0, 1114119, 0, 0, 1114120, 1, 0, 1114121, 1, 0, 1114122, 1, 0, 1114123, 1, 0, 1114124, 1, 0, 1114125, 1, 0, 1114126, 1, 0, 1114127, 1, 0, 1114128, 1, 0, 1114129, 1, 0, 1114130, 1, 0, 1114131, 1, 0, 1114132, 1, 0, 1114133, 1, 0, 1114134, 1, 0, 1114135, 1, 0, 1114136, 1, 0, 1114137, 1, 0, 1114138, 1, 0, 1114139, 1, 0, 1114140, 1, 0, 1114141, 1, 0, 1114142, 1, 0, 1114143, 1, 0, 1114144, 2, 0 )
 
 [node name="Bush (1)" type="Sprite" parent="."]
-position = Vector2( 313.358, 535.002 )
-texture = ExtResource( 50 )
+position = Vector2( 2761.84, 632.884 )
+texture = ExtResource( 36 )
 
 [node name="Bush (2)" type="Sprite" parent="."]
-position = Vector2( 690.136, 346.418 )
-texture = ExtResource( 49 )
+position = Vector2( 1060.05, 511.949 )
+texture = ExtResource( 39 )
 
 [node name="Cactus (1)" type="Sprite" parent="."]
-position = Vector2( 1446.59, 261.661 )
-texture = ExtResource( 51 )
+position = Vector2( 3105.86, 488.075 )
+texture = ExtResource( 37 )
 
-[node name="Cactus (3)" type="Sprite" parent="."]
-position = Vector2( 1692.39, 528.645 )
-texture = ExtResource( 52 )
+[node name="SignArrow" type="Sprite" parent="."]
+position = Vector2( 3046.95, -270.092 )
+texture = ExtResource( 40 )
 
 [node name="Skeleton" type="Sprite" parent="."]
-position = Vector2( 2336.82, 425.877 )
-texture = ExtResource( 53 )
+position = Vector2( 1827.05, 647.138 )
+texture = ExtResource( 38 )
 
 [node name="Tree" type="Sprite" parent="."]
-position = Vector2( 3284.53, 383.499 )
-texture = ExtResource( 47 )
+position = Vector2( 304.009, 541.858 )
+texture = ExtResource( 41 )
 
-[node name="Pausa" parent="." instance=ExtResource( 7 )]
+[node name="Stone" type="Sprite" parent="."]
+position = Vector2( 2212.62, 55.5317 )
+texture = ExtResource( 42 )
+
+[node name="Personagem" type="KinematicBody2D" parent="."]
+position = Vector2( 102.025, 561.745 )
+script = ExtResource( 35 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Personagem1" type="AnimatedSprite" parent="Personagem"]
+visible = false
+position = Vector2( 8.84882, 15.6508 )
+scale = Vector2( 0.364307, 0.364307 )
+frames = SubResource( 5 )
+animation = "andando"
+
+[node name="Personagem2" type="AnimatedSprite" parent="Personagem"]
+visible = false
+position = Vector2( 5.09326, 12.1962 )
+scale = Vector2( 0.332724, 0.332724 )
+frames = SubResource( 6 )
+animation = "parado"
+
+[node name="Personagem3" type="AnimatedSprite" parent="Personagem"]
+visible = false
+position = Vector2( 12.0623, 14.0328 )
+scale = Vector2( 0.333577, 0.333577 )
+frames = SubResource( 7 )
+animation = "parado"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Personagem"]
+position = Vector2( 10.0287, 13.8201 )
+shape = SubResource( 8 )
+
+[node name="Camera2D" type="Camera2D" parent="Personagem"]
+current = true
+limit_bottom = 650
+
+[node name="pisadinha" type="Area2D" parent="Personagem"]
+position = Vector2( 9.7785, 103.314 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Personagem/pisadinha"]
+shape = SubResource( 9 )
+
+[node name="Inimigo" type="KinematicBody2D" parent="."]
+position = Vector2( 1259.67, 443.385 )
+script = ExtResource( 53 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Inimigo"]
+scale = Vector2( 0.371872, 0.371873 )
+frames = SubResource( 10 )
+animation = "andando"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Inimigo"]
+position = Vector2( 0, 11 )
+shape = SubResource( 11 )
+
+[node name="pe_esquerdo" type="Area2D" parent="Inimigo"]
+position = Vector2( -53.615, 104.326 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Inimigo/pe_esquerdo"]
+shape = SubResource( 12 )
+
+[node name="pe_direito" type="Area2D" parent="Inimigo"]
+position = Vector2( 53.3289, 104.77 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Inimigo/pe_direito"]
+shape = SubResource( 12 )
+
+[node name="CheckPoint" type="Position2D" parent="."]
+position = Vector2( 506.363, 278.724 )
+
+[node name="Pause" parent="." instance=ExtResource( 184 )]
 visible = false
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 8 )
-volume_db = 20.0
+stream = ExtResource( 185 )
 autoplay = true
+[connection signal="body_entered" from="Personagem/pisadinha" to="Personagem" method="_on_pisadinha_body_entered"]
+[connection signal="animation_finished" from="Inimigo/AnimatedSprite" to="Inimigo" method="_on_AnimatedSprite_animation_finished"]
+[connection signal="body_exited" from="Inimigo/pe_esquerdo" to="Inimigo" method="_on_pe_esquerdo_body_exited"]
+[connection signal="body_exited" from="Inimigo/pe_direito" to="Inimigo" method="_on_pe_direito_body_exited"]
