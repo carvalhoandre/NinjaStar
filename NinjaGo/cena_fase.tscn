@@ -1,9 +1,10 @@
-[gd_scene load_steps=168 format=2]
+[gd_scene load_steps=169 format=2]
 
 [ext_resource path="res://imagens/cenário/Tile/3.png" type="Texture" id=1]
 [ext_resource path="res://imagens/cenário/Tile/2.png" type="Texture" id=2]
 [ext_resource path="res://imagens/cenário/Tile/1.png" type="Texture" id=3]
 [ext_resource path="res://imagens/cenário/BG.png" type="Texture" id=4]
+[ext_resource path="res://cena_inimigo.tscn" type="PackedScene" id=5]
 [ext_resource path="res://script_personagem.gd" type="Script" id=35]
 [ext_resource path="res://imagens/cenário/Objects/Bush (1).png" type="Texture" id=36]
 [ext_resource path="res://imagens/cenário/Objects/Cactus (1).png" type="Texture" id=37]
@@ -232,6 +233,16 @@ points = PoolVector2Array( 0, 0, 128, 0, 128, 128, 0, 128 )
 
 [sub_resource type="SpriteFrames" id=5]
 animations = [ {
+"frames": [ ExtResource( 91 ), ExtResource( 80 ), ExtResource( 83 ), ExtResource( 98 ), ExtResource( 94 ), ExtResource( 104 ), ExtResource( 88 ), ExtResource( 72 ), ExtResource( 108 ), ExtResource( 74 ) ],
+"loop": true,
+"name": "andando",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 102 ), ExtResource( 106 ), ExtResource( 107 ), ExtResource( 100 ), ExtResource( 96 ), ExtResource( 78 ), ExtResource( 75 ), ExtResource( 87 ), ExtResource( 103 ), ExtResource( 97 ) ],
+"loop": false,
+"name": "pulando",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 67 ), ExtResource( 68 ), ExtResource( 66 ), ExtResource( 92 ), ExtResource( 81 ), ExtResource( 76 ), ExtResource( 93 ), ExtResource( 95 ), ExtResource( 77 ), ExtResource( 86 ) ],
 "loop": true,
 "name": "parado",
@@ -241,20 +252,20 @@ animations = [ {
 "loop": false,
 "name": "abaixando",
 "speed": 5.0
-}, {
-"frames": [ ExtResource( 102 ), ExtResource( 106 ), ExtResource( 107 ), ExtResource( 100 ), ExtResource( 96 ), ExtResource( 78 ), ExtResource( 75 ), ExtResource( 87 ), ExtResource( 103 ), ExtResource( 97 ) ],
-"loop": false,
-"name": "pulando",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 91 ), ExtResource( 80 ), ExtResource( 83 ), ExtResource( 98 ), ExtResource( 94 ), ExtResource( 104 ), ExtResource( 88 ), ExtResource( 72 ), ExtResource( 108 ), ExtResource( 74 ) ],
-"loop": true,
-"name": "andando",
-"speed": 5.0
 } ]
 
 [sub_resource type="SpriteFrames" id=6]
 animations = [ {
+"frames": [ ExtResource( 174 ), ExtResource( 138 ), ExtResource( 130 ), ExtResource( 144 ), ExtResource( 147 ), ExtResource( 163 ), ExtResource( 157 ), ExtResource( 145 ), ExtResource( 158 ), ExtResource( 151 ) ],
+"loop": true,
+"name": "andando",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 135 ), ExtResource( 136 ), ExtResource( 171 ), ExtResource( 170 ), ExtResource( 172 ), ExtResource( 141 ), ExtResource( 153 ), ExtResource( 169 ), ExtResource( 173 ), ExtResource( 140 ) ],
+"loop": false,
+"name": "pulando",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 116 ), ExtResource( 165 ), ExtResource( 162 ), ExtResource( 129 ), ExtResource( 166 ), ExtResource( 167 ), ExtResource( 150 ), ExtResource( 161 ), ExtResource( 160 ), ExtResource( 168 ), ExtResource( 174 ), ExtResource( 138 ), ExtResource( 130 ), ExtResource( 144 ), ExtResource( 147 ), ExtResource( 163 ), ExtResource( 157 ), ExtResource( 145 ), ExtResource( 158 ), ExtResource( 151 ) ],
 "loop": true,
 "name": "parado",
@@ -264,20 +275,20 @@ animations = [ {
 "loop": false,
 "name": "abaixando",
 "speed": 5.0
-}, {
-"frames": [ ExtResource( 135 ), ExtResource( 136 ), ExtResource( 171 ), ExtResource( 170 ), ExtResource( 172 ), ExtResource( 141 ), ExtResource( 153 ), ExtResource( 169 ), ExtResource( 173 ), ExtResource( 140 ) ],
-"loop": false,
-"name": "pulando",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 174 ), ExtResource( 138 ), ExtResource( 130 ), ExtResource( 144 ), ExtResource( 147 ), ExtResource( 163 ), ExtResource( 157 ), ExtResource( 145 ), ExtResource( 158 ), ExtResource( 151 ) ],
-"loop": true,
-"name": "andando",
-"speed": 5.0
 } ]
 
 [sub_resource type="SpriteFrames" id=7]
 animations = [ {
+"frames": [ ExtResource( 123 ), ExtResource( 124 ), ExtResource( 127 ), ExtResource( 128 ), ExtResource( 180 ), ExtResource( 182 ), ExtResource( 183 ), ExtResource( 179 ) ],
+"loop": true,
+"name": "andando",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 139 ), ExtResource( 177 ), ExtResource( 143 ), ExtResource( 154 ), ExtResource( 121 ), ExtResource( 115 ), ExtResource( 146 ), ExtResource( 118 ), ExtResource( 120 ), ExtResource( 155 ) ],
+"loop": false,
+"name": "pulando",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 159 ), ExtResource( 176 ), ExtResource( 122 ), ExtResource( 156 ), ExtResource( 149 ), ExtResource( 142 ), ExtResource( 164 ), ExtResource( 137 ), ExtResource( 175 ), ExtResource( 152 ) ],
 "loop": true,
 "name": "parado",
@@ -286,16 +297,6 @@ animations = [ {
 "frames": [ ExtResource( 181 ), ExtResource( 112 ), ExtResource( 110 ), ExtResource( 111 ), ExtResource( 113 ), ExtResource( 114 ), ExtResource( 109 ), ExtResource( 79 ), ExtResource( 84 ), ExtResource( 105 ) ],
 "loop": false,
 "name": "abaixando",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 139 ), ExtResource( 177 ), ExtResource( 143 ), ExtResource( 154 ), ExtResource( 121 ), ExtResource( 115 ), ExtResource( 146 ), ExtResource( 118 ), ExtResource( 120 ), ExtResource( 155 ) ],
-"loop": false,
-"name": "pulando",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 123 ), ExtResource( 124 ), ExtResource( 127 ), ExtResource( 128 ), ExtResource( 180 ), ExtResource( 182 ), ExtResource( 183 ), ExtResource( 179 ) ],
-"loop": true,
-"name": "andando",
 "speed": 5.0
 } ]
 
@@ -328,7 +329,14 @@ pause_mode = 1
 position = Vector2( 8, 0 )
 scale = Vector2( 0.8, 0.8 )
 
+[node name="Pause" parent="." instance=ExtResource( 184 )]
+visible = false
+position = Vector2( -536.766, 73.4991 )
+scale = Vector2( 1, 1 )
+
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+pause_mode = 1
+scroll_offset = Vector2( 1.5, 1.5 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground"]
 position = Vector2( 512.533, 301.497 )
@@ -344,7 +352,7 @@ scale = Vector2( 0.5, 0.5 )
 tile_set = SubResource( 4 )
 cell_size = Vector2( 128, 128 )
 format = 1
-tile_data = PoolIntArray( -327587, 0, 0, -327586, 1, 0, -327585, 1, 0, -327584, 1, 0, -327583, 2, 0, -262099, 0, 0, -262098, 1, 0, -262097, 2, 0, -262093, 0, 0, -262092, 1, 0, -262091, 2, 0, -262087, 0, 0, -262086, 1, 0, -262085, 2, 0, -262080, 0, 0, -262079, 1, 0, -262078, 2, 0, -262071, 0, 0, -262070, 1, 0, -262069, 1, 0, -262068, 1, 0, -262067, 1, 0, -262066, 1, 0, -262065, 1, 0, -262064, 1, 0, -262063, 1, 0, -262062, 1, 0, -262061, 1, 0, -262060, 1, 0, -262059, 2, 0, -262052, 0, 0, -262051, 1, 0, -262050, 1, 0, -262049, 1, 0, -262048, 1, 0, -262047, 1, 0, -262046, 1, 0, -262045, 1, 0, -262044, 2, 0, -196525, 0, 0, -196524, 1, 0, -196523, 1, 0, -196522, 1, 0, -196521, 1, 0, -196520, 1, 0, -196519, 1, 0, -196518, 1, 0, -196517, 1, 0, -196516, 2, 0, -196515, 0, 0, -196514, 1, 0, -196513, 1, 0, -196512, 1, 0, -196511, 1, 0, -196510, 1, 0, -196509, 2, 0, -131034, 0, 0, -131033, 1, 0, -131032, 1, 0, -131031, 2, 0, -130968, 0, 0, -130967, 1, 0, -130966, 2, 0, 65566, 0, 0, 65567, 1, 0, 65568, 1, 0, 65569, 1, 0, 65570, 1, 0, 65571, 2, 0, 131121, 0, 0, 131122, 1, 0, 131123, 1, 0, 131124, 1, 0, 131125, 2, 0, 131191, 1, 0, 327702, 0, 0, 327703, 1, 0, 327704, 1, 0, 327705, 1, 0, 327706, 1, 0, 327707, 1, 0, 327708, 2, 0, 393272, 0, 0, 393273, 1, 0, 393274, 2, 0, 524304, 0, 0, 524305, 1, 0, 524306, 1, 0, 524307, 1, 0, 524308, 2, 0, 524336, 0, 0, 524337, 1, 0, 524338, 1, 0, 524339, 2, 0, 524342, 0, 0, 524343, 1, 0, 524344, 2, 0, 524390, 0, 0, 524391, 1, 0, 524392, 1, 0, 524393, 1, 0, 524394, 1, 0, 524395, 1, 0, 524396, 1, 0, 524397, 1, 0, 524398, 1, 0, 524399, 1, 0, 524400, 1, 0, 524401, 1, 0, 524402, 1, 0, 524403, 2, 0, 655361, 0, 0, 655362, 1, 0, 655363, 1, 0, 655364, 1, 0, 655365, 1, 0, 655366, 1, 0, 655367, 1, 0, 655368, 1, 0, 655369, 1, 0, 655370, 1, 0, 655371, 1, 0, 655372, 1, 0, 655373, 1, 0, 655374, 2, 0, 655382, 0, 0, 655383, 1, 0, 655384, 1, 0, 655385, 1, 0, 655386, 1, 0, 655387, 1, 0, 655388, 1, 0, 655389, 2, 0, 655393, 0, 0, 655394, 1, 0, 655395, 1, 0, 655396, 1, 0, 655397, 1, 0, 655398, 1, 0, 655399, 1, 0, 655400, 1, 0, 655401, 1, 0, 655402, 1, 0, 655403, 1, 0, 655404, 1, 0, 655405, 1, 0, 655406, 2, 0, 655419, 0, 0, 655420, 1, 0, 655421, 2, 0, 655428, 0, 0, 655429, 1, 0, 655430, 2, 0, 655436, 0, 0, 655437, 1, 0, 655438, 1, 0, 655439, 1, 0, 655440, 1, 0, 655441, 2, 0, 655445, 0, 0, 655446, 1, 0, 655447, 1, 0, 655448, 1, 0, 655449, 1, 0, 655455, 0, 0, 655456, 1, 0, 655457, 1, 0, 655458, 1, 0, 655459, 2, 0, 720985, 1, 0, 720986, 1, 0, 720987, 1, 0, 720988, 1, 0, 720989, 1, 0, 720990, 1, 0, 720991, 1, 0, 720992, 2, 0, 1114119, 0, 0, 1114120, 1, 0, 1114121, 1, 0, 1114122, 1, 0, 1114123, 1, 0, 1114124, 1, 0, 1114125, 1, 0, 1114126, 1, 0, 1114127, 1, 0, 1114128, 1, 0, 1114129, 1, 0, 1114130, 1, 0, 1114131, 1, 0, 1114132, 1, 0, 1114133, 1, 0, 1114134, 1, 0, 1114135, 1, 0, 1114136, 1, 0, 1114137, 1, 0, 1114138, 1, 0, 1114139, 1, 0, 1114140, 1, 0, 1114141, 1, 0, 1114142, 1, 0, 1114143, 1, 0, 1114144, 2, 0 )
+tile_data = PoolIntArray( -327587, 0, 0, -327586, 1, 0, -327585, 1, 0, -327584, 1, 0, -327583, 2, 0, -262099, 0, 0, -262098, 1, 0, -262097, 2, 0, -262093, 0, 0, -262092, 1, 0, -262091, 2, 0, -262087, 0, 0, -262086, 1, 0, -262085, 2, 0, -262080, 0, 0, -262079, 1, 0, -262078, 2, 0, -262071, 0, 0, -262070, 1, 0, -262069, 1, 0, -262068, 1, 0, -262067, 1, 0, -262066, 1, 0, -262065, 1, 0, -262064, 1, 0, -262063, 1, 0, -262062, 1, 0, -262061, 1, 0, -262060, 1, 0, -262059, 2, 0, -262052, 0, 0, -262051, 1, 0, -262050, 1, 0, -262049, 1, 0, -262048, 1, 0, -262047, 1, 0, -262046, 1, 0, -262045, 1, 0, -262044, 2, 0, -196525, 0, 0, -196524, 1, 0, -196523, 1, 0, -196522, 1, 0, -196521, 1, 0, -196520, 1, 0, -196519, 1, 0, -196518, 1, 0, -196517, 1, 0, -196516, 2, 0, -196515, 0, 0, -196514, 1, 0, -196513, 1, 0, -196512, 1, 0, -196511, 1, 0, -196510, 1, 0, -196509, 2, 0, -131034, 0, 0, -131033, 1, 0, -131032, 1, 0, -131031, 2, 0, -130968, 0, 0, -130967, 1, 0, -130966, 2, 0, 65566, 0, 0, 65567, 1, 0, 65568, 1, 0, 65569, 1, 0, 65570, 1, 0, 65571, 2, 0, 131121, 0, 0, 131122, 1, 0, 131123, 1, 0, 131124, 1, 0, 131125, 2, 0, 131191, 1, 0, 262167, 0, 0, 262168, 1, 0, 262169, 1, 0, 262170, 1, 0, 262171, 2, 0, 393272, 0, 0, 393273, 1, 0, 393274, 2, 0, 524304, 0, 0, 524305, 1, 0, 524306, 1, 0, 524307, 1, 0, 524308, 2, 0, 524336, 0, 0, 524337, 1, 0, 524338, 1, 0, 524339, 2, 0, 524342, 0, 0, 524343, 1, 0, 524344, 2, 0, 524390, 0, 0, 524391, 1, 0, 524392, 1, 0, 524393, 1, 0, 524394, 1, 0, 524395, 1, 0, 524396, 1, 0, 524397, 1, 0, 524398, 1, 0, 524399, 1, 0, 524400, 1, 0, 524401, 1, 0, 524402, 1, 0, 524403, 2, 0, 655361, 0, 0, 655362, 1, 0, 655363, 1, 0, 655364, 1, 0, 655365, 1, 0, 655366, 1, 0, 655367, 1, 0, 655368, 1, 0, 655369, 1, 0, 655370, 1, 0, 655371, 1, 0, 655372, 1, 0, 655373, 1, 0, 655374, 2, 0, 655382, 0, 0, 655383, 1, 0, 655384, 1, 0, 655385, 1, 0, 655386, 1, 0, 655387, 1, 0, 655388, 1, 0, 655389, 2, 0, 655393, 0, 0, 655394, 1, 0, 655395, 1, 0, 655396, 1, 0, 655397, 1, 0, 655398, 1, 0, 655399, 1, 0, 655400, 1, 0, 655401, 1, 0, 655402, 1, 0, 655403, 1, 0, 655404, 1, 0, 655405, 1, 0, 655406, 2, 0, 655419, 0, 0, 655420, 1, 0, 655421, 2, 0, 655428, 0, 0, 655429, 1, 0, 655430, 2, 0, 655436, 0, 0, 655437, 1, 0, 655438, 1, 0, 655439, 1, 0, 655440, 1, 0, 655441, 2, 0, 655445, 0, 0, 655446, 1, 0, 655447, 1, 0, 655448, 1, 0, 655449, 1, 0, 655455, 0, 0, 655456, 1, 0, 655457, 1, 0, 655458, 1, 0, 655459, 2, 0, 720985, 1, 0, 720986, 1, 0, 720987, 1, 0, 720988, 1, 0, 720989, 1, 0, 720990, 1, 0, 720991, 1, 0, 720992, 2, 0, 1114119, 0, 0, 1114120, 1, 0, 1114121, 1, 0, 1114122, 1, 0, 1114123, 1, 0, 1114124, 1, 0, 1114125, 1, 0, 1114126, 1, 0, 1114127, 1, 0, 1114128, 1, 0, 1114129, 1, 0, 1114130, 1, 0, 1114131, 1, 0, 1114132, 1, 0, 1114133, 1, 0, 1114134, 1, 0, 1114135, 1, 0, 1114136, 1, 0, 1114137, 1, 0, 1114138, 1, 0, 1114139, 1, 0, 1114140, 1, 0, 1114141, 1, 0, 1114142, 1, 0, 1114143, 1, 0, 1114144, 2, 0 )
 
 [node name="Bush (1)" type="Sprite" parent="."]
 position = Vector2( 2761.84, 632.884 )
@@ -456,12 +464,12 @@ shape = SubResource( 12 )
 [node name="CheckPoint" type="Position2D" parent="."]
 position = Vector2( 506.363, 278.724 )
 
-[node name="Pause" parent="." instance=ExtResource( 184 )]
-visible = false
-
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 185 )
 autoplay = true
+
+[node name="Inimigo2" parent="." instance=ExtResource( 5 )]
+position = Vector2( 793.7, -446.456 )
 [connection signal="body_entered" from="Personagem/pisadinha" to="Personagem" method="_on_pisadinha_body_entered"]
 [connection signal="animation_finished" from="Inimigo/AnimatedSprite" to="Inimigo" method="_on_AnimatedSprite_animation_finished"]
 [connection signal="body_exited" from="Inimigo/pe_esquerdo" to="Inimigo" method="_on_pe_esquerdo_body_exited"]

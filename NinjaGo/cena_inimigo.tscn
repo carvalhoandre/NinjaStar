@@ -1,0 +1,82 @@
+[gd_scene load_steps=27 format=2]
+
+[ext_resource path="res://script_inimigo.gd" type="Script" id=1]
+[ext_resource path="res://imagens/inimigo/Walk (7).png" type="Texture" id=2]
+[ext_resource path="res://imagens/inimigo/Dead (1).png" type="Texture" id=3]
+[ext_resource path="res://imagens/inimigo/Walk (8).png" type="Texture" id=4]
+[ext_resource path="res://imagens/inimigo/Dead (4).png" type="Texture" id=5]
+[ext_resource path="res://imagens/inimigo/Dead (10).png" type="Texture" id=6]
+[ext_resource path="res://imagens/inimigo/Dead (3).png" type="Texture" id=7]
+[ext_resource path="res://imagens/inimigo/Walk (2).png" type="Texture" id=8]
+[ext_resource path="res://imagens/inimigo/Walk (1).png" type="Texture" id=9]
+[ext_resource path="res://imagens/inimigo/Walk (9).png" type="Texture" id=10]
+[ext_resource path="res://imagens/inimigo/Walk (4).png" type="Texture" id=11]
+[ext_resource path="res://imagens/inimigo/Walk (6).png" type="Texture" id=12]
+[ext_resource path="res://imagens/inimigo/Dead (9).png" type="Texture" id=13]
+[ext_resource path="res://imagens/inimigo/Dead (2).png" type="Texture" id=14]
+[ext_resource path="res://imagens/inimigo/Walk (10).png" type="Texture" id=15]
+[ext_resource path="res://imagens/inimigo/Dead (6).png" type="Texture" id=16]
+[ext_resource path="res://imagens/inimigo/Walk (3).png" type="Texture" id=17]
+[ext_resource path="res://imagens/inimigo/Dead (7).png" type="Texture" id=18]
+[ext_resource path="res://imagens/inimigo/Dead (12).png" type="Texture" id=19]
+[ext_resource path="res://imagens/inimigo/Dead (11).png" type="Texture" id=20]
+[ext_resource path="res://imagens/inimigo/Dead (8).png" type="Texture" id=21]
+[ext_resource path="res://imagens/inimigo/Dead (5).png" type="Texture" id=22]
+[ext_resource path="res://imagens/inimigo/Walk (5).png" type="Texture" id=23]
+
+[sub_resource type="SpriteFrames" id=10]
+animations = [ {
+"frames": [ ExtResource( 9 ), ExtResource( 8 ), ExtResource( 17 ), ExtResource( 11 ), ExtResource( 23 ), ExtResource( 12 ), ExtResource( 2 ), ExtResource( 4 ), ExtResource( 10 ), ExtResource( 15 ) ],
+"loop": true,
+"name": "andando",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ), ExtResource( 14 ), ExtResource( 7 ), ExtResource( 5 ), ExtResource( 22 ), ExtResource( 16 ), ExtResource( 18 ), ExtResource( 21 ), ExtResource( 13 ), ExtResource( 6 ), ExtResource( 20 ), ExtResource( 19 ) ],
+"loop": false,
+"name": "morrendo",
+"speed": 10.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=11]
+extents = Vector2( 38.0141, 80.6583 )
+
+[sub_resource type="RectangleShape2D" id=12]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Inimigo" type="KinematicBody2D" parent="."]
+position = Vector2( 1259.67, 443.385 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Inimigo"]
+scale = Vector2( 0.371872, 0.371873 )
+frames = SubResource( 10 )
+animation = "andando"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Inimigo"]
+position = Vector2( 0, 11 )
+shape = SubResource( 11 )
+
+[node name="pe_esquerdo" type="Area2D" parent="Inimigo"]
+position = Vector2( -53.615, 104.326 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Inimigo/pe_esquerdo"]
+shape = SubResource( 12 )
+
+[node name="pe_direito" type="Area2D" parent="Inimigo"]
+position = Vector2( 53.3289, 104.77 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Inimigo/pe_direito"]
+shape = SubResource( 12 )
+[connection signal="animation_finished" from="Inimigo/AnimatedSprite" to="Inimigo" method="_on_AnimatedSprite_animation_finished"]
+[connection signal="body_exited" from="Inimigo/pe_esquerdo" to="Inimigo" method="_on_pe_esquerdo_body_exited"]
+[connection signal="body_exited" from="Inimigo/pe_direito" to="Inimigo" method="_on_pe_direito_body_exited"]
