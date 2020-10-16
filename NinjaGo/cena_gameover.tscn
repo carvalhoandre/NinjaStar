@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=216 format=2]
 
 [ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Slide__000.png" type="Texture" id=1]
 [ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Idle__001.png" type="Texture" id=2]
@@ -7,25 +7,215 @@
 [ext_resource path="res://recursos/fontes/game_over.ttf" type="DynamicFontData" id=5]
 [ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Jump_Attack__001.png" type="Texture" id=6]
 [ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Jump_Attack__000.png" type="Texture" id=7]
-[ext_resource path="res://recursos/sons/win.wav" type="AudioStream" id=8]
-[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Jump_Throw__001.png" type="Texture" id=9]
-[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Jump_Throw__002.png" type="Texture" id=10]
+[ext_resource path="res://recursos/sons/gameover.wav" type="AudioStream" id=8]
+[ext_resource path="res://recursos/imagens/personagens/Cop/Dead (4).png" type="Texture" id=9]
+[ext_resource path="res://recursos/imagens/personagens/Dead__006.png" type="Texture" id=10]
+[ext_resource path="res://recursos/imagens/personagens/Cop/Dead (6).png" type="Texture" id=11]
+[ext_resource path="res://recursos/imagens/personagens/Cop/JumpMelee (4).png" type="Texture" id=12]
+[ext_resource path="res://recursos/imagens/personagens/Dead__009.png" type="Texture" id=13]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Dead__004.png" type="Texture" id=14]
+[ext_resource path="res://recursos/imagens/personagens/Cop/Dead (2).png" type="Texture" id=15]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Dead__009.png" type="Texture" id=16]
+[ext_resource path="res://recursos/imagens/personagens/Cop/JumpMelee (5).png" type="Texture" id=17]
+[ext_resource path="res://recursos/imagens/personagens/Cop/JumpMelee (6).png" type="Texture" id=18]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Jump_Attack__006.png" type="Texture" id=19]
+[ext_resource path="res://recursos/imagens/personagens/Cop/RunShoot (1).png" type="Texture" id=20]
+[ext_resource path="res://recursos/imagens/personagens/Cop/RunShoot (3).png" type="Texture" id=21]
+[ext_resource path="res://recursos/imagens/personagens/Jump_Attack__008.png" type="Texture" id=22]
+[ext_resource path="res://recursos/imagens/personagens/Cop/RunShoot (2).png" type="Texture" id=23]
+[ext_resource path="res://recursos/imagens/personagens/Cop/RunShoot (6).png" type="Texture" id=24]
+[ext_resource path="res://recursos/imagens/personagens/Jump_Attack__005.png" type="Texture" id=25]
+[ext_resource path="res://recursos/imagens/personagens/Attack__000.png" type="Texture" id=26]
+[ext_resource path="res://recursos/imagens/personagens/Attack__002.png" type="Texture" id=27]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Jump_Attack__004.png" type="Texture" id=28]
+[ext_resource path="res://recursos/imagens/personagens/Cop/JumpMelee (2).png" type="Texture" id=29]
+[ext_resource path="res://recursos/imagens/personagens/Jump_Attack__009.png" type="Texture" id=30]
+[ext_resource path="res://recursos/imagens/personagens/Jump_Attack__003.png" type="Texture" id=31]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Jump_Attack__005.png" type="Texture" id=32]
+[ext_resource path="res://recursos/imagens/personagens/Cop/RunShoot (8).png" type="Texture" id=33]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Attack__000.png" type="Texture" id=34]
+[ext_resource path="res://recursos/imagens/personagens/Attack__005.png" type="Texture" id=35]
+[ext_resource path="res://recursos/imagens/personagens/Cop/RunShoot (4).png" type="Texture" id=36]
+[ext_resource path="res://recursos/imagens/personagens/Cop/RunShoot (7).png" type="Texture" id=37]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Jump_Attack__009.png" type="Texture" id=38]
+[ext_resource path="res://recursos/imagens/personagens/Cop/RunShoot (5).png" type="Texture" id=39]
+[ext_resource path="res://recursos/imagens/personagens/Jump_Attack__002.png" type="Texture" id=40]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Attack__009.png" type="Texture" id=41]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Jump_Attack__002.png" type="Texture" id=42]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Jump_Attack__007.png" type="Texture" id=43]
+[ext_resource path="res://recursos/imagens/personagens/Jump_Attack__001.png" type="Texture" id=44]
+[ext_resource path="res://recursos/imagens/personagens/Attack__001.png" type="Texture" id=45]
+[ext_resource path="res://recursos/imagens/personagens/Jump_Attack__006.png" type="Texture" id=46]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Jump_Attack__008.png" type="Texture" id=47]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Run__002.png" type="Texture" id=48]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Jump__005.png" type="Texture" id=49]
+[ext_resource path="res://recursos/imagens/personagens/Cop/Idle (4).png" type="Texture" id=50]
+[ext_resource path="res://recursos/imagens/personagens/Cop/Idle (1).png" type="Texture" id=51]
+[ext_resource path="res://recursos/imagens/personagens/Cop/Run (3).png" type="Texture" id=52]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Slide__003.png" type="Texture" id=53]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Slide__009.png" type="Texture" id=54]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Slide__007.png" type="Texture" id=55]
+[ext_resource path="res://recursos/imagens/personagens/Cop/Idle (8).png" type="Texture" id=56]
+[ext_resource path="res://recursos/imagens/personagens/Cop/Jump (3).png" type="Texture" id=57]
+[ext_resource path="res://recursos/imagens/personagens/Cop/Jump (10).png" type="Texture" id=58]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Run__008.png" type="Texture" id=59]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Idle__008.png" type="Texture" id=60]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Idle__007.png" type="Texture" id=61]
+[ext_resource path="res://recursos/imagens/personagens/Cop/Idle (6).png" type="Texture" id=62]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Run__009.png" type="Texture" id=63]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Jump__001.png" type="Texture" id=64]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Slide__008.png" type="Texture" id=65]
+[ext_resource path="res://recursos/imagens/personagens/Cop/Jump (7).png" type="Texture" id=66]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Idle__003.png" type="Texture" id=67]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Jump__009.png" type="Texture" id=68]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Run__006.png" type="Texture" id=69]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Slide__005.png" type="Texture" id=70]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Jump__000.png" type="Texture" id=71]
+[ext_resource path="res://recursos/imagens/personagens/Cop/Idle (5).png" type="Texture" id=72]
+[ext_resource path="res://recursos/imagens/personagens/Cop/Idle (10).png" type="Texture" id=73]
+[ext_resource path="res://recursos/imagens/personagens/Cop/Jump (4).png" type="Texture" id=74]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Run__003.png" type="Texture" id=75]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Slide__001.png" type="Texture" id=76]
+[ext_resource path="res://recursos/imagens/personagens/Cop/Jump (1).png" type="Texture" id=77]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Run__007.png" type="Texture" id=78]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Jump__006.png" type="Texture" id=79]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Run__004.png" type="Texture" id=80]
+[ext_resource path="res://recursos/imagens/personagens/Cop/Run (4).png" type="Texture" id=81]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Run__001.png" type="Texture" id=82]
+[ext_resource path="res://recursos/imagens/personagens/Run__002.png" type="Texture" id=83]
+[ext_resource path="res://recursos/imagens/personagens/Slide__003.png" type="Texture" id=84]
+[ext_resource path="res://recursos/imagens/personagens/Idle__009.png" type="Texture" id=85]
+[ext_resource path="res://recursos/imagens/personagens/Run__007.png" type="Texture" id=86]
+[ext_resource path="res://recursos/imagens/personagens/Slide__009.png" type="Texture" id=87]
+[ext_resource path="res://recursos/imagens/personagens/Jump__006.png" type="Texture" id=88]
+[ext_resource path="res://recursos/imagens/personagens/Idle__008.png" type="Texture" id=89]
+[ext_resource path="res://recursos/imagens/personagens/Cop/Slide (9).png" type="Texture" id=90]
+[ext_resource path="res://recursos/imagens/personagens/Jump__007.png" type="Texture" id=91]
+[ext_resource path="res://recursos/imagens/personagens/Run__006.png" type="Texture" id=92]
+[ext_resource path="res://recursos/imagens/personagens/Slide__002.png" type="Texture" id=93]
+[ext_resource path="res://recursos/imagens/personagens/Slide__006.png" type="Texture" id=94]
+[ext_resource path="res://recursos/imagens/personagens/Idle__000.png" type="Texture" id=95]
+[ext_resource path="res://recursos/imagens/personagens/Idle__005.png" type="Texture" id=96]
+[ext_resource path="res://recursos/imagens/personagens/Idle__001.png" type="Texture" id=97]
+[ext_resource path="res://recursos/imagens/personagens/Cop/Slide (8).png" type="Texture" id=98]
+[ext_resource path="res://recursos/imagens/personagens/Slide__001.png" type="Texture" id=99]
+[ext_resource path="res://recursos/imagens/personagens/Idle__002.png" type="Texture" id=100]
+[ext_resource path="res://recursos/imagens/personagens/Slide__004.png" type="Texture" id=101]
+[ext_resource path="res://recursos/imagens/personagens/Jump__005.png" type="Texture" id=102]
+[ext_resource path="res://recursos/imagens/personagens/Run__001.png" type="Texture" id=103]
+[ext_resource path="res://recursos/imagens/personagens/Idle__004.png" type="Texture" id=104]
+[ext_resource path="res://recursos/imagens/personagens/Run__009.png" type="Texture" id=105]
+[ext_resource path="res://recursos/imagens/personagens/Slide__007.png" type="Texture" id=106]
+[ext_resource path="res://script_gameover.gd" type="Script" id=107]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Slide__002.png" type="Texture" id=108]
+[ext_resource path="res://recursos/imagens/personagens/Cop/Idle (3).png" type="Texture" id=109]
+[ext_resource path="res://recursos/imagens/personagens/Cop/Run (1).png" type="Texture" id=110]
+[ext_resource path="res://recursos/imagens/personagens/Slide__008.png" type="Texture" id=111]
+[ext_resource path="res://recursos/imagens/personagens/Idle__003.png" type="Texture" id=112]
+[ext_resource path="res://recursos/imagens/personagens/Run__008.png" type="Texture" id=113]
+[ext_resource path="res://recursos/imagens/personagens/Slide__000.png" type="Texture" id=114]
+[ext_resource path="res://recursos/imagens/personagens/Cop/Slide (2).png" type="Texture" id=115]
+[ext_resource path="res://recursos/imagens/personagens/Cop/Jump (9).png" type="Texture" id=116]
+[ext_resource path="res://recursos/imagens/personagens/Run__003.png" type="Texture" id=117]
+[ext_resource path="res://recursos/imagens/personagens/Jump__001.png" type="Texture" id=118]
+[ext_resource path="res://recursos/imagens/personagens/Cop/Slide (4).png" type="Texture" id=119]
+[ext_resource path="res://recursos/imagens/personagens/Run__000.png" type="Texture" id=120]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Slide__006.png" type="Texture" id=121]
+[ext_resource path="res://recursos/imagens/personagens/Cop/Jump (8).png" type="Texture" id=122]
+[ext_resource path="res://recursos/imagens/personagens/Idle__006.png" type="Texture" id=123]
+[ext_resource path="res://recursos/imagens/personagens/Jump__008.png" type="Texture" id=124]
+[ext_resource path="res://recursos/imagens/personagens/Cop/Slide (5).png" type="Texture" id=125]
+[ext_resource path="res://recursos/imagens/personagens/Cop/Jump (5).png" type="Texture" id=126]
+[ext_resource path="res://recursos/imagens/personagens/Idle__007.png" type="Texture" id=127]
+[ext_resource path="res://recursos/imagens/personagens/Cop/Slide (6).png" type="Texture" id=128]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Idle__000.png" type="Texture" id=129]
+[ext_resource path="res://recursos/imagens/personagens/Cop/Slide (10).png" type="Texture" id=130]
+[ext_resource path="res://recursos/imagens/personagens/Cop/Run (2).png" type="Texture" id=131]
+[ext_resource path="res://recursos/imagens/personagens/Slide__005.png" type="Texture" id=132]
+[ext_resource path="res://recursos/imagens/personagens/Run__004.png" type="Texture" id=133]
+[ext_resource path="res://recursos/imagens/personagens/Jump__003.png" type="Texture" id=134]
+[ext_resource path="res://recursos/imagens/personagens/Run__005.png" type="Texture" id=135]
+[ext_resource path="res://recursos/imagens/personagens/Jump__004.png" type="Texture" id=136]
+[ext_resource path="res://recursos/imagens/personagens/Jump__000.png" type="Texture" id=137]
+[ext_resource path="res://recursos/imagens/personagens/Cop/Slide (7).png" type="Texture" id=138]
+[ext_resource path="res://recursos/imagens/personagens/Jump__009.png" type="Texture" id=139]
+[ext_resource path="res://recursos/imagens/personagens/Cop/Slide (3).png" type="Texture" id=140]
+[ext_resource path="res://recursos/imagens/personagens/Jump__002.png" type="Texture" id=141]
+[ext_resource path="res://recursos/imagens/personagens/Cop/Jump (6).png" type="Texture" id=142]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Idle__004.png" type="Texture" id=143]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Dead__006.png" type="Texture" id=144]
+[ext_resource path="res://recursos/imagens/personagens/Cop/Dead (8).png" type="Texture" id=145]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Attack__002.png" type="Texture" id=146]
+[ext_resource path="res://recursos/imagens/personagens/Cop/JumpMelee (8).png" type="Texture" id=147]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Attack__005.png" type="Texture" id=148]
+[ext_resource path="res://recursos/imagens/personagens/Dead__002.png" type="Texture" id=149]
+[ext_resource path="res://recursos/imagens/personagens/Cop/Run (5).png" type="Texture" id=150]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Jump__008.png" type="Texture" id=151]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Idle__002.png" type="Texture" id=152]
+[ext_resource path="res://recursos/imagens/personagens/Cop/Slide (1).png" type="Texture" id=153]
+[ext_resource path="res://recursos/imagens/personagens/Jump_Attack__004.png" type="Texture" id=154]
+[ext_resource path="res://recursos/imagens/personagens/Cop/Dead (5).png" type="Texture" id=155]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Idle__005.png" type="Texture" id=156]
+[ext_resource path="res://recursos/imagens/personagens/Dead__008.png" type="Texture" id=157]
+[ext_resource path="res://recursos/imagens/personagens/Attack__008.png" type="Texture" id=158]
+[ext_resource path="res://recursos/imagens/personagens/Attack__006.png" type="Texture" id=159]
+[ext_resource path="res://recursos/imagens/personagens/Cop/Dead (10).png" type="Texture" id=160]
+[ext_resource path="res://recursos/imagens/personagens/Cop/Idle (2).png" type="Texture" id=161]
+[ext_resource path="res://recursos/imagens/personagens/Cop/Run (8).png" type="Texture" id=162]
+[ext_resource path="res://recursos/imagens/personagens/Attack__009.png" type="Texture" id=163]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Run__005.png" type="Texture" id=164]
+[ext_resource path="res://recursos/imagens/personagens/Cop/Jump (2).png" type="Texture" id=165]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Jump_Attack__003.png" type="Texture" id=166]
+[ext_resource path="res://recursos/imagens/personagens/Cop/Dead (9).png" type="Texture" id=167]
+[ext_resource path="res://recursos/imagens/personagens/Attack__003.png" type="Texture" id=168]
+[ext_resource path="res://recursos/imagens/personagens/Cop/Run (6).png" type="Texture" id=169]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Attack__008.png" type="Texture" id=170]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Attack__001.png" type="Texture" id=171]
+[ext_resource path="res://recursos/imagens/personagens/Cop/RunShoot (9).png" type="Texture" id=172]
+[ext_resource path="res://recursos/imagens/personagens/Cop/Run (7).png" type="Texture" id=173]
+[ext_resource path="res://recursos/imagens/personagens/Jump_Attack__000.png" type="Texture" id=174]
+[ext_resource path="res://recursos/imagens/personagens/Cop/JumpMelee (1).png" type="Texture" id=175]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Jump__004.png" type="Texture" id=176]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Slide__004.png" type="Texture" id=177]
+[ext_resource path="res://recursos/imagens/personagens/Attack__004.png" type="Texture" id=178]
+[ext_resource path="res://recursos/imagens/personagens/Attack__007.png" type="Texture" id=179]
+[ext_resource path="res://recursos/imagens/personagens/Jump_Attack__007.png" type="Texture" id=180]
+[ext_resource path="res://recursos/imagens/personagens/Dead__007.png" type="Texture" id=181]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Attack__003.png" type="Texture" id=182]
+[ext_resource path="res://recursos/imagens/personagens/Cop/Idle (7).png" type="Texture" id=183]
+[ext_resource path="res://recursos/imagens/personagens/Cop/JumpMelee (3).png" type="Texture" id=184]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Attack__006.png" type="Texture" id=185]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Jump__003.png" type="Texture" id=186]
+[ext_resource path="res://recursos/imagens/personagens/Dead__000.png" type="Texture" id=187]
+[ext_resource path="res://recursos/imagens/personagens/Cop/JumpMelee (7).png" type="Texture" id=188]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Dead__005.png" type="Texture" id=189]
+[ext_resource path="res://recursos/imagens/personagens/Cop/Dead (1).png" type="Texture" id=190]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Dead__001.png" type="Texture" id=191]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Jump__002.png" type="Texture" id=192]
+[ext_resource path="res://recursos/imagens/personagens/Cop/Dead (7).png" type="Texture" id=193]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Attack__007.png" type="Texture" id=194]
+[ext_resource path="res://recursos/imagens/personagens/Dead__005.png" type="Texture" id=195]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Attack__004.png" type="Texture" id=196]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Dead__002.png" type="Texture" id=197]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Idle__009.png" type="Texture" id=198]
+[ext_resource path="res://recursos/imagens/personagens/Cop/Idle (9).png" type="Texture" id=199]
+[ext_resource path="res://recursos/imagens/personagens/Dead__003.png" type="Texture" id=200]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Dead__003.png" type="Texture" id=201]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Run__000.png" type="Texture" id=202]
+[ext_resource path="res://recursos/imagens/personagens/Dead__004.png" type="Texture" id=203]
+[ext_resource path="res://recursos/imagens/personagens/Cop/Dead (3).png" type="Texture" id=204]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Dead__007.png" type="Texture" id=205]
+[ext_resource path="res://recursos/imagens/personagens/Dead__001.png" type="Texture" id=206]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Dead__008.png" type="Texture" id=207]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Dead__000.png" type="Texture" id=208]
 
-[sub_resource type="StyleBoxEmpty" id=6]
+[sub_resource type="StyleBoxEmpty" id=1]
 
-[sub_resource type="DynamicFont" id=7]
+[sub_resource type="DynamicFont" id=2]
 size = 200
 font_data = ExtResource( 5 )
 
-[sub_resource type="SpriteFrames" id=3]
-animations = [ {
-"frames": [ ExtResource( 3 ), ExtResource( 2 ), ExtResource( 7 ), ExtResource( 6 ), ExtResource( 9 ), ExtResource( 4 ), ExtResource( 1 ), ExtResource( 10 ) ],
-"loop": true,
-"name": "default",
-"speed": 5.0
-} ]
-
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=3]
 resource_name = "default"
 loop = true
 tracks/0/type = "value"
@@ -41,17 +231,132 @@ tracks/0/keys = {
 "values": [ true, false ]
 }
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=4]
 size = 80
 use_mipmaps = true
 use_filter = true
 font_data = ExtResource( 5 )
 
+[sub_resource type="SpriteFrames" id=5]
+animations = [ {
+"frames": [ ExtResource( 26 ), ExtResource( 45 ), ExtResource( 27 ), ExtResource( 168 ), ExtResource( 178 ), ExtResource( 35 ), ExtResource( 159 ), ExtResource( 179 ), ExtResource( 158 ), ExtResource( 163 ) ],
+"loop": true,
+"name": "ataque",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 137 ), ExtResource( 118 ), ExtResource( 141 ), ExtResource( 134 ), ExtResource( 136 ), ExtResource( 102 ), ExtResource( 88 ), ExtResource( 91 ), ExtResource( 124 ), ExtResource( 139 ) ],
+"loop": false,
+"name": "pulando",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 120 ), ExtResource( 103 ), ExtResource( 83 ), ExtResource( 117 ), ExtResource( 133 ), ExtResource( 135 ), ExtResource( 92 ), ExtResource( 86 ), ExtResource( 113 ), ExtResource( 105 ) ],
+"loop": true,
+"name": "andando",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 95 ), ExtResource( 97 ), ExtResource( 100 ), ExtResource( 112 ), ExtResource( 104 ), ExtResource( 96 ), ExtResource( 123 ), ExtResource( 127 ), ExtResource( 89 ), ExtResource( 85 ) ],
+"loop": true,
+"name": "parado",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 114 ), ExtResource( 99 ), ExtResource( 93 ), ExtResource( 84 ), ExtResource( 101 ), ExtResource( 132 ), ExtResource( 94 ), ExtResource( 106 ), ExtResource( 111 ), ExtResource( 87 ) ],
+"loop": true,
+"name": "abaixando",
+"speed": 50.0
+}, {
+"frames": [ ExtResource( 187 ), ExtResource( 206 ), ExtResource( 149 ), ExtResource( 200 ), ExtResource( 203 ), ExtResource( 195 ), ExtResource( 10 ), ExtResource( 181 ), ExtResource( 157 ), ExtResource( 13 ) ],
+"loop": true,
+"name": "morrendo",
+"speed": 2.0
+}, {
+"frames": [ ExtResource( 174 ), ExtResource( 44 ), ExtResource( 40 ), ExtResource( 31 ), ExtResource( 154 ), ExtResource( 25 ), ExtResource( 46 ), ExtResource( 180 ), ExtResource( 22 ), ExtResource( 30 ) ],
+"loop": true,
+"name": "ataque_alto",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=6]
+animations = [ {
+"frames": [ ExtResource( 34 ), ExtResource( 171 ), ExtResource( 146 ), ExtResource( 182 ), ExtResource( 196 ), ExtResource( 148 ), ExtResource( 185 ), ExtResource( 194 ), ExtResource( 170 ), ExtResource( 41 ) ],
+"loop": true,
+"name": "ataque",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 71 ), ExtResource( 64 ), ExtResource( 192 ), ExtResource( 186 ), ExtResource( 176 ), ExtResource( 49 ), ExtResource( 79 ), ExtResource( 4 ), ExtResource( 151 ), ExtResource( 68 ) ],
+"loop": false,
+"name": "pulando",
+"speed": 2.0
+}, {
+"frames": [ ExtResource( 202 ), ExtResource( 82 ), ExtResource( 48 ), ExtResource( 75 ), ExtResource( 80 ), ExtResource( 164 ), ExtResource( 69 ), ExtResource( 78 ), ExtResource( 59 ), ExtResource( 63 ) ],
+"loop": true,
+"name": "andando",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 129 ), ExtResource( 2 ), ExtResource( 152 ), ExtResource( 67 ), ExtResource( 143 ), ExtResource( 156 ), ExtResource( 3 ), ExtResource( 61 ), ExtResource( 60 ), ExtResource( 198 ), ExtResource( 202 ), ExtResource( 82 ), ExtResource( 48 ), ExtResource( 75 ), ExtResource( 80 ), ExtResource( 164 ), ExtResource( 69 ), ExtResource( 78 ), ExtResource( 59 ), ExtResource( 63 ) ],
+"loop": true,
+"name": "parado",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 1 ), ExtResource( 76 ), ExtResource( 108 ), ExtResource( 53 ), ExtResource( 177 ), ExtResource( 70 ), ExtResource( 121 ), ExtResource( 55 ), ExtResource( 65 ), ExtResource( 54 ) ],
+"loop": false,
+"name": "abaixando",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 208 ), ExtResource( 191 ), ExtResource( 197 ), ExtResource( 201 ), ExtResource( 14 ), ExtResource( 189 ), ExtResource( 144 ), ExtResource( 205 ), ExtResource( 207 ), ExtResource( 16 ) ],
+"loop": true,
+"name": "morrendo",
+"speed": 2.0
+}, {
+"frames": [ ExtResource( 7 ), ExtResource( 6 ), ExtResource( 42 ), ExtResource( 166 ), ExtResource( 28 ), ExtResource( 32 ), ExtResource( 19 ), ExtResource( 43 ), ExtResource( 47 ), ExtResource( 38 ) ],
+"loop": true,
+"name": "ataque_alto",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=7]
+animations = [ {
+"frames": [ ExtResource( 20 ), ExtResource( 23 ), ExtResource( 21 ), ExtResource( 36 ), ExtResource( 39 ), ExtResource( 24 ), ExtResource( 37 ), ExtResource( 33 ), ExtResource( 172 ) ],
+"loop": true,
+"name": "ataque",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 77 ), ExtResource( 165 ), ExtResource( 57 ), ExtResource( 74 ), ExtResource( 126 ), ExtResource( 142 ), ExtResource( 66 ), ExtResource( 122 ), ExtResource( 116 ), ExtResource( 58 ) ],
+"loop": false,
+"name": "pulando",
+"speed": 2.0
+}, {
+"frames": [ ExtResource( 110 ), ExtResource( 131 ), ExtResource( 52 ), ExtResource( 81 ), ExtResource( 150 ), ExtResource( 169 ), ExtResource( 173 ), ExtResource( 162 ) ],
+"loop": true,
+"name": "andando",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 51 ), ExtResource( 161 ), ExtResource( 109 ), ExtResource( 50 ), ExtResource( 72 ), ExtResource( 62 ), ExtResource( 183 ), ExtResource( 56 ), ExtResource( 199 ), ExtResource( 73 ) ],
+"loop": true,
+"name": "parado",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 153 ), ExtResource( 115 ), ExtResource( 140 ), ExtResource( 119 ), ExtResource( 125 ), ExtResource( 128 ), ExtResource( 138 ), ExtResource( 98 ), ExtResource( 90 ), ExtResource( 130 ) ],
+"loop": false,
+"name": "abaixando",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 190 ), ExtResource( 15 ), ExtResource( 204 ), ExtResource( 9 ), ExtResource( 155 ), ExtResource( 11 ), ExtResource( 193 ), ExtResource( 145 ), ExtResource( 167 ), ExtResource( 160 ) ],
+"loop": true,
+"name": "morrendo",
+"speed": 2.0
+}, {
+"frames": [ ExtResource( 175 ), ExtResource( 29 ), ExtResource( 184 ), ExtResource( 12 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 188 ), ExtResource( 147 ) ],
+"loop": true,
+"name": "ataque_alto",
+"speed": 5.0
+} ]
+
 [node name="Node2D" type="Node2D"]
+script = ExtResource( 107 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
-margin_right = 1024.0
-margin_bottom = 592.0
+margin_right = 1026.0
+margin_bottom = 602.0
 color = Color( 0, 0, 0, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -62,28 +367,20 @@ margin_left = 295.996
 margin_top = 205.179
 margin_right = 749.996
 margin_bottom = 318.179
-custom_styles/normal = SubResource( 6 )
-custom_fonts/font = SubResource( 7 )
+custom_styles/normal = SubResource( 1 )
+custom_fonts/font = SubResource( 2 )
 text = "GAME OVER"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="AnimatedSprite2" type="AnimatedSprite" parent="."]
-visible = false
-position = Vector2( 144.915, 362.206 )
-scale = Vector2( 0.508154, 0.517529 )
-frames = SubResource( 3 )
-frame = 7
-playing = true
-
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "default"
-anims/default = SubResource( 5 )
+anims/default = SubResource( 3 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 8 )
-volume_db = 20.0
+volume_db = 3.0
 autoplay = true
 
 [node name="Label2" type="Label" parent="."]
@@ -91,8 +388,33 @@ margin_left = 292.0
 margin_top = 512.0
 margin_right = 756.0
 margin_bottom = 558.0
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 4 )
 text = "Pressione \"Enter\" para reiniciar"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Personagem1" type="AnimatedSprite" parent="."]
+visible = false
+position = Vector2( 217.646, 292.664 )
+scale = Vector2( 0.918463, 0.918463 )
+frames = SubResource( 5 )
+animation = "morrendo"
+
+[node name="Personagem2" type="AnimatedSprite" parent="."]
+visible = false
+position = Vector2( 220.21, 296.107 )
+scale = Vector2( 0.853699, 0.853699 )
+frames = SubResource( 6 )
+animation = "morrendo"
+frame = 4
+playing = true
+
+[node name="Personagem3" type="AnimatedSprite" parent="."]
+visible = false
+position = Vector2( 221.141, 281.438 )
+scale = Vector2( 0.926613, 0.926613 )
+frames = SubResource( 7 )
+animation = "morrendo"
+frame = 8
+playing = true

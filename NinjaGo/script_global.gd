@@ -12,3 +12,4 @@ var status_efeitos_sonoros = true
 var qtd_vidas = 3
 var qtd_pontos = 0
 var checkpoint = "CheckPoint1"
+var atacando = false

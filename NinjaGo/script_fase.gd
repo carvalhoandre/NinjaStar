@@ -15,7 +15,9 @@ func atualizar_hud():
 	elif (ScriptGlobal.qtd_vidas==1):
 		$HUD/Vida1.visible = true
 	else:
+		morrendo()
 		get_tree().change_scene("res://cena_gameover.tscn")
+		
 	
 func _process(delta):
 	atualizar_hud()
@@ -26,3 +28,11 @@ func _ready():
 func _on_CheckPoint2_body_entered(body):
 	ScriptGlobal.checkpoint = "CheckPoint2"
 	$CheckPoint2/AnimationPlayer.play("checkpoint_inativo")
+
+func morrendo():
+	if(ScriptGlobal.cod_personagem == 1):
+		$Personagem/Personagem1.play("morrendo")
+	elif(ScriptGlobal.cod_personagem == 2):
+		$Personagem/Personagem2.play("morrendo")
+	elif(ScriptGlobal.cod_personagem == 3):
+		$Personagem/Personagem3.play("morrendo")
