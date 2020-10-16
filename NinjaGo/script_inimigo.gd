@@ -22,3 +22,13 @@ func _on_pe_direito_body_exited(body):
 func _on_AnimatedSprite_animation_finished():
 	if ($AnimatedSprite.animation=="morrendo"):
 		queue_free()
+
+
+func _on_Ataque_body_entered(body):
+	if (body.name=="Personagem"):
+		ScriptGlobal.qtd_vidas -= 1
+		direcao = direcao * (-1)
+	if(direcao==1):
+		$AnimatedSprite.flip_h = false
+	else:
+		$AnimatedSprite.flip_h = true

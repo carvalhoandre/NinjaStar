@@ -1,5 +1,7 @@
 extends KinematicBody2D
 
+var atacando = false
+
 func _ready():
 	$Personagem1.visible = false
 	$Personagem2.visible = false
@@ -17,7 +19,9 @@ func _ready():
 
 func _process(delta):
 	if (global_position.y > $Camera2D.limit_bottom):
-		global_position = get_parent().get_node("CheckPoint").global_position
+		var checkpoint = ScriptGlobal.checkpoint 
+		global_position = get_parent().get_node(checkpoint).global_position
+		ScriptGlobal.qtd_vidas -= 1
 
 	ScriptGlobal.mov.y += 20
 	if(Input.is_action_pressed("ui_left")):
@@ -42,7 +46,7 @@ func _process(delta):
 			andando()
 	else:
 		ScriptGlobal.mov.x = 0
-		if(is_on_floor()):
+		if(is_on_floor() and not atacando):
 			parado()
 
 	if(Input.is_action_just_pressed("ui_up") and is_on_floor()):
@@ -52,6 +56,10 @@ func _process(delta):
 	if(Input.is_action_pressed("ui_down") and is_on_floor()):
 		abaixando()
 	ScriptGlobal.mov = move_and_slide(ScriptGlobal.mov, Vector2(0,-1))
+	
+	if(Input.is_action_pressed("kunai") and is_on_floor()):
+		atacando = true
+		ataque()
 	
 func _on_pisadinha_body_entered(body):
 	if (body.name=="Inimigo"):
@@ -91,4 +99,22 @@ func abaixando():
 		return $Personagem2.play("abaixado")
 	elif(ScriptGlobal.cod_personagem==3):
 		return $Personagem3.play("abaixado")
-		
+
+func ataque():
+	if(ScriptGlobal.cod_personagem==1):
+		return $Personagem1.play("ataque")
+	elif(ScriptGlobal.cod_personagem==2):
+		return $Personagem2.play("ataque")
+	elif(ScriptGlobal.cod_personagem==3):
+		return $Personagem3.play("ataque")
+
+func _on_Personagem1_animation_finished():
+	atacando = false
+
+
+func _on_Personagem2_animation_finished():
+	atacando = false
+
+
+func _on_Personagem3_animation_finished():
+	atacando = false

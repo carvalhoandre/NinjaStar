@@ -1,16 +1,28 @@
 extends Node2D
 
+func atualizar_hud():
+	$HUD/Vida1.visible = false
+	$HUD/Vida2.visible = false
+	$HUD/Vida3.visible = false
+	
+	if (ScriptGlobal.qtd_vidas==3):
+		$HUD/Vida1.visible = true
+		$HUD/Vida2.visible = true
+		$HUD/Vida3.visible = true
+	elif (ScriptGlobal.qtd_vidas==2):
+		$HUD/Vida1.visible = true
+		$HUD/Vida2.visible = true
+	elif (ScriptGlobal.qtd_vidas==1):
+		$HUD/Vida1.visible = true
+	else:
+		get_tree().change_scene("res://cena_gameover.tscn")
+	
+func _process(delta):
+	atualizar_hud()
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
-
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	$Personagem.global_position = get_node(ScriptGlobal.checkpoint).global_position
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func _on_CheckPoint2_body_entered(body):
+	ScriptGlobal.checkpoint = "CheckPoint2"
+	$CheckPoint2/AnimationPlayer.play("checkpoint_inativo")

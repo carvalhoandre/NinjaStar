@@ -92,13 +92,14 @@ __meta__ = {
 position = Vector2( 395.502, 390.796 )
 scale = Vector2( 0.508154, 0.517529 )
 frames = SubResource( 3 )
+frame = 3
 playing = true
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 622.035, 396.447 )
 scale = Vector2( 0.522318, 0.522318 )
 frames = SubResource( 4 )
-frame = 1
+frame = 2
 playing = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

@@ -85,7 +85,7 @@ __meta__ = {
 position = Vector2( 520.467, 452.929 )
 scale = Vector2( 0.195019, 0.195019 )
 frames = SubResource( 3 )
-frame = 15
+frame = 10
 playing = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
