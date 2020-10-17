@@ -1,25 +1,9 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://script_disparo.gd" type="Script" id=1]
-[ext_resource path="res://recursos/imagens/personagens/Cop/Objects/Muzzle_001.png" type="Texture" id=2]
 [ext_resource path="res://recursos/imagens/personagens/Kunai.png" type="Texture" id=3]
-[ext_resource path="res://recursos/imagens/personagens/Cop/Objects/Muzzle_003.png" type="Texture" id=4]
-[ext_resource path="res://recursos/imagens/personagens/Cop/Objects/Muzzle_000.png" type="Texture" id=5]
-[ext_resource path="res://recursos/imagens/personagens/Cop/Objects/Muzzle_004.png" type="Texture" id=6]
-[ext_resource path="res://recursos/imagens/personagens/Cop/Objects/Muzzle_002.png" type="Texture" id=7]
-[ext_resource path="res://recursos/imagens/personagens/Cop/Objects/Bullet_001.png" type="Texture" id=8]
-[ext_resource path="res://recursos/imagens/personagens/Cop/Objects/Bullet_002.png" type="Texture" id=9]
-[ext_resource path="res://recursos/imagens/personagens/Cop/Objects/Bullet_003.png" type="Texture" id=10]
 [ext_resource path="res://recursos/imagens/personagens/Cop/Objects/Bullet_000.png" type="Texture" id=11]
-[ext_resource path="res://recursos/imagens/personagens/Cop/Objects/Bullet_004.png" type="Texture" id=12]
-
-[sub_resource type="SpriteFrames" id=1]
-animations = [ {
-"frames": [ ExtResource( 11 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 12 ), ExtResource( 5 ), ExtResource( 2 ), ExtResource( 7 ), ExtResource( 4 ), ExtResource( 6 ) ],
-"loop": true,
-"name": "fogo",
-"speed": 5.0
-} ]
+[ext_resource path="res://recursos/sons/poof-sound-naruto.wav" type="AudioStream" id=13]
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 15.0154, 77.0931 )
@@ -32,20 +16,20 @@ position = Vector2( 449.212, 517.018 )
 rotation = 1.60809
 scale = Vector2( 0.628783, 0.628783 )
 
-[node name="Fire" type="AnimatedSprite" parent="Disparo"]
-position = Vector2( -12.6765, 60.318 )
-rotation = -1.57428
-scale = Vector2( 0.837116, 0.286212 )
-frames = SubResource( 1 )
-animation = "fogo"
-frame = 1
-offset = Vector2( 57.0281, 33.1498 )
-
 [node name="Kunai" type="Sprite" parent="Disparo"]
+rotation = -0.0354165
 texture = ExtResource( 3 )
+
+[node name="Fire" type="Sprite" parent="Disparo"]
+position = Vector2( -2.84381, 5.31934 )
+rotation = -1.60293
+scale = Vector2( 0.897442, 0.311671 )
+texture = ExtResource( 11 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Disparo"]
 position = Vector2( -3.17839, 8.47571 )
 shape = SubResource( 2 )
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+[node name="Efeito" type="AudioStreamPlayer2D" parent="."]
+rotation = 0.00589469
+stream = ExtResource( 13 )

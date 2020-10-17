@@ -1,6 +1,6 @@
 extends Node2D
 
-var mov = Vector2(-19, 0)
+var mov = Vector2(20,0)
 
 var tipo_disparo = "kunai"
 
@@ -12,9 +12,10 @@ func _ready():
 		$Disparo/Kunai.visible = true
 	elif (tipo_disparo == "fire"):
 		$Disparo/Fire.visible = true
+		$Disparo/Fire.play("fogo")
 	
 	if(ScriptGlobal.status_efeitos_sonoros):
-		get_parent().get_node("AudioStreamPlayer2D").play()
+		$Efeito.play()
 	
 func _process(delta):	
 	translate(mov)

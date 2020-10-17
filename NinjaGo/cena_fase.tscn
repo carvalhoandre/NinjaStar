@@ -1,9 +1,10 @@
-[gd_scene load_steps=263 format=2]
+[gd_scene load_steps=281 format=2]
 
 [ext_resource path="res://imagens/cenário/Tile/3.png" type="Texture" id=1]
 [ext_resource path="res://imagens/cenário/Tile/2.png" type="Texture" id=2]
 [ext_resource path="res://imagens/cenário/Tile/1.png" type="Texture" id=3]
 [ext_resource path="res://imagens/cenário/BG.png" type="Texture" id=4]
+[ext_resource path="res://recursos/imagens/personagens/Jump_Throw__000.png" type="Texture" id=5]
 [ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Attack__000.png" type="Texture" id=6]
 [ext_resource path="res://recursos/imagens/personagens/Jump_Attack__002.png" type="Texture" id=7]
 [ext_resource path="res://recursos/imagens/personagens/Jump_Attack__008.png" type="Texture" id=8]
@@ -244,87 +245,43 @@
 [ext_resource path="res://recursos/imagens/personagens/Cop/JumpMelee (4).png" type="Texture" id=243]
 [ext_resource path="res://recursos/imagens/recursos/Vida.png" type="Texture" id=244]
 [ext_resource path="res://script_fase.gd" type="Script" id=245]
+[ext_resource path="res://recursos/imagens/personagens/Jump_Throw__009.png" type="Texture" id=246]
+[ext_resource path="res://recursos/imagens/personagens/Cop/Shoot (2).png" type="Texture" id=247]
+[ext_resource path="res://recursos/imagens/personagens/Jump_Throw__004.png" type="Texture" id=248]
+[ext_resource path="res://recursos/imagens/personagens/Jump_Throw__003.png" type="Texture" id=249]
+[ext_resource path="res://recursos/imagens/personagens/Jump_Throw__001.png" type="Texture" id=250]
+[ext_resource path="res://recursos/imagens/personagens/Jump_Throw__007.png" type="Texture" id=251]
+[ext_resource path="res://recursos/imagens/personagens/Jump_Throw__002.png" type="Texture" id=252]
+[ext_resource path="res://recursos/imagens/personagens/Jump_Throw__008.png" type="Texture" id=253]
+[ext_resource path="res://recursos/imagens/personagens/Jump_Throw__006.png" type="Texture" id=254]
+[ext_resource path="res://recursos/imagens/personagens/Cop/Shoot (1).png" type="Texture" id=255]
+[ext_resource path="res://recursos/imagens/personagens/Cop/Shoot (3).png" type="Texture" id=256]
+[ext_resource path="res://recursos/imagens/personagens/Jump_Throw__005.png" type="Texture" id=257]
+[ext_resource path="res://recursos/sons/zombie-sound-effects-free.wav" type="AudioStream" id=258]
+[ext_resource path="res://recursos/imagens/cenário/Objects/Sign.png" type="Texture" id=259]
 
-[sub_resource type="ConvexPolygonShape2D" id=8]
-points = PoolVector2Array( 0, 0, 128, 0, 128, 128, 0, 128 )
-
-[sub_resource type="ConvexPolygonShape2D" id=9]
-points = PoolVector2Array( 0, 0, 128, 0, 128, 128, 0, 128 )
-
-[sub_resource type="ConvexPolygonShape2D" id=10]
-points = PoolVector2Array( 0, 0, 128, 0, 128, 128, 0, 128 )
-
-[sub_resource type="TileSet" id=11]
-0/name = "1.png 0"
-0/texture = ExtResource( 3 )
-0/tex_offset = Vector2( 0, 0 )
-0/modulate = Color( 1, 1, 1, 1 )
-0/region = Rect2( 0, 0, 128, 128 )
-0/tile_mode = 0
-0/occluder_offset = Vector2( 0, 0 )
-0/navigation_offset = Vector2( 0, 0 )
-0/shape_offset = Vector2( 0, 0 )
-0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-0/shape = SubResource( 8 )
-0/shape_one_way = false
-0/shape_one_way_margin = 1.0
-0/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 8 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-} ]
-0/z_index = 0
-1/name = "2.png 1"
-1/texture = ExtResource( 2 )
-1/tex_offset = Vector2( 0, 0 )
-1/modulate = Color( 1, 1, 1, 1 )
-1/region = Rect2( 0, 0, 128, 128 )
-1/tile_mode = 0
-1/occluder_offset = Vector2( 0, 0 )
-1/navigation_offset = Vector2( 0, 0 )
-1/shape_offset = Vector2( 0, 0 )
-1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-1/shape = SubResource( 9 )
-1/shape_one_way = false
-1/shape_one_way_margin = 1.0
-1/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 9 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-} ]
-1/z_index = 0
-2/name = "3.png 2"
-2/texture = ExtResource( 1 )
-2/tex_offset = Vector2( 0, 0 )
-2/modulate = Color( 1, 1, 1, 1 )
-2/region = Rect2( 0, 0, 128, 128 )
-2/tile_mode = 0
-2/occluder_offset = Vector2( 0, 0 )
-2/navigation_offset = Vector2( 0, 0 )
-2/shape_offset = Vector2( 0, 0 )
-2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-2/shape = SubResource( 10 )
-2/shape_one_way = false
-2/shape_one_way_margin = 1.0
-2/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 10 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-} ]
-2/z_index = 0
+[sub_resource type="Animation" id=19]
+resource_name = "morrendo"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Personagem:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1, 1.5, 2, 2.5, 2.9, 3.5, 4, 4.5, 5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ true, false, true, false, true, false, true, false, true, false, true ]
+}
 
 [sub_resource type="SpriteFrames" id=5]
 animations = [ {
-"frames": [ ExtResource( 33 ), ExtResource( 19 ), ExtResource( 15 ), ExtResource( 200 ), ExtResource( 195 ), ExtResource( 34 ), ExtResource( 189 ), ExtResource( 199 ), ExtResource( 197 ), ExtResource( 201 ) ],
+"frames": [ ExtResource( 99 ), ExtResource( 73 ), ExtResource( 89 ), ExtResource( 85 ), ExtResource( 70 ), ExtResource( 90 ), ExtResource( 69 ), ExtResource( 82 ), ExtResource( 101 ), ExtResource( 71 ) ],
 "loop": true,
-"name": "ataque",
-"speed": 5.0
+"name": "abaixando",
+"speed": 50.0
 }, {
 "frames": [ ExtResource( 102 ), ExtResource( 106 ), ExtResource( 107 ), ExtResource( 100 ), ExtResource( 96 ), ExtResource( 78 ), ExtResource( 75 ), ExtResource( 87 ), ExtResource( 103 ), ExtResource( 97 ) ],
 "loop": false,
@@ -341,13 +298,18 @@ animations = [ {
 "name": "parado",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 99 ), ExtResource( 73 ), ExtResource( 89 ), ExtResource( 85 ), ExtResource( 70 ), ExtResource( 90 ), ExtResource( 69 ), ExtResource( 82 ), ExtResource( 101 ), ExtResource( 71 ) ],
+"frames": [ ExtResource( 33 ), ExtResource( 19 ), ExtResource( 15 ), ExtResource( 200 ), ExtResource( 195 ), ExtResource( 34 ), ExtResource( 189 ), ExtResource( 199 ), ExtResource( 197 ), ExtResource( 201 ) ],
 "loop": true,
-"name": "abaixando",
-"speed": 50.0
+"name": "ataque",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 5 ), ExtResource( 250 ), ExtResource( 252 ), ExtResource( 249 ), ExtResource( 248 ), ExtResource( 257 ), ExtResource( 254 ), ExtResource( 251 ), ExtResource( 253 ), ExtResource( 246 ) ],
+"loop": true,
+"name": "kunai",
+"speed": 5.0
 }, {
 "frames": [ ExtResource( 212 ), ExtResource( 230 ), ExtResource( 225 ), ExtResource( 213 ), ExtResource( 233 ), ExtResource( 214 ), ExtResource( 237 ), ExtResource( 209 ), ExtResource( 226 ), ExtResource( 236 ) ],
-"loop": true,
+"loop": false,
 "name": "morrendo",
 "speed": 2.0
 }, {
@@ -359,9 +321,9 @@ animations = [ {
 
 [sub_resource type="SpriteFrames" id=6]
 animations = [ {
-"frames": [ ExtResource( 6 ), ExtResource( 186 ), ExtResource( 202 ), ExtResource( 191 ), ExtResource( 204 ), ExtResource( 193 ), ExtResource( 206 ), ExtResource( 205 ), ExtResource( 192 ), ExtResource( 9 ) ],
-"loop": true,
-"name": "ataque",
+"frames": [ ExtResource( 148 ), ExtResource( 126 ), ExtResource( 119 ), ExtResource( 131 ), ExtResource( 178 ), ExtResource( 134 ), ExtResource( 117 ), ExtResource( 133 ), ExtResource( 132 ), ExtResource( 125 ) ],
+"loop": false,
+"name": "abaixando",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 135 ), ExtResource( 136 ), ExtResource( 171 ), ExtResource( 170 ), ExtResource( 172 ), ExtResource( 141 ), ExtResource( 153 ), ExtResource( 169 ), ExtResource( 173 ), ExtResource( 140 ) ],
@@ -379,15 +341,20 @@ animations = [ {
 "name": "parado",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 148 ), ExtResource( 126 ), ExtResource( 119 ), ExtResource( 131 ), ExtResource( 178 ), ExtResource( 134 ), ExtResource( 117 ), ExtResource( 133 ), ExtResource( 132 ), ExtResource( 125 ) ],
-"loop": false,
-"name": "abaixando",
-"speed": 5.0
+"frames": [ ExtResource( 6 ), ExtResource( 186 ), ExtResource( 202 ), ExtResource( 191 ), ExtResource( 204 ), ExtResource( 193 ), ExtResource( 206 ), ExtResource( 205 ), ExtResource( 192 ), ExtResource( 9 ) ],
+"loop": true,
+"name": "ataque",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 6 ), ExtResource( 186 ), ExtResource( 202 ) ],
+"loop": true,
+"name": "kunai",
+"speed": 1.0
 }, {
 "frames": [ ExtResource( 232 ), ExtResource( 220 ), ExtResource( 211 ), ExtResource( 216 ), ExtResource( 239 ), ExtResource( 218 ), ExtResource( 221 ), ExtResource( 229 ), ExtResource( 231 ), ExtResource( 235 ) ],
 "loop": true,
 "name": "morrendo",
-"speed": 2.0
+"speed": 6.0
 }, {
 "frames": [ ExtResource( 208 ), ExtResource( 198 ), ExtResource( 10 ), ExtResource( 187 ), ExtResource( 26 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 22 ), ExtResource( 32 ) ],
 "loop": true,
@@ -397,9 +364,9 @@ animations = [ {
 
 [sub_resource type="SpriteFrames" id=7]
 animations = [ {
-"frames": [ ExtResource( 29 ), ExtResource( 23 ), ExtResource( 30 ), ExtResource( 25 ), ExtResource( 16 ), ExtResource( 24 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 188 ) ],
-"loop": true,
-"name": "ataque",
+"frames": [ ExtResource( 181 ), ExtResource( 112 ), ExtResource( 110 ), ExtResource( 111 ), ExtResource( 113 ), ExtResource( 114 ), ExtResource( 109 ), ExtResource( 79 ), ExtResource( 84 ), ExtResource( 105 ) ],
+"loop": false,
+"name": "abaixando",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 139 ), ExtResource( 177 ), ExtResource( 143 ), ExtResource( 154 ), ExtResource( 121 ), ExtResource( 115 ), ExtResource( 146 ), ExtResource( 118 ), ExtResource( 120 ), ExtResource( 155 ) ],
@@ -417,13 +384,18 @@ animations = [ {
 "name": "parado",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 181 ), ExtResource( 112 ), ExtResource( 110 ), ExtResource( 111 ), ExtResource( 113 ), ExtResource( 114 ), ExtResource( 109 ), ExtResource( 79 ), ExtResource( 84 ), ExtResource( 105 ) ],
-"loop": false,
-"name": "abaixando",
+"frames": [ ExtResource( 255 ), ExtResource( 247 ), ExtResource( 256 ) ],
+"loop": true,
+"name": "ataque",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 29 ), ExtResource( 23 ), ExtResource( 30 ), ExtResource( 25 ), ExtResource( 16 ), ExtResource( 24 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 188 ) ],
+"loop": true,
+"name": "kunai",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 210 ), ExtResource( 234 ), ExtResource( 228 ), ExtResource( 241 ), ExtResource( 219 ), ExtResource( 238 ), ExtResource( 222 ), ExtResource( 223 ), ExtResource( 215 ), ExtResource( 227 ) ],
-"loop": true,
+"loop": false,
 "name": "morrendo",
 "speed": 2.0
 }, {
@@ -433,13 +405,87 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=12]
+[sub_resource type="RectangleShape2D" id=8]
 extents = Vector2( 42.3835, 81.9597 )
 
-[sub_resource type="RectangleShape2D" id=13]
+[sub_resource type="RectangleShape2D" id=9]
 extents = Vector2( 45.4711, 5.31564 )
 
-[sub_resource type="SpriteFrames" id=14]
+[sub_resource type="ConvexPolygonShape2D" id=1]
+points = PoolVector2Array( 0, 0, 128, 0, 128, 128, 0, 128 )
+
+[sub_resource type="ConvexPolygonShape2D" id=2]
+points = PoolVector2Array( 0, 0, 128, 0, 128, 128, 0, 128 )
+
+[sub_resource type="ConvexPolygonShape2D" id=3]
+points = PoolVector2Array( 0, 0, 128, 0, 128, 128, 0, 128 )
+
+[sub_resource type="TileSet" id=4]
+0/name = "1.png 0"
+0/texture = ExtResource( 3 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 128, 128 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape = SubResource( 1 )
+0/shape_one_way = false
+0/shape_one_way_margin = 1.0
+0/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 1 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+0/z_index = 0
+1/name = "2.png 1"
+1/texture = ExtResource( 2 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 0, 0, 128, 128 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape = SubResource( 2 )
+1/shape_one_way = false
+1/shape_one_way_margin = 1.0
+1/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 2 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+1/z_index = 0
+2/name = "3.png 2"
+2/texture = ExtResource( 1 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 0, 0, 128, 128 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape = SubResource( 3 )
+2/shape_one_way = false
+2/shape_one_way_margin = 1.0
+2/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 3 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+2/z_index = 0
+
+[sub_resource type="SpriteFrames" id=10]
 animations = [ {
 "frames": [ ExtResource( 43 ), ExtResource( 50 ), ExtResource( 44 ), ExtResource( 51 ), ExtResource( 45 ), ExtResource( 52 ), ExtResource( 46 ), ExtResource( 48 ), ExtResource( 47 ), ExtResource( 49 ) ],
 "loop": true,
@@ -452,18 +498,18 @@ animations = [ {
 "speed": 10.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=15]
+[sub_resource type="RectangleShape2D" id=11]
 extents = Vector2( 38.0141, 80.6583 )
 
-[sub_resource type="RectangleShape2D" id=16]
+[sub_resource type="RectangleShape2D" id=12]
 
-[sub_resource type="RectangleShape2D" id=17]
+[sub_resource type="RectangleShape2D" id=13]
 extents = Vector2( 37.0511, 79.9057 )
 
-[sub_resource type="CapsuleShape2D" id=18]
+[sub_resource type="CapsuleShape2D" id=14]
 radius = 38.9565
 
-[sub_resource type="Animation" id=19]
+[sub_resource type="Animation" id=15]
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("SignArrow:visible")
@@ -490,7 +536,7 @@ tracks/1/keys = {
 "values": [ Vector2( 0, 0 ) ]
 }
 
-[sub_resource type="Animation" id=20]
+[sub_resource type="Animation" id=16]
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("SignArrow:rotation_degrees")
@@ -517,7 +563,61 @@ tracks/1/keys = {
 "values": [ false ]
 }
 
+[sub_resource type="Animation" id=20]
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("SignArrow:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ true, false, true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("SignArrow:offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 1 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+
 [sub_resource type="Animation" id=21]
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("SignArrow:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 360.0, 0.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("SignArrow:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 1 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=17]
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("SignArrow:visible")
@@ -532,7 +632,7 @@ tracks/0/keys = {
 "values": [ true, false, true ]
 }
 
-[sub_resource type="Animation" id=22]
+[sub_resource type="Animation" id=18]
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("SignArrow:rotation_degrees")
@@ -564,6 +664,55 @@ pause_mode = 1
 position = Vector2( 8, 0 )
 scale = Vector2( 0.8, 0.8 )
 script = ExtResource( 245 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/morrendo = SubResource( 19 )
+
+[node name="Personagem" type="KinematicBody2D" parent="."]
+position = Vector2( 110.216, 562.162 )
+scale = Vector2( 1, 1 )
+script = ExtResource( 35 )
+
+[node name="Personagem1" type="AnimatedSprite" parent="Personagem"]
+visible = false
+position = Vector2( 8.84882, 15.6508 )
+scale = Vector2( 0.364307, 0.364307 )
+frames = SubResource( 5 )
+animation = "kunai"
+
+[node name="Personagem2" type="AnimatedSprite" parent="Personagem"]
+visible = false
+position = Vector2( 5.09326, 12.1962 )
+scale = Vector2( 0.332724, 0.332724 )
+frames = SubResource( 6 )
+animation = "kunai"
+
+[node name="Personagem3" type="AnimatedSprite" parent="Personagem"]
+position = Vector2( 12.0623, 14.0328 )
+scale = Vector2( 0.333577, 0.333577 )
+frames = SubResource( 7 )
+animation = "ataque"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Personagem"]
+position = Vector2( 10.0287, 13.8201 )
+shape = SubResource( 8 )
+
+[node name="Camera2D" type="Camera2D" parent="Personagem"]
+current = true
+limit_bottom = 650
+
+[node name="pisadinha" type="Area2D" parent="Personagem"]
+position = Vector2( 10.1956, 104.983 )
+scale = Vector2( 1.21702, 1.21702 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Personagem/pisadinha"]
+shape = SubResource( 9 )
+
+[node name="Position2D" type="Position2D" parent="Personagem"]
+position = Vector2( 41.3603, 20.8713 )
 
 [node name="HUD" type="ParallaxBackground" parent="."]
 layer = 1
@@ -603,7 +752,7 @@ __meta__ = {
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2( -6.47656, 26.6468 )
 scale = Vector2( 0.5, 0.5 )
-tile_set = SubResource( 11 )
+tile_set = SubResource( 4 )
 cell_size = Vector2( 128, 128 )
 format = 1
 tile_data = PoolIntArray( -327587, 0, 0, -327586, 1, 0, -327585, 1, 0, -327584, 1, 0, -327583, 2, 0, -262099, 0, 0, -262098, 1, 0, -262097, 2, 0, -262093, 0, 0, -262092, 1, 0, -262091, 2, 0, -262087, 0, 0, -262086, 1, 0, -262085, 2, 0, -262080, 0, 0, -262079, 1, 0, -262078, 2, 0, -262071, 0, 0, -262070, 1, 0, -262069, 1, 0, -262068, 1, 0, -262067, 1, 0, -262066, 1, 0, -262065, 1, 0, -262064, 1, 0, -262063, 1, 0, -262062, 1, 0, -262061, 1, 0, -262060, 1, 0, -262059, 2, 0, -262052, 0, 0, -262051, 1, 0, -262050, 1, 0, -262049, 1, 0, -262048, 1, 0, -262047, 1, 0, -262046, 1, 0, -262045, 1, 0, -262044, 2, 0, -196525, 0, 0, -196524, 1, 0, -196523, 1, 0, -196522, 1, 0, -196521, 1, 0, -196520, 1, 0, -196519, 1, 0, -196518, 1, 0, -196517, 1, 0, -196516, 2, 0, -196515, 0, 0, -196514, 1, 0, -196513, 1, 0, -196512, 1, 0, -196511, 1, 0, -196510, 1, 0, -196509, 2, 0, -131034, 0, 0, -131033, 1, 0, -131032, 1, 0, -131031, 2, 0, -130968, 0, 0, -130967, 1, 0, -130966, 2, 0, 65566, 0, 0, 65567, 1, 0, 65568, 1, 0, 65569, 1, 0, 65570, 1, 0, 65571, 2, 0, 131121, 0, 0, 131122, 1, 0, 131123, 1, 0, 131124, 1, 0, 131125, 2, 0, 131191, 1, 0, 262167, 0, 0, 262168, 1, 0, 262169, 1, 0, 262170, 1, 0, 262171, 2, 0, 393272, 0, 0, 393273, 1, 0, 393274, 2, 0, 524304, 0, 0, 524305, 1, 0, 524306, 1, 0, 524307, 1, 0, 524308, 2, 0, 524336, 0, 0, 524337, 1, 0, 524338, 1, 0, 524339, 2, 0, 524342, 0, 0, 524343, 1, 0, 524344, 2, 0, 524390, 0, 0, 524391, 1, 0, 524392, 1, 0, 524393, 1, 0, 524394, 1, 0, 524395, 1, 0, 524396, 1, 0, 524397, 1, 0, 524398, 1, 0, 524399, 1, 0, 524400, 1, 0, 524401, 1, 0, 524402, 1, 0, 524403, 2, 0, 655361, 0, 0, 655362, 1, 0, 655363, 1, 0, 655364, 1, 0, 655365, 1, 0, 655366, 1, 0, 655367, 1, 0, 655368, 1, 0, 655369, 1, 0, 655370, 1, 0, 655371, 1, 0, 655372, 1, 0, 655373, 1, 0, 655374, 2, 0, 655382, 0, 0, 655383, 1, 0, 655384, 1, 0, 655385, 1, 0, 655386, 1, 0, 655387, 1, 0, 655388, 1, 0, 655389, 2, 0, 655393, 0, 0, 655394, 1, 0, 655395, 1, 0, 655396, 1, 0, 655397, 1, 0, 655398, 1, 0, 655399, 1, 0, 655400, 1, 0, 655401, 1, 0, 655402, 1, 0, 655403, 1, 0, 655404, 1, 0, 655405, 1, 0, 655406, 2, 0, 655419, 0, 0, 655420, 1, 0, 655421, 2, 0, 655428, 0, 0, 655429, 1, 0, 655430, 2, 0, 655436, 0, 0, 655437, 1, 0, 655438, 1, 0, 655439, 1, 0, 655440, 1, 0, 655441, 2, 0, 655445, 0, 0, 655446, 1, 0, 655447, 1, 0, 655448, 1, 0, 655449, 1, 0, 655455, 0, 0, 655456, 1, 0, 655457, 1, 0, 655458, 1, 0, 655459, 2, 0, 720985, 1, 0, 720986, 1, 0, 720987, 1, 0, 720988, 1, 0, 720989, 1, 0, 720990, 1, 0, 720991, 1, 0, 720992, 2, 0, 1114119, 0, 0, 1114120, 1, 0, 1114121, 1, 0, 1114122, 1, 0, 1114123, 1, 0, 1114124, 1, 0, 1114125, 1, 0, 1114126, 1, 0, 1114127, 1, 0, 1114128, 1, 0, 1114129, 1, 0, 1114130, 1, 0, 1114131, 1, 0, 1114132, 1, 0, 1114133, 1, 0, 1114134, 1, 0, 1114135, 1, 0, 1114136, 1, 0, 1114137, 1, 0, 1114138, 1, 0, 1114139, 1, 0, 1114140, 1, 0, 1114141, 1, 0, 1114142, 1, 0, 1114143, 1, 0, 1114144, 2, 0 )
@@ -632,50 +781,6 @@ texture = ExtResource( 41 )
 position = Vector2( 2212.62, 55.5317 )
 texture = ExtResource( 42 )
 
-[node name="Personagem" type="KinematicBody2D" parent="."]
-position = Vector2( 102.025, 561.745 )
-script = ExtResource( 35 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="Personagem1" type="AnimatedSprite" parent="Personagem"]
-visible = false
-position = Vector2( 8.84882, 15.6508 )
-scale = Vector2( 0.364307, 0.364307 )
-frames = SubResource( 5 )
-animation = "ataque"
-frame = 9
-
-[node name="Personagem2" type="AnimatedSprite" parent="Personagem"]
-visible = false
-position = Vector2( 5.09326, 12.1962 )
-scale = Vector2( 0.332724, 0.332724 )
-frames = SubResource( 6 )
-
-[node name="Personagem3" type="AnimatedSprite" parent="Personagem"]
-position = Vector2( 12.0623, 14.0328 )
-scale = Vector2( 0.333577, 0.333577 )
-frames = SubResource( 7 )
-animation = "morrendo"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Personagem"]
-position = Vector2( 10.0287, 13.8201 )
-shape = SubResource( 12 )
-
-[node name="Camera2D" type="Camera2D" parent="Personagem"]
-current = true
-limit_bottom = 650
-
-[node name="pisadinha" type="Area2D" parent="Personagem"]
-position = Vector2( 9.7785, 103.314 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Personagem/pisadinha"]
-shape = SubResource( 13 )
-
 [node name="Inimigo" type="KinematicBody2D" parent="."]
 position = Vector2( 1259.67, 443.385 )
 script = ExtResource( 53 )
@@ -685,12 +790,12 @@ __meta__ = {
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Inimigo"]
 scale = Vector2( 0.371872, 0.371873 )
-frames = SubResource( 14 )
+frames = SubResource( 10 )
 animation = "andando"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Inimigo"]
 position = Vector2( 0, 11 )
-shape = SubResource( 15 )
+shape = SubResource( 11 )
 
 [node name="pe_esquerdo" type="Area2D" parent="Inimigo"]
 position = Vector2( -53.615, 104.326 )
@@ -699,7 +804,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Inimigo/pe_esquerdo"]
-shape = SubResource( 16 )
+shape = SubResource( 12 )
 
 [node name="pe_direito" type="Area2D" parent="Inimigo"]
 position = Vector2( 53.3289, 104.77 )
@@ -708,15 +813,15 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Inimigo/pe_direito"]
-shape = SubResource( 16 )
+shape = SubResource( 12 )
 
 [node name="Ataque" type="Area2D" parent="Inimigo"]
 
 [node name="Colli" type="CollisionShape2D" parent="Inimigo/Ataque"]
 position = Vector2( -2.22974, 9.66223 )
-shape = SubResource( 17 )
+shape = SubResource( 13 )
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 185 )
 autoplay = true
 
@@ -733,12 +838,33 @@ texture = ExtResource( 40 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CheckPoint1"]
 position = Vector2( 132.143, 87.3084 )
-shape = SubResource( 18 )
+shape = SubResource( 14 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="CheckPoint1"]
 autoplay = "checkpoint_ativo"
-anims/checkpoint_ativo = SubResource( 19 )
-anims/checkpoint_inativo = SubResource( 20 )
+anims/checkpoint_ativo = SubResource( 15 )
+anims/checkpoint_inativo = SubResource( 16 )
+
+[node name="CheckPoint3" type="Area2D" parent="."]
+position = Vector2( 7456.78, 587.605 )
+rotation = -3.11076
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="SignArrow" type="Sprite" parent="CheckPoint3"]
+position = Vector2( 137.817, 88.1884 )
+scale = Vector2( 0.97603, -0.946861 )
+texture = ExtResource( 259 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CheckPoint3"]
+position = Vector2( 132.143, 87.3084 )
+shape = SubResource( 14 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CheckPoint3"]
+autoplay = "checkpoint_ativo"
+anims/checkpoint_ativo = SubResource( 20 )
+anims/checkpoint_inativo = SubResource( 21 )
 
 [node name="CheckPoint2" type="Area2D" parent="."]
 position = Vector2( 3270.49, -379.937 )
@@ -747,19 +873,21 @@ __meta__ = {
 }
 
 [node name="SignArrow" type="Sprite" parent="CheckPoint2"]
-visible = false
 position = Vector2( 137.817, 88.1884 )
 scale = Vector2( 0.97603, -0.946861 )
 texture = ExtResource( 40 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CheckPoint2"]
 position = Vector2( 132.143, 87.3084 )
-shape = SubResource( 18 )
+shape = SubResource( 14 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="CheckPoint2"]
 autoplay = "checkpoint_ativo"
-anims/checkpoint_ativo = SubResource( 21 )
-anims/checkpoint_inativo = SubResource( 22 )
+anims/checkpoint_ativo = SubResource( 17 )
+anims/checkpoint_inativo = SubResource( 18 )
+
+[node name="Zombi" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 258 )
 [connection signal="animation_finished" from="Personagem/Personagem1" to="Personagem" method="_on_Personagem1_animation_finished"]
 [connection signal="animation_finished" from="Personagem/Personagem2" to="Personagem" method="_on_Personagem2_animation_finished"]
 [connection signal="animation_finished" from="Personagem/Personagem3" to="Personagem" method="_on_Personagem3_animation_finished"]
@@ -768,4 +896,5 @@ anims/checkpoint_inativo = SubResource( 22 )
 [connection signal="body_exited" from="Inimigo/pe_esquerdo" to="Inimigo" method="_on_pe_esquerdo_body_exited"]
 [connection signal="body_exited" from="Inimigo/pe_direito" to="Inimigo" method="_on_pe_direito_body_exited"]
 [connection signal="body_entered" from="Inimigo/Ataque" to="Inimigo" method="_on_Ataque_body_entered"]
+[connection signal="body_entered" from="CheckPoint3" to="." method="_on_CheckPoint3_body_entered"]
 [connection signal="body_entered" from="CheckPoint2" to="." method="_on_CheckPoint2_body_entered"]

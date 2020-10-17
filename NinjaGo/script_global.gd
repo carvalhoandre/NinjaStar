@@ -13,3 +13,6 @@ var qtd_vidas = 3
 var qtd_pontos = 0
 var checkpoint = "CheckPoint1"
 var atacando = false
+var morrendo = false
+var morte = 0
+var zombi = false

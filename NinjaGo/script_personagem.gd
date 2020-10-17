@@ -1,7 +1,5 @@
 extends KinematicBody2D
 
-var atacando = false
-
 func _ready():
 	$Personagem1.visible = false
 	$Personagem2.visible = false
@@ -46,7 +44,7 @@ func _process(delta):
 			andando()
 	else:
 		ScriptGlobal.mov.x = 0
-		if(is_on_floor() and not atacando):
+		if(is_on_floor() and not ScriptGlobal.atacando and not ScriptGlobal.morrendo):
 			parado()
 
 	if(Input.is_action_just_pressed("ui_up") and is_on_floor()):
@@ -57,10 +55,28 @@ func _process(delta):
 		abaixando()
 	ScriptGlobal.mov = move_and_slide(ScriptGlobal.mov, Vector2(0,-1))
 	
-	if(Input.is_action_pressed("kunai") and is_on_floor()):
-		atacando = true
+	if(Input.is_action_pressed("golpe") and is_on_floor()):
+		ScriptGlobal.atacando = true
 		ataque()
 	
+	if(Input.is_action_just_pressed("kunai")):
+		var cena_disparo = preload("res://cena_disparo.tscn")
+		var objeto_disparo1 = cena_disparo.instance()
+		objeto_disparo1.global_position = $Position2D.global_position
+		objeto_disparo1.z_index = 0
+		kunai()
+		get_parent().get_parent().add_child(objeto_disparo1)
+	
+	if(ScriptGlobal.morte == 0 and ScriptGlobal.qtd_vidas == 2):
+		ScriptGlobal.morrendo = true
+		morrendo()
+		ScriptGlobal.morte += 1
+	
+	if(ScriptGlobal.morte == 1 and ScriptGlobal.qtd_vidas == 1):
+		ScriptGlobal.morrendo = true
+		morrendo()
+		ScriptGlobal.morte += 1
+
 func _on_pisadinha_body_entered(body):
 	if (body.name=="Inimigo"):
 		body.get_node("AnimatedSprite").play("morrendo")
@@ -108,13 +124,31 @@ func ataque():
 	elif(ScriptGlobal.cod_personagem==3):
 		return $Personagem3.play("ataque")
 
-func _on_Personagem1_animation_finished():
-	atacando = false
+func kunai():
+	if(ScriptGlobal.cod_personagem==1):
+		return $Personagem1.play("kunai")
+	elif(ScriptGlobal.cod_personagem==2):
+		return $Personagem2.play("kunai")
+	elif(ScriptGlobal.cod_personagem==3):
+		return $Personagem3.play("kunai")
+		
+func morrendo():
+	if(ScriptGlobal.cod_personagem == 1):
+		return $Personagem1.play("morrendo")
+	elif(ScriptGlobal.cod_personagem == 2):
+		return $Personagem2.play("morrendo")
+	elif(ScriptGlobal.cod_personagem == 3):
+		return $Personagem3.play("morrendo")
 
+func _on_Personagem1_animation_finished():
+	ScriptGlobal.atacando = false
+	ScriptGlobal.morrendo = false
 
 func _on_Personagem2_animation_finished():
-	atacando = false
-
+	ScriptGlobal.atacando = false
+	ScriptGlobal.morrendo = false
 
 func _on_Personagem3_animation_finished():
-	atacando = false
+	ScriptGlobal.atacando = false
+	ScriptGlobal.morrendo = false
+	
