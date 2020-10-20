@@ -11,6 +11,7 @@ func _ready():
 		$Disparo/Kunai.visible = true
 	elif (ScriptGlobal.tipo_disparo == "fire"):
 		$Disparo/Fire.visible = true
+		$Disparo/Fire.play("lancamento")
 	
 	if(ScriptGlobal.status_efeitos_sonoros):
 		$Efeito.play()
@@ -18,11 +19,11 @@ func _ready():
 func _process(delta):	
 	mov.x = velocidade
 	translate(mov)
-	
-
 
 func _on_Disparo_body_entered(body):
 	if (body.name=="Inimigo"):
+		if(ScriptGlobal.status_efeitos_sonoros == true):
+			$Disparo/Fire.play("impacto")
 		body.velocidade = 0
 		body.get_node("AnimatedSprite").play("morrendo")
 		body.get_node("CollisionShape2D").queue_free()

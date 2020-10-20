@@ -28,6 +28,7 @@ func _on_AnimatedSprite_animation_finished():
 func _on_Ataque_body_entered(body):
 	if (body.name=="Personagem" and ScriptGlobal.atacando == false):
 		ScriptGlobal.qtd_vidas -= 1
+		ScriptGlobal.zombi = true
 		direcao = direcao * (-1)
 	if(direcao==1):
 		$AnimatedSprite.flip_h = false

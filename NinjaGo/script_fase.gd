@@ -22,14 +22,15 @@ func _process(delta):
 	
 	if(ScriptGlobal.morte == 0 and ScriptGlobal.qtd_vidas == 2):
 		$AnimationPlayer.play("morrendo")
-		ScriptGlobal.zombi = true
 	
 	if(ScriptGlobal.morte == 1 and ScriptGlobal.qtd_vidas == 1):
 		$AnimationPlayer.play("morrendo")
-		ScriptGlobal.zombi = true
 		
 	if ScriptGlobal.zombi == true:
 		$Zombi.play()
+	
+	if(ScriptGlobal.status_musica == true):
+		$Music.play()
 
 func _ready():
 	$Personagem.global_position = get_node(ScriptGlobal.checkpoint).global_position
