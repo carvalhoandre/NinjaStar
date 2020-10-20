@@ -1,21 +1,30 @@
 extends Node2D
 
-var mov = Vector2(20,0)
-
-var tipo_disparo = "kunai"
+var mov = Vector2(0,0)
+var velocidade = 6
 
 func _ready():
 	$Disparo/Fire.visible = false
 	$Disparo/Kunai.visible = false
 	
-	if (tipo_disparo == "kunai"):
+	if (ScriptGlobal.tipo_disparo == "kunai"):
 		$Disparo/Kunai.visible = true
-	elif (tipo_disparo == "fire"):
+	elif (ScriptGlobal.tipo_disparo == "fire"):
 		$Disparo/Fire.visible = true
-		$Disparo/Fire.play("fogo")
 	
 	if(ScriptGlobal.status_efeitos_sonoros):
 		$Efeito.play()
 	
 func _process(delta):	
+	mov.x = velocidade
 	translate(mov)
+	
+
+
+func _on_Disparo_body_entered(body):
+	if (body.name=="Inimigo"):
+		body.velocidade = 0
+		body.get_node("AnimatedSprite").play("morrendo")
+		body.get_node("CollisionShape2D").queue_free()
+		body.get_node("Ataque").queue_free()
+		queue_free()

@@ -38,6 +38,6 @@ func _on_CheckPoint2_body_entered(body):
 	ScriptGlobal.checkpoint = "CheckPoint2"
 	$CheckPoint2/AnimationPlayer.play("checkpoint_inativo")
 
+func _on_Pont_area_shape_entered(area_id, area, area_shape, self_shape):
+	get_tree().change_scene("res://cena_win.tscn")
 
-#func _on_CheckPoint3_body_entered(body):
-	#get_tree().change_scene("res://cena_win.tscn")

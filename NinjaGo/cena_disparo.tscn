@@ -1,35 +1,33 @@
 [gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://script_disparo.gd" type="Script" id=1]
+[ext_resource path="res://recursos/imagens/personagens/Cop/Objects/Bullet_000.png" type="Texture" id=2]
 [ext_resource path="res://recursos/imagens/personagens/Kunai.png" type="Texture" id=3]
-[ext_resource path="res://recursos/imagens/personagens/Cop/Objects/Bullet_000.png" type="Texture" id=11]
 [ext_resource path="res://recursos/sons/poof-sound-naruto.wav" type="AudioStream" id=13]
 
-[sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 15.0154, 77.0931 )
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 18.2208
+height = 119.424
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 1 )
 
-[node name="Disparo" type="Area2D" parent="."]
-position = Vector2( 449.212, 517.018 )
-rotation = 1.60809
-scale = Vector2( 0.628783, 0.628783 )
-
-[node name="Kunai" type="Sprite" parent="Disparo"]
-rotation = -0.0354165
-texture = ExtResource( 3 )
-
-[node name="Fire" type="Sprite" parent="Disparo"]
-position = Vector2( -2.84381, 5.31934 )
-rotation = -1.60293
-scale = Vector2( 0.897442, 0.311671 )
-texture = ExtResource( 11 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Disparo"]
-position = Vector2( -3.17839, 8.47571 )
-shape = SubResource( 2 )
-
 [node name="Efeito" type="AudioStreamPlayer2D" parent="."]
 rotation = 0.00589469
 stream = ExtResource( 13 )
+
+[node name="Disparo" type="Area2D" parent="."]
+
+[node name="Kunai" type="Sprite" parent="Disparo"]
+position = Vector2( 5.96205, -0.235982 )
+scale = Vector2( 0.838845, 0.256444 )
+texture = ExtResource( 2 )
+
+[node name="Fire" type="Sprite" parent="Disparo"]
+rotation = 1.57079
+texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Disparo"]
+rotation = 1.56529
+shape = SubResource( 1 )
+[connection signal="body_entered" from="Disparo" to="." method="_on_Disparo_body_entered"]

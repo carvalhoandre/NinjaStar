@@ -1,5 +1,8 @@
 extends KinematicBody2D
 
+var magia = false
+var direcao = 1 # 1 é para direita e -1 é para esquerda
+
 func _ready():
 	$Personagem1.visible = false
 	$Personagem2.visible = false
@@ -7,13 +10,10 @@ func _ready():
 
 	if(ScriptGlobal.cod_personagem==1):
 		$Personagem1.visible = true
-		var personagem = $Personagem1
 	elif(ScriptGlobal.cod_personagem==2):
 		$Personagem2.visible = true
-		var personagem = $Personagem2
 	elif(ScriptGlobal.cod_personagem==3):
 		$Personagem3.visible = true
-		var personagem = $Personagem3
 
 func _process(delta):
 	if (global_position.y > $Camera2D.limit_bottom):
@@ -22,29 +22,28 @@ func _process(delta):
 		ScriptGlobal.qtd_vidas -= 1
 
 	ScriptGlobal.mov.y += 20
-	if(Input.is_action_pressed("ui_left")):
+	if(Input.is_action_pressed("ui_left") and not magia):
+		if(direcao == 1):
+			scale.x = -1
+			direcao = -1
+
 		ScriptGlobal.mov.x = -ScriptGlobal.velocidade
-		if(ScriptGlobal.cod_personagem==1):
-			$Personagem1.flip_h = true
-		elif(ScriptGlobal.cod_personagem==2):
-			$Personagem2.flip_h = true
-		elif(ScriptGlobal.cod_personagem==3):
-			$Personagem3.flip_h = true
+
 		if(is_on_floor()):
 			andando()
+
 	elif(Input.is_action_pressed("ui_right")):
+		if(direcao == -1):
+			scale.x = -1
+			direcao = 1
+
 		ScriptGlobal.mov.x = ScriptGlobal.velocidade
-		if(ScriptGlobal.cod_personagem==1):
-			$Personagem1.flip_h = false
-		elif(ScriptGlobal.cod_personagem==2):
-			$Personagem2.flip_h = false
-		elif(ScriptGlobal.cod_personagem==3):
-			$Personagem3.flip_h = false
 		if(is_on_floor()):
 			andando()
+
 	else:
 		ScriptGlobal.mov.x = 0
-		if(is_on_floor() and not ScriptGlobal.atacando and not ScriptGlobal.morrendo):
+		if(is_on_floor() and not ScriptGlobal.atacando and not ScriptGlobal.morrendo and not magia):
 			parado()
 
 	if(Input.is_action_just_pressed("ui_up") and is_on_floor()):
@@ -53,20 +52,35 @@ func _process(delta):
 	
 	if(Input.is_action_pressed("ui_down") and is_on_floor()):
 		abaixando()
-	ScriptGlobal.mov = move_and_slide(ScriptGlobal.mov, Vector2(0,-1))
-	
+		
 	if(Input.is_action_pressed("golpe") and is_on_floor()):
 		ScriptGlobal.atacando = true
 		ataque()
 	
 	if(Input.is_action_just_pressed("kunai")):
-		var cena_disparo = preload("res://cena_disparo.tscn")
-		var objeto_disparo1 = cena_disparo.instance()
-		objeto_disparo1.global_position = $Position2D.global_position
-		objeto_disparo1.z_index = 0
+		ScriptGlobal.tipo_disparo = "kunai"
+		magia = true
+		ScriptGlobal.mov.x = 0
 		kunai()
-		get_parent().get_parent().add_child(objeto_disparo1)
-	
+		var cena_tiro = preload("res://cena_disparo.tscn")
+		var objeto_tiro = cena_tiro.instance()
+		if(direcao ==-1):
+			objeto_tiro.scale.x = -1
+		objeto_tiro.global_position = $Position2D.global_position
+		get_tree().root.add_child(objeto_tiro)
+		
+	if(Input.is_action_just_pressed("fire")):
+		ScriptGlobal.tipo_disparo = "fire"
+		magia = true
+		ScriptGlobal.mov.x = 0
+		kunai()
+		var cena_tiro = preload("res://cena_disparo.tscn")
+		var objeto_tiro = cena_tiro.instance()
+		if(direcao ==-1):
+			objeto_tiro.scale.x = -1
+		objeto_tiro.global_position = $Position2D.global_position
+		get_tree().root.add_child(objeto_tiro)
+		
 	if(ScriptGlobal.morte == 0 and ScriptGlobal.qtd_vidas == 2):
 		ScriptGlobal.morrendo = true
 		morrendo()
@@ -76,12 +90,23 @@ func _process(delta):
 		ScriptGlobal.morrendo = true
 		morrendo()
 		ScriptGlobal.morte += 1
+	
+	ScriptGlobal.mov = move_and_slide(ScriptGlobal.mov, Vector2(0,-1))
+	
+func _on_Kunai_body_entered(body):
+	ScriptGlobal.zombi = true
+	if (body.name=="Inimigo" and ScriptGlobal.atacando == true):
+			body.get_node("AnimatedSprite").play("morrendo")
+			body.velocidade = 0
+			body.get_node("CollisionShape2D").queue_free()
+			body.get_node("Ataque").queue_free()
 
 func _on_pisadinha_body_entered(body):
 	if (body.name=="Inimigo"):
 		body.get_node("AnimatedSprite").play("morrendo")
 		body.velocidade = 0
 		body.get_node("CollisionShape2D").queue_free()
+		body.get_node("Ataque").queue_free()
 		ScriptGlobal.mov.y = ScriptGlobal.forca_pulo / 2
 
 func andando():
@@ -143,12 +168,14 @@ func morrendo():
 func _on_Personagem1_animation_finished():
 	ScriptGlobal.atacando = false
 	ScriptGlobal.morrendo = false
+	magia = false
 
 func _on_Personagem2_animation_finished():
 	ScriptGlobal.atacando = false
 	ScriptGlobal.morrendo = false
+	magia = false
 
 func _on_Personagem3_animation_finished():
 	ScriptGlobal.atacando = false
 	ScriptGlobal.morrendo = false
-	
+	magia = false
