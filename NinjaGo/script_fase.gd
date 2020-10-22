@@ -29,7 +29,7 @@ func _process(delta):
 	if ScriptGlobal.zombi == true:
 		$Zombi.play()
 	
-	if(ScriptGlobal.status_musica == true):
+	if(not $Music.playing):
 		$Music.play()
 
 func _ready():

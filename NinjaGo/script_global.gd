@@ -24,4 +24,4 @@ func alpha():
 	var qtd_pontos = 0
 	var checkpoint = "CheckPoint1"
 	var morte = 0
-	
+	var zombi = false

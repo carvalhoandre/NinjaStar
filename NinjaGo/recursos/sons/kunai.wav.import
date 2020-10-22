@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/kunai.wav-2bba34a8d72ae6f712e8ccf2b07fb274.sample"
+
+[deps]
+
+source_file="res://recursos/sons/kunai.wav"
+dest_files=[ "res://.import/kunai.wav-2bba34a8d72ae6f712e8ccf2b07fb274.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

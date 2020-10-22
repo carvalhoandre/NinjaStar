@@ -21,3 +21,6 @@ func _on_EfeitosSonoros_pressed():
 		ScriptGlobal.status_efeitos_sonoros = true
 	else:
 		ScriptGlobal.status_efeitos_sonoros = false
+
+func _on_Button_pressed():
+	get_tree().change_scene("res://cena_selecao.tscn")

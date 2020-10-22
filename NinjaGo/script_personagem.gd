@@ -16,12 +16,14 @@ func _ready():
 		$Personagem3.visible = true
 
 func _process(delta):
+
+	ScriptGlobal.mov.y += 20
+
 	if (global_position.y > $Camera2D.limit_bottom):
 		var checkpoint = ScriptGlobal.checkpoint 
 		global_position = get_parent().get_node(checkpoint).global_position
 		ScriptGlobal.qtd_vidas -= 1
-
-	ScriptGlobal.mov.y += 20
+	
 	if(Input.is_action_pressed("ui_left") and not magia):
 		if(direcao == 1):
 			scale.x = -1
@@ -32,7 +34,7 @@ func _process(delta):
 		if(is_on_floor()):
 			andando()
 
-	elif(Input.is_action_pressed("ui_right")):
+	elif(Input.is_action_pressed("ui_right") and not magia):
 		if(direcao == -1):
 			scale.x = -1
 			direcao = 1

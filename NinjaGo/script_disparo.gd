@@ -9,12 +9,13 @@ func _ready():
 	
 	if (ScriptGlobal.tipo_disparo == "kunai"):
 		$Disparo/Kunai.visible = true
+		if(ScriptGlobal.status_efeitos_sonoros):
+			$Kunai.play()
 	elif (ScriptGlobal.tipo_disparo == "fire"):
 		$Disparo/Fire.visible = true
 		$Disparo/Fire.play("lancamento")
-	
-	if(ScriptGlobal.status_efeitos_sonoros):
-		$Efeito.play()
+		if(ScriptGlobal.status_efeitos_sonoros):
+			$Efeito.play()
 	
 func _process(delta):	
 	mov.x = velocidade
@@ -22,10 +23,11 @@ func _process(delta):
 
 func _on_Disparo_body_entered(body):
 	if (body.name=="Inimigo"):
-		if(ScriptGlobal.status_efeitos_sonoros == true):
+		if(ScriptGlobal.tipo_disparo == "fire"):
 			$Disparo/Fire.play("impacto")
 		body.velocidade = 0
 		body.get_node("AnimatedSprite").play("morrendo")
 		body.get_node("CollisionShape2D").queue_free()
 		body.get_node("Ataque").queue_free()
 		queue_free()
+		ScriptGlobal.zombi = false
