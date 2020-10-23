@@ -1,8 +1,8 @@
 extends Node2D
 
 var mov = Vector2(0,0)
-var velocidade = 6
-
+var velocidade = 16
+var direcao = 1
 func _ready():
 	$Disparo/Fire.visible = false
 	$Disparo/Kunai.visible = false
@@ -18,7 +18,7 @@ func _ready():
 			$Efeito.play()
 	
 func _process(delta):	
-	mov.x = velocidade
+	mov.x = velocidade*direcao
 	translate(mov)
 
 func _on_Disparo_body_entered(body):

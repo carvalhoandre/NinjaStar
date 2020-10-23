@@ -15,11 +15,10 @@ func _ready():
 #func _process(delta):
 #	pass
 func _on_Premio_body_entered(body):
-	if(tipo_premio=="moeda"):
-		ScriptGlobal.qtd_pontos += ScriptGlobal.valor_ponto
-	elif(tipo_premio=="vida"):
-		ScriptGlobal.qtd_vidas += ScriptGlobal.qtd_vidas
-	queue_free()
+	if (body.name=="Personagem"):
+		if(tipo_premio=="moeda"):
+			ScriptGlobal.qtd_pontos += ScriptGlobal.valor_ponto
+		elif(tipo_premio=="vida"):
+			ScriptGlobal.qtd_vidas += 1
+		queue_free()
 
-func _on_TempoPremio_timeout():
-	queue_free()

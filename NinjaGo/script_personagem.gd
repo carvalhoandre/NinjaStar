@@ -22,6 +22,7 @@ func _process(delta):
 	if (global_position.y > $Camera2D.limit_bottom):
 		var checkpoint = ScriptGlobal.checkpoint 
 		global_position = get_parent().get_node(checkpoint).global_position
+		aparecendo()
 		ScriptGlobal.qtd_vidas -= 1
 	
 	if(Input.is_action_pressed("ui_left") and not magia):
@@ -66,6 +67,7 @@ func _process(delta):
 		kunai()
 		var cena_tiro = preload("res://cena_disparo.tscn")
 		var objeto_tiro = cena_tiro.instance()
+		objeto_tiro.direcao = direcao
 		if(direcao ==-1):
 			objeto_tiro.scale.x = -1
 		objeto_tiro.global_position = $Position2D.global_position
@@ -78,6 +80,7 @@ func _process(delta):
 		kunai()
 		var cena_tiro = preload("res://cena_disparo.tscn")
 		var objeto_tiro = cena_tiro.instance()
+		objeto_tiro.direcao = direcao
 		if(direcao ==-1):
 			objeto_tiro.scale.x = -1
 		objeto_tiro.global_position = $Position2D.global_position
@@ -166,6 +169,14 @@ func morrendo():
 		return $Personagem2.play("morrendo")
 	elif(ScriptGlobal.cod_personagem == 3):
 		return $Personagem3.play("morrendo")
+
+func aparecendo():
+	if(ScriptGlobal.cod_personagem == 1):
+		return $Personagem1.play("aparece")
+	elif(ScriptGlobal.cod_personagem == 2):
+		return $Personagem2.play("aparece")
+	elif(ScriptGlobal.cod_personagem == 3):
+		return $Personagem3.play("aparece")
 
 func _on_Personagem1_animation_finished():
 	ScriptGlobal.atacando = false

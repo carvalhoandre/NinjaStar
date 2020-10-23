@@ -33,16 +33,16 @@ tracks/0/keys = {
 "values": [ true, false ]
 }
 
+[sub_resource type="DynamicFont" id=5]
+size = 80
+outline_color = Color( 1, 0.00392157, 0.00392157, 1 )
+font_data = ExtResource( 3 )
+
 [sub_resource type="DynamicFont" id=4]
 size = 40
 use_mipmaps = true
 use_filter = true
 font_data = ExtResource( 2 )
-
-[sub_resource type="DynamicFont" id=5]
-size = 80
-outline_color = Color( 1, 0.00392157, 0.00392157, 1 )
-font_data = ExtResource( 3 )
 
 [sub_resource type="DynamicFont" id=6]
 size = 50
@@ -90,6 +90,18 @@ __meta__ = {
 autoplay = "pressione"
 anims/pressione = SubResource( 3 )
 
+[node name="Label2" type="Label" parent="."]
+margin_left = 15.5563
+margin_top = 11.3137
+margin_right = 400.556
+margin_bottom = 90.3137
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0.717647, 0.0156863, 0.0156863, 1 )
+text = "NINJA GO"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="EfeitosSonoros" type="CheckBox" parent="."]
 margin_left = 413.191
 margin_top = 217.19
@@ -112,18 +124,6 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label2" type="Label" parent="."]
-margin_left = 15.5563
-margin_top = 11.3137
-margin_right = 400.556
-margin_bottom = 90.3137
-custom_fonts/font = SubResource( 5 )
-custom_colors/font_color = Color( 0.717647, 0.0156863, 0.0156863, 1 )
-text = "NINJA GO"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="Button" type="Button" parent="."]
 margin_left = 438.858
 margin_top = 413.343
@@ -136,4 +136,6 @@ clip_text = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
+[connection signal="pressed" from="EfeitosSonoros" to="." method="_on_EfeitosSonoros_pressed"]
+[connection signal="pressed" from="Musica" to="." method="_on_Musica_pressed"]
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

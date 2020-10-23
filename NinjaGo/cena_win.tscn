@@ -14,7 +14,7 @@
 [ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Jump__007.png" type="Texture" id=12]
 [ext_resource path="res://recursos/imagens/personagens/Idle__003.png" type="Texture" id=13]
 [ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Idle__001.png" type="Texture" id=14]
-[ext_resource path="res://recursos/sons/win.wav" type="AudioStream" id=15]
+[ext_resource path="res://recursos/sons/naruto-musica-de-batalha.wav" type="AudioStream" id=15]
 
 [sub_resource type="DynamicFont" id=1]
 size = 150
@@ -89,17 +89,18 @@ __meta__ = {
 }
 
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="."]
+visible = false
 position = Vector2( 395.502, 390.796 )
 scale = Vector2( 0.508154, 0.517529 )
 frames = SubResource( 3 )
-frame = 3
+frame = 7
 playing = true
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( 622.035, 396.447 )
-scale = Vector2( 0.522318, 0.522318 )
+position = Vector2( 471.126, 266.158 )
+scale = Vector2( 1.13767, 1.13767 )
 frames = SubResource( 4 )
-frame = 2
+frame = 1
 playing = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -108,5 +109,5 @@ anims/default = SubResource( 5 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 15 )
-volume_db = 20.0
+volume_db = 1.0
 autoplay = true

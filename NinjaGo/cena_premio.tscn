@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://script_premio.gd" type="Script" id=1]
 [ext_resource path="res://recursos/imagens/Outos/cmb2.png" type="Texture" id=2]
 [ext_resource path="res://recursos/imagens/recursos/Vida.png" type="Texture" id=3]
+[ext_resource path="res://recursos/imagens/Outos/525px-Fuuma_Shuriken.svg.png" type="Texture" id=4]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 62.2874
@@ -10,7 +11,7 @@ radius = 62.2874
 [node name="Node2D" type="Node2D"]
 
 [node name="Premio" type="Area2D" parent="."]
-scale = Vector2( 0.214093, 0.214093 )
+scale = Vector2( 0.429137, 0.429137 )
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
@@ -27,8 +28,6 @@ texture = ExtResource( 3 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Premio"]
 shape = SubResource( 1 )
 
-[node name="TempoPremio" type="Timer" parent="Premio"]
-wait_time = 3.0
-autostart = true
+[node name="Sprite" type="Sprite" parent="Premio"]
+texture = ExtResource( 4 )
 [connection signal="body_entered" from="Premio" to="Premio" method="_on_Premio_body_entered"]
-[connection signal="timeout" from="Premio/TempoPremio" to="Premio" method="_on_TempoPremio_timeout"]

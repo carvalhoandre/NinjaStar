@@ -17,44 +17,44 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 2 ) ],
-"loop": true,
-"name": "lancamento",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 7 ), ExtResource( 8 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 12 ), ExtResource( 4 ), ExtResource( 11 ), ExtResource( 9 ), ExtResource( 10 ) ],
 "loop": true,
 "name": "impacto",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "lancamento",
 "speed": 5.0
 } ]
 
 [sub_resource type="CapsuleShape2D" id=2]
 radius = 8.56018
-height = 133.899
+height = 72.2488
 
 [node name="Node2D" type="Node2D"]
-scale = Vector2( 0.380413, 0.380413 )
 script = ExtResource( 1 )
-
-[node name="Efeito" type="AudioStreamPlayer2D" parent="."]
-rotation = 0.00589469
-stream = ExtResource( 13 )
 
 [node name="Disparo" type="Area2D" parent="."]
 
 [node name="Fire" type="AnimatedSprite" parent="Disparo"]
-position = Vector2( -3.51578, -1.01747 )
-scale = Vector2( 0.959119, 0.629646 )
+position = Vector2( -14.1979, -1.01747 )
+scale = Vector2( 0.720228, 0.317157 )
 frames = SubResource( 1 )
 animation = "impacto"
 
 [node name="Kunai" type="Sprite" parent="Disparo"]
 rotation = 1.56472
+scale = Vector2( 0.596634, 0.596634 )
 texture = ExtResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Disparo"]
 rotation = 1.57386
 shape = SubResource( 2 )
+
+[node name="Efeito" type="AudioStreamPlayer2D" parent="."]
+rotation = 0.00589469
+stream = ExtResource( 13 )
 
 [node name="Kunai" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 14 )

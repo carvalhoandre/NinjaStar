@@ -2,6 +2,8 @@ extends KinematicBody2D
 
 func _ready():
 	$AnimatedSprite.play("andando")
+	if(not ScriptGlobal.zombi):
+		$Zombi.play()
 
 var velocidade = 100
 var direcao = 1 # Direcao 1 para direita, -1 para esquerda
