@@ -21,6 +21,7 @@ func atualizar_hud():
 	elif($AudioStreamPlayer.playing and ScriptGlobal.status_musica==false):
 		$AudioStreamPlayer.stop()
 	$HUD/QPonto.text = str(ScriptGlobal.qtd_pontos)
+	$HUD/QEspecial.text = str(ScriptGlobal.especial)
 
 func _process(delta):
 	atualizar_hud()

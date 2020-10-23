@@ -10,6 +10,8 @@ func _ready():
 		$Moeda.visible = true
 	elif(tipo_premio=="vida"):
 		$Vida.visible = true
+	elif(tipo_premio=="especial"):
+		$Especial.visible = true
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
@@ -20,5 +22,7 @@ func _on_Premio_body_entered(body):
 			ScriptGlobal.qtd_pontos += ScriptGlobal.valor_ponto
 		elif(tipo_premio=="vida"):
 			ScriptGlobal.qtd_vidas += 1
+		elif(tipo_premio=="especial"):
+			ScriptGlobal.especial += 1
 		queue_free()
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=286 format=2]
+[gd_scene load_steps=289 format=2]
 
 [ext_resource path="res://imagens/cenário/Tile/3.png" type="Texture" id=1]
 [ext_resource path="res://imagens/cenário/Tile/2.png" type="Texture" id=2]
@@ -262,6 +262,9 @@
 [ext_resource path="res://recursos/imagens/Outos/1071208.png" type="Texture" id=260]
 [ext_resource path="res://recursos/fontes/game_over.ttf" type="DynamicFontData" id=261]
 [ext_resource path="res://cena_premio.tscn" type="PackedScene" id=262]
+[ext_resource path="res://recursos/imagens/Outos/525px-Fuuma_Shuriken.svg.png" type="Texture" id=263]
+[ext_resource path="res://cena_inimigo.tscn" type="PackedScene" id=264]
+[ext_resource path="res://recursos/imagens/Outos/game-3468135_960_720.png" type="Texture" id=265]
 
 [sub_resource type="Animation" id=1]
 resource_name = "morrendo"
@@ -706,6 +709,27 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="QEspecial" type="Label" parent="HUD"]
+margin_left = 983.706
+margin_top = 58.0595
+margin_right = 1023.71
+margin_bottom = 115.06
+custom_fonts/font = SubResource( 2 )
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Moedas" type="Sprite" parent="HUD"]
+position = Vector2( 941.622, 34.1887 )
+scale = Vector2( 0.0776957, 0.0776957 )
+texture = ExtResource( 265 )
+
+[node name="Especial" type="Sprite" parent="HUD"]
+position = Vector2( 942.622, 93.1887 )
+scale = Vector2( 0.0776957, 0.0776957 )
+texture = ExtResource( 263 )
+
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 pause_mode = 1
 scroll_offset = Vector2( 6, 6 )
@@ -864,7 +888,6 @@ position = Vector2( 8.84882, 14.4008 )
 scale = Vector2( 0.364307, 0.364307 )
 frames = SubResource( 18 )
 animation = "aparece"
-frame = 1
 playing = true
 
 [node name="Personagem2" type="AnimatedSprite" parent="Personagem"]
@@ -913,6 +936,9 @@ position = Vector2( 95.8138, 14.8125 )
 
 [node name="Premio" parent="." instance=ExtResource( 262 )]
 position = Vector2( 1048.88, 511.771 )
+
+[node name="Inimigo2" parent="." instance=ExtResource( 264 )]
+position = Vector2( 1085.15, -242.301 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 185 )

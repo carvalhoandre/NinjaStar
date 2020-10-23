@@ -16,6 +16,7 @@ var atacando = false
 var morrendo = false
 var morte = 0
 var zombi = false
+var especial = 0
 
 var tipo_disparo = "kunai"
 
@@ -25,3 +26,4 @@ func alpha():
 	var checkpoint = "CheckPoint1"
 	var morte = 0
 	var zombi = false
+	var especial = 0

@@ -25,9 +25,11 @@ texture = ExtResource( 2 )
 [node name="Vida" type="Sprite" parent="Premio"]
 texture = ExtResource( 3 )
 
+[node name="Especial" type="Sprite" parent="Premio"]
+position = Vector2( 3.10518, 3.494 )
+scale = Vector2( 0.271577, 0.271577 )
+texture = ExtResource( 4 )
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Premio"]
 shape = SubResource( 1 )
-
-[node name="Sprite" type="Sprite" parent="Premio"]
-texture = ExtResource( 4 )
 [connection signal="body_entered" from="Premio" to="Premio" method="_on_Premio_body_entered"]

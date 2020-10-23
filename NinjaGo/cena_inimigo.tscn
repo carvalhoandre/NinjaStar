@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://script_inimigo.gd" type="Script" id=1]
 [ext_resource path="res://imagens/inimigo/Walk (7).png" type="Texture" id=2]
@@ -23,6 +23,8 @@
 [ext_resource path="res://imagens/inimigo/Dead (8).png" type="Texture" id=21]
 [ext_resource path="res://imagens/inimigo/Dead (5).png" type="Texture" id=22]
 [ext_resource path="res://imagens/inimigo/Walk (5).png" type="Texture" id=23]
+[ext_resource path="res://recursos/imagens/Outos/1071208.png" type="Texture" id=24]
+[ext_resource path="res://recursos/sons/zombie-sound-effects-free.wav" type="AudioStream" id=25]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -31,7 +33,7 @@ animations = [ {
 "name": "andando",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 3 ), ExtResource( 14 ), ExtResource( 7 ), ExtResource( 5 ), ExtResource( 22 ), ExtResource( 16 ), ExtResource( 18 ), ExtResource( 21 ), ExtResource( 13 ), ExtResource( 6 ), ExtResource( 20 ), ExtResource( 19 ) ],
+"frames": [ ExtResource( 3 ), ExtResource( 14 ), ExtResource( 7 ), ExtResource( 5 ), ExtResource( 22 ), ExtResource( 16 ), ExtResource( 18 ), ExtResource( 21 ), ExtResource( 13 ), ExtResource( 6 ), ExtResource( 20 ), ExtResource( 19 ), ExtResource( 24 ), ExtResource( 24 ), ExtResource( 24 ) ],
 "loop": false,
 "name": "morrendo",
 "speed": 10.0
@@ -42,10 +44,13 @@ extents = Vector2( 38.0141, 80.6583 )
 
 [sub_resource type="RectangleShape2D" id=3]
 
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 37.0511, 79.9057 )
+
 [node name="Node2D" type="Node2D"]
 
 [node name="Inimigo" type="KinematicBody2D" parent="."]
-position = Vector2( 1259.67, 443.385 )
+position = Vector2( 448.509, 432.273 )
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
@@ -77,6 +82,16 @@ __meta__ = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Inimigo/pe_direito"]
 shape = SubResource( 3 )
+
+[node name="Ataque" type="Area2D" parent="Inimigo"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Inimigo/Ataque"]
+position = Vector2( -2.22974, 9.66223 )
+shape = SubResource( 4 )
+
+[node name="Zombi" type="AudioStreamPlayer" parent="Inimigo"]
+stream = ExtResource( 25 )
 [connection signal="animation_finished" from="Inimigo/AnimatedSprite" to="Inimigo" method="_on_AnimatedSprite_animation_finished"]
 [connection signal="body_exited" from="Inimigo/pe_esquerdo" to="Inimigo" method="_on_pe_esquerdo_body_exited"]
 [connection signal="body_exited" from="Inimigo/pe_direito" to="Inimigo" method="_on_pe_direito_body_exited"]
+[connection signal="body_entered" from="Inimigo/Ataque" to="Inimigo" method="_on_Ataque_body_entered"]
