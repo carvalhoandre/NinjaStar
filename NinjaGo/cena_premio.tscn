@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://script_premio.gd" type="Script" id=1]
 [ext_resource path="res://recursos/imagens/Outos/cmb2.png" type="Texture" id=2]
 [ext_resource path="res://recursos/imagens/recursos/Vida.png" type="Texture" id=3]
 [ext_resource path="res://recursos/imagens/Outos/525px-Fuuma_Shuriken.svg.png" type="Texture" id=4]
+[ext_resource path="res://recursos/imagens/Outos/510px-Mudra-Naruto-Tigre.svg_.png" type="Texture" id=5]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 62.2874
@@ -13,9 +14,6 @@ radius = 62.2874
 [node name="Premio" type="Area2D" parent="."]
 scale = Vector2( 0.429137, 0.429137 )
 script = ExtResource( 1 )
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="Moeda" type="Sprite" parent="Premio"]
 position = Vector2( -0.855392, 0.617783 )
@@ -23,12 +21,18 @@ scale = Vector2( 0.31746, 0.31746 )
 texture = ExtResource( 2 )
 
 [node name="Vida" type="Sprite" parent="Premio"]
+position = Vector2( -0.291282, 0 )
 texture = ExtResource( 3 )
 
 [node name="Especial" type="Sprite" parent="Premio"]
 position = Vector2( 3.10518, 3.494 )
 scale = Vector2( 0.271577, 0.271577 )
 texture = ExtResource( 4 )
+
+[node name="Jutsu" type="Sprite" parent="Premio"]
+position = Vector2( 0.462402, 0.238342 )
+scale = Vector2( 0.227673, 0.227673 )
+texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Premio"]
 shape = SubResource( 1 )

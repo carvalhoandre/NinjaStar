@@ -17,6 +17,7 @@ var morrendo = false
 var morte = 0
 var zombi = false
 var especial = 0
+var jutsu = false
 
 var tipo_disparo = "kunai"
 
@@ -27,3 +28,4 @@ func alpha():
 	var morte = 0
 	var zombi = false
 	var especial = 0
+	var jutsu = 0

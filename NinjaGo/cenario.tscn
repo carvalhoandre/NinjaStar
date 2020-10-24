@@ -1,0 +1,56 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://imagens/Sem título.png" type="Texture" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 32.1326, 32.171 )
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sem título" type="Sprite" parent="."]
+position = Vector2( 32.781, 31.9316 )
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 64, 64 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sem título"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sem título/StaticBody2D"]
+position = Vector2( 31.8231, 32.3402 )
+shape = SubResource( 1 )
+
+[node name="Sem título2" type="Sprite" parent="."]
+position = Vector2( 80.7663, 104.611 )
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 64, 0, 64, 64 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sem título2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sem título2/StaticBody2D"]
+position = Vector2( 31.8231, 32.3402 )
+shape = SubResource( 1 )
+
+[node name="Sem título3" type="Sprite" parent="."]
+position = Vector2( 104.619, 29.9673 )
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 128, 0, 64, 64 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sem título3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sem título3/StaticBody2D"]
+position = Vector2( 31.8231, 32.3402 )
+shape = SubResource( 1 )

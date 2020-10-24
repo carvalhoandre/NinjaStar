@@ -1,10 +1,11 @@
 extends Area2D
-
-var tipo_premio = "moeda"
+var tipo_premio = "jutsu"
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$Moeda.visible = false
 	$Vida.visible = false
+	$Jutsu.visible = false
+	$Especial.visible = false
 
 	if(tipo_premio=="moeda"):
 		$Moeda.visible = true
@@ -12,6 +13,8 @@ func _ready():
 		$Vida.visible = true
 	elif(tipo_premio=="especial"):
 		$Especial.visible = true
+	elif(tipo_premio=="jutsu"):
+		$Jutsu.visible = true
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
@@ -24,5 +27,7 @@ func _on_Premio_body_entered(body):
 			ScriptGlobal.qtd_vidas += 1
 		elif(tipo_premio=="especial"):
 			ScriptGlobal.especial += 1
+		elif(tipo_premio=="jutsu"):
+			ScriptGlobal.jutsu = true
 		queue_free()
 

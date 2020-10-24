@@ -45,12 +45,12 @@ extents = Vector2( 38.0141, 80.6583 )
 [sub_resource type="RectangleShape2D" id=3]
 
 [sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 37.0511, 79.9057 )
+extents = Vector2( 39.6794, 82.1871 )
 
 [node name="Node2D" type="Node2D"]
 
 [node name="Inimigo" type="KinematicBody2D" parent="."]
-position = Vector2( 448.509, 432.273 )
+position = Vector2( -0.272415, -1.16419 )
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
@@ -86,7 +86,7 @@ shape = SubResource( 3 )
 [node name="Ataque" type="Area2D" parent="Inimigo"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Inimigo/Ataque"]
-position = Vector2( -2.22974, 9.66223 )
+position = Vector2( -0.127506, 10.9236 )
 shape = SubResource( 4 )
 
 [node name="Zombi" type="AudioStreamPlayer" parent="Inimigo"]
