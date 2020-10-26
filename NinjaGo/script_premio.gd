@@ -30,4 +30,4 @@ func _on_Premio_body_entered(body):
 		elif(tipo_premio=="jutsu"):
 			ScriptGlobal.jutsu = true
 		queue_free()
-
+		

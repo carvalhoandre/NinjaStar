@@ -1,0 +1,34 @@
+[gd_scene load_steps=3 format=2]
+
+[sub_resource type="Animation" id=1]
+resource_name = "morrendo"
+length = 5.0
+
+[sub_resource type="Animation" id=16]
+resource_name = "transacao"
+length = 2.0
+
+[node name="Node2D" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = 5.73303
+margin_top = 3.67328
+margin_right = 1020.73
+margin_bottom = 600.673
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+margin_left = 2.16943
+margin_top = 3.67325
+margin_right = 1017.17
+margin_bottom = 600.673
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/morrendo = SubResource( 1 )
+anims/transacao = SubResource( 16 )

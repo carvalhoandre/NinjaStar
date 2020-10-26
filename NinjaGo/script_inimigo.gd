@@ -1,8 +1,10 @@
 extends KinematicBody2D
 
+var tipo_premio = "moeda"
+
 func _ready():
 	$AnimatedSprite.play("andando")
-	if(not ScriptGlobal.zombi):
+	if(not ScriptGlobal.zombi and not ScriptGlobal.status_efeitos_sonoros):
 		$Zombi.play()
 
 var velocidade = 100
@@ -24,8 +26,8 @@ func _on_pe_direito_body_exited(body):
 func _on_AnimatedSprite_animation_finished():
 	if ($AnimatedSprite.animation=="morrendo"):
 		queue_free()
+		premio()
 	ScriptGlobal.zombi = false
-
 
 func _on_Ataque_body_entered(body):
 	if (body.name=="Personagem" and ScriptGlobal.atacando == false):
@@ -36,3 +38,15 @@ func _on_Ataque_body_entered(body):
 		$AnimatedSprite.flip_h = false
 	else:
 		$AnimatedSprite.flip_h = true
+		
+func premio():
+	var cena_premio = preload("res://cena_premio.tscn")
+	var objeto = cena_premio.instance()
+	objeto.get_node("Premio").tipo_premio = tipo_premio
+	objeto.global_position = global_position
+	get_parent().get_parent().add_child(objeto)
+	
+	
+	
+	
+	

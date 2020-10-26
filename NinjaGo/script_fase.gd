@@ -1,5 +1,7 @@
 extends Node2D
 
+var tipo_premio = "vida"
+
 func atualizar_hud():
 	$HUD/Vida1.visible = false
 	$HUD/Vida2.visible = false
@@ -14,7 +16,7 @@ func atualizar_hud():
 		$HUD/Vida2.visible = true
 	elif (ScriptGlobal.qtd_vidas==1):
 		$HUD/Vida1.visible = true
-	else:
+	elif(ScriptGlobal.qtd_vidas == 0):
 		get_tree().change_scene("res://cena_gameover.tscn")
 	if(not $AudioStreamPlayer.playing and ScriptGlobal.status_musica==true):
 		$AudioStreamPlayer.play()
@@ -33,13 +35,11 @@ func atualizar_hud():
 		ScriptGlobal.zombi = true
 	
 	#if (ScriptGlobal.jutso == true):
-		#var clone = preload("res://cena_personagem.tscn")
-		#var objeto_clone = clone.instance()
-		#get_tree().root.add_child(objeto_clone)
-		#objeto_clone.global_position = $Position2D.global_position
-		#ScriptGlobal.jutsu = false
-	
-	
+		#var cena_premio = preload("res://cena_premio.tscn")
+		#var objeto = cena_premio.instance()
+		#objeto.get_node("Premio").tipo_premio = tipo_premio
+		#objeto.global_position = global_position
+		#get_parent().get_parent().add_child(objeto)
 
 		
 func _process(delta):
@@ -55,11 +55,11 @@ func _on_CheckPoint2_body_entered(body):
 func _on_Pont_body_entered(body):
 	if (body.name=="Personagem"):
 		get_tree().change_scene("res://cena_win.tscn")
-	
-func criar_inimigo():
-	var cena_inimigo = preload("res://cena_inimigo.tscn")
-	var objeto_inimigo = cena_inimigo.instance()
-	#objeto_inimigo.global_position =
 
 func _on_Timer_timeout():
-	criar_inimigo()
+	var cena_premio = preload("res://cena_premio.tscn")
+	var objeto = cena_premio.instance()
+	objeto.get_node("Premio").tipo_premio = tipo_premio
+	objeto.global_position = global_position
+	add_child(objeto)
+	
