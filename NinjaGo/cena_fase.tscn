@@ -591,7 +591,7 @@ scale = Vector2( 0.0776957, 0.0776957 )
 texture = ExtResource( 263 )
 
 [node name="CheckPoint1" type="Area2D" parent="."]
-position = Vector2( -444.429, 586.261 )
+position = Vector2( -450.041, 586.261 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -718,7 +718,7 @@ shape = SubResource( 15 )
 position = Vector2( 95.8138, 14.8125 )
 
 [node name="Cenario" parent="." instance=ExtResource( 1 )]
-position = Vector2( -294.043, 11.2373 )
+position = Vector2( -303.492, 11.2373 )
 
 [node name="Node2D2" parent="." instance=ExtResource( 264 )]
 position = Vector2( 552.966, -530.422 )

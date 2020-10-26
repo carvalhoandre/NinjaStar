@@ -6,6 +6,7 @@ var direcao = 1
 func _ready():
 	$Disparo/Fire.visible = false
 	$Disparo/Kunai.visible = false
+	$Disparo/Sprite.visible = false
 	
 	if (ScriptGlobal.tipo_disparo == "kunai"):
 		$Disparo/Kunai.visible = true
@@ -14,6 +15,11 @@ func _ready():
 	elif (ScriptGlobal.tipo_disparo == "fire"):
 		$Disparo/Fire.visible = true
 		$Disparo/Fire.play("lancamento")
+		if(ScriptGlobal.status_efeitos_sonoros):
+			$Efeito.play()
+	elif (ScriptGlobal.tipo_disparo == "especial"):
+		$Disparo/Sprite.visible = true
+		$Disparo/Sprite/AnimationPlayer.play("giro")
 		if(ScriptGlobal.status_efeitos_sonoros):
 			$Efeito.play()
 	

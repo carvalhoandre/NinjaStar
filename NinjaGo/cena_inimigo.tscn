@@ -45,24 +45,22 @@ extents = Vector2( 38.0141, 80.6583 )
 [sub_resource type="RectangleShape2D" id=3]
 
 [sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 39.6794, 82.1871 )
+extents = Vector2( 40.0907, 81.179 )
 
 [node name="Node2D" type="Node2D"]
 
 [node name="Inimigo" type="KinematicBody2D" parent="."]
-position = Vector2( -0.272415, -1.16419 )
+position = Vector2( 1.25378, 0.734232 )
 script = ExtResource( 1 )
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Inimigo"]
+position = Vector2( 0.561234, -1.12246 )
 scale = Vector2( 0.371872, 0.371873 )
 frames = SubResource( 1 )
 animation = "andando"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Inimigo"]
-position = Vector2( 0, 11 )
+position = Vector2( -1.12247, 0.336617 )
 shape = SubResource( 2 )
 
 [node name="pe_esquerdo" type="Area2D" parent="Inimigo"]
@@ -86,7 +84,7 @@ shape = SubResource( 3 )
 [node name="Ataque" type="Area2D" parent="Inimigo"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Inimigo/Ataque"]
-position = Vector2( -0.127506, 10.9236 )
+position = Vector2( -0.68874, -0.86225 )
 shape = SubResource( 4 )
 
 [node name="Zombi" type="AudioStreamPlayer" parent="Inimigo"]

@@ -1,5 +1,5 @@
 extends Area2D
-var tipo_premio = "jutsu"
+var tipo_premio = "especial"
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$Moeda.visible = false

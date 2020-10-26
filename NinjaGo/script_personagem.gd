@@ -85,6 +85,20 @@ func _process(delta):
 			objeto_tiro.scale.x = -1
 		objeto_tiro.global_position = $Position2D.global_position
 		get_tree().root.add_child(objeto_tiro)
+	
+	if(Input.is_action_just_pressed("especial") and ScriptGlobal.especial > 0):
+		ScriptGlobal.tipo_disparo = "especial"
+		magia = true
+		ScriptGlobal.mov.x = 0
+		kunai()
+		var cena_tiro = preload("res://cena_disparo.tscn")
+		var objeto_tiro = cena_tiro.instance()
+		objeto_tiro.direcao = direcao
+		if(direcao ==-1):
+			objeto_tiro.scale.x = -1
+		objeto_tiro.global_position = $Position2D.global_position
+		get_tree().root.add_child(objeto_tiro)
+		ScriptGlobal.especial -= 1
 		
 	if(ScriptGlobal.morte == 0 and ScriptGlobal.qtd_vidas == 2):
 		ScriptGlobal.morrendo = true

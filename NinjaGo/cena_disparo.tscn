@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://script_disparo.gd" type="Script" id=1]
 [ext_resource path="res://recursos/imagens/personagens/Cop/Objects/Bullet_000.png" type="Texture" id=2]
@@ -14,6 +14,7 @@
 [ext_resource path="res://recursos/imagens/personagens/Cop/Objects/Muzzle_000.png" type="Texture" id=12]
 [ext_resource path="res://recursos/sons/poof-sound-naruto.wav" type="AudioStream" id=13]
 [ext_resource path="res://recursos/sons/kunai.wav" type="AudioStream" id=14]
+[ext_resource path="res://recursos/imagens/Outos/525px-Fuuma_Shuriken.svg.png" type="Texture" id=15]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -31,6 +32,45 @@ animations = [ {
 [sub_resource type="CapsuleShape2D" id=2]
 radius = 8.56018
 height = 72.2488
+
+[sub_resource type="Animation" id=3]
+length = 2.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:rotation_degrees")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6, 1.8, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 5.0, 10.0, 20.0, 30.0, 40.0, 50.0, 60.0, 70.0, 80.0, 90.0, 100.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:scale")
+tracks/1/interp = 0
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6, 1.8, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Vector2( 0.0988555, 0.0988555 ), Vector2( 0.12, 0.12 ), Vector2( 0.1, 0.1 ), Vector2( 0.2, 0.2 ), Vector2( 0.1, 0.1 ), Vector2( 0.2, 0.2 ), Vector2( 0.1, 0.1 ), Vector2( 0.2, 0.2 ), Vector2( 0.1, 0.1 ), Vector2( 0.2, 0.2 ), Vector2( 0.1, 0.1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprite:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray(  ),
+"transitions": PoolRealArray(  ),
+"update": 1,
+"values": [  ]
+}
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 1 )
@@ -51,6 +91,15 @@ texture = ExtResource( 3 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Disparo"]
 rotation = 1.57386
 shape = SubResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="Disparo"]
+position = Vector2( -0.129628, 0.348209 )
+rotation = 0.872665
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 15 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Disparo"]
+anims/giro = SubResource( 3 )
 
 [node name="Efeito" type="AudioStreamPlayer2D" parent="."]
 rotation = 0.00589469
