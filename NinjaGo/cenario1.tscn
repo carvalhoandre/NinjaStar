@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://chao.tres" type="TileSet" id=1]
 [ext_resource path="res://imagens/jap.jpg" type="Texture" id=2]
 [ext_resource path="res://imagens/car.png" type="Texture" id=3]
+[ext_resource path="res://imagens/arvore.png" type="Texture" id=4]
 
 [node name="Node2D" type="Node2D"]
 
@@ -10,8 +11,8 @@
 scroll_offset = Vector2( 2, 2 )
 
 [node name="jap" type="Sprite" parent="ParallaxBackground"]
-position = Vector2( 512.044, 256.573 )
-scale = Vector2( 1.05564, 1.05564 )
+position = Vector2( 516.282, 222.67 )
+scale = Vector2( 1.08654, 1.05564 )
 texture = ExtResource( 2 )
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -23,3 +24,7 @@ tile_data = PoolIntArray( -1179641, 1, 0, -1114105, 1, 0, -1048569, 1, 0, -98303
 position = Vector2( -234.969, 635.314 )
 scale = Vector2( 0.738092, 0.738092 )
 texture = ExtResource( 3 )
+
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( 5536.86, -609.562 )
+texture = ExtResource( 4 )

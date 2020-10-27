@@ -98,7 +98,7 @@ rotation = 0.872665
 scale = Vector2( 0.2, 0.2 )
 texture = ExtResource( 15 )
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Disparo"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Disparo/Sprite"]
 anims/giro = SubResource( 3 )
 
 [node name="Efeito" type="AudioStreamPlayer2D" parent="."]

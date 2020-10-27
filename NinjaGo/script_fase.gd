@@ -6,8 +6,8 @@ func atualizar_hud():
 	$HUD/Vida1.visible = false
 	$HUD/Vida2.visible = false
 	$HUD/Vida3.visible = false
-	
-	if (ScriptGlobal.qtd_vidas==3):
+	#Vidas:
+	if (ScriptGlobal.qtd_vidas>=3):
 		$HUD/Vida1.visible = true
 		$HUD/Vida2.visible = true
 		$HUD/Vida3.visible = true
@@ -20,14 +20,17 @@ func atualizar_hud():
 		get_tree().change_scene("res://cena_gameover.tscn")
 	else:
 		pass
+	#Music
 	if(not $AudioStreamPlayer.playing and ScriptGlobal.status_musica==true):
 		$AudioStreamPlayer.play()
 	elif($AudioStreamPlayer.playing and ScriptGlobal.status_musica==false):
 		$AudioStreamPlayer.stop()
-	$HUD/QPonto.text = str(ScriptGlobal.qtd_pontos)
-	$HUD/QEspecial.text = str(ScriptGlobal.especial)
 	if (not $AudioStreamPlayer.playing):
 		$AudioStreamPlayer.play()
+	#HUD:
+	$HUD/QPonto.text = str(ScriptGlobal.qtd_pontos)
+	$HUD/QEspecial.text = str(ScriptGlobal.especial)
+	$HUD/QJutsu.text = str(ScriptGlobal.jutsu)
 	
 	if(ScriptGlobal.morte == 0 and ScriptGlobal.qtd_vidas == 2):
 		$AnimationPlayer.play("morrendo")
@@ -35,15 +38,6 @@ func atualizar_hud():
 	if(ScriptGlobal.morte == 1 and ScriptGlobal.qtd_vidas == 1):
 		$AnimationPlayer.play("morrendo")
 		ScriptGlobal.zombi = true
-	
-	
-	#if (ScriptGlobal.jutso == true):
-		#var cena_premio = preload("res://cena_premio.tscn")
-		#var objeto = cena_premio.instance()
-		#objeto.get_node("Premio").tipo_premio = tipo_premio
-		#objeto.global_position = global_position
-		#get_parent().get_parent().add_child(objeto)
-
 		
 func _process(delta):
 	atualizar_hud()
@@ -68,6 +62,6 @@ func _on_Timer_timeout():
 	var cena_premio = preload("res://cena_premio.tscn")
 	var objeto = cena_premio.instance()
 	objeto.get_node("Premio").tipo_premio = tipo_premio
-	objeto.global_position = Vector2(rand_range(600,600), rand_range(600,600))
+	objeto.global_position = Vector2(rand_range(1000,1000), rand_range(1000,1000))
 	add_child(objeto)
 	

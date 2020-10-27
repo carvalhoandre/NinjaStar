@@ -1,5 +1,5 @@
 extends Area2D
-var tipo_premio = "especial"
+var tipo_premio = "jutsu"
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$Moeda.visible = false
@@ -28,6 +28,6 @@ func _on_Premio_body_entered(body):
 		elif(tipo_premio=="especial"):
 			ScriptGlobal.especial += 1
 		elif(tipo_premio=="jutsu"):
-			ScriptGlobal.jutsu = true
+			ScriptGlobal.jutsu += 1
 		queue_free()
 		

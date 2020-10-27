@@ -1,13 +1,13 @@
 extends KinematicBody2D
 
-var tipo_premio = "moeda"
+var tipo_premio = "trofeu"
 
 func _ready():
 	$AnimatedSprite.play("andando")
 	if(not ScriptGlobal.zombi and ScriptGlobal.status_efeitos_sonoros):
 		$Zombi.play()
 
-var velocidade = 100
+var velocidade = 250
 var direcao = 1 # Direcao 1 para direita, -1 para esquerda
 var mov = Vector2(velocidade,0)
 

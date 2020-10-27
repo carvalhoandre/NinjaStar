@@ -1,8 +1,9 @@
-[gd_scene load_steps=248 format=2]
+[gd_scene load_steps=249 format=2]
 
 [ext_resource path="res://cenario1.tscn" type="PackedScene" id=1]
 [ext_resource path="res://imagens/warning.png" type="Texture" id=2]
 [ext_resource path="res://imagens/rip.png" type="Texture" id=3]
+[ext_resource path="res://recursos/imagens/Outos/510px-Mudra-Naruto-Tigre.svg_.png" type="Texture" id=4]
 [ext_resource path="res://recursos/imagens/personagens/Run__002.png" type="Texture" id=5]
 [ext_resource path="res://recursos/imagens/personagens/Idle__000.png" type="Texture" id=6]
 [ext_resource path="res://recursos/imagens/personagens/Run__004.png" type="Texture" id=7]
@@ -375,16 +376,6 @@ tracks/1/keys = {
 
 [sub_resource type="SpriteFrames" id=10]
 animations = [ {
-"frames": [ ExtResource( 191 ), ExtResource( 189 ), ExtResource( 180 ), ExtResource( 182 ), ExtResource( 209 ), ExtResource( 19 ), ExtResource( 70 ), ExtResource( 236 ), ExtResource( 187 ), ExtResource( 90 ) ],
-"loop": true,
-"name": "ataque_alto",
-"speed": 10.0
-}, {
-"frames": [ ExtResource( 260 ), ExtResource( 260 ), ExtResource( 260 ) ],
-"loop": true,
-"name": "aparece",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 6 ), ExtResource( 74 ), ExtResource( 12 ), ExtResource( 9 ), ExtResource( 77 ), ExtResource( 81 ), ExtResource( 95 ), ExtResource( 18 ), ExtResource( 28 ), ExtResource( 11 ) ],
 "loop": true,
 "name": "parado",
@@ -419,20 +410,20 @@ animations = [ {
 "loop": true,
 "name": "andando",
 "speed": 20.0
-} ]
-
-[sub_resource type="SpriteFrames" id=11]
-animations = [ {
-"frames": [ ExtResource( 252 ), ExtResource( 253 ), ExtResource( 181 ), ExtResource( 192 ), ExtResource( 23 ), ExtResource( 177 ), ExtResource( 186 ), ExtResource( 188 ), ExtResource( 26 ), ExtResource( 20 ) ],
+}, {
+"frames": [ ExtResource( 191 ), ExtResource( 189 ), ExtResource( 180 ), ExtResource( 182 ), ExtResource( 209 ), ExtResource( 19 ), ExtResource( 70 ), ExtResource( 236 ), ExtResource( 187 ), ExtResource( 90 ) ],
 "loop": true,
 "name": "ataque_alto",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [ ExtResource( 260 ), ExtResource( 260 ), ExtResource( 260 ) ],
 "loop": true,
 "name": "aparece",
 "speed": 5.0
-}, {
+} ]
+
+[sub_resource type="SpriteFrames" id=11]
+animations = [ {
 "frames": [ ExtResource( 139 ), ExtResource( 150 ), ExtResource( 112 ), ExtResource( 116 ), ExtResource( 117 ), ExtResource( 143 ), ExtResource( 76 ), ExtResource( 107 ), ExtResource( 166 ), ExtResource( 145 ), ExtResource( 168 ), ExtResource( 100 ), ExtResource( 161 ), ExtResource( 113 ), ExtResource( 103 ), ExtResource( 137 ), ExtResource( 106 ), ExtResource( 33 ), ExtResource( 132 ), ExtResource( 84 ) ],
 "loop": true,
 "name": "parado",
@@ -467,11 +458,8 @@ animations = [ {
 "loop": true,
 "name": "andando",
 "speed": 20.0
-} ]
-
-[sub_resource type="SpriteFrames" id=12]
-animations = [ {
-"frames": [ ExtResource( 248 ), ExtResource( 178 ), ExtResource( 243 ), ExtResource( 194 ), ExtResource( 257 ), ExtResource( 195 ), ExtResource( 235 ), ExtResource( 227 ) ],
+}, {
+"frames": [ ExtResource( 252 ), ExtResource( 253 ), ExtResource( 181 ), ExtResource( 192 ), ExtResource( 23 ), ExtResource( 177 ), ExtResource( 186 ), ExtResource( 188 ), ExtResource( 26 ), ExtResource( 20 ) ],
 "loop": true,
 "name": "ataque_alto",
 "speed": 5.0
@@ -480,7 +468,10 @@ animations = [ {
 "loop": true,
 "name": "aparece",
 "speed": 5.0
-}, {
+} ]
+
+[sub_resource type="SpriteFrames" id=12]
+animations = [ {
 "frames": [ ExtResource( 144 ), ExtResource( 214 ), ExtResource( 167 ), ExtResource( 102 ), ExtResource( 67 ), ExtResource( 32 ), ExtResource( 134 ), ExtResource( 79 ), ExtResource( 212 ), ExtResource( 85 ) ],
 "loop": true,
 "name": "parado",
@@ -515,6 +506,16 @@ animations = [ {
 "loop": true,
 "name": "andando",
 "speed": 20.0
+}, {
+"frames": [ ExtResource( 248 ), ExtResource( 178 ), ExtResource( 243 ), ExtResource( 194 ), ExtResource( 257 ), ExtResource( 195 ), ExtResource( 235 ), ExtResource( 227 ) ],
+"loop": true,
+"name": "ataque_alto",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 260 ), ExtResource( 260 ), ExtResource( 260 ) ],
+"loop": true,
+"name": "aparece",
+"speed": 5.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=13]
@@ -559,10 +560,10 @@ scale = Vector2( 0.336457, 0.336457 )
 texture = ExtResource( 244 )
 
 [node name="QPonto" type="Label" parent="HUD"]
-margin_left = 982.706
-margin_top = 1.05946
-margin_right = 1022.71
-margin_bottom = 58.0595
+margin_left = 953.597
+margin_top = 12.8594
+margin_right = 993.601
+margin_bottom = 69.8594
 custom_fonts/font = SubResource( 2 )
 text = "0"
 __meta__ = {
@@ -570,10 +571,21 @@ __meta__ = {
 }
 
 [node name="QEspecial" type="Label" parent="HUD"]
-margin_left = 983.706
-margin_top = 58.0595
-margin_right = 1023.71
-margin_bottom = 115.06
+margin_left = 824.762
+margin_top = 14.4055
+margin_right = 864.766
+margin_bottom = 71.406
+custom_fonts/font = SubResource( 2 )
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="QJutsu" type="Label" parent="HUD"]
+margin_left = 715.513
+margin_top = 13.0856
+margin_right = 755.517
+margin_bottom = 70.0861
 custom_fonts/font = SubResource( 2 )
 text = "0"
 __meta__ = {
@@ -581,14 +593,19 @@ __meta__ = {
 }
 
 [node name="Moedas" type="Sprite" parent="HUD"]
-position = Vector2( 941.622, 34.1887 )
+position = Vector2( 913.622, 34.1887 )
 scale = Vector2( 0.0776957, 0.0776957 )
 texture = ExtResource( 265 )
 
 [node name="Especial" type="Sprite" parent="HUD"]
-position = Vector2( 942.622, 93.1887 )
+position = Vector2( 795.46, 40.6257 )
 scale = Vector2( 0.0776957, 0.0776957 )
 texture = ExtResource( 263 )
+
+[node name="Jutsu" type="Sprite" parent="HUD"]
+position = Vector2( 678.245, 40.8757 )
+scale = Vector2( 0.0776957, 0.0776957 )
+texture = ExtResource( 4 )
 
 [node name="CheckPoint1" type="Area2D" parent="."]
 position = Vector2( -450.041, 586.261 )
@@ -658,8 +675,41 @@ anims/checkpoint_inativo = SubResource( 9 )
 [node name="Premio" parent="." instance=ExtResource( 262 )]
 position = Vector2( 1599.51, 487.424 )
 
+[node name="Premio2" parent="." instance=ExtResource( 262 )]
+position = Vector2( 4021.29, -353.472 )
+
+[node name="Premio3" parent="." instance=ExtResource( 262 )]
+position = Vector2( 4466.97, 268.791 )
+
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 185 )
+
+[node name="Cenario" parent="." instance=ExtResource( 1 )]
+position = Vector2( -303.492, 11.2373 )
+
+[node name="Inimigo" parent="." instance=ExtResource( 264 )]
+position = Vector2( 68.3794, -1.48651 )
+scale = Vector2( 1, 1 )
+
+[node name="Inimigo2" parent="." instance=ExtResource( 264 )]
+position = Vector2( 552.966, -530.422 )
+
+[node name="Inimigo3" parent="." instance=ExtResource( 264 )]
+position = Vector2( 285.098, 435.817 )
+
+[node name="Inimigo4" parent="." instance=ExtResource( 264 )]
+position = Vector2( 4465.38, -395.98 )
+scale = Vector2( 1, 1 )
+
+[node name="Inimigo5" parent="." instance=ExtResource( 264 )]
+position = Vector2( 5516.28, -16.8179 )
+scale = Vector2( 1, 1 )
+
+[node name="Inimigo6" parent="." instance=ExtResource( 264 )]
+position = Vector2( 4901.8, 51.2329 )
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
 
 [node name="Personagem" type="KinematicBody2D" parent="."]
 position = Vector2( -700.743, 603.365 )
@@ -716,37 +766,11 @@ shape = SubResource( 15 )
 
 [node name="Position2D" type="Position2D" parent="Personagem"]
 position = Vector2( 95.8138, 14.8125 )
-
-[node name="Cenario" parent="." instance=ExtResource( 1 )]
-position = Vector2( -303.492, 11.2373 )
-
-[node name="Node2D2" parent="." instance=ExtResource( 264 )]
-position = Vector2( 552.966, -530.422 )
-
-[node name="Node2D3" parent="." instance=ExtResource( 264 )]
-position = Vector2( 285.098, 435.817 )
-scale = Vector2( 1, 1 )
-
-[node name="Node2D6" parent="." instance=ExtResource( 264 )]
-position = Vector2( 4901.8, 51.2329 )
-scale = Vector2( 1, 1 )
-
-[node name="Node2D5" parent="." instance=ExtResource( 264 )]
-position = Vector2( 5516.28, -16.8179 )
-
-[node name="Node2D" parent="." instance=ExtResource( 264 )]
-position = Vector2( 68.3794, -1.48651 )
-
-[node name="Node2D4" parent="." instance=ExtResource( 264 )]
-position = Vector2( 4465.38, -395.98 )
-
-[node name="Timer" type="Timer" parent="."]
-autostart = true
 [connection signal="body_entered" from="Pont" to="." method="_on_Pont_body_entered"]
 [connection signal="body_entered" from="CheckPoint2" to="." method="_on_CheckPoint2_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 [connection signal="animation_finished" from="Personagem/Personagem1" to="Personagem" method="_on_Personagem1_animation_finished"]
 [connection signal="animation_finished" from="Personagem/Personagem2" to="Personagem" method="_on_Personagem2_animation_finished"]
 [connection signal="animation_finished" from="Personagem/Personagem3" to="Personagem" method="_on_Personagem3_animation_finished"]
 [connection signal="body_entered" from="Personagem/pisadinha" to="Personagem" method="_on_pisadinha_body_entered"]
 [connection signal="body_entered" from="Personagem/Kunai" to="Personagem" method="_on_Kunai_body_entered"]
-[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

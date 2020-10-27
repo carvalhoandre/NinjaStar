@@ -2,6 +2,9 @@ extends KinematicBody2D
 
 var magia = false
 var direcao = 1 # 1 é para direita e -1 é para esquerda
+var mov = Vector2(0,0)
+var velocidade = 20
+var forca_pulo = 20
 
 func _ready():
 	$Personagem1.visible = false
@@ -17,20 +20,14 @@ func _ready():
 
 func _process(delta):
 
-	ScriptGlobal.mov.y += 20
-
-	if (global_position.y > $Camera2D.limit_bottom):
-		var checkpoint = ScriptGlobal.checkpoint 
-		global_position = get_parent().get_node(checkpoint).global_position
-		aparecendo()
-		ScriptGlobal.qtd_vidas -= 1
+	mov.y += 20
 	
 	if(Input.is_action_pressed("ui_left") and not magia):
 		if(direcao == 1):
 			scale.x = -1
 			direcao = -1
 
-		ScriptGlobal.mov.x = -ScriptGlobal.velocidade
+		mov.x = - velocidade
 
 		if(is_on_floor()):
 			andando()
@@ -40,7 +37,7 @@ func _process(delta):
 			scale.x = -1
 			direcao = 1
 
-		ScriptGlobal.mov.x = ScriptGlobal.velocidade
+		mov.x = velocidade
 		if(is_on_floor()):
 			andando()
 
@@ -50,7 +47,7 @@ func _process(delta):
 			parado()
 
 	if(Input.is_action_just_pressed("ui_up") and is_on_floor()):
-		ScriptGlobal.mov.y = ScriptGlobal.forca_pulo
+		mov.y = forca_pulo
 		pulando()
 	
 	if(Input.is_action_pressed("ui_down") and is_on_floor()):
@@ -60,63 +57,11 @@ func _process(delta):
 		ScriptGlobal.atacando = true
 		ataque()
 	
-	if(Input.is_action_just_pressed("kunai")):
-		ScriptGlobal.tipo_disparo = "kunai"
-		magia = true
-		ScriptGlobal.mov.x = 0
-		kunai()
-		var cena_tiro = preload("res://cena_disparo.tscn")
-		var objeto_tiro = cena_tiro.instance()
-		objeto_tiro.direcao = direcao
-		if(direcao ==-1):
-			objeto_tiro.scale.x = -1
-		objeto_tiro.global_position = $Position2D.global_position
-		get_tree().root.add_child(objeto_tiro)
-		
-	if(Input.is_action_just_pressed("fire")):
-		ScriptGlobal.tipo_disparo = "fire"
-		magia = true
-		ScriptGlobal.mov.x = 0
-		kunai()
-		var cena_tiro = preload("res://cena_disparo.tscn")
-		var objeto_tiro = cena_tiro.instance()
-		objeto_tiro.direcao = direcao
-		if(direcao ==-1):
-			objeto_tiro.scale.x = -1
-		objeto_tiro.global_position = $Position2D.global_position
-		get_tree().root.add_child(objeto_tiro)
-	
-	if(Input.is_action_just_pressed("especial") and ScriptGlobal.especial > 0):
-		ScriptGlobal.tipo_disparo = "especial"
-		magia = true
-		ScriptGlobal.mov.x = 0
-		kunai()
-		var cena_tiro = preload("res://cena_disparo.tscn")
-		var objeto_tiro = cena_tiro.instance()
-		objeto_tiro.direcao = direcao
-		if(direcao ==-1):
-			objeto_tiro.scale.x = -1
-		objeto_tiro.global_position = $Position2D.global_position
-		get_tree().root.add_child(objeto_tiro)
-		ScriptGlobal.especial -= 1
-		
-	if(Input.is_action_just_pressed("jutsu") and ScriptGlobal.jutsu > 0):
-		ScriptGlobal.mov.x = 0
-		var cena_clone = preload("res://cena_clone.tscn")
-		var objeto_clone = cena_clone.instance()
-		objeto_clone.global_position = global_position
-		get_tree().root.add_child(objeto_clone)
-		ScriptGlobal.jutsu -= 1
-	
 	if(ScriptGlobal.morte == 0 and ScriptGlobal.qtd_vidas == 2):
-		ScriptGlobal.morrendo = true
 		morrendo()
-		ScriptGlobal.morte += 1
 	
 	if(ScriptGlobal.morte == 1 and ScriptGlobal.qtd_vidas == 1):
-		ScriptGlobal.morrendo = true
 		morrendo()
-		ScriptGlobal.morte += 1
 	
 	ScriptGlobal.mov = move_and_slide(ScriptGlobal.mov, Vector2(0,-1))
 	
@@ -134,7 +79,7 @@ func _on_pisadinha_body_entered(body):
 		body.velocidade = 0
 		body.get_node("CollisionShape2D").queue_free()
 		body.get_node("Ataque").queue_free()
-		ScriptGlobal.mov.y = ScriptGlobal.forca_pulo / 2
+		mov.y = forca_pulo / 2
 
 func andando():
 	if(ScriptGlobal.cod_personagem==1):

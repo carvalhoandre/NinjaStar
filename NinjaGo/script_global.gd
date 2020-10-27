@@ -17,7 +17,7 @@ var morrendo = false
 var morte = 0
 var zombi = false
 var especial = 0
-var jutsu = false
+var jutsu = 0
 
 var tipo_disparo = "kunai"
 
