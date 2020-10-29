@@ -25,6 +25,7 @@ func _process(delta):
 	if (global_position.y > $Camera2D.limit_bottom):
 		var checkpoint = ScriptGlobal.checkpoint 
 		global_position = get_parent().get_node(checkpoint).global_position
+		ScriptGlobal.qtd_vidas -= 1
 		aparecendo()
 	
 	if(Input.is_action_pressed("ui_left") and not magia):
@@ -136,7 +137,7 @@ func _on_pisadinha_body_entered(body):
 		body.velocidade = 0
 		body.get_node("CollisionShape2D").queue_free()
 		body.get_node("Ataque").queue_free()
-		ScriptGlobal.mov.y = ScriptGlobal.forca_pulo / 2
+		mov.y = forca_pulo / 2
 
 func andando():
 	if(ScriptGlobal.cod_personagem==1):
