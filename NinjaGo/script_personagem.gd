@@ -1,5 +1,8 @@
 extends KinematicBody2D
 
+var velocidade = 400
+var forca_pulo = -720
+var mov = Vector2(0,0)
 var magia = false
 var direcao = 1 # 1 é para direita e -1 é para esquerda
 
@@ -17,20 +20,19 @@ func _ready():
 
 func _process(delta):
 
-	ScriptGlobal.mov.y += 20
+	mov.y += 20
 
 	if (global_position.y > $Camera2D.limit_bottom):
 		var checkpoint = ScriptGlobal.checkpoint 
 		global_position = get_parent().get_node(checkpoint).global_position
 		aparecendo()
-		ScriptGlobal.qtd_vidas -= 1
 	
 	if(Input.is_action_pressed("ui_left") and not magia):
 		if(direcao == 1):
 			scale.x = -1
 			direcao = -1
 
-		ScriptGlobal.mov.x = -ScriptGlobal.velocidade
+		mov.x = -velocidade
 
 		if(is_on_floor()):
 			andando()
@@ -40,17 +42,17 @@ func _process(delta):
 			scale.x = -1
 			direcao = 1
 
-		ScriptGlobal.mov.x = ScriptGlobal.velocidade
+		mov.x =  velocidade
 		if(is_on_floor()):
 			andando()
 
 	else:
-		ScriptGlobal.mov.x = 0
+		mov.x = 0
 		if(is_on_floor() and not ScriptGlobal.atacando and not ScriptGlobal.morrendo and not magia):
 			parado()
 
 	if(Input.is_action_just_pressed("ui_up") and is_on_floor()):
-		ScriptGlobal.mov.y = ScriptGlobal.forca_pulo
+		mov.y = forca_pulo
 		pulando()
 	
 	if(Input.is_action_pressed("ui_down") and is_on_floor()):
@@ -63,7 +65,7 @@ func _process(delta):
 	if(Input.is_action_just_pressed("kunai")):
 		ScriptGlobal.tipo_disparo = "kunai"
 		magia = true
-		ScriptGlobal.mov.x = 0
+		mov.x = 0
 		kunai()
 		var cena_tiro = preload("res://cena_disparo.tscn")
 		var objeto_tiro = cena_tiro.instance()
@@ -76,7 +78,7 @@ func _process(delta):
 	if(Input.is_action_just_pressed("fire")):
 		ScriptGlobal.tipo_disparo = "fire"
 		magia = true
-		ScriptGlobal.mov.x = 0
+		mov.x = 0
 		kunai()
 		var cena_tiro = preload("res://cena_disparo.tscn")
 		var objeto_tiro = cena_tiro.instance()
@@ -89,7 +91,7 @@ func _process(delta):
 	if(Input.is_action_just_pressed("especial") and ScriptGlobal.especial > 0):
 		ScriptGlobal.tipo_disparo = "especial"
 		magia = true
-		ScriptGlobal.mov.x = 0
+		mov.x = 0
 		kunai()
 		var cena_tiro = preload("res://cena_disparo.tscn")
 		var objeto_tiro = cena_tiro.instance()
@@ -101,7 +103,7 @@ func _process(delta):
 		ScriptGlobal.especial -= 1
 		
 	if(Input.is_action_just_pressed("jutsu") and ScriptGlobal.jutsu > 0):
-		ScriptGlobal.mov.x = 0
+		mov.x = 0
 		var cena_clone = preload("res://cena_clone.tscn")
 		var objeto_clone = cena_clone.instance()
 		objeto_clone.global_position = global_position
@@ -118,7 +120,7 @@ func _process(delta):
 		morrendo()
 		ScriptGlobal.morte += 1
 	
-	ScriptGlobal.mov = move_and_slide(ScriptGlobal.mov, Vector2(0,-1))
+	mov = move_and_slide(mov, Vector2(0,-1))
 	
 func _on_Kunai_body_entered(body):
 	ScriptGlobal.zombi = true

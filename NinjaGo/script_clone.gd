@@ -42,7 +42,7 @@ func _process(delta):
 			andando()
 
 	else:
-		ScriptGlobal.mov.x = 0
+		mov.x = 0
 		if(is_on_floor() and not ScriptGlobal.atacando and not ScriptGlobal.morrendo and not magia):
 			parado()
 
@@ -63,7 +63,7 @@ func _process(delta):
 	if(ScriptGlobal.morte == 1 and ScriptGlobal.qtd_vidas == 1):
 		morrendo()
 	
-	ScriptGlobal.mov = move_and_slide(ScriptGlobal.mov, Vector2(0,-1))
+	mov = move_and_slide(mov, Vector2(0,-1))
 	
 func _on_Kunai_body_entered(body):
 	ScriptGlobal.zombi = true

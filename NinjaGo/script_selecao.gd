@@ -28,8 +28,7 @@ func _process(delta):
 		$AnimationPlayer.play("personagem3")
 
 	if (Input.is_action_just_pressed("enter")):
-		ScriptGlobal.alpha()
-		get_tree().change_scene("res://cena_fase.tscn")
+		get_tree().change_scene("res://cena_tutorial.tscn")
 
 func _on_AudioStreamPlayer_finished():
 	$AudioStreamPlayer.play()
