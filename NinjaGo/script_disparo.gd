@@ -32,8 +32,25 @@ func _on_Disparo_body_entered(body):
 		if(ScriptGlobal.tipo_disparo == "fire"):
 			$Disparo/Fire.play("impacto")
 		body.velocidade = 0
-		body.get_node("AnimatedSprite").play("morrendo")
+		if ScriptGlobal.cod_inimigo == 1:
+			body.get_node("Zumbi").play("morrendo")
+		if ScriptGlobal.cod_inimigo == 2:
+			body.get_node("Zumbi1").play("morrendo")
+		if ScriptGlobal.cod_inimigo == 3:
+			body.get_node("Abobora").play("morrendo")
 		body.get_node("CollisionShape2D").queue_free()
 		body.get_node("Ataque").queue_free()
 		queue_free()
 		ScriptGlobal.zombi = false
+	if (body.name=="Personagem"):
+		if(ScriptGlobal.tipo_disparo == "fire"):
+			$Disparo/Fire.play("impacto")
+		if ScriptGlobal.cod_personagem == 1:
+			body.get_node("Personagem1").play("morrendo")
+		if ScriptGlobal.cod_personagem == 2:
+			body.get_node("Personagem2").play("morrendo")
+		if ScriptGlobal.cod_personagem == 3:
+			body.get_node("Personagem3").play("morrendo")
+		ScriptGlobal.qtd_vidas -= 1
+
+	

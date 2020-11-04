@@ -107,7 +107,7 @@ func _process(delta):
 		mov.x = 0
 		var cena_clone = preload("res://cena_clone.tscn")
 		var objeto_clone = cena_clone.instance()
-		objeto_clone.global_position = global_position
+		objeto_clone.global_position = $clone.global_position
 		get_tree().root.add_child(objeto_clone)
 		ScriptGlobal.jutsu -= 1
 	
@@ -126,14 +126,24 @@ func _process(delta):
 func _on_Kunai_body_entered(body):
 	ScriptGlobal.zombi = true
 	if (body.name=="Inimigo" and ScriptGlobal.atacando == true):
-			body.get_node("AnimatedSprite").play("morrendo")
+			if ScriptGlobal.cod_inimigo == 1:
+				body.get_node("Zumbi").play("morrendo")
+			if ScriptGlobal.cod_inimigo == 2:
+				body.get_node("Zumbi1").play("morrendo")
+			if ScriptGlobal.cod_inimigo == 3:
+				body.get_node("Abobora").play("morrendo")			
 			body.velocidade = 0
 			body.get_node("CollisionShape2D").queue_free()
 			body.get_node("Ataque").queue_free()
 
 func _on_pisadinha_body_entered(body):
 	if (body.name=="Inimigo"):
-		body.get_node("AnimatedSprite").play("morrendo")
+		if ScriptGlobal.cod_inimigo == 1:
+				body.get_node("Zumbi").play("morrendo")
+		if ScriptGlobal.cod_inimigo == 2:
+				body.get_node("Zumbi1").play("morrendo")
+		if ScriptGlobal.cod_inimigo == 3:
+				body.get_node("Abobora").play("morrendo")	
 		body.velocidade = 0
 		body.get_node("CollisionShape2D").queue_free()
 		body.get_node("Ataque").queue_free()

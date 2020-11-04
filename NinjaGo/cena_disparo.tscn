@@ -31,7 +31,7 @@ animations = [ {
 
 [sub_resource type="CapsuleShape2D" id=2]
 radius = 8.56018
-height = 72.2488
+height = 0.0
 
 [sub_resource type="Animation" id=3]
 length = 2.1
@@ -89,7 +89,8 @@ scale = Vector2( 0.596634, 0.596634 )
 texture = ExtResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Disparo"]
-rotation = 1.57386
+position = Vector2( 38.471, -1.26134 )
+rotation = 1.57079
 shape = SubResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="Disparo"]

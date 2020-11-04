@@ -20,5 +20,4 @@ func _on_Premio_body_entered(body):
 		ScriptGlobal.qtd_pontos += ScriptGlobal.valor_ponto
 	elif (tipo_premio=="missil"):
 		ScriptGlobal.qtd_missel += 1
-		
 	queue_free()

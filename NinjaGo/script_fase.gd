@@ -20,7 +20,7 @@ func atualizar_hud():
 		get_tree().change_scene("res://cena_gameover.tscn")
 	else:
 		pass
-	#Music
+	#Musica
 	if(not $AudioStreamPlayer.playing and ScriptGlobal.status_musica==true):
 		$AudioStreamPlayer.play()
 	elif($AudioStreamPlayer.playing and ScriptGlobal.status_musica==false):
@@ -54,14 +54,9 @@ func _on_Pont_body_entered(body):
 		get_tree().change_scene("res://cena_win.tscn")
 
 func _on_Timer_timeout():
-	var number = rand_range(0,2)
-	if(number == 2):
-		tipo_premio = "vida"
-	else:
-		tipo_premio = "especial"
+	ScriptGlobal.troc_premio()
 	var cena_premio = preload("res://cena_premio.tscn")
 	var objeto = cena_premio.instance()
-	objeto.get_node("Premio").tipo_premio = tipo_premio
 	objeto.global_position = Vector2(rand_range(1000,1000), rand_range(1000,1000))
 	add_child(objeto)
 	
