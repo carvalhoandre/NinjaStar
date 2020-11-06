@@ -1,6 +1,6 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=24 format=2]
 
-[ext_resource path="res://recursos/fontes/NinjaLine.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://recursos/fontes/njnaruto.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://script_inicio.gd" type="Script" id=2]
 [ext_resource path="res://recursos/imagens/Outos/Sem Título-1.png" type="Texture" id=3]
 [ext_resource path="res://recursos/imagens/personagens/Zumbi/female/Idle (9).png" type="Texture" id=4]
@@ -21,18 +21,13 @@
 [ext_resource path="res://recursos/imagens/personagens/Zumbi/female/Idle (15).png" type="Texture" id=19]
 [ext_resource path="res://recursos/sons/inicio.wav" type="AudioStream" id=20]
 
-[sub_resource type="StyleBoxFlat" id=1]
-bg_color = Color( 1, 0.0509804, 0.0509804, 1 )
-
-[sub_resource type="DynamicFont" id=2]
-resource_local_to_scene = true
+[sub_resource type="DynamicFont" id=1]
 size = 30
-outline_color = Color( 0, 0, 0, 1 )
 use_mipmaps = true
 use_filter = true
 font_data = ExtResource( 1 )
 
-[sub_resource type="SpriteFrames" id=3]
+[sub_resource type="SpriteFrames" id=2]
 animations = [ {
 "frames": [ ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 5 ), ExtResource( 8 ), ExtResource( 14 ), ExtResource( 7 ), ExtResource( 9 ), ExtResource( 18 ), ExtResource( 4 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 10 ), ExtResource( 17 ), ExtResource( 6 ), ExtResource( 19 ) ],
 "loop": true,
@@ -40,7 +35,7 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=3]
 length = 0.5
 loop = true
 tracks/0/type = "value"
@@ -67,13 +62,12 @@ scale = Vector2( 0.424741, 0.345324 )
 texture = ExtResource( 3 )
 
 [node name="Button" type="Button" parent="."]
-margin_left = 400.738
-margin_top = 483.204
-margin_right = 558.738
-margin_bottom = 534.204
+margin_left = 358.779
+margin_top = 496.157
+margin_right = 564.779
+margin_bottom = 562.157
 rect_scale = Vector2( 1.57113, 1.53118 )
-custom_styles/hover = SubResource( 1 )
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 1 )
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 text = "Iniciar"
 flat = true
@@ -82,15 +76,15 @@ __meta__ = {
 }
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( 520.467, 452.929 )
-scale = Vector2( 0.195019, 0.195019 )
-frames = SubResource( 3 )
-frame = 6
+position = Vector2( 519.66, 436.773 )
+scale = Vector2( 0.284848, 0.284848 )
+frames = SubResource( 2 )
+frame = 5
 playing = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "iniciar"
-anims/iniciar = SubResource( 4 )
+anims/iniciar = SubResource( 3 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 20 )

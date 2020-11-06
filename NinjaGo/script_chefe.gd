@@ -1,13 +1,13 @@
 extends KinematicBody2D
 
-var tipo_premio = "trofeu"
+var tipo_premio = "fim"
 
 func _ready():
 	$AnimatedSprite.play("andando")
 	if(not ScriptGlobal.zombi and ScriptGlobal.status_efeitos_sonoros):
 		$Zombi.play()
 
-var velocidade = 250
+var velocidade = 500
 var direcao = 1 # Direcao 1 para direita, -1 para esquerda
 var mov = Vector2(velocidade,0)
 
@@ -47,6 +47,12 @@ func premio():
 	get_parent().get_parent().add_child(objeto)
 	
 	
-	
-	
-	
+func inimigos():
+		var cena_inimigo = preload("res://cena_inimigo.tscn")
+		var objeto_inimigo = cena_inimigo.instance()
+		objeto_inimigo.global_position = $Position2D.global_position
+		get_tree().root.add_child(objeto_inimigo)
+		
+
+func _on_Timer_timeout():
+	inimigos()

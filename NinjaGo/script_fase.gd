@@ -60,3 +60,8 @@ func _on_Timer_timeout():
 	objeto.global_position = Vector2(rand_range(1000,1000), rand_range(1000,1000))
 	add_child(objeto)
 	
+func chefe():
+		var cena_chefe = preload("res://cena_chefe.tscn")
+		var objeto_chefe = cena_chefe.instance()
+		objeto_chefe.global_position = $Pont.global_position
+		get_tree().root.add_child(objeto_chefe)

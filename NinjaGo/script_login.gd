@@ -4,7 +4,7 @@ extends Node2D
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-
+var login = true
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -14,14 +14,18 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
+func _on_CheckButton_button_up():
+	login = false
 
-
-func _on_Entrar_pressed():
-	var url = "localhost/NinjaGO/login.php"+ $Email.text + "&senha" + $Senha.text
-	var headers = []
-	var ssl = false
-	var method = HTTPClient.METHOD_GET
-	$HTTPRequest.request(url,headers,ssl,method)
+func _on_Enviar_pressed():
+	if login == true:
+		var url = "localhost/NinjaGO/login.php"+ $Email.text + "&senha" + $Senha.text
+		var headers = []
+		var ssl = false
+		var method = HTTPClient.METHOD_GET
+		$HTTPRequest.request(url,headers,ssl,method)
+	else:
+		get_tree().change_scene("res://cena_selecao.tscn")
 
 
 func _on_HTTPRequest_request_completed(result, response_code, headers, body):
@@ -34,3 +38,5 @@ func _on_HTTPRequest_request_completed(result, response_code, headers, body):
 
 func _on_Ok_pressed():
 	$ColorRect.visible = false
+
+

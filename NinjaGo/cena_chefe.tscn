@@ -26,18 +26,17 @@
 [ext_resource path="res://recursos/imagens/imagens/inimigo/Walk (1).png" type="Texture" id=24]
 [ext_resource path="res://recursos/imagens/imagens/inimigo/Walk (8).png" type="Texture" id=25]
 
-
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 24 ), ExtResource( 23 ), ExtResource( 8 ), ExtResource( 3 ), ExtResource( 2 ), ExtResource( 6 ), ExtResource( 18 ), ExtResource( 25 ), ExtResource( 14 ), ExtResource( 4 ) ],
-"loop": true,
-"name": "andando",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 22 ), ExtResource( 11 ), ExtResource( 21 ), ExtResource( 19 ), ExtResource( 5 ), ExtResource( 9 ), ExtResource( 16 ), ExtResource( 13 ), ExtResource( 10 ), ExtResource( 20 ), ExtResource( 15 ), ExtResource( 12 ), ExtResource( 7 ), ExtResource( 7 ), ExtResource( 7 ) ],
 "loop": false,
 "name": "morrendo",
 "speed": 10.0
+}, {
+"frames": [ ExtResource( 24 ), ExtResource( 23 ), ExtResource( 8 ), ExtResource( 3 ), ExtResource( 2 ), ExtResource( 6 ), ExtResource( 18 ), ExtResource( 25 ), ExtResource( 14 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "andando",
+"speed": 18.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
@@ -50,48 +49,65 @@ extents = Vector2( 40.0907, 81.179 )
 
 [node name="Node2D" type="Node2D"]
 
-[node name="Inimigo" type="KinematicBody2D" parent="."]
+[node name="Chefe" type="KinematicBody2D" parent="."]
 position = Vector2( 1.25378, 0.734232 )
 scale = Vector2( 3.46081, 3.46081 )
 script = ExtResource( 1 )
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="Inimigo"]
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Chefe"]
 position = Vector2( 0.561234, -1.12246 )
 scale = Vector2( 0.371872, 0.371873 )
 frames = SubResource( 1 )
 animation = "andando"
+frame = 8
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Inimigo"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chefe"]
 position = Vector2( -1.12247, 0.336617 )
 shape = SubResource( 2 )
 
-[node name="pe_esquerdo" type="Area2D" parent="Inimigo"]
+[node name="pe_esquerdo" type="Area2D" parent="Chefe"]
 position = Vector2( -53.615, 104.326 )
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Inimigo/pe_esquerdo"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chefe/pe_esquerdo"]
 shape = SubResource( 3 )
 
-[node name="pe_direito" type="Area2D" parent="Inimigo"]
+[node name="pe_direito" type="Area2D" parent="Chefe"]
 position = Vector2( 53.3289, 104.77 )
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Inimigo/pe_direito"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chefe/pe_direito"]
 shape = SubResource( 3 )
 
-[node name="Ataque" type="Area2D" parent="Inimigo"]
+[node name="Ataque" type="Area2D" parent="Chefe"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Inimigo/Ataque"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chefe/Ataque"]
 position = Vector2( -0.68874, -0.86225 )
 shape = SubResource( 4 )
 
-[node name="Zombi" type="AudioStreamPlayer" parent="Inimigo"]
+[node name="Zombi" type="AudioStreamPlayer" parent="Chefe"]
 stream = ExtResource( 17 )
-[connection signal="animation_finished" from="Inimigo/AnimatedSprite" to="Inimigo" method="_on_AnimatedSprite_animation_finished"]
-[connection signal="body_exited" from="Inimigo/pe_esquerdo" to="Inimigo" method="_on_pe_esquerdo_body_exited"]
-[connection signal="body_exited" from="Inimigo/pe_direito" to="Inimigo" method="_on_pe_direito_body_exited"]
-[connection signal="body_entered" from="Inimigo/Ataque" to="Inimigo" method="_on_Ataque_body_entered"]
+
+[node name="Position2D" type="Position2D" parent="Chefe"]
+
+[node name="Timer" type="Timer" parent="Chefe"]
+wait_time = 10.0
+autostart = true
+
+[node name="ProgressBar" type="ProgressBar" parent="Chefe"]
+margin_left = -4.85952
+margin_top = -103.994
+margin_right = -0.859519
+margin_bottom = -89.994
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="animation_finished" from="Chefe/AnimatedSprite" to="Chefe" method="_on_AnimatedSprite_animation_finished"]
+[connection signal="body_exited" from="Chefe/pe_esquerdo" to="Chefe" method="_on_pe_esquerdo_body_exited"]
+[connection signal="body_exited" from="Chefe/pe_direito" to="Chefe" method="_on_pe_direito_body_exited"]
+[connection signal="body_entered" from="Chefe/Ataque" to="Chefe" method="_on_Ataque_body_entered"]
+[connection signal="timeout" from="Chefe/Timer" to="Chefe" method="_on_Timer_timeout"]

@@ -7,6 +7,7 @@ func _ready():
 	$Vida.visible = false
 	$Jutsu.visible = false
 	$Especial.visible = false
+	$Fim.visel = false
 
 	if(ScriptGlobal.tipo_premio=="moeda"):
 		$Moeda.visible = true
@@ -16,6 +17,8 @@ func _ready():
 		$Especial.visible = true
 	elif(ScriptGlobal.tipo_premio=="jutsu"):
 		$Jutsu.visible = true
+	elif(ScriptGlobal.tipo_premio=="fim"):
+		$Fim.visible = true
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
@@ -33,5 +36,7 @@ func _on_Premio_body_entered(body):
 			ScriptGlobal.especial += 1
 		elif(ScriptGlobal.tipo_premio=="jutsu"):
 			ScriptGlobal.jutsu += 1
+		elif(ScriptGlobal.tipo_premio=="fim"):
+			get_tree().change_scene("res://cena_win.tscn")
 		queue_free()
 		

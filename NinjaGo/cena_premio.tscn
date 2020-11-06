@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://script_premio.gd" type="Script" id=1]
 [ext_resource path="res://recursos/imagens/Outos/cmb2.png" type="Texture" id=2]
 [ext_resource path="res://recursos/imagens/recursos/Vida.png" type="Texture" id=3]
 [ext_resource path="res://recursos/imagens/Outos/525px-Fuuma_Shuriken.svg.png" type="Texture" id=4]
 [ext_resource path="res://recursos/imagens/Outos/510px-Mudra-Naruto-Tigre.svg_.png" type="Texture" id=5]
+[ext_resource path="res://recursos/imagens/Outos/Mudra-Naruto-Coq.svg_-600x469.png" type="Texture" id=6]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 62.2874
@@ -33,6 +34,11 @@ texture = ExtResource( 4 )
 position = Vector2( 0.462402, 0.238342 )
 scale = Vector2( 0.227673, 0.227673 )
 texture = ExtResource( 5 )
+
+[node name="Fim" type="Sprite" parent="Premio"]
+position = Vector2( 0.462402, 0.238342 )
+scale = Vector2( 0.227673, 0.227673 )
+texture = ExtResource( 6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Premio"]
 shape = SubResource( 1 )

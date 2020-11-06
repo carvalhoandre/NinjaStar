@@ -38,12 +38,23 @@ func _process(delta):
 		inimigo  += 1
 		if a == 8:
 			queue_free()
-	if a == 10:
+	if a == 8:
+		ScriptGlobal.alpha()
+		ScriptGlobal.tutorial = false
 		get_tree().change_scene("res://cena_fase.tscn")
 	
 	if (Input.is_action_just_pressed("exit")):
+		ScriptGlobal.alpha()
+		ScriptGlobal.tutorial = false
 		get_tree().change_scene("res://cena_fase.tscn")
 		
+	if(not $AudioStreamPlayer.playing and ScriptGlobal.status_musica==true):
+		$AudioStreamPlayer.play()
+	elif($AudioStreamPlayer.playing and ScriptGlobal.status_musica==false):
+		$AudioStreamPlayer.stop()
+	if (not $AudioStreamPlayer.playing):
+		$AudioStreamPlayer.play()
+
 func _on_Timer_timeout():
 	a += 1
 	$Timer.start()

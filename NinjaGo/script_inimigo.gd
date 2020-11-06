@@ -13,7 +13,7 @@ func _ready():
 	if ScriptGlobal.cod_inimigo == 1:
 		$Zumbi.visible = true
 	if ScriptGlobal.cod_inimigo == 2:
-		$Zumbi1.visible = true
+		$Zumbi2.visible = true
 	if ScriptGlobal.cod_inimigo == 3:
 		$Abobora.visible = true
 	
@@ -38,7 +38,7 @@ func _on_Timer_timeout():
 	
 func disparo():
 		ScriptGlobal.tipo_disparo = "kunai"
-		var cena_tiro = preload("res://cena_disparo.tscn")
+		var cena_tiro = preload("res://disparo_inimigo.tscn")
 		var objeto_tiro = cena_tiro.instance()
 		objeto_tiro.direcao = direcao
 		if(direcao == -1):

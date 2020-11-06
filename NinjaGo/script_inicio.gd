@@ -6,7 +6,7 @@ func _ready():
 		
 func _process(delta):
 	if (Input.is_action_just_pressed("enter")):
-		get_tree().change_scene("res://cena_selecao.tscn")
+		get_tree().change_scene("res://cena_login.tscn")
 
 func _on_Button_pressed():
-	get_tree().change_scene("res://cena_selecao.tscn")
+	get_tree().change_scene("res://cena_login.tscn")

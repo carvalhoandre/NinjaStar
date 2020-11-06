@@ -135,6 +135,7 @@ func _on_Kunai_body_entered(body):
 			body.velocidade = 0
 			body.get_node("CollisionShape2D").queue_free()
 			body.get_node("Ataque").queue_free()
+			ScriptGlobal.troc_inimigo()
 
 func _on_pisadinha_body_entered(body):
 	if (body.name=="Inimigo"):
@@ -147,7 +148,8 @@ func _on_pisadinha_body_entered(body):
 		body.velocidade = 0
 		body.get_node("CollisionShape2D").queue_free()
 		body.get_node("Ataque").queue_free()
-		mov.y = forca_pulo / 2
+		mov.y = forca_pulo * 2
+		ScriptGlobal.troc_inimigo()
 
 func andando():
 	if(ScriptGlobal.cod_personagem==1):
