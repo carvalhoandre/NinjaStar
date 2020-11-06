@@ -1,0 +1,132 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://recursos/fontes/game_over.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://script_login.gd" type="Script" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 100
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 50
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 50
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 1 )
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 390.2
+margin_top = 132.964
+margin_right = 677.2
+margin_bottom = 189.964
+custom_fonts/font = SubResource( 1 )
+text = "TELA DE LOGIN"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 168.264
+margin_top = 236.522
+margin_right = 314.264
+margin_bottom = 265.522
+custom_fonts/font = SubResource( 1 )
+text = "E-mail"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="."]
+margin_left = 148.478
+margin_top = 317.386
+margin_right = 294.478
+margin_bottom = 346.386
+custom_fonts/font = SubResource( 1 )
+text = "Senha"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Email" type="LineEdit" parent="."]
+margin_left = 325.0
+margin_top = 240.0
+margin_right = 584.0
+margin_bottom = 264.0
+custom_fonts/font = SubResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Senha" type="LineEdit" parent="."]
+margin_left = 327.378
+margin_top = 322.055
+margin_right = 586.378
+margin_bottom = 361.055
+custom_fonts/font = SubResource( 2 )
+secret = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Entrar" type="Button" parent="."]
+margin_left = 472.584
+margin_top = 491.083
+margin_right = 560.584
+margin_bottom = 526.083
+custom_fonts/font = SubResource( 3 )
+text = "ENVIAR"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+margin_left = 169.907
+margin_top = 204.819
+margin_right = 862.907
+margin_bottom = 432.819
+color = Color( 0.0745098, 0.486275, 0.513726, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label4" type="Label" parent="ColorRect"]
+margin_left = 219.067
+margin_top = 92.3855
+margin_right = 498.067
+margin_bottom = 149.386
+custom_fonts/font = SubResource( 1 )
+text = "Dados inválidos"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Ok" type="Button" parent="ColorRect"]
+margin_left = 302.677
+margin_top = 286.265
+margin_right = 390.677
+margin_bottom = 321.265
+custom_fonts/font = SubResource( 3 )
+text = "OK"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Entrar" to="." method="_on_Entrar_pressed"]
+[connection signal="request_completed" from="HTTPRequest" to="." method="_on_HTTPRequest_request_completed"]
+[connection signal="pressed" from="ColorRect/Ok" to="." method="_on_Ok_pressed"]

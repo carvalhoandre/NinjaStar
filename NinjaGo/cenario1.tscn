@@ -1,9 +1,11 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://chao.tres" type="TileSet" id=1]
-[ext_resource path="res://imagens/jap.jpg" type="Texture" id=2]
-[ext_resource path="res://imagens/car.png" type="Texture" id=3]
-[ext_resource path="res://imagens/arvore.png" type="Texture" id=4]
+[ext_resource path="res://recursos/imagens/cenário/chao.tres" type="TileSet" id=1]
+[ext_resource path="res://recursos/imagens/imagens/jap.jpg" type="Texture" id=2]
+[ext_resource path="res://recursos/imagens/imagens/car.png" type="Texture" id=3]
+[ext_resource path="res://recursos/imagens/imagens/arvore.png" type="Texture" id=4]
+
+
 
 [node name="Node2D" type="Node2D"]
 

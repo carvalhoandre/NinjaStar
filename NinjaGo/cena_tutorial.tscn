@@ -108,7 +108,7 @@
 [ext_resource path="res://recursos/imagens/cenário/Fase3/Object/Tree_3.png" type="Texture" id=106]
 [ext_resource path="res://recursos/imagens/cenário/Fase3/BG/BG.png" type="Texture" id=107]
 [ext_resource path="res://script_tutorial.gd" type="Script" id=108]
-[ext_resource path="res://chao.tres" type="TileSet" id=109]
+[ext_resource path="res://recursos/imagens/cenário/chao.tres" type="TileSet" id=109]
 [ext_resource path="res://recursos/imagens/recursos/s.png" type="Texture" id=110]
 [ext_resource path="res://recursos/imagens/recursos/Esc.png" type="Texture" id=111]
 [ext_resource path="res://recursos/imagens/recursos/setas.png" type="Texture" id=112]
@@ -233,6 +233,9 @@
 [ext_resource path="res://recursos/fontes/game_over.ttf" type="DynamicFontData" id=231]
 [ext_resource path="res://recursos/imagens/recursos/enter.png" type="Texture" id=232]
 [ext_resource path="res://cena_pausa.tscn" type="PackedScene" id=233]
+
+
+
 
 [sub_resource type="DynamicFont" id=1]
 size = 80

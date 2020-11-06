@@ -209,6 +209,8 @@
 [ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Dead__008.png" type="Texture" id=207]
 [ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Dead__000.png" type="Texture" id=208]
 
+
+
 [sub_resource type="StyleBoxEmpty" id=1]
 
 [sub_resource type="DynamicFont" id=2]

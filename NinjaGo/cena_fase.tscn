@@ -1,8 +1,8 @@
 [gd_scene load_steps=249 format=2]
 
 [ext_resource path="res://cenario1.tscn" type="PackedScene" id=1]
-[ext_resource path="res://imagens/warning.png" type="Texture" id=2]
-[ext_resource path="res://imagens/rip.png" type="Texture" id=3]
+[ext_resource path="res://recursos/imagens/imagens/warning.png" type="Texture" id=2]
+[ext_resource path="res://recursos/imagens/imagens/rip.png" type="Texture" id=3]
 [ext_resource path="res://recursos/imagens/Outos/510px-Mudra-Naruto-Tigre.svg_.png" type="Texture" id=4]
 [ext_resource path="res://recursos/imagens/personagens/Run__002.png" type="Texture" id=5]
 [ext_resource path="res://recursos/imagens/personagens/Idle__000.png" type="Texture" id=6]
@@ -233,6 +233,9 @@
 [ext_resource path="res://recursos/imagens/Outos/525px-Fuuma_Shuriken.svg.png" type="Texture" id=263]
 [ext_resource path="res://cena_inimigo.tscn" type="PackedScene" id=264]
 [ext_resource path="res://recursos/imagens/Outos/game-3468135_960_720.png" type="Texture" id=265]
+
+
+
 
 [sub_resource type="Animation" id=1]
 resource_name = "morrendo"
