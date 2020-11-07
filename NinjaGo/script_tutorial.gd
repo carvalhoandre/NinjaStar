@@ -40,11 +40,13 @@ func _process(delta):
 			queue_free()
 	if a == 8:
 		ScriptGlobal.alpha()
+		ScriptGlobal.troc_inimigo()
 		ScriptGlobal.tutorial = false
 		get_tree().change_scene("res://cena_fase.tscn")
 	
 	if (Input.is_action_just_pressed("exit")):
 		ScriptGlobal.alpha()
+		ScriptGlobal.troc_inimigo()
 		ScriptGlobal.tutorial = false
 		get_tree().change_scene("res://cena_fase.tscn")
 		

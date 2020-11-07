@@ -7,7 +7,7 @@ func _ready():
 	$Vida.visible = false
 	$Jutsu.visible = false
 	$Especial.visible = false
-	$Fim.visel = false
+	$Fim.visible = false
 
 	if(ScriptGlobal.tipo_premio=="moeda"):
 		$Moeda.visible = true
@@ -38,5 +38,6 @@ func _on_Premio_body_entered(body):
 			ScriptGlobal.jutsu += 1
 		elif(ScriptGlobal.tipo_premio=="fim"):
 			get_tree().change_scene("res://cena_win.tscn")
+		ScriptGlobal.troc_premio()
 		queue_free()
 		

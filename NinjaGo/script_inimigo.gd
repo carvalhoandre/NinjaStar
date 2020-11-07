@@ -18,7 +18,11 @@ func _ready():
 		$Abobora.visible = true
 	
 	andando()
-	if(not ScriptGlobal.zombi and ScriptGlobal.status_efeitos_sonoros):
+	if(not $Zombi.playing and ScriptGlobal.zombi==true and ScriptGlobal.status_efeitos_sonoros == true):
+		$Zombi.play()
+	elif($Zombi.playing and ScriptGlobal.zombi==false and ScriptGlobal.status_efeitos_sonoros == false):
+		$Zombi.stop()
+	if (not $Zombi.playing):
 		$Zombi.play()
 
 func _process(delta):
@@ -45,12 +49,6 @@ func disparo():
 			objeto_tiro.scale.x = -1
 		objeto_tiro.global_position = $Position2D.global_position
 		get_tree().root.add_child(objeto_tiro)
-
-func _on_AnimatedSprite_animation_finished():
-	if ($AnimatedSprite.animation=="morrendo"):
-		queue_free()
-		premio()
-	ScriptGlobal.zombi = false
 
 func _on_Zumbi2_animation_finished():
 	if ($Zumbi2.animation=="morrendo"):

@@ -28,9 +28,12 @@ func _process(delta):
 		$AnimationPlayer.play("personagem3")
 
 	if (Input.is_action_just_pressed("enter")):
+		ScriptGlobal.alpha()
 		if(ScriptGlobal.tutorial == true):
+			ScriptGlobal.troc_inimigo()
 			get_tree().change_scene("res://cena_tutorial.tscn")
 		else:
+			ScriptGlobal.troc_inimigo()
 			get_tree().change_scene("res://cena_fase.tscn")
 
 func _on_AudioStreamPlayer_finished():

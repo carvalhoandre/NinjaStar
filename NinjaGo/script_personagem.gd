@@ -129,7 +129,7 @@ func _on_Kunai_body_entered(body):
 			if ScriptGlobal.cod_inimigo == 1:
 				body.get_node("Zumbi").play("morrendo")
 			if ScriptGlobal.cod_inimigo == 2:
-				body.get_node("Zumbi1").play("morrendo")
+				body.get_node("Zumbi2").play("morrendo")
 			if ScriptGlobal.cod_inimigo == 3:
 				body.get_node("Abobora").play("morrendo")			
 			body.velocidade = 0
@@ -142,13 +142,13 @@ func _on_pisadinha_body_entered(body):
 		if ScriptGlobal.cod_inimigo == 1:
 				body.get_node("Zumbi").play("morrendo")
 		if ScriptGlobal.cod_inimigo == 2:
-				body.get_node("Zumbi1").play("morrendo")
+				body.get_node("Zumbi2").play("morrendo")
 		if ScriptGlobal.cod_inimigo == 3:
 				body.get_node("Abobora").play("morrendo")	
 		body.velocidade = 0
 		body.get_node("CollisionShape2D").queue_free()
 		body.get_node("Ataque").queue_free()
-		mov.y = forca_pulo * 2
+		mov.y = forca_pulo * 0.5
 		ScriptGlobal.troc_inimigo()
 
 func andando():

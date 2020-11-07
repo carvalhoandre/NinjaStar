@@ -4,7 +4,11 @@ var tipo_premio = "fim"
 
 func _ready():
 	$AnimatedSprite.play("andando")
-	if(not ScriptGlobal.zombi and ScriptGlobal.status_efeitos_sonoros):
+	if(not $Zombi.playing and ScriptGlobal.zombi==true and ScriptGlobal.status_efeitos_sonoros == true):
+		$Zombi.play()
+	elif($Zombi.playing and ScriptGlobal.zombi==false and ScriptGlobal.status_efeitos_sonoros == false):
+		$Zombi.stop()
+	if (not $Zombi.playing):
 		$Zombi.play()
 
 var velocidade = 500
@@ -27,7 +31,7 @@ func _on_AnimatedSprite_animation_finished():
 	if ($AnimatedSprite.animation=="morrendo"):
 		queue_free()
 		premio()
-	ScriptGlobal.zombi = false
+		ScriptGlobal.zombi = false
 
 func _on_Ataque_body_entered(body):
 	if (body.name=="Personagem" and ScriptGlobal.atacando == false):

@@ -41,5 +41,6 @@ func _on_Disparo_body_entered(body):
 		body.get_node("CollisionShape2D").queue_free()
 		body.get_node("Ataque").queue_free()
 		queue_free()
-		ScriptGlobal.troc_inimigo()
 		ScriptGlobal.zombi = false
+	queue_free()
+	
