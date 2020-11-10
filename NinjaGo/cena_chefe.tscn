@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=2]
+[gd_scene load_steps=32 format=2]
 
 [ext_resource path="res://script_chefe.gd" type="Script" id=1]
 [ext_resource path="res://recursos/imagens/imagens/inimigo/Walk (5).png" type="Texture" id=2]
@@ -28,15 +28,15 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 24 ), ExtResource( 23 ), ExtResource( 8 ), ExtResource( 3 ), ExtResource( 2 ), ExtResource( 6 ), ExtResource( 18 ), ExtResource( 25 ), ExtResource( 14 ), ExtResource( 4 ) ],
-"loop": true,
-"name": "andando",
-"speed": 18.0
-}, {
 "frames": [ ExtResource( 22 ), ExtResource( 11 ), ExtResource( 21 ), ExtResource( 19 ), ExtResource( 5 ), ExtResource( 9 ), ExtResource( 16 ), ExtResource( 13 ), ExtResource( 10 ), ExtResource( 20 ), ExtResource( 15 ), ExtResource( 12 ), ExtResource( 7 ), ExtResource( 7 ), ExtResource( 7 ) ],
 "loop": false,
 "name": "morrendo",
 "speed": 10.0
+}, {
+"frames": [ ExtResource( 24 ), ExtResource( 23 ), ExtResource( 8 ), ExtResource( 3 ), ExtResource( 2 ), ExtResource( 6 ), ExtResource( 18 ), ExtResource( 25 ), ExtResource( 14 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "andando",
+"speed": 18.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
@@ -46,6 +46,12 @@ extents = Vector2( 38.0141, 80.6583 )
 
 [sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 40.0907, 81.179 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0, 1, 0.0156863, 1 )
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 0.286275, 0.87451, 0.121569, 1 )
 
 [node name="Node2D" type="Node2D"]
 
@@ -98,11 +104,14 @@ stream = ExtResource( 17 )
 wait_time = 10.0
 autostart = true
 
-[node name="ProgressBar" type="ProgressBar" parent="Chefe"]
-margin_left = -4.85952
-margin_top = -103.994
-margin_right = -0.859519
-margin_bottom = -89.994
+[node name="Vida" type="ProgressBar" parent="Chefe"]
+margin_left = -12.8719
+margin_top = -97.1198
+margin_right = 12.1281
+margin_bottom = -83.1198
+custom_styles/fg = SubResource( 5 )
+custom_styles/bg = SubResource( 6 )
+step = 1.0
 __meta__ = {
 "_edit_use_anchors_": false
 }

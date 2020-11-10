@@ -14,10 +14,12 @@ func _ready():
 			$Kunai.play()
 	elif (ScriptGlobal.tipo_disparo == "fire"):
 		$Disparo/Fire.visible = true
+		velocidade = 11
 		$Disparo/Fire.play("lancamento")
 		if(ScriptGlobal.status_efeitos_sonoros):
 			$Efeito.play()
 	elif (ScriptGlobal.tipo_disparo == "especial"):
+		velocidade = 20
 		$Disparo/Sprite.visible = true
 		$Disparo/Sprite/AnimationPlayer.play("giro")
 		if(ScriptGlobal.status_efeitos_sonoros):
@@ -42,5 +44,19 @@ func _on_Disparo_body_entered(body):
 		body.get_node("Ataque").queue_free()
 		queue_free()
 		ScriptGlobal.zombi = false
+	if (body.name=="Chefe"):
+		if(ScriptGlobal.tipo_disparo == "fire"):
+			$Disparo/Fire.play("impacto")
+		body.velocidade = 0
+		body.get_node("CollisionShape2D").queue_free()
+		body.get_node("Ataque").queue_free()
+		queue_free()
+		ScriptGlobal.zombi = false
+		if (ScriptGlobal.tipo_disparo == "kunai"):
+			ScriptGlobal.qtd_vidas_chefe -= 1
+		elif (ScriptGlobal.tipo_disparo == "fire"):
+			ScriptGlobal.qtd_vidas_chefe -= 5
+		elif (ScriptGlobal.tipo_disparo == "especial"):
+			ScriptGlobal.qtd_vidas_chefe -= 10
 	queue_free()
 	

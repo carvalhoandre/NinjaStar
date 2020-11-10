@@ -1,0 +1,34 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/Chacra_001.png-b01289c5248afac63cce5a4d13da9ff1.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://recursos/imagens/personagens/ninjaWoman/Chacra_001.png"
+dest_files=[ "res://.import/Chacra_001.png-b01289c5248afac63cce5a4d13da9ff1.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

@@ -1,4 +1,4 @@
-[gd_scene load_steps=249 format=2]
+[gd_scene load_steps=277 format=2]
 
 [ext_resource path="res://cenario1.tscn" type="PackedScene" id=1]
 [ext_resource path="res://recursos/imagens/imagens/warning.png" type="Texture" id=2]
@@ -35,6 +35,30 @@
 [ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Run__007.png" type="Texture" id=33]
 [ext_resource path="res://recursos/imagens/personagens/Slide__004.png" type="Texture" id=34]
 [ext_resource path="res://recursos/imagens/personagens/Slide__007.png" type="Texture" id=35]
+[ext_resource path="res://recursos/imagens/Outos/faceNinja.png" type="Texture" id=36]
+[ext_resource path="res://recursos/imagens/Outos/faceCop.png" type="Texture" id=37]
+[ext_resource path="res://recursos/imagens/Outos/faceWoman.png" type="Texture" id=38]
+[ext_resource path="res://recursos/fontes/NinjaStrike.otf" type="DynamicFontData" id=39]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Chacra_002.png" type="Texture" id=40]
+[ext_resource path="res://recursos/imagens/personagens/Chacra_002.png" type="Texture" id=41]
+[ext_resource path="res://recursos/imagens/personagens/Chacra_003.png" type="Texture" id=42]
+[ext_resource path="res://recursos/imagens/personagens/Chacra_001.png" type="Texture" id=43]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Chacra_001.png" type="Texture" id=44]
+[ext_resource path="res://recursos/imagens/personagens/Cop/Chacra_001.png" type="Texture" id=45]
+[ext_resource path="res://recursos/imagens/personagens/Cop/Chacra_003.png" type="Texture" id=46]
+[ext_resource path="res://recursos/imagens/personagens/Cop/Chacra_000.png" type="Texture" id=47]
+[ext_resource path="res://recursos/imagens/personagens/Chacra_004.png" type="Texture" id=48]
+[ext_resource path="res://recursos/imagens/personagens/Chacra_005.png" type="Texture" id=49]
+[ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Chacra_003.png" type="Texture" id=50]
+[ext_resource path="res://recursos/imagens/personagens/Cop/Chacra_002.png" type="Texture" id=51]
+[ext_resource path="res://recursos/imagens/personagens/Cop/Melee (1).png" type="Texture" id=52]
+[ext_resource path="res://recursos/imagens/personagens/Cop/Melee (2).png" type="Texture" id=53]
+[ext_resource path="res://recursos/imagens/personagens/Cop/Melee (3).png" type="Texture" id=54]
+[ext_resource path="res://recursos/imagens/personagens/Cop/Melee (4).png" type="Texture" id=55]
+[ext_resource path="res://recursos/imagens/personagens/Cop/Melee (6).png" type="Texture" id=56]
+[ext_resource path="res://recursos/imagens/personagens/Cop/Melee (5).png" type="Texture" id=57]
+[ext_resource path="res://recursos/imagens/personagens/Cop/Melee (7).png" type="Texture" id=58]
+[ext_resource path="res://recursos/imagens/personagens/Cop/Melee (8).png" type="Texture" id=59]
 [ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Slide__002.png" type="Texture" id=66]
 [ext_resource path="res://recursos/imagens/personagens/Cop/Idle (5).png" type="Texture" id=67]
 [ext_resource path="res://recursos/imagens/personagens/Cop/RunShoot (8).png" type="Texture" id=68]
@@ -121,8 +145,6 @@
 [ext_resource path="res://recursos/imagens/personagens/Cop/Run (2).png" type="Texture" id=149]
 [ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Idle__001.png" type="Texture" id=150]
 [ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Slide__003.png" type="Texture" id=151]
-[ext_resource path="res://recursos/imagens/personagens/Cop/Shoot (2).png" type="Texture" id=152]
-[ext_resource path="res://recursos/imagens/personagens/Cop/Shoot (3).png" type="Texture" id=153]
 [ext_resource path="res://recursos/imagens/personagens/Jump_Throw__003.png" type="Texture" id=154]
 [ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Slide__000.png" type="Texture" id=155]
 [ext_resource path="res://recursos/imagens/personagens/Cop/Jump (9).png" type="Texture" id=156]
@@ -140,7 +162,6 @@
 [ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Run__000.png" type="Texture" id=168]
 [ext_resource path="res://recursos/imagens/personagens/Cop/Dead (5).png" type="Texture" id=169]
 [ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Dead__001.png" type="Texture" id=170]
-[ext_resource path="res://recursos/imagens/personagens/Cop/Shoot (1).png" type="Texture" id=171]
 [ext_resource path="res://recursos/imagens/personagens/Jump_Throw__006.png" type="Texture" id=172]
 [ext_resource path="res://recursos/imagens/personagens/Cop/Slide (1).png" type="Texture" id=173]
 [ext_resource path="res://script_personagem.gd" type="Script" id=174]
@@ -244,6 +265,25 @@ outline_color = Color( 0, 0, 0, 1 )
 use_mipmaps = true
 use_filter = true
 font_data = ExtResource( 261 )
+
+[sub_resource type="DynamicFont" id=16]
+size = 30
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 261 )
+
+[sub_resource type="Theme" id=17]
+default_font = SubResource( 16 )
+
+[sub_resource type="StyleBoxFlat" id=18]
+bg_color = Color( 0.0745098, 0.94902, 0.866667, 1 )
+corner_detail = 10
+
+[sub_resource type="DynamicFont" id=19]
+size = 30
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 39 )
 
 [sub_resource type="CapsuleShape2D" id=3]
 radius = 38.9565
@@ -376,15 +416,35 @@ tracks/1/keys = {
 
 [sub_resource type="SpriteFrames" id=10]
 animations = [ {
-"frames": [ ExtResource( 72 ), ExtResource( 24 ), ExtResource( 5 ), ExtResource( 82 ), ExtResource( 7 ), ExtResource( 121 ), ExtResource( 10 ), ExtResource( 97 ), ExtResource( 160 ), ExtResource( 98 ) ],
+"frames": [ ExtResource( 191 ), ExtResource( 189 ), ExtResource( 180 ), ExtResource( 182 ), ExtResource( 209 ), ExtResource( 19 ), ExtResource( 70 ), ExtResource( 236 ), ExtResource( 187 ), ExtResource( 90 ) ],
 "loop": true,
-"name": "andando",
-"speed": 20.0
+"name": "ataque_alto",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 260 ), ExtResource( 260 ), ExtResource( 260 ) ],
+"loop": true,
+"name": "aparece",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 190 ), ExtResource( 193 ), ExtResource( 238 ), ExtResource( 250 ), ExtResource( 213 ), ExtResource( 204 ), ExtResource( 197 ), ExtResource( 217 ), ExtResource( 233 ), ExtResource( 198 ), ExtResource( 260 ) ],
+"loop": false,
+"name": "morrendo",
+"speed": 25.0
 }, {
 "frames": [ ExtResource( 179 ), ExtResource( 157 ), ExtResource( 159 ), ExtResource( 154 ), ExtResource( 158 ), ExtResource( 163 ), ExtResource( 172 ), ExtResource( 164 ), ExtResource( 148 ), ExtResource( 222 ) ],
 "loop": true,
 "name": "kunai",
 "speed": 20.0
+}, {
+"frames": [ ExtResource( 72 ), ExtResource( 24 ), ExtResource( 5 ), ExtResource( 82 ), ExtResource( 7 ), ExtResource( 121 ), ExtResource( 10 ), ExtResource( 97 ), ExtResource( 160 ), ExtResource( 98 ) ],
+"loop": true,
+"name": "andando",
+"speed": 20.0
+}, {
+"frames": [ ExtResource( 6 ), ExtResource( 74 ), ExtResource( 12 ), ExtResource( 9 ), ExtResource( 77 ), ExtResource( 81 ), ExtResource( 95 ), ExtResource( 18 ), ExtResource( 28 ), ExtResource( 11 ) ],
+"loop": true,
+"name": "parado",
+"speed": 5.0
 }, {
 "frames": [ ExtResource( 16 ), ExtResource( 122 ), ExtResource( 133 ), ExtResource( 93 ), ExtResource( 8 ), ExtResource( 17 ), ExtResource( 73 ), ExtResource( 89 ), ExtResource( 119 ), ExtResource( 92 ) ],
 "loop": false,
@@ -400,38 +460,38 @@ animations = [ {
 "loop": true,
 "name": "ataque",
 "speed": 20.0
-}, {
-"frames": [ ExtResource( 6 ), ExtResource( 74 ), ExtResource( 12 ), ExtResource( 9 ), ExtResource( 77 ), ExtResource( 81 ), ExtResource( 95 ), ExtResource( 18 ), ExtResource( 28 ), ExtResource( 11 ) ],
-"loop": true,
-"name": "parado",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 190 ), ExtResource( 193 ), ExtResource( 238 ), ExtResource( 250 ), ExtResource( 213 ), ExtResource( 204 ), ExtResource( 197 ), ExtResource( 217 ), ExtResource( 233 ), ExtResource( 198 ), ExtResource( 260 ) ],
-"loop": false,
-"name": "morrendo",
-"speed": 25.0
-}, {
-"frames": [ ExtResource( 191 ), ExtResource( 189 ), ExtResource( 180 ), ExtResource( 182 ), ExtResource( 209 ), ExtResource( 19 ), ExtResource( 70 ), ExtResource( 236 ), ExtResource( 187 ), ExtResource( 90 ) ],
+} ]
+
+[sub_resource type="SpriteFrames" id=11]
+animations = [ {
+"frames": [ ExtResource( 252 ), ExtResource( 253 ), ExtResource( 181 ), ExtResource( 192 ), ExtResource( 23 ), ExtResource( 177 ), ExtResource( 186 ), ExtResource( 188 ), ExtResource( 26 ), ExtResource( 20 ) ],
 "loop": true,
 "name": "ataque_alto",
-"speed": 10.0
+"speed": 5.0
 }, {
 "frames": [ ExtResource( 260 ), ExtResource( 260 ), ExtResource( 260 ) ],
 "loop": true,
 "name": "aparece",
 "speed": 5.0
-} ]
-
-[sub_resource type="SpriteFrames" id=11]
-animations = [ {
+}, {
+"frames": [ ExtResource( 247 ), ExtResource( 170 ), ExtResource( 255 ), ExtResource( 241 ), ExtResource( 256 ), ExtResource( 246 ), ExtResource( 200 ), ExtResource( 229 ), ExtResource( 234 ), ExtResource( 215 ), ExtResource( 260 ) ],
+"loop": true,
+"name": "morrendo",
+"speed": 25.0
+}, {
+"frames": [ ExtResource( 175 ), ExtResource( 242 ), ExtResource( 203 ) ],
+"loop": true,
+"name": "kunai",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 168 ), ExtResource( 100 ), ExtResource( 161 ), ExtResource( 113 ), ExtResource( 103 ), ExtResource( 137 ), ExtResource( 106 ), ExtResource( 33 ), ExtResource( 132 ), ExtResource( 84 ) ],
 "loop": true,
 "name": "andando",
 "speed": 20.0
 }, {
-"frames": [ ExtResource( 175 ), ExtResource( 242 ), ExtResource( 203 ) ],
+"frames": [ ExtResource( 139 ), ExtResource( 150 ), ExtResource( 112 ), ExtResource( 116 ), ExtResource( 117 ), ExtResource( 143 ), ExtResource( 76 ), ExtResource( 107 ), ExtResource( 166 ), ExtResource( 145 ), ExtResource( 168 ), ExtResource( 100 ), ExtResource( 161 ), ExtResource( 113 ), ExtResource( 103 ), ExtResource( 137 ), ExtResource( 106 ), ExtResource( 33 ), ExtResource( 132 ), ExtResource( 84 ) ],
 "loop": true,
-"name": "kunai",
+"name": "parado",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 165 ), ExtResource( 136 ), ExtResource( 147 ), ExtResource( 142 ), ExtResource( 162 ), ExtResource( 31 ), ExtResource( 99 ), ExtResource( 146 ), ExtResource( 239 ), ExtResource( 141 ) ],
@@ -448,18 +508,11 @@ animations = [ {
 "loop": true,
 "name": "ataque",
 "speed": 20.0
-}, {
-"frames": [ ExtResource( 139 ), ExtResource( 150 ), ExtResource( 112 ), ExtResource( 116 ), ExtResource( 117 ), ExtResource( 143 ), ExtResource( 76 ), ExtResource( 107 ), ExtResource( 166 ), ExtResource( 145 ), ExtResource( 168 ), ExtResource( 100 ), ExtResource( 161 ), ExtResource( 113 ), ExtResource( 103 ), ExtResource( 137 ), ExtResource( 106 ), ExtResource( 33 ), ExtResource( 132 ), ExtResource( 84 ) ],
-"loop": true,
-"name": "parado",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 247 ), ExtResource( 170 ), ExtResource( 255 ), ExtResource( 241 ), ExtResource( 256 ), ExtResource( 246 ), ExtResource( 200 ), ExtResource( 229 ), ExtResource( 234 ), ExtResource( 215 ), ExtResource( 260 ) ],
-"loop": true,
-"name": "morrendo",
-"speed": 25.0
-}, {
-"frames": [ ExtResource( 252 ), ExtResource( 253 ), ExtResource( 181 ), ExtResource( 192 ), ExtResource( 23 ), ExtResource( 177 ), ExtResource( 186 ), ExtResource( 188 ), ExtResource( 26 ), ExtResource( 20 ) ],
+} ]
+
+[sub_resource type="SpriteFrames" id=12]
+animations = [ {
+"frames": [ ExtResource( 248 ), ExtResource( 178 ), ExtResource( 243 ), ExtResource( 194 ), ExtResource( 257 ), ExtResource( 195 ), ExtResource( 235 ), ExtResource( 227 ) ],
 "loop": true,
 "name": "ataque_alto",
 "speed": 5.0
@@ -468,19 +521,26 @@ animations = [ {
 "loop": true,
 "name": "aparece",
 "speed": 5.0
-} ]
-
-[sub_resource type="SpriteFrames" id=12]
-animations = [ {
-"frames": [ ExtResource( 131 ), ExtResource( 149 ), ExtResource( 111 ), ExtResource( 138 ), ExtResource( 224 ), ExtResource( 211 ), ExtResource( 219 ), ExtResource( 221 ) ],
-"loop": true,
-"name": "andando",
-"speed": 20.0
+}, {
+"frames": [ ExtResource( 220 ), ExtResource( 223 ), ExtResource( 208 ), ExtResource( 196 ), ExtResource( 169 ), ExtResource( 225 ), ExtResource( 201 ), ExtResource( 232 ), ExtResource( 226 ), ExtResource( 205 ), ExtResource( 260 ) ],
+"loop": false,
+"name": "morrendo",
+"speed": 25.0
 }, {
 "frames": [ ExtResource( 29 ), ExtResource( 25 ), ExtResource( 83 ), ExtResource( 27 ), ExtResource( 183 ), ExtResource( 30 ), ExtResource( 22 ), ExtResource( 68 ), ExtResource( 216 ) ],
 "loop": true,
 "name": "kunai",
 "speed": 20.0
+}, {
+"frames": [ ExtResource( 131 ), ExtResource( 149 ), ExtResource( 111 ), ExtResource( 138 ), ExtResource( 224 ), ExtResource( 211 ), ExtResource( 219 ), ExtResource( 221 ) ],
+"loop": true,
+"name": "andando",
+"speed": 20.0
+}, {
+"frames": [ ExtResource( 144 ), ExtResource( 214 ), ExtResource( 167 ), ExtResource( 102 ), ExtResource( 67 ), ExtResource( 32 ), ExtResource( 134 ), ExtResource( 79 ), ExtResource( 212 ), ExtResource( 85 ) ],
+"loop": true,
+"name": "parado",
+"speed": 5.0
 }, {
 "frames": [ ExtResource( 118 ), ExtResource( 207 ), ExtResource( 135 ), ExtResource( 104 ), ExtResource( 127 ), ExtResource( 129 ), ExtResource( 120 ), ExtResource( 126 ), ExtResource( 156 ), ExtResource( 101 ) ],
 "loop": false,
@@ -492,30 +552,10 @@ animations = [ {
 "name": "abaixando",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 171 ), ExtResource( 152 ), ExtResource( 153 ) ],
+"frames": [ ExtResource( 52 ), ExtResource( 53 ), ExtResource( 54 ), ExtResource( 55 ), ExtResource( 57 ), ExtResource( 56 ), ExtResource( 58 ), ExtResource( 59 ) ],
 "loop": true,
 "name": "ataque",
 "speed": 20.0
-}, {
-"frames": [ ExtResource( 144 ), ExtResource( 214 ), ExtResource( 167 ), ExtResource( 102 ), ExtResource( 67 ), ExtResource( 32 ), ExtResource( 134 ), ExtResource( 79 ), ExtResource( 212 ), ExtResource( 85 ) ],
-"loop": true,
-"name": "parado",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 220 ), ExtResource( 223 ), ExtResource( 208 ), ExtResource( 196 ), ExtResource( 169 ), ExtResource( 225 ), ExtResource( 201 ), ExtResource( 232 ), ExtResource( 226 ), ExtResource( 205 ), ExtResource( 260 ) ],
-"loop": false,
-"name": "morrendo",
-"speed": 25.0
-}, {
-"frames": [ ExtResource( 248 ), ExtResource( 178 ), ExtResource( 243 ), ExtResource( 194 ), ExtResource( 257 ), ExtResource( 195 ), ExtResource( 235 ), ExtResource( 227 ) ],
-"loop": true,
-"name": "ataque_alto",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 260 ), ExtResource( 260 ), ExtResource( 260 ) ],
-"loop": true,
-"name": "aparece",
-"speed": 5.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=13]
@@ -526,6 +566,30 @@ extents = Vector2( 45.4711, 5.31564 )
 
 [sub_resource type="RectangleShape2D" id=15]
 extents = Vector2( 53.0314, 54.3503 )
+
+[sub_resource type="SpriteFrames" id=22]
+animations = [ {
+"frames": [ ExtResource( 47 ), ExtResource( 45 ), ExtResource( 51 ), ExtResource( 46 ) ],
+"loop": true,
+"name": "default",
+"speed": 1.0
+} ]
+
+[sub_resource type="SpriteFrames" id=21]
+animations = [ {
+"frames": [ ExtResource( 44 ), ExtResource( 40 ), ExtResource( 50 ) ],
+"loop": true,
+"name": "chacra",
+"speed": 1.0
+} ]
+
+[sub_resource type="SpriteFrames" id=20]
+animations = [ {
+"frames": [ ExtResource( 43 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 48 ), ExtResource( 49 ) ],
+"loop": true,
+"name": "chacra",
+"speed": 1.0
+} ]
 
 [node name="Node2D" type="Node2D"]
 pause_mode = 1
@@ -545,17 +609,22 @@ position = Vector2( -1.06525, 0.161079 )
 scale = Vector2( 1.06739, 1.06739 )
 
 [node name="Vida1" type="Sprite" parent="HUD"]
-position = Vector2( 23.1896, 25.8438 )
+position = Vector2( 129.136, 25.8438 )
 scale = Vector2( 0.336457, 0.336457 )
 texture = ExtResource( 244 )
 
 [node name="Vida2" type="Sprite" parent="HUD"]
-position = Vector2( 71.9469, 27.033 )
+position = Vector2( 172.596, 25.9735 )
 scale = Vector2( 0.336457, 0.336457 )
 texture = ExtResource( 244 )
 
 [node name="Vida3" type="Sprite" parent="HUD"]
-position = Vector2( 124.272, 25.8438 )
+position = Vector2( 215.386, 25.8438 )
+scale = Vector2( 0.336457, 0.336457 )
+texture = ExtResource( 244 )
+
+[node name="Vida4" type="Sprite" parent="HUD"]
+position = Vector2( 258.846, 24.6546 )
 scale = Vector2( 0.336457, 0.336457 )
 texture = ExtResource( 244 )
 
@@ -606,6 +675,46 @@ texture = ExtResource( 263 )
 position = Vector2( 678.245, 40.8757 )
 scale = Vector2( 0.0776957, 0.0776957 )
 texture = ExtResource( 4 )
+
+[node name="Face1" type="Sprite" parent="HUD"]
+position = Vector2( 56.4075, 113.952 )
+scale = Vector2( 0.154327, 0.154327 )
+texture = ExtResource( 36 )
+
+[node name="Face2" type="Sprite" parent="HUD"]
+position = Vector2( 57.6903, 112.006 )
+scale = Vector2( 0.147868, 0.147868 )
+texture = ExtResource( 38 )
+
+[node name="Face3" type="Sprite" parent="HUD"]
+position = Vector2( 56.3222, 118.425 )
+scale = Vector2( 0.15724, 0.15724 )
+texture = ExtResource( 37 )
+
+[node name="Chacra" type="ProgressBar" parent="HUD"]
+margin_left = 111.337
+margin_top = 74.9336
+margin_right = 313.337
+margin_bottom = 95.9336
+theme = SubResource( 17 )
+custom_styles/fg = SubResource( 18 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0.92549, 0.0470588, 0.0470588, 1 )
+step = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="HUD"]
+margin_left = 113.265
+margin_top = 47.1937
+margin_right = 220.265
+margin_bottom = 71.1937
+custom_fonts/font = SubResource( 19 )
+text = "Chacra:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="CheckPoint1" type="Area2D" parent="."]
 position = Vector2( -1201.14, -80.5948 )
@@ -713,35 +822,34 @@ position = Vector2( -700.743, 603.365 )
 script = ExtResource( 174 )
 
 [node name="Personagem1" type="AnimatedSprite" parent="Personagem"]
+visible = false
 position = Vector2( 8.84882, 14.4008 )
 scale = Vector2( 0.364307, 0.364307 )
 frames = SubResource( 10 )
-animation = "aparece"
-frame = 2
-playing = true
+animation = "andando"
 
 [node name="Personagem2" type="AnimatedSprite" parent="Personagem"]
 visible = false
 position = Vector2( 5.09326, 12.1962 )
 scale = Vector2( 0.332724, 0.332724 )
 frames = SubResource( 11 )
-animation = "aparece"
+animation = "andando"
 
 [node name="Personagem3" type="AnimatedSprite" parent="Personagem"]
 visible = false
 position = Vector2( 12.0623, 14.0328 )
 scale = Vector2( 0.333577, 0.333577 )
 frames = SubResource( 12 )
-animation = "aparece"
+animation = "andando"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Personagem"]
 position = Vector2( 10.0287, 13.8201 )
 shape = SubResource( 13 )
 
 [node name="Camera2D" type="Camera2D" parent="Personagem"]
-position = Vector2( 1.66858, 3.3371 )
+position = Vector2( -2.78595, 1.10987 )
 current = true
-limit_bottom = 650
+limit_bottom = 800
 
 [node name="pisadinha" type="Area2D" parent="Personagem"]
 position = Vector2( 10.1956, 104.983 )
@@ -767,6 +875,26 @@ position = Vector2( 95.8138, 14.8125 )
 
 [node name="clone" type="Position2D" parent="Personagem"]
 position = Vector2( -222.969, 11.7987 )
+
+[node name="Chacra3" type="AnimatedSprite" parent="Personagem"]
+visible = false
+position = Vector2( 18.6426, 16.7728 )
+scale = Vector2( 0.129171, 0.129171 )
+frames = SubResource( 22 )
+
+[node name="Chacra2" type="AnimatedSprite" parent="Personagem"]
+visible = false
+position = Vector2( 10.0339, 12.8525 )
+scale = Vector2( 0.143387, 0.143387 )
+frames = SubResource( 21 )
+animation = "chacra"
+
+[node name="Chacra1" type="AnimatedSprite" parent="Personagem"]
+visible = false
+position = Vector2( 11.5349, 15.2958 )
+scale = Vector2( 0.1361, 0.13694 )
+frames = SubResource( 20 )
+animation = "chacra"
 [connection signal="body_entered" from="Pont" to="." method="_on_Pont_body_entered"]
 [connection signal="body_entered" from="CheckPoint2" to="." method="_on_CheckPoint2_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
@@ -775,3 +903,6 @@ position = Vector2( -222.969, 11.7987 )
 [connection signal="animation_finished" from="Personagem/Personagem3" to="Personagem" method="_on_Personagem3_animation_finished"]
 [connection signal="body_entered" from="Personagem/pisadinha" to="Personagem" method="_on_pisadinha_body_entered"]
 [connection signal="body_entered" from="Personagem/Kunai" to="Personagem" method="_on_Kunai_body_entered"]
+[connection signal="animation_finished" from="Personagem/Chacra3" to="Personagem" method="_on_Chacra3_animation_finished"]
+[connection signal="animation_finished" from="Personagem/Chacra2" to="Personagem" method="_on_Chacra2_animation_finished"]
+[connection signal="animation_finished" from="Personagem/Chacra1" to="Personagem" method="_on_Chacra1_animation_finished"]

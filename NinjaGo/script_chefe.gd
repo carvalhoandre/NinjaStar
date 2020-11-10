@@ -10,6 +10,7 @@ func _ready():
 		$Zombi.stop()
 	if (not $Zombi.playing):
 		$Zombi.play()
+	$Vida.value = ScriptGlobal.qtd_vidas_chefe
 
 var velocidade = 500
 var direcao = 1 # Direcao 1 para direita, -1 para esquerda

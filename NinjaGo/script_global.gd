@@ -37,10 +37,12 @@ func alpha():
 	zombi = false
 	especial = 0
 	jutsu = 0
+	qtd_vidas_chefe = 100
+	chacra = 0
 
 func troc_premio():
 	if(tipo_premio=="moeda"):
-		if qtd_vidas < 3:
+		if qtd_vidas < 4:
 			tipo_premio = "vida"
 		else:
 			tipo_premio = "moeda"

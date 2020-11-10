@@ -19,11 +19,12 @@ func _on_CheckButton_button_up():
 
 func _on_Enviar_pressed():
 	if login == true:
-		var url = "localhost/NinjaGO/login.php"+ $Email.text + "&senha" + $Senha.text
+		var url = "localhost/NinjaGO/login.php";
+		var data = "email=" + $email.text + "&password=" + $senha.text;
 		var headers = []
 		var ssl = false
 		var method = HTTPClient.METHOD_GET
-		$HTTPRequest.request(url,headers,ssl,method)
+		$HTTPRequest.request(url + data, headers, use_ssl, HTTPClient.METHOD_GET)
 	else:
 		get_tree().change_scene("res://cena_selecao.tscn")
 
