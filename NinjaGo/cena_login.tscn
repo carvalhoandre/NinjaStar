@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=2]
+[gd_scene load_steps=36 format=2]
 
 [ext_resource path="res://recursos/fontes/game_over.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://script_login.gd" type="Script" id=2]
@@ -19,6 +19,10 @@
 [ext_resource path="res://recursos/fontes/njnaruto.ttf" type="DynamicFontData" id=17]
 [ext_resource path="res://recursos/fontes/NinjaStrike.otf" type="DynamicFontData" id=18]
 [ext_resource path="res://recursos/sons/inicio.wav" type="AudioStream" id=19]
+[ext_resource path="res://recursos/imagens/recursos/email_open_50px.png" type="Texture" id=20]
+[ext_resource path="res://recursos/imagens/recursos/password_100px.png" type="Texture" id=21]
+[ext_resource path="res://recursos/imagens/recursos/internet_50px.png" type="Texture" id=22]
+[ext_resource path="res://recursos/imagens/recursos/coins_50px.png" type="Texture" id=23]
 
 [sub_resource type="DynamicFont" id=1]
 size = 100
@@ -27,45 +31,37 @@ use_filter = true
 font_data = ExtResource( 4 )
 
 [sub_resource type="DynamicFont" id=2]
-size = 80
-use_mipmaps = true
-use_filter = true
-font_data = ExtResource( 1 )
 
-[sub_resource type="DynamicFont" id=3]
-size = 80
-outline_color = Color( 0, 0, 0, 1 )
-use_mipmaps = true
-use_filter = true
-font_data = ExtResource( 1 )
+[sub_resource type="Theme" id=3]
+default_font = SubResource( 2 )
 
-[sub_resource type="DynamicFont" id=4]
-
-[sub_resource type="Theme" id=5]
-default_font = SubResource( 4 )
-
-[sub_resource type="StyleBoxFlat" id=6]
+[sub_resource type="StyleBoxFlat" id=4]
 bg_color = Color( 1, 1, 1, 1 )
 
-[sub_resource type="DynamicFont" id=7]
+[sub_resource type="DynamicFont" id=5]
 size = 50
 use_mipmaps = true
 use_filter = true
 font_data = ExtResource( 1 )
 
-[sub_resource type="DynamicFont" id=8]
+[sub_resource type="DynamicFont" id=6]
+size = 50
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=7]
 size = 30
 use_mipmaps = true
 use_filter = true
 font_data = ExtResource( 17 )
 
-[sub_resource type="DynamicFont" id=9]
+[sub_resource type="DynamicFont" id=8]
 size = 60
 use_mipmaps = true
-use_filter = true
 font_data = ExtResource( 1 )
 
-[sub_resource type="SpriteFrames" id=10]
+[sub_resource type="SpriteFrames" id=9]
 animations = [ {
 "frames": [ ExtResource( 10 ), ExtResource( 6 ), ExtResource( 9 ), ExtResource( 7 ), ExtResource( 5 ), ExtResource( 15 ), ExtResource( 14 ), ExtResource( 11 ), ExtResource( 8 ), ExtResource( 12 ), ExtResource( 13 ) ],
 "loop": true,
@@ -73,17 +69,17 @@ animations = [ {
 "speed": 2.0
 } ]
 
-[sub_resource type="DynamicFont" id=11]
+[sub_resource type="DynamicFont" id=10]
 size = 40
 font_data = ExtResource( 18 )
 
-[sub_resource type="DynamicFont" id=12]
+[sub_resource type="DynamicFont" id=11]
 size = 20
 use_mipmaps = true
 use_filter = true
 font_data = ExtResource( 16 )
 
-[sub_resource type="DynamicFont" id=13]
+[sub_resource type="DynamicFont" id=12]
 size = 50
 use_mipmaps = true
 use_filter = true
@@ -93,7 +89,7 @@ font_data = ExtResource( 1 )
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 516.341, 300.024 )
+position = Vector2( 518.586, 301.146 )
 scale = Vector2( 0.414112, 0.338758 )
 texture = ExtResource( 3 )
 
@@ -109,39 +105,16 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label2" type="Label" parent="."]
-margin_left = 394.355
-margin_top = 246.945
-margin_right = 470.355
-margin_bottom = 292.945
-custom_fonts/font = SubResource( 2 )
-text = "Usuario"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Label3" type="Label" parent="."]
-margin_left = 393.095
-margin_top = 331.359
-margin_right = 478.095
-margin_bottom = 377.359
-custom_fonts/font = SubResource( 3 )
-custom_colors/font_color = Color( 0.996078, 0.996078, 0.996078, 1 )
-text = "Senha"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Email" type="LineEdit" parent="."]
+[node name="email" type="LineEdit" parent="."]
 margin_left = 394.296
 margin_top = 289.137
 margin_right = 653.296
 margin_bottom = 328.137
 mouse_filter = 1
 mouse_default_cursor_shape = 4
-theme = SubResource( 5 )
-custom_styles/read_only = SubResource( 6 )
-custom_fonts/font = SubResource( 7 )
+theme = SubResource( 3 )
+custom_styles/read_only = SubResource( 4 )
+custom_fonts/font = SubResource( 5 )
 custom_colors/selection_color = Color( 0.952941, 0.952941, 0.952941, 1 )
 custom_colors/cursor_color = Color( 0.87451, 0.87451, 0.87451, 1 )
 custom_colors/clear_button_color_pressed = Color( 0.839216, 0.819608, 0.819608, 1 )
@@ -151,12 +124,12 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Senha" type="LineEdit" parent="."]
+[node name="senha" type="LineEdit" parent="."]
 margin_left = 391.634
 margin_top = 372.452
 margin_right = 650.634
 margin_bottom = 411.452
-custom_fonts/font = SubResource( 7 )
+custom_fonts/font = SubResource( 6 )
 secret = true
 expand_to_text_length = true
 __meta__ = {
@@ -164,11 +137,11 @@ __meta__ = {
 }
 
 [node name="Enviar" type="Button" parent="."]
-margin_left = 448.306
-margin_top = 472.347
-margin_right = 562.306
-margin_bottom = 513.347
-custom_fonts/font = SubResource( 8 )
+margin_left = 459.102
+margin_top = 485.47
+margin_right = 574.102
+margin_bottom = 526.47
+custom_fonts/font = SubResource( 7 )
 text = "Enviar"
 flat = true
 __meta__ = {
@@ -187,12 +160,12 @@ __meta__ = {
 [node name="HTTPRequest" type="HTTPRequest" parent="."]
 
 [node name="Label4" type="Label" parent="."]
-margin_left = 462.0
-margin_top = 420.0
-margin_right = 629.0
-margin_bottom = 466.0
-custom_fonts/font = SubResource( 9 )
-text = "Usar Convidado"
+margin_left = 448.531
+margin_top = 418.878
+margin_right = 615.531
+margin_bottom = 464.878
+custom_fonts/font = SubResource( 8 )
+text = "Convidado"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -212,8 +185,8 @@ __meta__ = {
 [node name="AnimatedSprite" type="AnimatedSprite" parent="ColorRect"]
 position = Vector2( 185.68, 165 )
 scale = Vector2( 0.631164, 0.631164 )
-frames = SubResource( 10 )
-frame = 2
+frames = SubResource( 9 )
+frame = 6
 playing = true
 
 [node name="Label" type="Label" parent="ColorRect"]
@@ -221,7 +194,7 @@ margin_left = 390.817
 margin_top = 128.038
 margin_right = 652.817
 margin_bottom = 160.038
-custom_fonts/font = SubResource( 11 )
+custom_fonts/font = SubResource( 10 )
 text = "Login invalido"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -232,7 +205,7 @@ margin_left = 494.407
 margin_top = 190.357
 margin_right = 528.407
 margin_bottom = 214.357
-custom_fonts/font = SubResource( 12 )
+custom_fonts/font = SubResource( 11 )
 text = "Ok"
 
 [node name="Label5" type="Label" parent="ColorRect"]
@@ -240,12 +213,34 @@ margin_left = 301.354
 margin_top = 309.331
 margin_right = 802.354
 margin_bottom = 338.331
-custom_fonts/font = SubResource( 13 )
+custom_fonts/font = SubResource( 12 )
 text = "Verifique seu login e senha, ou, realize seu cadastro "
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 19 )
 autoplay = true
+
+[node name="Sprite2" type="Sprite" parent="."]
+self_modulate = Color( 0, 0, 0, 1 )
+position = Vector2( 681.334, 304.187 )
+texture = ExtResource( 20 )
+
+[node name="Sprite3" type="Sprite" parent="."]
+self_modulate = Color( 0, 0, 0, 1 )
+position = Vector2( 684.702, 385.004 )
+texture = ExtResource( 21 )
+
+[node name="Sprite4" type="Sprite" parent="."]
+self_modulate = Color( 0, 0, 0, 1 )
+position = Vector2( 814.346, 104.95 )
+scale = Vector2( 0.573465, 0.573465 )
+texture = ExtResource( 22 )
+
+[node name="Sprite5" type="Sprite" parent="."]
+self_modulate = Color( 0, 0, 0, 1 )
+position = Vector2( 410.26, 272.197 )
+scale = Vector2( 0.573465, 0.573465 )
+texture = ExtResource( 23 )
 [connection signal="pressed" from="Enviar" to="." method="_on_Enviar_pressed"]
 [connection signal="button_up" from="CheckButton" to="." method="_on_CheckButton_button_up"]
 [connection signal="request_completed" from="HTTPRequest" to="." method="_on_HTTPRequest_request_completed"]

@@ -1,6 +1,5 @@
 extends KinematicBody2D
 
-var tipo_premio = "trofeu"
 var velocidade = 250
 var direcao = 1 # Direcao 1 para direita, -1 para esquerda
 var mov = Vector2(velocidade,0)
@@ -18,14 +17,14 @@ func _ready():
 		$Abobora.visible = true
 	
 	andando()
-	if(not $Zombi.playing and ScriptGlobal.zombi==true and ScriptGlobal.status_efeitos_sonoros == true):
-		$Zombi.play()
-	elif($Zombi.playing and ScriptGlobal.zombi==false and ScriptGlobal.status_efeitos_sonoros == false):
-		$Zombi.stop()
-	if (not $Zombi.playing):
-		$Zombi.play()
 
 func _process(delta):
+	if(not $AudioStreamPlayer.playing and ScriptGlobal.status_musica==true and ScriptGlobal.zombi):
+		$AudioStreamPlayer.play()
+	elif($AudioStreamPlayer.playing and ScriptGlobal.status_musica==false):
+		$AudioStreamPlayer.stop()
+	if (not $AudioStreamPlayer.playing):
+		$AudioStreamPlayer.play()
 	mov.x = direcao * velocidade	
 	mov = move_and_slide(mov)
 

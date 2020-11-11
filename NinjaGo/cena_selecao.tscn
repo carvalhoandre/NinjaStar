@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://script_selecao.gd" type="Script" id=1]
 [ext_resource path="res://recursos/imagens/Outos/cena_selecao.png" type="Texture" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://recursos/fontes/NinjaStrike.otf" type="DynamicFontData" id=7]
 [ext_resource path="res://recursos/sons/ninja-sound-effect.wav" type="AudioStream" id=8]
 [ext_resource path="res://recursos/sons/poof-sound-naruto.wav" type="AudioStream" id=9]
+[ext_resource path="res://recursos/fontes/njnaruto.ttf" type="DynamicFontData" id=10]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.447059, 0.184314, 0.45098, 1 )
@@ -277,6 +278,14 @@ use_mipmaps = true
 use_filter = true
 font_data = ExtResource( 7 )
 
+[sub_resource type="DynamicFont" id=9]
+size = 20
+font_data = ExtResource( 10 )
+
+[sub_resource type="DynamicFont" id=10]
+size = 20
+font_data = ExtResource( 10 )
+
 [node name="Node2D" type="Node2D"]
 position = Vector2( 1.12244, 0 )
 script = ExtResource( 1 )
@@ -370,4 +379,25 @@ autoplay = true
 [node name="Efeito" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 9 )
 volume_db = 1.0
+
+[node name="BemVindo" type="Label" parent="."]
+margin_left = 727.795
+margin_top = 83.2445
+margin_right = 835.795
+margin_bottom = 107.245
+custom_fonts/font = SubResource( 9 )
+text = "Bem vindo "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Nomejogador" type="Label" parent="."]
+margin_left = 846.716
+margin_top = 86.8122
+margin_right = 886.716
+margin_bottom = 110.812
+custom_fonts/font = SubResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="finished" from="AudioStreamPlayer" to="." method="_on_AudioStreamPlayer_finished"]

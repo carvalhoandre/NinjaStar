@@ -5,6 +5,7 @@ var forca_pulo = -720
 var mov = Vector2(0,0)
 var magia = false
 var direcao = 1 # 1 é para direita e -1 é para esquerda
+var chacraOn = false
 
 func _ready():
 	$Personagem1.visible = false
@@ -31,7 +32,7 @@ func _process(delta):
 		ScriptGlobal.qtd_vidas -= 1
 		aparecendo()
 	
-	if(Input.is_action_pressed("ui_left") and not magia):
+	if(Input.is_action_pressed("ui_left") and not magia and not chacraOn):
 		if(direcao == 1):
 			scale.x = -1
 			direcao = -1
@@ -41,7 +42,7 @@ func _process(delta):
 		if(is_on_floor()):
 			andando()
 
-	elif(Input.is_action_pressed("ui_right") and not magia):
+	elif(Input.is_action_pressed("ui_right") and not magia and not chacraOn):
 		if(direcao == -1):
 			scale.x = -1
 			direcao = 1
@@ -52,17 +53,18 @@ func _process(delta):
 
 	else:
 		mov.x = 0
-		if(is_on_floor() and not ScriptGlobal.atacando and not ScriptGlobal.morrendo and not magia):
+		if(is_on_floor() and not ScriptGlobal.atacando and not ScriptGlobal.morrendo and not magia and not chacraOn):
 			parado()
 
-	if(Input.is_action_just_pressed("ui_up") and is_on_floor()):
+	if(Input.is_action_just_pressed("ui_up") and is_on_floor() and not chacraOn):
 		mov.y = forca_pulo
 		pulando()
 	
 	if(Input.is_action_pressed("ui_down") and is_on_floor()):
+		chacraOn = true
 		chacra()
 		
-	if(Input.is_action_pressed("golpe") and is_on_floor()):
+	if(Input.is_action_pressed("golpe") and is_on_floor() and not chacraOn):
 		ScriptGlobal.atacando = true
 		ataque()
 	
@@ -260,14 +262,17 @@ func _on_Chacra1_animation_finished():
 	$Chacra1.visible = false
 	$Personagem1.visible = true
 	ScriptGlobal.chacra += 5
+	chacraOn = false
 
 func _on_Chacra2_animation_finished():
 	$Chacra2.visible = false
 	$Personagem2.visible = true
 	ScriptGlobal.chacra += 5
+	chacraOn = false
 
 
 func _on_Chacra3_animation_finished():
 	$Chacra3.visible = false
 	$Personagem3.visible = true
 	ScriptGlobal.chacra += 5
+	chacraOn = false

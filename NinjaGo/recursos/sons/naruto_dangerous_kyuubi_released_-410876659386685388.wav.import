@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/naruto_dangerous_kyuubi_released_-410876659386685388.wav-bd7fe7af6439b38ea3f1235f12ee8680.sample"
+
+[deps]
+
+source_file="res://recursos/sons/naruto_dangerous_kyuubi_released_-410876659386685388.wav"
+dest_files=[ "res://.import/naruto_dangerous_kyuubi_released_-410876659386685388.wav-bd7fe7af6439b38ea3f1235f12ee8680.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

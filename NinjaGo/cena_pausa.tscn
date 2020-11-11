@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://script_pausa.gd" type="Script" id=1]
 [ext_resource path="res://recursos/fontes/game_over.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://recursos/fontes/NinjaStrike.otf" type="DynamicFontData" id=3]
-
-
+[ext_resource path="res://recursos/imagens/recursos/play_50px.png" type="Texture" id=4]
+[ext_resource path="res://recursos/imagens/recursos/music_26px.png" type="Texture" id=5]
+[ext_resource path="res://recursos/imagens/recursos/services_30px.png" type="Texture" id=6]
 
 [sub_resource type="DynamicFont" id=1]
 size = 80
@@ -88,6 +89,12 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Sprite3" type="Sprite" parent="PressioneEnter"]
+modulate = Color( 1, 0, 0, 1 )
+position = Vector2( 151.655, 14.1706 )
+scale = Vector2( 0.941069, 0.941069 )
+texture = ExtResource( 4 )
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "pressione"
 anims/pressione = SubResource( 3 )
@@ -138,6 +145,25 @@ clip_text = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Sprite" type="Sprite" parent="."]
+modulate = Color( 1, 0.0117647, 0.0117647, 1 )
+self_modulate = Color( 1, 0, 0, 1 )
+position = Vector2( 522.04, 308.103 )
+scale = Vector2( 1.3414, 1.3414 )
+texture = ExtResource( 5 )
+
+[node name="Sprite2" type="Sprite" parent="."]
+modulate = Color( 1, 0, 0, 1 )
+position = Vector2( 604.065, 237.392 )
+scale = Vector2( 1.45019, 1.45019 )
+texture = ExtResource( 5 )
+
+[node name="Sprite3" type="Sprite" parent="."]
+modulate = Color( 1, 0, 0, 1 )
+position = Vector2( 656.39, 97.3852 )
+scale = Vector2( 1.45019, 1.45019 )
+texture = ExtResource( 6 )
 [connection signal="pressed" from="EfeitosSonoros" to="." method="_on_EfeitosSonoros_pressed"]
 [connection signal="pressed" from="Musica" to="." method="_on_Musica_pressed"]
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

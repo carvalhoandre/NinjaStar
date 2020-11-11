@@ -21,12 +21,13 @@ var jutsu = 0
 #Inimigo
 var cod_inimigo = 1
 var zombi = false
+	#Chefao
+var qtd_vidas_chefe = 100
 
 #Config
 var status_musica = true
 var status_efeitos_sonoros = true
-#Chefao
-var qtd_vidas_chefe = 100
+var jogador = ""
 
 #Funções
 func alpha():

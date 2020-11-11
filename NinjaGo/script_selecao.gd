@@ -1,7 +1,7 @@
 extends Node2D
 
 func _ready():
-	pass # Replace with function body.
+	$Nomejogador.text = ScriptGlobal.jogador
 	
 func _process(delta):
 	

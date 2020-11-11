@@ -19,19 +19,20 @@ func _on_CheckButton_button_up():
 
 func _on_Enviar_pressed():
 	if login == true:
-		var url = "localhost/NinjaGO/login.php";
+		var url = "http://localhost/cadastro/consultar.php?";
 		var data = "email=" + $email.text + "&password=" + $senha.text;
 		var headers = []
-		var ssl = false
-		var method = HTTPClient.METHOD_GET
+		var use_ssl = false
 		$HTTPRequest.request(url + data, headers, use_ssl, HTTPClient.METHOD_GET)
 	else:
+		ScriptGlobal.jogador = "Convidado"
 		get_tree().change_scene("res://cena_selecao.tscn")
 
 
 func _on_HTTPRequest_request_completed(result, response_code, headers, body):
-	var usuario = body.get_string_from_utf8()
-	if (usuario !=""):
+	var resultado = body.get_string_from_utf8()
+	if (resultado!=""):
+		ScriptGlobal.jogador = resultado
 		get_tree().change_scene("res://cena_selecao.tscn")
 	else:
 		$ColorRect.visible = true

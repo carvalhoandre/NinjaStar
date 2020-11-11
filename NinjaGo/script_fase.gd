@@ -1,5 +1,7 @@
 extends Node2D
-		
+
+var chefao = false
+
 func _process(delta):
 	atualizar_hud()
 	
@@ -12,7 +14,8 @@ func _on_CheckPoint2_body_entered(body):
 
 func _on_Pont_body_entered(body):
 	if (body.name=="Personagem"):
-		get_tree().change_scene("res://cena_win.tscn")
+		chefe()
+		chefao = true
 
 func _on_Timer_timeout():
 	ScriptGlobal.troc_premio()
@@ -63,12 +66,19 @@ func atualizar_hud():
 	else:
 		pass
 	#Musica
-	if(not $AudioStreamPlayer.playing and ScriptGlobal.status_musica==true):
+	if(not $AudioStreamPlayer.playing and ScriptGlobal.status_musica==true and not chefao):
 		$AudioStreamPlayer.play()
-	elif($AudioStreamPlayer.playing and ScriptGlobal.status_musica==false):
+	elif($AudioStreamPlayer.playing and ScriptGlobal.status_musica==false and chefao==true):
 		$AudioStreamPlayer.stop()
-	if (not $AudioStreamPlayer.playing):
+	if (not $AudioStreamPlayer.playing  and not chefao):
 		$AudioStreamPlayer.play()
+	#Chefao
+	if(not $chefao.playing and ScriptGlobal.status_musica==true and chefao==true):
+		$chefao.play()
+	elif($chefao.playing and ScriptGlobal.status_musica==false and not chefao):
+		$chefao.stop()
+	if (not $chefao.playing  and chefao==true):
+		$chefao.play()
 	#HUD:
 	$HUD/QPonto.text = str(ScriptGlobal.qtd_pontos)
 	$HUD/QEspecial.text = str(ScriptGlobal.especial)
