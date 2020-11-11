@@ -16,7 +16,7 @@
 [ext_resource path="res://recursos/imagens/imagens/inimigo/Walk (9).png" type="Texture" id=14]
 [ext_resource path="res://recursos/imagens/imagens/inimigo/Dead (11).png" type="Texture" id=15]
 [ext_resource path="res://recursos/imagens/imagens/inimigo/Dead (7).png" type="Texture" id=16]
-[ext_resource path="res://recursos/sons/zombie-sound-effects-free.wav" type="AudioStream" id=17]
+[ext_resource path="res://recursos/sons/naruto_dangerous_kyuubi_released_-410876659386685388.wav" type="AudioStream" id=17]
 [ext_resource path="res://recursos/imagens/imagens/inimigo/Walk (7).png" type="Texture" id=18]
 [ext_resource path="res://recursos/imagens/imagens/inimigo/Dead (4).png" type="Texture" id=19]
 [ext_resource path="res://recursos/imagens/imagens/inimigo/Dead (10).png" type="Texture" id=20]
@@ -95,7 +95,7 @@ shape = SubResource( 3 )
 position = Vector2( -0.68874, -0.86225 )
 shape = SubResource( 4 )
 
-[node name="Zombi" type="AudioStreamPlayer" parent="Chefe"]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Chefe"]
 stream = ExtResource( 17 )
 
 [node name="Position2D" type="Position2D" parent="Chefe"]

@@ -221,7 +221,7 @@
 [ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Dead__004.png" type="Texture" id=219]
 [ext_resource path="res://recursos/imagens/personagens/Cop/JumpMelee (5).png" type="Texture" id=220]
 
-[sub_resource type="SpriteFrames" id=18]
+[sub_resource type="SpriteFrames" id=1]
 animations = [ {
 "frames": [ ExtResource( 191 ), ExtResource( 196 ), ExtResource( 155 ), ExtResource( 177 ), ExtResource( 211 ), ExtResource( 195 ), ExtResource( 213 ), ExtResource( 158 ), ExtResource( 200 ), ExtResource( 214 ), ExtResource( 141 ) ],
 "loop": false,
@@ -243,6 +243,11 @@ animations = [ {
 "name": "pulando",
 "speed": 18.0
 }, {
+"frames": [ ExtResource( 42 ), ExtResource( 50 ), ExtResource( 40 ), ExtResource( 23 ), ExtResource( 20 ), ExtResource( 33 ), ExtResource( 45 ), ExtResource( 39 ), ExtResource( 53 ), ExtResource( 47 ) ],
+"loop": true,
+"name": "abaixando",
+"speed": 50.0
+}, {
 "frames": [ ExtResource( 56 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 182 ), ExtResource( 199 ), ExtResource( 58 ), ExtResource( 159 ), ExtResource( 208 ), ExtResource( 169 ), ExtResource( 157 ) ],
 "loop": true,
 "name": "ataque",
@@ -252,11 +257,6 @@ animations = [ {
 "loop": true,
 "name": "kunai",
 "speed": 20.0
-}, {
-"frames": [ ExtResource( 42 ), ExtResource( 50 ), ExtResource( 40 ), ExtResource( 23 ), ExtResource( 20 ), ExtResource( 33 ), ExtResource( 45 ), ExtResource( 39 ), ExtResource( 53 ), ExtResource( 47 ) ],
-"loop": true,
-"name": "abaixando",
-"speed": 50.0
 }, {
 "frames": [ ExtResource( 174 ), ExtResource( 12 ), ExtResource( 7 ), ExtResource( 13 ), ExtResource( 170 ), ExtResource( 55 ), ExtResource( 63 ), ExtResource( 203 ), ExtResource( 11 ), ExtResource( 17 ) ],
 "loop": true,
@@ -269,7 +269,7 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="SpriteFrames" id=19]
+[sub_resource type="SpriteFrames" id=2]
 animations = [ {
 "frames": [ ExtResource( 198 ), ExtResource( 154 ), ExtResource( 183 ), ExtResource( 184 ), ExtResource( 219 ), ExtResource( 180 ), ExtResource( 188 ), ExtResource( 193 ), ExtResource( 197 ), ExtResource( 215 ), ExtResource( 141 ) ],
 "loop": true,
@@ -291,6 +291,11 @@ animations = [ {
 "name": "pulando",
 "speed": 20.0
 }, {
+"frames": [ ExtResource( 105 ), ExtResource( 110 ), ExtResource( 72 ), ExtResource( 128 ), ExtResource( 165 ), ExtResource( 88 ), ExtResource( 75 ), ExtResource( 95 ), ExtResource( 102 ), ExtResource( 131 ) ],
+"loop": false,
+"name": "abaixando",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 2 ), ExtResource( 167 ), ExtResource( 201 ), ExtResource( 168 ), ExtResource( 176 ), ExtResource( 172 ), ExtResource( 162 ), ExtResource( 160 ), ExtResource( 187 ), ExtResource( 3 ) ],
 "loop": true,
 "name": "ataque",
@@ -299,11 +304,6 @@ animations = [ {
 "frames": [ ExtResource( 2 ), ExtResource( 167 ), ExtResource( 201 ) ],
 "loop": true,
 "name": "kunai",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 105 ), ExtResource( 110 ), ExtResource( 72 ), ExtResource( 128 ), ExtResource( 165 ), ExtResource( 88 ), ExtResource( 75 ), ExtResource( 95 ), ExtResource( 102 ), ExtResource( 131 ) ],
-"loop": false,
-"name": "abaixando",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 161 ), ExtResource( 173 ), ExtResource( 8 ), ExtResource( 181 ), ExtResource( 62 ), ExtResource( 4 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 67 ), ExtResource( 57 ) ],
@@ -317,7 +317,7 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="SpriteFrames" id=20]
+[sub_resource type="SpriteFrames" id=3]
 animations = [ {
 "frames": [ ExtResource( 205 ), ExtResource( 217 ), ExtResource( 192 ), ExtResource( 212 ), ExtResource( 152 ), ExtResource( 218 ), ExtResource( 189 ), ExtResource( 190 ), ExtResource( 178 ), ExtResource( 164 ), ExtResource( 141 ) ],
 "loop": false,
@@ -339,6 +339,11 @@ animations = [ {
 "name": "pulando",
 "speed": 20.0
 }, {
+"frames": [ ExtResource( 153 ), ExtResource( 122 ), ExtResource( 117 ), ExtResource( 118 ), ExtResource( 107 ), ExtResource( 115 ), ExtResource( 124 ), ExtResource( 22 ), ExtResource( 30 ), ExtResource( 99 ) ],
+"loop": false,
+"name": "abaixando",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 149 ), ExtResource( 142 ), ExtResource( 144 ) ],
 "loop": true,
 "name": "ataque",
@@ -348,11 +353,6 @@ animations = [ {
 "loop": true,
 "name": "kunai",
 "speed": 20.0
-}, {
-"frames": [ ExtResource( 153 ), ExtResource( 122 ), ExtResource( 117 ), ExtResource( 118 ), ExtResource( 107 ), ExtResource( 115 ), ExtResource( 124 ), ExtResource( 22 ), ExtResource( 30 ), ExtResource( 99 ) ],
-"loop": false,
-"name": "abaixando",
-"speed": 5.0
 }, {
 "frames": [ ExtResource( 204 ), ExtResource( 5 ), ExtResource( 175 ), ExtResource( 209 ), ExtResource( 220 ), ExtResource( 210 ), ExtResource( 163 ), ExtResource( 171 ) ],
 "loop": true,
@@ -365,13 +365,13 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=21]
+[sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 42.3835, 81.9597 )
 
-[sub_resource type="RectangleShape2D" id=22]
+[sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 45.4711, 5.31564 )
 
-[sub_resource type="RectangleShape2D" id=23]
+[sub_resource type="RectangleShape2D" id=6]
 extents = Vector2( 53.0314, 54.3503 )
 
 [node name="Node2D" type="Node2D"]
@@ -383,27 +383,28 @@ script = ExtResource( 1 )
 [node name="Personagem1" type="AnimatedSprite" parent="Personagem"]
 position = Vector2( 8.84882, 14.4008 )
 scale = Vector2( 0.364307, 0.364307 )
-frames = SubResource( 18 )
+frames = SubResource( 1 )
 animation = "aparece"
+frame = 2
 playing = true
 
 [node name="Personagem2" type="AnimatedSprite" parent="Personagem"]
 visible = false
 position = Vector2( 5.09326, 12.1962 )
 scale = Vector2( 0.332724, 0.332724 )
-frames = SubResource( 19 )
+frames = SubResource( 2 )
 animation = "aparece"
 
 [node name="Personagem3" type="AnimatedSprite" parent="Personagem"]
 visible = false
 position = Vector2( 12.0623, 14.0328 )
 scale = Vector2( 0.333577, 0.333577 )
-frames = SubResource( 20 )
+frames = SubResource( 3 )
 animation = "aparece"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Personagem"]
 position = Vector2( 10.0287, 13.8201 )
-shape = SubResource( 21 )
+shape = SubResource( 4 )
 
 [node name="Camera2D" type="Camera2D" parent="Personagem"]
 current = true
@@ -417,7 +418,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Personagem/pisadinha"]
-shape = SubResource( 22 )
+shape = SubResource( 5 )
 
 [node name="Kunai" type="Area2D" parent="Personagem"]
 __meta__ = {
@@ -426,7 +427,7 @@ __meta__ = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Personagem/Kunai"]
 position = Vector2( 9.19334, 32.3069 )
-shape = SubResource( 23 )
+shape = SubResource( 6 )
 
 [node name="Position2D" type="Position2D" parent="Personagem"]
 position = Vector2( 95.8138, 14.8125 )

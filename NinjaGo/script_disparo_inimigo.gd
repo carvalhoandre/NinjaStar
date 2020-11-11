@@ -40,4 +40,10 @@ func _on_Disparo_body_entered(body):
 		if ScriptGlobal.cod_personagem == 3:
 			body.get_node("Personagem3").play("morrendo")
 		ScriptGlobal.qtd_vidas -= 1
-		queue_free()
+		
+	if (body.name=="Clone"):
+		if(disparo == "fire"):
+			$Disparo/Fire.play("impacto")
+		ScriptGlobal.qtd_clone -= 1
+		body.queue_free()
+	queue_free()

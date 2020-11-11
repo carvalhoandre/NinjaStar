@@ -18,7 +18,7 @@
 [ext_resource path="res://recursos/fontes/Ninjos.otf" type="DynamicFontData" id=16]
 [ext_resource path="res://recursos/fontes/njnaruto.ttf" type="DynamicFontData" id=17]
 [ext_resource path="res://recursos/fontes/NinjaStrike.otf" type="DynamicFontData" id=18]
-[ext_resource path="res://recursos/sons/inicio.wav" type="AudioStream" id=19]
+[ext_resource path="res://recursos/sons/music1.wav" type="AudioStream" id=19]
 [ext_resource path="res://recursos/imagens/recursos/email_open_50px.png" type="Texture" id=20]
 [ext_resource path="res://recursos/imagens/recursos/password_100px.png" type="Texture" id=21]
 [ext_resource path="res://recursos/imagens/recursos/internet_50px.png" type="Texture" id=22]
@@ -186,7 +186,7 @@ __meta__ = {
 position = Vector2( 185.68, 165 )
 scale = Vector2( 0.631164, 0.631164 )
 frames = SubResource( 9 )
-frame = 6
+frame = 9
 playing = true
 
 [node name="Label" type="Label" parent="ColorRect"]

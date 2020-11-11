@@ -30,6 +30,7 @@ func _process(delta):
 		var checkpoint = ScriptGlobal.checkpoint 
 		global_position = get_parent().get_node(checkpoint).global_position
 		ScriptGlobal.qtd_vidas -= 1
+		ScriptGlobal.qtd_clone -= 1
 		aparecendo()
 	
 	if(Input.is_action_pressed("ui_left") and not magia and not chacraOn):
@@ -118,7 +119,10 @@ func _process(delta):
 		objeto_clone.global_position = $clone.global_position
 		get_tree().root.add_child(objeto_clone)
 		ScriptGlobal.jutsu -= 1
-		ScriptGlobal.chacra >= 20
+		ScriptGlobal.chacra -= 20
+		ScriptGlobal.qtd_clone += 1
+		if ScriptGlobal.qtd_clone == 0:
+			queue_free()
 	
 	if(ScriptGlobal.morte == 0 and ScriptGlobal.qtd_vidas == 2):
 		ScriptGlobal.morrendo = true

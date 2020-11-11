@@ -9,6 +9,8 @@ var checkpoint = "CheckPoint1"
 var tipo_disparo = "kunai"
 var morte = 0
 var chacra = 0
+#clone
+var qtd_clone = 0
 
 #Variantes
 var valor_ponto = 10
@@ -23,6 +25,7 @@ var cod_inimigo = 1
 var zombi = false
 	#Chefao
 var qtd_vidas_chefe = 100
+var chefao = true
 
 #Config
 var status_musica = true
@@ -40,6 +43,8 @@ func alpha():
 	jutsu = 0
 	qtd_vidas_chefe = 100
 	chacra = 0
+	qtd_clone = 0
+	chefao = false
 
 func troc_premio():
 	if(tipo_premio=="moeda"):
@@ -61,3 +66,4 @@ func troc_inimigo():
 		cod_inimigo = 3
 	elif(cod_inimigo== 3):
 		cod_inimigo = 1
+		
