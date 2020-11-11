@@ -56,9 +56,12 @@ bg_color = Color( 0.286275, 0.87451, 0.121569, 1 )
 [node name="Node2D" type="Node2D"]
 
 [node name="Chefe" type="KinematicBody2D" parent="."]
-position = Vector2( 1.25378, 0.734232 )
+position = Vector2( 1.25378, -1.38473 )
 scale = Vector2( 3.46081, 3.46081 )
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Chefe"]
 position = Vector2( 0.561234, -1.12246 )

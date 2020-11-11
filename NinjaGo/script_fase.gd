@@ -1,5 +1,7 @@
 extends Node2D
 
+var chefe_dead = false
+
 func _process(delta):
 	atualizar_hud()
 	
@@ -11,12 +13,11 @@ func _on_CheckPoint2_body_entered(body):
 	$CheckPoint2/AnimationPlayer.play("checkpoint_inativo")
 
 func _on_Pont_body_entered(body):
-	if ScriptGlobal.chefao == false:
-		if (body.name=="Personagem"):
-			chefe()
-			ScriptGlobal.chefao = true
-			$Pont/SignArrow.visible = false
-			$Pont/CollisionShape2D.queue_free()
+	if (body.name=="Personagem"):
+		chefe()
+		ScriptGlobal.chefao = true
+		$Pont/SignArrow.visible = false
+		$Pont/CollisionShape2D.queue_free()
 		
 func chefe():
 		var cena_chefe = preload("res://cena_chefe.tscn")
