@@ -1,30 +1,30 @@
 [gd_scene load_steps=32 format=2]
 
 [ext_resource path="res://script_chefe.gd" type="Script" id=1]
-[ext_resource path="res://recursos/imagens/imagens/inimigo/Walk (5).png" type="Texture" id=2]
-[ext_resource path="res://recursos/imagens/imagens/inimigo/Walk (4).png" type="Texture" id=3]
-[ext_resource path="res://recursos/imagens/imagens/inimigo/Walk (10).png" type="Texture" id=4]
-[ext_resource path="res://recursos/imagens/imagens/inimigo/Dead (5).png" type="Texture" id=5]
-[ext_resource path="res://recursos/imagens/imagens/inimigo/Walk (6).png" type="Texture" id=6]
-[ext_resource path="res://recursos/imagens/Outos/1071208.png" type="Texture" id=7]
-[ext_resource path="res://recursos/imagens/imagens/inimigo/Walk (3).png" type="Texture" id=8]
-[ext_resource path="res://recursos/imagens/imagens/inimigo/Dead (6).png" type="Texture" id=9]
-[ext_resource path="res://recursos/imagens/imagens/inimigo/Dead (9).png" type="Texture" id=10]
-[ext_resource path="res://recursos/imagens/imagens/inimigo/Dead (2).png" type="Texture" id=11]
-[ext_resource path="res://recursos/imagens/imagens/inimigo/Dead (12).png" type="Texture" id=12]
-[ext_resource path="res://recursos/imagens/imagens/inimigo/Dead (8).png" type="Texture" id=13]
-[ext_resource path="res://recursos/imagens/imagens/inimigo/Walk (9).png" type="Texture" id=14]
-[ext_resource path="res://recursos/imagens/imagens/inimigo/Dead (11).png" type="Texture" id=15]
-[ext_resource path="res://recursos/imagens/imagens/inimigo/Dead (7).png" type="Texture" id=16]
-[ext_resource path="res://recursos/sons/naruto_dangerous_kyuubi_released_-410876659386685388.wav" type="AudioStream" id=17]
-[ext_resource path="res://recursos/imagens/imagens/inimigo/Walk (7).png" type="Texture" id=18]
-[ext_resource path="res://recursos/imagens/imagens/inimigo/Dead (4).png" type="Texture" id=19]
-[ext_resource path="res://recursos/imagens/imagens/inimigo/Dead (10).png" type="Texture" id=20]
-[ext_resource path="res://recursos/imagens/imagens/inimigo/Dead (3).png" type="Texture" id=21]
-[ext_resource path="res://recursos/imagens/imagens/inimigo/Dead (1).png" type="Texture" id=22]
-[ext_resource path="res://recursos/imagens/imagens/inimigo/Walk (2).png" type="Texture" id=23]
-[ext_resource path="res://recursos/imagens/imagens/inimigo/Walk (1).png" type="Texture" id=24]
-[ext_resource path="res://recursos/imagens/imagens/inimigo/Walk (8).png" type="Texture" id=25]
+[ext_resource path="res://recursos/imagens/personagens/inimigo/Walk (5).png" type="Texture" id=2]
+[ext_resource path="res://recursos/imagens/personagens/inimigo/Walk (4).png" type="Texture" id=3]
+[ext_resource path="res://recursos/imagens/personagens/inimigo/Walk (10).png" type="Texture" id=4]
+[ext_resource path="res://recursos/imagens/personagens/inimigo/Dead (5).png" type="Texture" id=5]
+[ext_resource path="res://recursos/imagens/personagens/inimigo/Walk (6).png" type="Texture" id=6]
+[ext_resource path="res://recursos/imagens/Outros/1071208.png" type="Texture" id=7]
+[ext_resource path="res://recursos/imagens/personagens/inimigo/Walk (3).png" type="Texture" id=8]
+[ext_resource path="res://recursos/imagens/personagens/inimigo/Dead (6).png" type="Texture" id=9]
+[ext_resource path="res://recursos/imagens/personagens/inimigo/Dead (9).png" type="Texture" id=10]
+[ext_resource path="res://recursos/imagens/personagens/inimigo/Dead (2).png" type="Texture" id=11]
+[ext_resource path="res://recursos/imagens/personagens/inimigo/Dead (12).png" type="Texture" id=12]
+[ext_resource path="res://recursos/imagens/personagens/inimigo/Dead (8).png" type="Texture" id=13]
+[ext_resource path="res://recursos/imagens/personagens/inimigo/Walk (9).png" type="Texture" id=14]
+[ext_resource path="res://recursos/imagens/personagens/inimigo/Dead (11).png" type="Texture" id=15]
+[ext_resource path="res://recursos/imagens/personagens/inimigo/Dead (7).png" type="Texture" id=16]
+[ext_resource path="res://recursos/fontes/njnaruto.ttf" type="DynamicFontData" id=17]
+[ext_resource path="res://recursos/imagens/personagens/inimigo/Walk (7).png" type="Texture" id=18]
+[ext_resource path="res://recursos/imagens/personagens/inimigo/Dead (4).png" type="Texture" id=19]
+[ext_resource path="res://recursos/imagens/personagens/inimigo/Dead (10).png" type="Texture" id=20]
+[ext_resource path="res://recursos/imagens/personagens/inimigo/Dead (3).png" type="Texture" id=21]
+[ext_resource path="res://recursos/imagens/personagens/inimigo/Dead (1).png" type="Texture" id=22]
+[ext_resource path="res://recursos/imagens/personagens/inimigo/Walk (2).png" type="Texture" id=23]
+[ext_resource path="res://recursos/imagens/personagens/inimigo/Walk (1).png" type="Texture" id=24]
+[ext_resource path="res://recursos/imagens/personagens/inimigo/Walk (8).png" type="Texture" id=25]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -50,8 +50,11 @@ extents = Vector2( 40.0907, 81.179 )
 [sub_resource type="StyleBoxFlat" id=5]
 bg_color = Color( 0, 1, 0.0156863, 1 )
 
-[sub_resource type="StyleBoxFlat" id=6]
-bg_color = Color( 0.286275, 0.87451, 0.121569, 1 )
+[sub_resource type="DynamicFont" id=6]
+size = 5
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 17 )
 
 [node name="Node2D" type="Node2D"]
 
@@ -59,9 +62,6 @@ bg_color = Color( 0.286275, 0.87451, 0.121569, 1 )
 position = Vector2( 1.25378, -1.38473 )
 scale = Vector2( 3.46081, 3.46081 )
 script = ExtResource( 1 )
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Chefe"]
 position = Vector2( 0.561234, -1.12246 )
@@ -98,23 +98,22 @@ shape = SubResource( 3 )
 position = Vector2( -0.68874, -0.86225 )
 shape = SubResource( 4 )
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Chefe"]
-stream = ExtResource( 17 )
-
 [node name="Position2D" type="Position2D" parent="Chefe"]
+position = Vector2( 34.2867, 77.1452 )
 
 [node name="Timer" type="Timer" parent="Chefe"]
 wait_time = 10.0
 autostart = true
 
 [node name="Vida" type="ProgressBar" parent="Chefe"]
-margin_left = -12.8719
-margin_top = -97.1198
-margin_right = 12.1281
-margin_bottom = -83.1198
+margin_left = -31.3223
+margin_top = -91.4834
+margin_right = 25.6777
+margin_bottom = -84.4834
 custom_styles/fg = SubResource( 5 )
-custom_styles/bg = SubResource( 6 )
+custom_fonts/font = SubResource( 6 )
 step = 1.0
+value = 100.0
 __meta__ = {
 "_edit_use_anchors_": false
 }

@@ -1,19 +1,17 @@
 extends KinematicBody2D
 
 var tipo_premio = "fim"
-
-func _ready():
-	if(not $AudioStreamPlayer.playing and ScriptGlobal.status_musica==true):
-		$AudioStreamPlayer.play()
-	elif($AudioStreamPlayer.playing and ScriptGlobal.status_musica==false):
-		$AudioStreamPlayer.stop()
-	if (not $AudioStreamPlayer.playing):
-		$AudioStreamPlayer.play()
-	$Vida.value = ScriptGlobal.qtd_vidas_chefe
-
 var velocidade = 500
 var direcao = 1 # Direcao 1 para direita, -1 para esquerda
 var mov = Vector2(velocidade,0)
+
+func _ready():
+	$Vida.value = ScriptGlobal.qtd_vidas_chefe
+	
+	if ScriptGlobal.qtd_vidas_chefe == 0:
+		$AnimatedSprite.play("morrendo")
+		
+	$AnimatedSprite.play("andando")
 
 func _process(delta):
 	mov.x = direcao * velocidade	
@@ -29,7 +27,6 @@ func _on_pe_direito_body_exited(body):
 
 func _on_AnimatedSprite_animation_finished():
 	if ($AnimatedSprite.animation=="morrendo"):
-		queue_free()
 		premio()
 		ScriptGlobal.chefao == false
 
@@ -46,7 +43,7 @@ func _on_Ataque_body_entered(body):
 func premio():
 	var cena_premio = preload("res://cena_premio.tscn")
 	var objeto = cena_premio.instance()
-	objeto.get_node("Premio").tipo_premio = tipo_premio
+	ScriptGlobal.tipo_premio = tipo_premio
 	objeto.global_position = global_position
 	get_parent().get_parent().add_child(objeto)
 	

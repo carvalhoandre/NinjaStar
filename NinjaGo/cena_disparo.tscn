@@ -14,7 +14,7 @@
 [ext_resource path="res://recursos/imagens/personagens/Cop/Objects/Muzzle_000.png" type="Texture" id=12]
 [ext_resource path="res://recursos/sons/naruto_hand_sceals_sound_effect_738499733974450647.wav" type="AudioStream" id=13]
 [ext_resource path="res://recursos/sons/kunai.wav" type="AudioStream" id=14]
-[ext_resource path="res://recursos/imagens/Outos/525px-Fuuma_Shuriken.svg.png" type="Texture" id=15]
+[ext_resource path="res://recursos/imagens/Outros/525px-Fuuma_Shuriken.svg.png" type="Texture" id=15]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {

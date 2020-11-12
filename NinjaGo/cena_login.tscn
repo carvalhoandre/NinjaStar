@@ -1,8 +1,8 @@
-[gd_scene load_steps=36 format=2]
+[gd_scene load_steps=40 format=2]
 
 [ext_resource path="res://recursos/fontes/game_over.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://script_login.gd" type="Script" id=2]
-[ext_resource path="res://recursos/imagens/Outos/login.png" type="Texture" id=3]
+[ext_resource path="res://recursos/imagens/Outros/login.png" type="Texture" id=3]
 [ext_resource path="res://recursos/fontes/Ninjos.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://recursos/imagens/personagens/Zumbi/female/Dead (6).png" type="Texture" id=5]
 [ext_resource path="res://recursos/imagens/personagens/Zumbi/female/Dead (3).png" type="Texture" id=6]
@@ -21,11 +21,14 @@
 [ext_resource path="res://recursos/sons/music1.wav" type="AudioStream" id=19]
 [ext_resource path="res://recursos/imagens/recursos/email_open_50px.png" type="Texture" id=20]
 [ext_resource path="res://recursos/imagens/recursos/password_100px.png" type="Texture" id=21]
-[ext_resource path="res://recursos/imagens/recursos/internet_50px.png" type="Texture" id=22]
-[ext_resource path="res://recursos/imagens/recursos/coins_50px.png" type="Texture" id=23]
+[ext_resource path="res://recursos/imagens/personagens/Chacra_004.png" type="Texture" id=22]
+[ext_resource path="res://recursos/imagens/personagens/Chacra_002.png" type="Texture" id=23]
+[ext_resource path="res://recursos/imagens/personagens/Chacra_003.png" type="Texture" id=24]
+[ext_resource path="res://recursos/imagens/personagens/Chacra_005.png" type="Texture" id=25]
+[ext_resource path="res://recursos/imagens/personagens/Chacra_001.png" type="Texture" id=26]
 
 [sub_resource type="DynamicFont" id=1]
-size = 100
+size = 30
 use_mipmaps = true
 use_filter = true
 font_data = ExtResource( 4 )
@@ -85,19 +88,27 @@ use_mipmaps = true
 use_filter = true
 font_data = ExtResource( 1 )
 
+[sub_resource type="SpriteFrames" id=13]
+animations = [ {
+"frames": [ ExtResource( 26 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 22 ), ExtResource( 25 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 518.586, 301.146 )
-scale = Vector2( 0.414112, 0.338758 )
+position = Vector2( 512.341, 292.156 )
+scale = Vector2( 0.434857, 0.396255 )
 texture = ExtResource( 3 )
 
 [node name="Label" type="Label" parent="."]
-margin_left = 545.17
-margin_top = 76.2676
-margin_right = 832.17
-margin_bottom = 133.268
+margin_left = 727.526
+margin_top = 16.6473
+margin_right = 1014.53
+margin_bottom = 104.647
 custom_fonts/font = SubResource( 1 )
 text = "LOGIN"
 align = 1
@@ -230,17 +241,12 @@ self_modulate = Color( 0, 0, 0, 1 )
 position = Vector2( 684.702, 385.004 )
 texture = ExtResource( 21 )
 
-[node name="Sprite4" type="Sprite" parent="."]
-self_modulate = Color( 0, 0, 0, 1 )
-position = Vector2( 814.346, 104.95 )
-scale = Vector2( 0.573465, 0.573465 )
-texture = ExtResource( 22 )
-
-[node name="Sprite5" type="Sprite" parent="."]
-self_modulate = Color( 0, 0, 0, 1 )
-position = Vector2( 410.26, 272.197 )
-scale = Vector2( 0.573465, 0.573465 )
-texture = ExtResource( 23 )
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 157.327, 302.377 )
+scale = Vector2( 0.5, 0.5 )
+frames = SubResource( 13 )
+frame = 1
+playing = true
 [connection signal="pressed" from="Enviar" to="." method="_on_Enviar_pressed"]
 [connection signal="button_up" from="CheckButton" to="." method="_on_CheckButton_button_up"]
 [connection signal="request_completed" from="HTTPRequest" to="." method="_on_HTTPRequest_request_completed"]

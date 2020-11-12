@@ -118,7 +118,7 @@
 [ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Jump__007.png" type="Texture" id=116]
 [ext_resource path="res://script_clone.gd" type="Script" id=117]
 [ext_resource path="res://recursos/imagens/personagens/Cop/Dead (4).png" type="Texture" id=118]
-[ext_resource path="res://recursos/imagens/Outos/1071208.png" type="Texture" id=119]
+[ext_resource path="res://recursos/imagens/Outros/1071208.png" type="Texture" id=119]
 [ext_resource path="res://recursos/imagens/personagens/Attack__009.png" type="Texture" id=120]
 [ext_resource path="res://recursos/imagens/personagens/Dead__006.png" type="Texture" id=121]
 [ext_resource path="res://recursos/imagens/personagens/Dead__009.png" type="Texture" id=122]
@@ -225,6 +225,7 @@
 [ext_resource path="res://recursos/imagens/personagens/Cop/Melee (3).png" type="Texture" id=223]
 [ext_resource path="res://recursos/imagens/personagens/Cop/Melee (2).png" type="Texture" id=224]
 [ext_resource path="res://recursos/imagens/personagens/Cop/Melee (4).png" type="Texture" id=225]
+
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {

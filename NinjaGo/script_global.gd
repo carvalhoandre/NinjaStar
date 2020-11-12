@@ -30,7 +30,7 @@ var chefao = true
 #Config
 var status_musica = true
 var status_efeitos_sonoros = true
-var jogador = ""
+var jogador = "Convidado"
 
 #Funções
 func alpha():

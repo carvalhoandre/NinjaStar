@@ -14,6 +14,7 @@ func _ready():
 	$HUD/Label4. visible = false
 	$HUD/Label5. visible = false
 	$HUD/Label6. visible = false
+	$Nomejogador.text = ScriptGlobal.jogador
 	
 	
 func _process(delta):

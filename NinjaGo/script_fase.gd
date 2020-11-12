@@ -1,12 +1,11 @@
 extends Node2D
 
-var chefe_dead = false
-
 func _process(delta):
 	atualizar_hud()
 	
 func _ready():
 	$Personagem.global_position = get_node(ScriptGlobal.checkpoint).global_position
+	$HUD/NomeJogador.text = ScriptGlobal.jogador
 
 func _on_CheckPoint2_body_entered(body):
 	ScriptGlobal.checkpoint = "CheckPoint2"
@@ -14,17 +13,9 @@ func _on_CheckPoint2_body_entered(body):
 
 func _on_Pont_body_entered(body):
 	if (body.name=="Personagem"):
-		chefe()
-		ScriptGlobal.chefao = true
-		$Pont/SignArrow.visible = false
-		$Pont/CollisionShape2D.queue_free()
+		$HUD/Efeito.visible = true
+		$HUD/Efeito/Transacao.play("transacao")
 		
-func chefe():
-		var cena_chefe = preload("res://cena_chefe.tscn")
-		var objeto_chefe = cena_chefe.instance()
-		objeto_chefe.global_position = $Pont.global_position
-		get_tree().root.add_child(objeto_chefe)
-
 func atualizar_hud():
 	$HUD/Face1.visible = false
 	$HUD/Face2.visible = false
@@ -33,6 +24,7 @@ func atualizar_hud():
 	$HUD/Vida2.visible = false
 	$HUD/Vida3.visible = false
 	$HUD/Vida4.visible = false
+	$HUD/Efeito.visible = false
 	#Face:
 	if(ScriptGlobal.cod_personagem==1):
 		$HUD/Face1.visible = true
@@ -63,7 +55,7 @@ func atualizar_hud():
 	else:
 		pass
 	#Musica
-	if(not $AudioStreamPlayer.playing and ScriptGlobal.status_musica==true and ScriptGlobal.chefao == true):
+	if(not $AudioStreamPlayer.playing and ScriptGlobal.status_musica==true):
 		$AudioStreamPlayer.play()
 	elif($AudioStreamPlayer.playing and ScriptGlobal.status_musica==false):
 		$AudioStreamPlayer.stop()
@@ -82,3 +74,8 @@ func atualizar_hud():
 	if(ScriptGlobal.morte == 1 and ScriptGlobal.qtd_vidas == 1):
 		$AnimationPlayer.play("morrendo")
 		ScriptGlobal.zombi = true
+
+
+func _on_AnimationPlayer_animation_finished(anim_name):
+	if anim_name == "transacao":
+		get_tree().change_scene("res://cena_chefao01.tscn")

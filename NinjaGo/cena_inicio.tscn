@@ -1,8 +1,8 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://recursos/fontes/njnaruto.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://script_inicio.gd" type="Script" id=2]
-[ext_resource path="res://recursos/imagens/Outos/Sem Título-1.png" type="Texture" id=3]
+[ext_resource path="res://recursos/imagens/Outros/Sem Título-1.png" type="Texture" id=3]
 [ext_resource path="res://recursos/imagens/personagens/Zumbi/female/Idle (9).png" type="Texture" id=4]
 [ext_resource path="res://recursos/imagens/personagens/Zumbi/female/Idle (3).png" type="Texture" id=5]
 [ext_resource path="res://recursos/imagens/personagens/Zumbi/female/Idle (14).png" type="Texture" id=6]
@@ -20,6 +20,7 @@
 [ext_resource path="res://recursos/imagens/personagens/Zumbi/female/Idle (8).png" type="Texture" id=18]
 [ext_resource path="res://recursos/imagens/personagens/Zumbi/female/Idle (15).png" type="Texture" id=19]
 [ext_resource path="res://recursos/sons/inicio.wav" type="AudioStream" id=20]
+[ext_resource path="res://recursos/imagens/Outros/fundo001.png" type="Texture" id=21]
 
 [sub_resource type="DynamicFont" id=1]
 size = 30
@@ -57,9 +58,15 @@ scale = Vector2( 0.983627, 0.980426 )
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
+visible = false
 position = Vector2( 514.115, 306.469 )
 scale = Vector2( 0.424741, 0.345324 )
 texture = ExtResource( 3 )
+
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( 514.062, 306.284 )
+scale = Vector2( 0.419358, 0.346753 )
+texture = ExtResource( 21 )
 
 [node name="Button" type="Button" parent="."]
 margin_left = 358.779
@@ -79,7 +86,7 @@ __meta__ = {
 position = Vector2( 519.66, 436.773 )
 scale = Vector2( 0.284848, 0.284848 )
 frames = SubResource( 2 )
-frame = 12
+frame = 14
 playing = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

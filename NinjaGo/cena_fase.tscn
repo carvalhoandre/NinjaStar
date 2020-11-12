@@ -1,9 +1,9 @@
-[gd_scene load_steps=275 format=2]
+[gd_scene load_steps=278 format=2]
 
 [ext_resource path="res://cenario1.tscn" type="PackedScene" id=1]
-[ext_resource path="res://recursos/imagens/imagens/warning.png" type="Texture" id=2]
-[ext_resource path="res://recursos/imagens/cenário/Objects/Tree.png" type="Texture" id=3]
-[ext_resource path="res://recursos/imagens/Outos/510px-Mudra-Naruto-Tigre.svg_.png" type="Texture" id=4]
+[ext_resource path="res://recursos/imagens/cenário/Fase01/warning.png" type="Texture" id=2]
+[ext_resource path="res://recursos/imagens/cenário/Fase01/rip.png" type="Texture" id=3]
+[ext_resource path="res://recursos/imagens/Outros/510px-Mudra-Naruto-Tigre.svg_.png" type="Texture" id=4]
 [ext_resource path="res://recursos/imagens/personagens/Run__002.png" type="Texture" id=5]
 [ext_resource path="res://recursos/imagens/personagens/Idle__000.png" type="Texture" id=6]
 [ext_resource path="res://recursos/imagens/personagens/Run__004.png" type="Texture" id=7]
@@ -35,9 +35,9 @@
 [ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Run__007.png" type="Texture" id=33]
 [ext_resource path="res://recursos/imagens/personagens/Slide__004.png" type="Texture" id=34]
 [ext_resource path="res://recursos/imagens/personagens/Slide__007.png" type="Texture" id=35]
-[ext_resource path="res://recursos/imagens/Outos/faceNinja.png" type="Texture" id=36]
-[ext_resource path="res://recursos/imagens/Outos/faceCop.png" type="Texture" id=37]
-[ext_resource path="res://recursos/imagens/Outos/faceWoman.png" type="Texture" id=38]
+[ext_resource path="res://recursos/imagens/Outros/faceNinja.png" type="Texture" id=36]
+[ext_resource path="res://recursos/imagens/Outros/faceCop.png" type="Texture" id=37]
+[ext_resource path="res://recursos/imagens/Outros/faceWoman.png" type="Texture" id=38]
 [ext_resource path="res://recursos/fontes/NinjaStrike.otf" type="DynamicFontData" id=39]
 [ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Chacra_002.png" type="Texture" id=40]
 [ext_resource path="res://recursos/imagens/personagens/Chacra_002.png" type="Texture" id=41]
@@ -59,6 +59,8 @@
 [ext_resource path="res://recursos/imagens/personagens/Cop/Melee (5).png" type="Texture" id=57]
 [ext_resource path="res://recursos/imagens/personagens/Cop/Melee (7).png" type="Texture" id=58]
 [ext_resource path="res://recursos/imagens/personagens/Cop/Melee (8).png" type="Texture" id=59]
+[ext_resource path="res://script_transacao.gd" type="Script" id=60]
+[ext_resource path="res://recursos/fontes/njnaruto.ttf" type="DynamicFontData" id=61]
 [ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Slide__002.png" type="Texture" id=66]
 [ext_resource path="res://recursos/imagens/personagens/Cop/Idle (5).png" type="Texture" id=67]
 [ext_resource path="res://recursos/imagens/personagens/Cop/RunShoot (8).png" type="Texture" id=68]
@@ -248,48 +250,66 @@
 [ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Dead__002.png" type="Texture" id=255]
 [ext_resource path="res://recursos/imagens/personagens/ninjaWoman/Dead__004.png" type="Texture" id=256]
 [ext_resource path="res://recursos/imagens/personagens/Cop/JumpMelee (5).png" type="Texture" id=257]
-[ext_resource path="res://recursos/imagens/Outos/1071208.png" type="Texture" id=260]
+[ext_resource path="res://recursos/imagens/Outros/1071208.png" type="Texture" id=260]
 [ext_resource path="res://recursos/fontes/game_over.ttf" type="DynamicFontData" id=261]
 [ext_resource path="res://cena_premio.tscn" type="PackedScene" id=262]
-[ext_resource path="res://recursos/imagens/Outos/525px-Fuuma_Shuriken.svg.png" type="Texture" id=263]
+[ext_resource path="res://recursos/imagens/Outros/525px-Fuuma_Shuriken.svg.png" type="Texture" id=263]
 [ext_resource path="res://cena_inimigo.tscn" type="PackedScene" id=264]
-[ext_resource path="res://recursos/imagens/Outos/game-3468135_960_720.png" type="Texture" id=265]
+[ext_resource path="res://recursos/imagens/Outros/game-3468135_960_720.png" type="Texture" id=265]
 
-[sub_resource type="Animation" id=7]
-resource_name = "morrendo"
-length = 5.0
-
-[sub_resource type="DynamicFont" id=8]
+[sub_resource type="DynamicFont" id=2]
 size = 100
 outline_color = Color( 0, 0, 0, 1 )
 use_mipmaps = true
 use_filter = true
 font_data = ExtResource( 261 )
 
-[sub_resource type="DynamicFont" id=9]
+[sub_resource type="DynamicFont" id=3]
 size = 30
 use_mipmaps = true
 use_filter = true
 font_data = ExtResource( 261 )
 
-[sub_resource type="Theme" id=10]
-default_font = SubResource( 9 )
+[sub_resource type="Theme" id=4]
+default_font = SubResource( 3 )
 
-[sub_resource type="StyleBoxFlat" id=11]
+[sub_resource type="StyleBoxFlat" id=5]
 bg_color = Color( 0.0745098, 0.94902, 0.866667, 1 )
 corner_detail = 10
 
-[sub_resource type="DynamicFont" id=12]
+[sub_resource type="DynamicFont" id=6]
 size = 30
 use_mipmaps = true
 use_filter = true
 font_data = ExtResource( 39 )
 
-[sub_resource type="CapsuleShape2D" id=13]
-radius = 65.8213
-height = 194.203
+[sub_resource type="DynamicFont" id=22]
+size = 12
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 61 )
 
-[sub_resource type="Animation" id=14]
+[sub_resource type="Animation" id=21]
+resource_name = "transacao"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Black:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true ]
+}
+
+[sub_resource type="CapsuleShape2D" id=7]
+radius = 65.8213
+height = 37.4585
+
+[sub_resource type="Animation" id=8]
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("SignArrow:visible")
@@ -316,7 +336,7 @@ tracks/1/keys = {
 "values": [ Vector2( 0, 0 ) ]
 }
 
-[sub_resource type="Animation" id=15]
+[sub_resource type="Animation" id=9]
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("SignArrow:rotation_degrees")
@@ -343,7 +363,7 @@ tracks/1/keys = {
 "values": [ false ]
 }
 
-[sub_resource type="Animation" id=18]
+[sub_resource type="Animation" id=10]
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("SignArrow:visible")
@@ -358,7 +378,7 @@ tracks/0/keys = {
 "values": [ true, false, true ]
 }
 
-[sub_resource type="Animation" id=19]
+[sub_resource type="Animation" id=11]
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("SignArrow:rotation_degrees")
@@ -385,12 +405,17 @@ tracks/1/keys = {
 "values": [ false ]
 }
 
-[sub_resource type="SpriteFrames" id=1]
+[sub_resource type="SpriteFrames" id=12]
 animations = [ {
 "frames": [ ExtResource( 190 ), ExtResource( 193 ), ExtResource( 238 ), ExtResource( 250 ), ExtResource( 213 ), ExtResource( 204 ), ExtResource( 197 ), ExtResource( 217 ), ExtResource( 233 ), ExtResource( 198 ), ExtResource( 260 ) ],
 "loop": false,
 "name": "morrendo",
 "speed": 25.0
+}, {
+"frames": [ ExtResource( 69 ), ExtResource( 91 ), ExtResource( 71 ), ExtResource( 96 ), ExtResource( 34 ), ExtResource( 80 ), ExtResource( 13 ), ExtResource( 35 ), ExtResource( 15 ), ExtResource( 14 ) ],
+"loop": true,
+"name": "abaixando",
+"speed": 50.0
 }, {
 "frames": [ ExtResource( 72 ), ExtResource( 24 ), ExtResource( 5 ), ExtResource( 82 ), ExtResource( 7 ), ExtResource( 121 ), ExtResource( 10 ), ExtResource( 97 ), ExtResource( 160 ), ExtResource( 98 ) ],
 "loop": true,
@@ -402,20 +427,15 @@ animations = [ {
 "name": "parado",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 16 ), ExtResource( 122 ), ExtResource( 133 ), ExtResource( 93 ), ExtResource( 8 ), ExtResource( 17 ), ExtResource( 73 ), ExtResource( 89 ), ExtResource( 119 ), ExtResource( 92 ) ],
-"loop": false,
-"name": "pulando",
-"speed": 18.0
-}, {
-"frames": [ ExtResource( 69 ), ExtResource( 91 ), ExtResource( 71 ), ExtResource( 96 ), ExtResource( 34 ), ExtResource( 80 ), ExtResource( 13 ), ExtResource( 35 ), ExtResource( 15 ), ExtResource( 14 ) ],
-"loop": true,
-"name": "abaixando",
-"speed": 50.0
-}, {
 "frames": [ ExtResource( 94 ), ExtResource( 86 ), ExtResource( 88 ), ExtResource( 206 ), ExtResource( 202 ), ExtResource( 21 ), ExtResource( 210 ), ExtResource( 251 ), ExtResource( 218 ), ExtResource( 199 ) ],
 "loop": true,
 "name": "ataque",
 "speed": 20.0
+}, {
+"frames": [ ExtResource( 16 ), ExtResource( 122 ), ExtResource( 133 ), ExtResource( 93 ), ExtResource( 8 ), ExtResource( 17 ), ExtResource( 73 ), ExtResource( 89 ), ExtResource( 119 ), ExtResource( 92 ) ],
+"loop": false,
+"name": "pulando",
+"speed": 18.0
 }, {
 "frames": [ ExtResource( 179 ), ExtResource( 157 ), ExtResource( 159 ), ExtResource( 154 ), ExtResource( 158 ), ExtResource( 163 ), ExtResource( 172 ), ExtResource( 164 ), ExtResource( 148 ), ExtResource( 222 ) ],
 "loop": true,
@@ -433,12 +453,17 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="SpriteFrames" id=2]
+[sub_resource type="SpriteFrames" id=13]
 animations = [ {
 "frames": [ ExtResource( 247 ), ExtResource( 170 ), ExtResource( 255 ), ExtResource( 241 ), ExtResource( 256 ), ExtResource( 246 ), ExtResource( 200 ), ExtResource( 229 ), ExtResource( 234 ), ExtResource( 215 ), ExtResource( 260 ) ],
 "loop": true,
 "name": "morrendo",
 "speed": 25.0
+}, {
+"frames": [ ExtResource( 155 ), ExtResource( 105 ), ExtResource( 66 ), ExtResource( 151 ), ExtResource( 240 ), ExtResource( 115 ), ExtResource( 78 ), ExtResource( 108 ), ExtResource( 110 ), ExtResource( 140 ) ],
+"loop": false,
+"name": "abaixando",
+"speed": 5.0
 }, {
 "frames": [ ExtResource( 168 ), ExtResource( 100 ), ExtResource( 161 ), ExtResource( 113 ), ExtResource( 103 ), ExtResource( 137 ), ExtResource( 106 ), ExtResource( 33 ), ExtResource( 132 ), ExtResource( 84 ) ],
 "loop": true,
@@ -450,19 +475,14 @@ animations = [ {
 "name": "parado",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 165 ), ExtResource( 136 ), ExtResource( 147 ), ExtResource( 142 ), ExtResource( 162 ), ExtResource( 31 ), ExtResource( 99 ), ExtResource( 146 ), ExtResource( 239 ), ExtResource( 141 ) ],
-"loop": false,
-"name": "pulando",
-"speed": 20.0
-}, {
-"frames": [ ExtResource( 155 ), ExtResource( 105 ), ExtResource( 66 ), ExtResource( 151 ), ExtResource( 240 ), ExtResource( 115 ), ExtResource( 78 ), ExtResource( 108 ), ExtResource( 110 ), ExtResource( 140 ) ],
-"loop": false,
-"name": "abaixando",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 175 ), ExtResource( 242 ), ExtResource( 203 ), ExtResource( 237 ), ExtResource( 231 ), ExtResource( 230 ), ExtResource( 249 ), ExtResource( 254 ), ExtResource( 228 ), ExtResource( 176 ) ],
 "loop": true,
 "name": "ataque",
+"speed": 20.0
+}, {
+"frames": [ ExtResource( 165 ), ExtResource( 136 ), ExtResource( 147 ), ExtResource( 142 ), ExtResource( 162 ), ExtResource( 31 ), ExtResource( 99 ), ExtResource( 146 ), ExtResource( 239 ), ExtResource( 141 ) ],
+"loop": false,
+"name": "pulando",
 "speed": 20.0
 }, {
 "frames": [ ExtResource( 175 ), ExtResource( 242 ), ExtResource( 203 ) ],
@@ -481,12 +501,17 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="SpriteFrames" id=3]
+[sub_resource type="SpriteFrames" id=14]
 animations = [ {
 "frames": [ ExtResource( 220 ), ExtResource( 223 ), ExtResource( 208 ), ExtResource( 196 ), ExtResource( 169 ), ExtResource( 225 ), ExtResource( 201 ), ExtResource( 232 ), ExtResource( 226 ), ExtResource( 205 ), ExtResource( 260 ) ],
 "loop": false,
 "name": "morrendo",
 "speed": 25.0
+}, {
+"frames": [ ExtResource( 173 ), ExtResource( 128 ), ExtResource( 124 ), ExtResource( 125 ), ExtResource( 114 ), ExtResource( 123 ), ExtResource( 130 ), ExtResource( 87 ), ExtResource( 75 ), ExtResource( 109 ) ],
+"loop": false,
+"name": "abaixando",
+"speed": 5.0
 }, {
 "frames": [ ExtResource( 131 ), ExtResource( 149 ), ExtResource( 111 ), ExtResource( 138 ), ExtResource( 224 ), ExtResource( 211 ), ExtResource( 219 ), ExtResource( 221 ) ],
 "loop": true,
@@ -498,19 +523,14 @@ animations = [ {
 "name": "parado",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 118 ), ExtResource( 207 ), ExtResource( 135 ), ExtResource( 104 ), ExtResource( 127 ), ExtResource( 129 ), ExtResource( 120 ), ExtResource( 126 ), ExtResource( 156 ), ExtResource( 101 ) ],
-"loop": false,
-"name": "pulando",
-"speed": 20.0
-}, {
-"frames": [ ExtResource( 173 ), ExtResource( 128 ), ExtResource( 124 ), ExtResource( 125 ), ExtResource( 114 ), ExtResource( 123 ), ExtResource( 130 ), ExtResource( 87 ), ExtResource( 75 ), ExtResource( 109 ) ],
-"loop": false,
-"name": "abaixando",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 52 ), ExtResource( 53 ), ExtResource( 54 ), ExtResource( 55 ), ExtResource( 57 ), ExtResource( 56 ), ExtResource( 58 ), ExtResource( 59 ) ],
 "loop": true,
 "name": "ataque",
+"speed": 20.0
+}, {
+"frames": [ ExtResource( 118 ), ExtResource( 207 ), ExtResource( 135 ), ExtResource( 104 ), ExtResource( 127 ), ExtResource( 129 ), ExtResource( 120 ), ExtResource( 126 ), ExtResource( 156 ), ExtResource( 101 ) ],
+"loop": false,
+"name": "pulando",
 "speed": 20.0
 }, {
 "frames": [ ExtResource( 29 ), ExtResource( 25 ), ExtResource( 83 ), ExtResource( 27 ), ExtResource( 183 ), ExtResource( 30 ), ExtResource( 22 ), ExtResource( 68 ), ExtResource( 216 ) ],
@@ -529,16 +549,16 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=4]
+[sub_resource type="RectangleShape2D" id=15]
 extents = Vector2( 42.3835, 81.9597 )
 
-[sub_resource type="RectangleShape2D" id=5]
+[sub_resource type="RectangleShape2D" id=16]
 extents = Vector2( 45.4711, 5.31564 )
 
-[sub_resource type="RectangleShape2D" id=6]
+[sub_resource type="RectangleShape2D" id=17]
 extents = Vector2( 53.0314, 54.3503 )
 
-[sub_resource type="SpriteFrames" id=20]
+[sub_resource type="SpriteFrames" id=18]
 animations = [ {
 "frames": [ ExtResource( 47 ), ExtResource( 45 ), ExtResource( 51 ), ExtResource( 46 ) ],
 "loop": true,
@@ -546,7 +566,7 @@ animations = [ {
 "speed": 1.0
 } ]
 
-[sub_resource type="SpriteFrames" id=21]
+[sub_resource type="SpriteFrames" id=19]
 animations = [ {
 "frames": [ ExtResource( 44 ), ExtResource( 40 ), ExtResource( 50 ) ],
 "loop": true,
@@ -554,7 +574,7 @@ animations = [ {
 "speed": 1.0
 } ]
 
-[sub_resource type="SpriteFrames" id=22]
+[sub_resource type="SpriteFrames" id=20]
 animations = [ {
 "frames": [ ExtResource( 43 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 48 ), ExtResource( 49 ) ],
 "loop": true,
@@ -567,9 +587,6 @@ pause_mode = 1
 position = Vector2( 41.9028, 91.1139 )
 scale = Vector2( 0.8, 0.8 )
 script = ExtResource( 245 )
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/morrendo = SubResource( 7 )
 
 [node name="HUD" type="ParallaxBackground" parent="."]
 layer = 1
@@ -604,7 +621,7 @@ margin_left = 953.597
 margin_top = 12.8594
 margin_right = 993.601
 margin_bottom = 69.8594
-custom_fonts/font = SubResource( 8 )
+custom_fonts/font = SubResource( 2 )
 text = "0"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -615,7 +632,7 @@ margin_left = 824.762
 margin_top = 14.4055
 margin_right = 864.766
 margin_bottom = 71.406
-custom_fonts/font = SubResource( 8 )
+custom_fonts/font = SubResource( 2 )
 text = "0"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -626,7 +643,7 @@ margin_left = 715.513
 margin_top = 13.0856
 margin_right = 755.517
 margin_bottom = 70.0861
-custom_fonts/font = SubResource( 8 )
+custom_fonts/font = SubResource( 2 )
 text = "0"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -667,8 +684,8 @@ margin_left = 111.337
 margin_top = 74.9336
 margin_right = 313.337
 margin_bottom = 95.9336
-theme = SubResource( 10 )
-custom_styles/fg = SubResource( 11 )
+theme = SubResource( 4 )
+custom_styles/fg = SubResource( 5 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_shadow = Color( 0.92549, 0.0470588, 0.0470588, 1 )
 step = 1.0
@@ -676,16 +693,58 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="HUD"]
+[node name="NomeJogador" type="Label" parent="HUD"]
 margin_left = 113.265
 margin_top = 47.1937
 margin_right = 220.265
 margin_bottom = 71.1937
-custom_fonts/font = SubResource( 12 )
+custom_fonts/font = SubResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="HUD"]
+margin_left = 122.27
+margin_top = 79.4585
+margin_right = 177.27
+margin_bottom = 97.4585
+custom_fonts/font = SubResource( 22 )
 text = "Chacra:"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Efeito" type="Node2D" parent="HUD"]
+visible = false
+position = Vector2( 41.9028, 91.1139 )
+scale = Vector2( 0.8, 0.8 )
+script = ExtResource( 60 )
+
+[node name="White" type="ColorRect" parent="HUD/Efeito"]
+margin_left = 5.73303
+margin_top = 3.67328
+margin_right = 1020.73
+margin_bottom = 600.673
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Black" type="ColorRect" parent="HUD/Efeito"]
+margin_left = 2.0
+margin_top = 4.0
+margin_right = 1024.0
+margin_bottom = 601.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Node2D" parent="HUD/Efeito" instance=ExtResource( 1 )]
+position = Vector2( -5180.13, 15.1999 )
+
+[node name="Transacao" type="AnimationPlayer" parent="HUD/Efeito"]
+autoplay = "transacao"
+anims/transacao = SubResource( 21 )
 
 [node name="CheckPoint1" type="Area2D" parent="."]
 position = Vector2( -1201.14, -80.5948 )
@@ -701,27 +760,31 @@ texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CheckPoint1"]
 position = Vector2( 132.143, 87.3084 )
-shape = SubResource( 13 )
+shape = SubResource( 7 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="CheckPoint1"]
 autoplay = "checkpoint_ativo"
-anims/checkpoint_ativo = SubResource( 14 )
-anims/checkpoint_inativo = SubResource( 15 )
+anims/checkpoint_ativo = SubResource( 8 )
+anims/checkpoint_inativo = SubResource( 9 )
 
 [node name="Pont" type="Area2D" parent="."]
-position = Vector2( 5468.3, 538.63 )
+position = Vector2( 5534.72, 727.729 )
 rotation = -3.11076
+scale = Vector2( 0.715499, 0.715499 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="SignArrow" type="Sprite" parent="Pont"]
-position = Vector2( 8.56437, -6.34047 )
-scale = Vector2( 2.4598, -2.35194 )
+position = Vector2( -0.625488, -1.23145 )
+scale = Vector2( 0.568292, -0.543373 )
 texture = ExtResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pont"]
-position = Vector2( 30.2539, 2.20074 )
+position = Vector2( 1.03418, -2.862 )
 rotation = -3.14159
 scale = Vector2( 2.03649, 2.03649 )
-shape = SubResource( 13 )
+shape = SubResource( 7 )
 
 [node name="CheckPoint2" type="Area2D" parent="."]
 position = Vector2( 3303.53, -500.281 )
@@ -737,12 +800,12 @@ texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CheckPoint2"]
 position = Vector2( 132.143, 87.3084 )
-shape = SubResource( 13 )
+shape = SubResource( 7 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="CheckPoint2"]
 autoplay = "checkpoint_ativo"
-anims/checkpoint_ativo = SubResource( 18 )
-anims/checkpoint_inativo = SubResource( 19 )
+anims/checkpoint_ativo = SubResource( 10 )
+anims/checkpoint_inativo = SubResource( 11 )
 
 [node name="Premio" parent="." instance=ExtResource( 262 )]
 position = Vector2( 1599.51, 487.424 )
@@ -785,26 +848,26 @@ script = ExtResource( 174 )
 visible = false
 position = Vector2( 8.84882, 14.4008 )
 scale = Vector2( 0.364307, 0.364307 )
-frames = SubResource( 1 )
+frames = SubResource( 12 )
 animation = "andando"
 
 [node name="Personagem2" type="AnimatedSprite" parent="Personagem"]
 visible = false
 position = Vector2( 5.09326, 12.1962 )
 scale = Vector2( 0.332724, 0.332724 )
-frames = SubResource( 2 )
+frames = SubResource( 13 )
 animation = "andando"
 
 [node name="Personagem3" type="AnimatedSprite" parent="Personagem"]
 visible = false
 position = Vector2( 12.0623, 14.0328 )
 scale = Vector2( 0.333577, 0.333577 )
-frames = SubResource( 3 )
+frames = SubResource( 14 )
 animation = "andando"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Personagem"]
 position = Vector2( 10.0287, 13.8201 )
-shape = SubResource( 4 )
+shape = SubResource( 15 )
 
 [node name="Camera2D" type="Camera2D" parent="Personagem"]
 position = Vector2( -2.78595, 1.10987 )
@@ -819,7 +882,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Personagem/pisadinha"]
-shape = SubResource( 5 )
+shape = SubResource( 16 )
 
 [node name="Kunai" type="Area2D" parent="Personagem"]
 __meta__ = {
@@ -828,7 +891,7 @@ __meta__ = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Personagem/Kunai"]
 position = Vector2( 9.19334, 32.3069 )
-shape = SubResource( 6 )
+shape = SubResource( 17 )
 
 [node name="Position2D" type="Position2D" parent="Personagem"]
 position = Vector2( 95.8138, 14.8125 )
@@ -840,21 +903,22 @@ position = Vector2( -222.969, 11.7987 )
 visible = false
 position = Vector2( 18.6426, 16.7728 )
 scale = Vector2( 0.129171, 0.129171 )
-frames = SubResource( 20 )
+frames = SubResource( 18 )
 
 [node name="Chacra2" type="AnimatedSprite" parent="Personagem"]
 visible = false
 position = Vector2( 10.0339, 12.8525 )
 scale = Vector2( 0.143387, 0.143387 )
-frames = SubResource( 21 )
+frames = SubResource( 19 )
 animation = "chacra"
 
 [node name="Chacra1" type="AnimatedSprite" parent="Personagem"]
 visible = false
 position = Vector2( 11.5349, 15.2958 )
 scale = Vector2( 0.1361, 0.13694 )
-frames = SubResource( 22 )
+frames = SubResource( 20 )
 animation = "chacra"
+[connection signal="animation_finished" from="HUD/Efeito/Transacao" to="." method="_on_AnimationPlayer_animation_finished"]
 [connection signal="body_entered" from="Pont" to="." method="_on_Pont_body_entered"]
 [connection signal="body_entered" from="CheckPoint2" to="." method="_on_CheckPoint2_body_entered"]
 [connection signal="animation_finished" from="Personagem/Personagem1" to="Personagem" method="_on_Personagem1_animation_finished"]

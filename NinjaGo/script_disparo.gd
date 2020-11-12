@@ -47,13 +47,9 @@ func _on_Disparo_body_entered(body):
 	if (body.name=="Chefe"):
 		if(ScriptGlobal.tipo_disparo == "fire"):
 			$Disparo/Fire.play("impacto")
-		body.velocidade = 0
-		body.get_node("CollisionShape2D").queue_free()
-		body.get_node("Ataque").queue_free()
-		queue_free()
 		ScriptGlobal.zombi = false
 		if (ScriptGlobal.tipo_disparo == "kunai"):
-			ScriptGlobal.qtd_vidas_chefe -= 1
+			ScriptGlobal.qtd_vidas_chefe -= 100
 		elif (ScriptGlobal.tipo_disparo == "fire"):
 			ScriptGlobal.qtd_vidas_chefe -= 5
 		elif (ScriptGlobal.tipo_disparo == "especial"):
