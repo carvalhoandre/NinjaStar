@@ -1,4 +1,4 @@
-# NinjaGO :space_invader:
+# NinjaStar:space_invader:
 ***
 _Em desenvolvimento_
 _Jogo de plataforma 2D, desenvolvido via Godot._
