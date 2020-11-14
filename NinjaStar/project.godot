@@ -15,7 +15,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="NinjaGO"
+config/name="NinjaStar"
 run/main_scene="res://cena_inicio.tscn"
 config/icon="res://icon.png"
 
