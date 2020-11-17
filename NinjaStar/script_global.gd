@@ -26,6 +26,7 @@ var zombi = false
 	#Chefao
 var qtd_vidas_chefe = 100
 var chefao = true
+var direcao_chefe = 1 # Direcao 1 para direita, -1 para esquerda
 
 #Config
 var status_musica = true

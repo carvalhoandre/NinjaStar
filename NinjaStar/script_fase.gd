@@ -49,8 +49,6 @@ func atualizar_hud():
 	elif (ScriptGlobal.qtd_vidas==1):
 		$HUD/Vida1.visible = true
 	elif(ScriptGlobal.qtd_vidas == 0):
-		ScriptGlobal.chefao = false
-		ScriptGlobal.qtd_vidas_chefe = 0
 		get_tree().change_scene("res://cena_gameover.tscn")
 	else:
 		pass
@@ -67,13 +65,6 @@ func atualizar_hud():
 	$HUD/QEspecial.text = str(ScriptGlobal.especial)
 	$HUD/QJutsu.text = str(ScriptGlobal.jutsu)
 	$HUD/Chacra.value = ScriptGlobal.chacra
-	
-	if(ScriptGlobal.morte == 0 and ScriptGlobal.qtd_vidas == 2):
-		$AnimationPlayer.play("morrendo")
-	
-	if(ScriptGlobal.morte == 1 and ScriptGlobal.qtd_vidas == 1):
-		$AnimationPlayer.play("morrendo")
-		ScriptGlobal.zombi = true
 
 
 func _on_AnimationPlayer_animation_finished(anim_name):

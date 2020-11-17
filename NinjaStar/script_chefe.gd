@@ -2,7 +2,6 @@ extends KinematicBody2D
 
 var tipo_premio = "fim"
 var velocidade = 500
-var direcao = 1 # Direcao 1 para direita, -1 para esquerda
 var mov = Vector2(velocidade,0)
 
 func _ready():
@@ -14,15 +13,15 @@ func _ready():
 	$AnimatedSprite.play("andando")
 
 func _process(delta):
-	mov.x = direcao * velocidade	
+	mov.x = ScriptGlobal.direcao_chefe * velocidade	
 	mov = move_and_slide(mov)
 
 func _on_pe_esquerdo_body_exited(body):
-	direcao = 1
+	ScriptGlobal.direcao_chefe = 1
 	$AnimatedSprite.flip_h = false
 	
 func _on_pe_direito_body_exited(body):
-	direcao = -1
+	ScriptGlobal.direcao_chefe = -1
 	$AnimatedSprite.flip_h = true
 
 func _on_AnimatedSprite_animation_finished():
@@ -34,8 +33,8 @@ func _on_Ataque_body_entered(body):
 	if (body.name=="Personagem" and ScriptGlobal.atacando == false):
 		ScriptGlobal.qtd_vidas -= 1
 		ScriptGlobal.zombi = true
-		direcao = direcao * (-1)
-	if(direcao==1):
+		ScriptGlobal.direcao_chefe = ScriptGlobal.direcao_chefe * (-1)
+	if(ScriptGlobal.direcao_chefe==1):
 		$AnimatedSprite.flip_h = false
 	else:
 		$AnimatedSprite.flip_h = true

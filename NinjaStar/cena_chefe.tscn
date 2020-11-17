@@ -28,15 +28,15 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 22 ), ExtResource( 11 ), ExtResource( 21 ), ExtResource( 19 ), ExtResource( 5 ), ExtResource( 9 ), ExtResource( 16 ), ExtResource( 13 ), ExtResource( 10 ), ExtResource( 20 ), ExtResource( 15 ), ExtResource( 12 ), ExtResource( 7 ), ExtResource( 7 ), ExtResource( 7 ) ],
-"loop": false,
-"name": "morrendo",
-"speed": 10.0
-}, {
 "frames": [ ExtResource( 24 ), ExtResource( 23 ), ExtResource( 8 ), ExtResource( 3 ), ExtResource( 2 ), ExtResource( 6 ), ExtResource( 18 ), ExtResource( 25 ), ExtResource( 14 ), ExtResource( 4 ) ],
 "loop": true,
 "name": "andando",
 "speed": 18.0
+}, {
+"frames": [ ExtResource( 22 ), ExtResource( 11 ), ExtResource( 21 ), ExtResource( 19 ), ExtResource( 5 ), ExtResource( 9 ), ExtResource( 16 ), ExtResource( 13 ), ExtResource( 10 ), ExtResource( 20 ), ExtResource( 15 ), ExtResource( 12 ), ExtResource( 7 ), ExtResource( 7 ), ExtResource( 7 ) ],
+"loop": false,
+"name": "morrendo",
+"speed": 10.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]

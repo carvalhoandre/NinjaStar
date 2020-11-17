@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
-var velocidade = 500
-var forca_pulo = -680
+var velocidade = 600
+var forca_pulo = -1200
 var mov = Vector2(0,0)
 var magia = false
 var direcao = 1 # 1 é para direita e -1 é para esquerda
@@ -136,15 +136,6 @@ func _process(delta):
 	
 	mov = move_and_slide(mov, Vector2(0,-1))
 	
-	if(ScriptGlobal.morte == 0 and ScriptGlobal.qtd_vidas == 3):
-		morrendo()
-	
-	if(ScriptGlobal.morte == 1 and ScriptGlobal.qtd_vidas == 2):
-		morrendo()
-	
-	if(ScriptGlobal.morte == 2 and ScriptGlobal.qtd_vidas == 1):
-		morrendo()
-
 func _on_Kunai_body_entered(body):
 	ScriptGlobal.zombi = true
 	if (body.name=="Inimigo" and ScriptGlobal.atacando == true):
@@ -158,6 +149,17 @@ func _on_Kunai_body_entered(body):
 			body.get_node("CollisionShape2D").queue_free()
 			body.get_node("Ataque").queue_free()
 			ScriptGlobal.troc_inimigo()
+			
+	if (body.name=="Chefe" and ScriptGlobal.atacando == true):
+		body.get_node("AnimatedSprite")	
+		ScriptGlobal.qtd_vidas_chefe -= 10
+		if ScriptGlobal.direcao_chefe == 1:
+			ScriptGlobal.direcao_chefe = -1
+		if ScriptGlobal.direcao_chefe == -1:
+			ScriptGlobal.direcao_chefe = 1
+	
+	# Direcao 1 para direita, -1 para esquerda
+
 
 func _on_pisadinha_body_entered(body):
 	if (body.name=="Inimigo"):
@@ -172,6 +174,11 @@ func _on_pisadinha_body_entered(body):
 		body.get_node("Ataque").queue_free()
 		mov.y = forca_pulo * 0.5
 		ScriptGlobal.troc_inimigo()
+		
+		if (body.name=="Chefe"):
+			body.get_node("AnimatedSprite")	
+			ScriptGlobal.qtd_vidas_chefe -= 10
+			mov.y = forca_pulo * 0.5
 
 func andando():
 	if(ScriptGlobal.cod_personagem==1):

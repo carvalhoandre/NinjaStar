@@ -38,11 +38,10 @@ func atualizar_hud():
 	elif (ScriptGlobal.qtd_vidas==1):
 		$HUD/Vida1.visible = true
 	elif(ScriptGlobal.qtd_vidas == 0):
-		ScriptGlobal.chefao = false
-		ScriptGlobal.qtd_vidas_chefe = 0
 		get_tree().change_scene("res://cena_gameover.tscn")
-	else:
-		pass
+	
+	if ScriptGlobal.qtd_vidas_chefe == 0:
+		get_tree().change_scene("res://cena_win.tscn")
 	#Musica
 	if(not $AudioStreamPlayer.playing and ScriptGlobal.status_musica==true):
 		$AudioStreamPlayer.play()
