@@ -135,15 +135,6 @@ func _process(delta):
 		ScriptGlobal.morte += 1
 	
 	mov = move_and_slide(mov, Vector2(0,-1))
-	
-	if(ScriptGlobal.morte == 0 and ScriptGlobal.qtd_vidas == 3):
-		morrendo()
-	
-	if(ScriptGlobal.morte == 1 and ScriptGlobal.qtd_vidas == 2):
-		morrendo()
-	
-	if(ScriptGlobal.morte == 2 and ScriptGlobal.qtd_vidas == 1):
-		morrendo()
 
 func _on_Kunai_body_entered(body):
 	ScriptGlobal.zombi = true
