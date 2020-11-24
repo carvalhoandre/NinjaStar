@@ -17,7 +17,7 @@ func _ready():
 		velocidade = 11
 		$Disparo/Fire.play("lancamento")
 		if(ScriptGlobal.status_efeitos_sonoros):
-			$Efeito.play()
+			$Kunai.play()
 	elif (ScriptGlobal.tipo_disparo == "especial"):
 		velocidade = 20
 		$Disparo/Sprite.visible = true

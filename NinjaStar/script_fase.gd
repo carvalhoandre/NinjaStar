@@ -13,8 +13,7 @@ func _on_CheckPoint2_body_entered(body):
 
 func _on_Pont_body_entered(body):
 	if (body.name=="Personagem"):
-		$HUD/Efeito.visible = true
-		$HUD/Efeito/Transacao.play("transacao")
+		get_tree().change_scene("res://cena_chefao01.tscn")
 		
 func atualizar_hud():
 	$HUD/Face1.visible = false
@@ -24,7 +23,7 @@ func atualizar_hud():
 	$HUD/Vida2.visible = false
 	$HUD/Vida3.visible = false
 	$HUD/Vida4.visible = false
-	$HUD/Efeito.visible = false
+	
 	#Face:
 	if(ScriptGlobal.cod_personagem==1):
 		$HUD/Face1.visible = true
@@ -65,8 +64,3 @@ func atualizar_hud():
 	$HUD/QEspecial.text = str(ScriptGlobal.especial)
 	$HUD/QJutsu.text = str(ScriptGlobal.jutsu)
 	$HUD/Chacra.value = ScriptGlobal.chacra
-
-
-func _on_AnimationPlayer_animation_finished(anim_name):
-	if anim_name == "transacao":
-		get_tree().change_scene("res://cena_chefao01.tscn")

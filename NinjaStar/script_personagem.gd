@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 var velocidade = 500
-var forca_pulo = -680
+var forca_pulo = -600
 var mov = Vector2(0,0)
 var magia = false
 var direcao = 1 # 1 é para direita e -1 é para esquerda

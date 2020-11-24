@@ -18,8 +18,8 @@ func _on_CheckButton_button_up():
 	login = false
 
 func _on_Enviar_pressed():
-	if login == true:
-		var url = "http://localhost/cadastro/consultar.php?";
+	if login == true: 
+		var url = "http://localhost/ninjastar/consultar.php?";
 		var data = "email=" + $email.text + "&password=" + $senha.text;
 		var headers = []
 		var use_ssl = false

@@ -6,13 +6,13 @@
 [ext_resource path="res://recursos/imagens/recursos/music_26px.png" type="Texture" id=5]
 
 [sub_resource type="DynamicFont" id=1]
-size = 80
+size = 50
 use_mipmaps = true
 use_filter = true
 font_data = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=2]
-size = 45
+size = 40
 use_mipmaps = true
 use_filter = true
 font_data = ExtResource( 2 )
@@ -64,10 +64,10 @@ __meta__ = {
 }
 
 [node name="Configuracoes" type="Label" parent="."]
-margin_left = 385.645
-margin_top = 74.1624
-margin_right = 635.645
-margin_bottom = 120.162
+margin_left = 374.331
+margin_top = 101.032
+margin_right = 624.331
+margin_bottom = 147.032
 custom_fonts/font = SubResource( 1 )
 text = "CONFIGURAÇOES"
 align = 1
@@ -92,10 +92,11 @@ autoplay = "pressione"
 anims/pressione = SubResource( 3 )
 
 [node name="Label2" type="Label" parent="."]
-margin_left = 15.5563
-margin_top = 11.3137
-margin_right = 400.556
-margin_bottom = 90.3137
+margin_left = 16.0
+margin_top = 11.0
+margin_right = 404.0
+margin_bottom = 74.0
+rect_scale = Vector2( 0.475726, 0.475726 )
 custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 0.717647, 0.0156863, 0.0156863, 1 )
 text = "NINJA Star"

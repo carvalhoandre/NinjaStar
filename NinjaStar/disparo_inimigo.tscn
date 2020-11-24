@@ -16,7 +16,6 @@
 [ext_resource path="res://script_disparo_inimigo.gd" type="Script" id=14]
 [ext_resource path="res://recursos/imagens/Outros/525px-Fuuma_Shuriken.svg.png" type="Texture" id=15]
 
-
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
 "frames": [ ExtResource( 11 ), ExtResource( 2 ), ExtResource( 9 ), ExtResource( 1 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 12 ), ExtResource( 3 ) ],
@@ -74,6 +73,7 @@ tracks/2/keys = {
 }
 
 [node name="Node2D" type="Node2D"]
+scale = Vector2( 0.577686, 0.577686 )
 script = ExtResource( 14 )
 
 [node name="Disparo" type="Area2D" parent="."]

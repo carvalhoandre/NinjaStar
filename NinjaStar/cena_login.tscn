@@ -197,7 +197,7 @@ __meta__ = {
 position = Vector2( 185.68, 165 )
 scale = Vector2( 0.631164, 0.631164 )
 frames = SubResource( 9 )
-frame = 2
+frame = 9
 playing = true
 
 [node name="Label" type="Label" parent="ColorRect"]
