@@ -2,7 +2,7 @@
 ***
 _Em desenvolvimento_
 
-Projeto de aula matéria de desenvolvimento de jogos usando [Godot](https://godotengine.org//)
+Projeto de aula em programção de jogos usando [Godot](https://godotengine.org//)
 
 - _Desenvolvido para ser aquele velho e bom jogo nostálgico de de plataforma 2D que te desafia a cada fase. Jogue e se surpreenda com a qualidade gráfica que nos remete aos anos 90._
 
