@@ -9,7 +9,7 @@ Projeto de aula em programção de jogos usando [Godot](https://godotengine.org/
 [Plataforma online em desenvolvimento](https://github.com/carvalhoandre/NinjaStar-site)
 
 
-Implementações realizadas e atualizações segund: [ninjastar.6te.net](http://ninjastar.6te.net/)
+Implementações realizadas e atualizações segundo: [ninjastar.6te.net](http://ninjastar.6te.net/)
 
 ![selecao](https://github.com/carvalhoandre/games/blob/master/readmimagens/img.jpg)
 - _Contribua para realização do jogo._
