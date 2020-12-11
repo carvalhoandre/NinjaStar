@@ -4,7 +4,7 @@
 
 Projeto de aula em programção de jogos usando [Godot](https://godotengine.org//)
 
-- _Desenvolvido para ser aquele velho e bom jogo nostálgico de de plataforma 2D, que, te desafia a cada fase *Ninja GO* tem o objetivo de te surpreender com a qualidade gráfica que nos remete aos anos 90._
+- _Desenvolvido para ser aquele velho e bom jogo nostálgico de de plataforma 2D, que, te desafia a cada fase *NinjaStar* tem o objetivo de te surpreender com a qualidade gráfica que nos remete aos anos 90._
 
 [Plataforma online em desenvolvimento](https://github.com/carvalhoandre/NinjaStar-site)
 
