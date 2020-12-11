@@ -1,5 +1,4 @@
 # NinjaStar:space_invader:
-***
 
 <img src="https://github.com/carvalhoandre/NinjaStar/blob/master/NinjaStar/recursos/imagens/personagens/Attack__000.png" max-width="400px" width="400px" align="right" alt="Logo_andre">
 
