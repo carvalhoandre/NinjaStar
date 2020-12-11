@@ -1,6 +1,7 @@
 # NinjaStar:space_invader:
 ***
-_Em desenvolvimento_
+
+<img src="https://github.com/carvalhoandre/NinjaStar/blob/master/NinjaStar/recursos/imagens/personagens/Attack__000.png" max-width="400px" width="400px" align="right" alt="Logo_andre">
 
 Projeto de aula em programção de jogos usando [Godot](https://godotengine.org//)
 
@@ -11,7 +12,5 @@ Projeto de aula em programção de jogos usando [Godot](https://godotengine.org/
 
 Implementações realizadas e atualizações segundo: [ninjastar.6te.net](http://ninjastar.6te.net/)
 
-![selecao](https://github.com/carvalhoandre/games/blob/master/readmimagens/img.jpg)
-- _Contribua para realização do jogo._
 
-_Equipe trabalhando em correções de bugs, desenvolvimento de fases, e plataforma online, conforme mensão anterior._
+_Projeto em processo de descontinuação; finalização, porém, aberto para sugestões e contibuições._
